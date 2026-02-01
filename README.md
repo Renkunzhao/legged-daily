@@ -21,21 +21,22 @@ Built to help researchers quickly discover, categorize, and compare relevant wor
 
 | Project | Tasks | Methods | Robots | Trainning simulator | Deploy | Description |
 |--------|-------|------|------|------|------|-------------|
-| [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion | RL | Humanoid(G1) & Quadruped(Go2)| IsaacSim | HW | Real-world RL deployment on Unitree platforms |
-| [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | RL | Quadruped(Go1) | IsaacGym | None | Learning challenge acrobatic maneuvers for quadrupeds |
+| [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion, Mimic | RL, IL | Humanoid (H1, G1) & Quadruped (Go2)| IsaacSim | HW | Real-world RL deployment on Unitree robots |
+| [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | RL | Quadruped (Go1) | IsaacGym | None | Learning challenge acrobatic maneuvers for quadrupeds |
+| [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (Flip, Stand) | RL | Quadruped (Go2) | IsaacGym | Mujoco | |
 
 ## 🔖 Tag Legend
 
 Use tags to mix and match method, robot, simulator, and deployment.
 
 1. Tasks
-   - **Locomotion**: Walking/running on flat or uneven terrain
+   - **Locomotion**: Walking/running on flat or uneven terrain using various gait type
+   - **Mimic**: Mimic motion from human
    - **Acrobatics**: Parkour, jumps, flips, handstands, dancing
      - **Parkour/Agility**: Dynamic, complex movement sequences
-     - **Jump/Hop**: Vertical or gap-clearing jumps
+     - **Jump**: Vertical or gap-clearing jumps
      - **Flip**: Aerial rotations (front/back)
      - **Handstand/Legstand**: Inverted balancing poses
-     - **Dance**: Rhythmic, style-focused motions
      - **Ground Parkour/Rolling**: Falling, rolling, and getting up
    - **Perception/Navigation**: Stairs, gaps, obstacles, uneven surfaces
    - **Manipulation**: Coordinated arm-leg or multi-limb actions
