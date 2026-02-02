@@ -62,6 +62,57 @@ Use tags to mix and match method, robot, simulator, and deployment.
 
 ---
 
+## 👩‍🔬👨‍🔬 Researchers (by Region)
+
+A curated, non-exhaustive index of researchers in legged robotics and related areas.
+The list is organized **by region/institution** to avoid rigid topical classification.
+Entries are intended for **research discovery and reference**, not ranking or evaluation.
+
+<details>
+<summary><strong>🇺🇸 North America</strong></summary>
+
+- <details>
+   <summary><strong>Xue Bin (Jason) Peng — SFU</strong></summary>
+
+   - Research Interests: 
+      Computer graphics and machine learning, with a focus on reinforcement learning for motion control of simulated characters
+
+   - [Website](https://xbpeng.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=FwxfQosAAAAJ&hl=en)
+
+   - Notable Works:
+      - [MimicKit](https://github.com/xbpeng/MimicKit): A framework for imitation learning of physics-based character skills using reinforcement learning.
+
+   </details>
+
+- <details>
+   <summary><strong>Zixuan (Eric) Chen (PhD) — UCSD</strong></summary>
+
+   - Research Interests: 
+      General intelligent humanoid robots, including robust locomotion and general manipulation.
+
+   - [Website](https://zixuan417.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en)
+
+   - Notable Works:
+      - [GMT](https://github.com/zixuan417/humanoid-general-motion-tracking): General Motion Tracking for Humanoid Whole-Body Control.
+
+   </details>
+
+</details>
+
+<details>
+<summary><strong>🇪🇺 Europe</strong></summary>
+
+
+</details>
+
+<details>
+<summary><strong>🇨🇳 Asia</strong></summary>
+
+
+</details>
+
+---
+
 ## 📚 Surveys & Collections
 
 <details>
