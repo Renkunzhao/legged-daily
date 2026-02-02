@@ -1,8 +1,19 @@
-# Legged Robotics Open-source Projects
+# Legged Robotics Research Index
 
-A curated index of open-source legged robotics projects spanning **model-based control**, **reinforcement learning**, **imitation learning**, **humanoids**, **quadrupeds**, and **simulation platforms**.
+A curated, research-oriented index for **legged robotics**, covering:
 
-Built to help researchers quickly discover, categorize, and compare relevant work.
+- **Open-source projects and toolkits**
+- **Researchers and research groups**
+- **Learning-based and model-based control methods**
+- **Humanoids and quadrupeds**
+- **Simulation platforms and sim-to-real deployment**
+
+This repository is designed to support **research discovery, orientation, and long-term reference**
+for students and researchers working on legged locomotion and related areas.
+
+> This repository is a **curated index**, not a benchmark, ranking, or evaluation.
+> All entries are based on **publicly available information** and reflect
+> representative research directions rather than exhaustive coverage.
 
 ---
 
