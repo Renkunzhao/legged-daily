@@ -22,6 +22,7 @@ for students and researchers working on legged locomotion and related areas.
 | Project | Description |
 |--------|------- |
 | [robot_viewer](https://viewer.robotsfan.com/) | A web-based 3D viewer for robot models and scenes supporting URDF, MJCF (Mujoco XML), USD (partial support) formats.
+| [netron](https://netron.app/) | A web-based viewer for neural network models, including those used in robotics research.
 | [mink](https://github.com/kevinzakka/mink) | Python inverse kinematics based on MuJoCo
 | [pyroki](https://github.com/chungmin99/pyroki) | A Modular Toolkit for Robot Kinematic Optimization
 | [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives
