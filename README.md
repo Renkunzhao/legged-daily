@@ -83,39 +83,60 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 <details>
 <summary><strong>🇺🇸 North America</strong></summary>
 
-- <details>
-   <summary><strong>Xue Bin (Jason) Peng — SFU</strong></summary>
+   <!--  -->
+   - <details>
+      <summary><strong>Xue Bin (Jason) Peng — SFU</strong></summary>
 
-   - Research Interests: 
-      Computer graphics and machine learning, with a focus on reinforcement learning for motion control of simulated characters
+      - Research Interests: 
+         Computer graphics and machine learning, with a focus on reinforcement learning for motion control of simulated characters
 
-   - [Website](https://xbpeng.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=FwxfQosAAAAJ&hl=en)
+      - [Website](https://xbpeng.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=FwxfQosAAAAJ&hl=en)
 
-   - Notable Works:
-      - [MimicKit](https://github.com/xbpeng/MimicKit): A framework for imitation learning of physics-based character skills using reinforcement learning.
+      - Notable Works:
+         - [MimicKit](https://github.com/xbpeng/MimicKit): A framework for imitation learning of physics-based character skills using reinforcement learning.
 
-   </details>
+      </details>
 
-- <details>
-   <summary><strong>Zixuan (Eric) Chen (PhD) — UCSD</strong></summary>
+   <!--  -->
+   - <details>
+      <summary><strong>Zixuan (Eric) Chen (PhD) — UCSD</strong></summary>
 
-   - Research Interests: 
-      General intelligent humanoid robots, including robust locomotion and general manipulation.
+      - Research Interests: 
+         General intelligent humanoid robots, including robust locomotion and general manipulation.
 
-   - [Website](https://zixuan417.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en)
+      - [Website](https://zixuan417.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en)
 
-   - Notable Works:
-      - [GMT](https://github.com/zixuan417/humanoid-general-motion-tracking): General Motion Tracking for Humanoid Whole-Body Control.
+      - Notable Works:
+         - [GMT](https://github.com/zixuan417/humanoid-general-motion-tracking): General Motion Tracking for Humanoid Whole-Body Control.
 
-   </details>
+      </details>  
+
+   <!--  -->
+   - <details>
+      <summary><strong>Yanjie Ze (PhD) — Standford</strong></summary>
+
+      - Research Interests: 
+         General intelligent humanoid robots.
+
+      - [Website](https://yanjieze.com/) | [Google Scholar](https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao)
+
+      - Notable Works:
+         - [TWIST2](https://github.com/amazon-far/TWIST2): Scalable, Portable, and Holistic Humanoid Data Collection System.
+         - [TWIST](https://github.com/YanjieZe/TWIST): TWIST: Teleoperated Whole-Body Imitation System.
+
+      </details>
 
 </details>
+
+---
 
 <details>
 <summary><strong>🇪🇺 Europe</strong></summary>
 
 
 </details>
+
+---
 
 <details>
 <summary><strong>🇨🇳 Asia</strong></summary>
