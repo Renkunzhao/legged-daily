@@ -35,7 +35,8 @@ for students and researchers working on legged locomotion and related areas.
 |--------|-------|------|------|------|------|-------------|
 | [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion, Mimic | RL, IL | Humanoid (H1, G1) & Quadruped (Go2)| IsaacSim | HW | Real-world RL deployment on Unitree robots |
 | [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | RL | Quadruped (Go1) | IsaacGym | None | Learning challenge acrobatic maneuvers for quadrupeds |
-| [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (Flip, Stand) | RL | Quadruped (Go2) | IsaacGym | Mujoco | |
+| [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (~~Flip~~, Stand) | RL | Quadruped (Go2) | IsaacGym | Mujoco | |
+| [TWIST2](https://github.com/amazon-far/TWIST2) | Teleoperation | IL | Humanoid (G1) | IsaacGym | Mujoco HW | Teleoperated Whole-Body Imitation System |
 
 ## 🔖 Tag Legend
 
