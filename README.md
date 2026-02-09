@@ -147,6 +147,27 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 ---
 
+## 📚 Paper Lists
+
+<details>
+<summary><strong>DAPC</strong></summary>
+
+- [Learning quadrupedal locomotion on deformable terrain](https://www.science.org/doi/pdf/10.1126/scirobotics.ade2256)
+
+   - Method: They train a quadruped RL policy in simulation using a fast, parameterized deformable-terrain contact model (normal penetration + shear/friction + horizontal drag) with broad terrain parameter randomization. A recurrent (RNN) policy uses proprioceptive history to implicitly infer the current ground properties and adapt online at deployment. 
+   
+   - Result: a single controller transfers to hardware and achieves fast, robust locomotion on granular media (e.g., sand) and highly compliant surfaces (e.g., air mattress) without explicit terrain estimation.
+
+- [Data-Enabled Predictive Control: In the Shallows of the DeePC](https://arxiv.org/pdf/1811.05890)
+
+- [Toward a Data-Driven Template Model for Quadrupedal Locomotion](https://arxiv.org/pdf/2408.16338)
+
+- [Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning](https://aiche.onlinelibrary.wiley.com/doi/pdf/10.1002/aic.18644)
+
+</details>
+
+---
+
 ## 📚 Surveys & Collections
 
 <details>
