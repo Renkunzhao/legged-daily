@@ -37,6 +37,9 @@ for students and researchers working on legged locomotion and related areas.
 | [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | RL | Quadruped (Go1) | IsaacGym | None | Learning challenge acrobatic maneuvers for quadrupeds |
 | [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (~~Flip~~, Stand) | RL | Quadruped (Go2) | IsaacGym | Mujoco | |
 | [TWIST2](https://github.com/amazon-far/TWIST2) | Teleoperation | IL | Humanoid (G1) | IsaacGym | Mujoco HW | Teleoperated Whole-Body Imitation System |
+| [OCS2](https://github.com/leggedrobotics/ocs2/tree/ros2) | Locomotion | MB | Quadruped (Anymal) |  | Raisim | Optimal Control for Switched Systems |
+| [Quadruped-PyMPC](https://github.com/iit-DLSLab/Quadruped-PyMPC/tree/main) | Locomotion | MB | Quadruped (Anymal) |  | Mujoco | Model Predictive Control for Quadrupedal Robots | A model predictive controller for quadruped robots based on the single rigid body model and written in python. Gradient-based (acados) or Sampling-based (jax) |
+| [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software) | Locomotion | MB | Quadruped (MIT Cheetah) |  |  | Software for the MIT Cheetah robot, including control and simulation tools. |
 
 ## 🔖 Tag Legend
 
@@ -160,7 +163,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 - [Data-Enabled Predictive Control: In the Shallows of the DeePC](https://arxiv.org/pdf/1811.05890)
 
-- [Toward a Data-Driven Template Model for Quadrupedal Locomotion](https://arxiv.org/pdf/2408.16338)
+- [Toward a Data-Driven Template Model for Quadrupedal Locomotion](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9799758)
 
 - [Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning](https://aiche.onlinelibrary.wiley.com/doi/pdf/10.1002/aic.18644)
 
