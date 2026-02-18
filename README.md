@@ -23,6 +23,7 @@ for students and researchers working on legged locomotion and related areas.
 |--------|------- |
 | [robot_viewer](https://viewer.robotsfan.com/) | A web-based 3D viewer for robot models and scenes supporting URDF, MJCF (Mujoco XML), USD (partial support) formats.
 | [netron](https://netron.app/) | A web-based viewer for neural network models, including those used in robotics research.
+| [GMR](https://github.com/YanjieZe/GMR) | Retarget human motions into diverse humanoid robots in real time on CPU.
 | [mink](https://github.com/kevinzakka/mink) | Python inverse kinematics based on MuJoCo
 | [pyroki](https://github.com/chungmin99/pyroki) | A Modular Toolkit for Robot Kinematic Optimization
 | [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives
@@ -127,6 +128,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - Notable Works:
          - [TWIST2](https://github.com/amazon-far/TWIST2): Scalable, Portable, and Holistic Humanoid Data Collection System.
          - [TWIST](https://github.com/YanjieZe/TWIST): TWIST: Teleoperated Whole-Body Imitation System.
+         - [GMR](https://github.com/YanjieZe/GMR): Retarget human motions into diverse humanoid robots in real time on CPU.
 
       </details>
 
