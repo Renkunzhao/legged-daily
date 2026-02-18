@@ -26,6 +26,7 @@ for students and researchers working on legged locomotion and related areas.
 | [GMR](https://github.com/YanjieZe/GMR) | Retarget human motions into diverse humanoid robots in real time on CPU.
 | [mink](https://github.com/kevinzakka/mink) | Python inverse kinematics based on MuJoCo
 | [pyroki](https://github.com/chungmin99/pyroki) | A Modular Toolkit for Robot Kinematic Optimization
+| [PlaCo](https://github.com/Rhoban/placo.git) | Task-space inverse kinematics and dynamics for whole-body control tasks
 | [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives
 
 ---
