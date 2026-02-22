@@ -19,10 +19,19 @@ for students and researchers working on legged locomotion and related areas.
 
 ## Toolkits
 
+### Websites
+
 | Project | Description |
 |--------|------- |
 | [robot_viewer](https://viewer.robotsfan.com/) | A web-based 3D viewer for robot models and scenes supporting URDF, MJCF (Mujoco XML), USD (partial support) formats.
 | [netron](https://netron.app/) | A web-based viewer for neural network models, including those used in robotics research.
+| [rokoko](https://vision.rokoko.com/) | Turn video to animation.
+| [mujoco_wasm](https://zalo.github.io/mujoco_wasm/) | Simulate and Render MuJoCo Models in the Browser
+
+### Repos
+
+| Project | Description |
+|--------|------- |
 | [GMR](https://github.com/YanjieZe/GMR) | Retarget human motions into diverse humanoid robots in real time on CPU.
 | [mink](https://github.com/kevinzakka/mink) | Python inverse kinematics based on MuJoCo
 | [pyroki](https://github.com/chungmin99/pyroki) | A Modular Toolkit for Robot Kinematic Optimization
