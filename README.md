@@ -26,6 +26,7 @@ for students and researchers working on legged locomotion and related areas.
 | [robot_viewer](https://viewer.robotsfan.com/) | A web-based 3D viewer for robot models and scenes supporting URDF, MJCF (Mujoco XML), USD (partial support) formats.
 | [netron](https://netron.app/) | A web-based viewer for neural network models, including those used in robotics research.
 | [BVHView](https://theorangeduck.com/media/uploads/BVHView/bvhview.html) | A simple viewer for the .bvh animation file format written using raylib.
+| [sketchfab](https://sketchfab.com/feed#upload) | A web-based fbx player, login is needed.
 | [rokoko](https://vision.rokoko.com/) | Turn video to animation.
 | [mujoco_wasm](https://zalo.github.io/mujoco_wasm/) | Simulate and Render MuJoCo Models in the Browser
 
