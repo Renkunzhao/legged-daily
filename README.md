@@ -23,6 +23,7 @@ for students and researchers working on legged locomotion and related areas.
 
 | Project | Description |
 |--------|------- |
+| [motion_viewer](https://renkunzhao.github.io/motion_viewer/) | A web-based visualization tool for robot models and motion data.
 | [robot_viewer](https://viewer.robotsfan.com/) | A web-based 3D viewer for robot models and scenes supporting URDF, MJCF (Mujoco XML), USD (partial support) formats.
 | [netron](https://netron.app/) | A web-based viewer for neural network models, including those used in robotics research.
 | [BVHView](https://theorangeduck.com/media/uploads/BVHView/bvhview.html) | A simple viewer for the .bvh animation file format written using raylib.
