@@ -29,7 +29,8 @@ for students and researchers working on legged locomotion and related areas.
 | [BVHView](https://theorangeduck.com/media/uploads/BVHView/bvhview.html) | A simple viewer for the .bvh animation file format written using raylib.
 | [sketchfab](https://sketchfab.com/feed#upload) | A web-based fbx player, login is needed.
 | [rokoko](https://vision.rokoko.com/) | Turn video to animation.
-| [mujoco_wasm](https://zalo.github.io/mujoco_wasm/) | Simulate and Render MuJoCo Models in the Browser
+| [mjswan](https://github.com/ttktjmt/mjswan) | MuJoco Simulation on Web Assembly with Neural netwroks.
+| [mujoco_wasm](https://zalo.github.io/mujoco_wasm/) | Simulate and Render MuJoCo Models in the Browser.
 
 ### Repos
 
