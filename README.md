@@ -42,6 +42,11 @@ for students and researchers working on legged locomotion and related areas.
 | [PlaCo](https://github.com/Rhoban/placo.git) | Task-space inverse kinematics and dynamics for whole-body control tasks
 | [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives
 
+### Dataset
+| Project | Description |
+|--------|------- |
+| [KungFuAthleteBot](https://github.com/NPCLEI/KungFuAthleteBot.git) | Athletes’ daily martial arts training videos processed using GVHMR.
+
 ---
 
 ## 📦 Project List
