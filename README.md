@@ -179,6 +179,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
       - Notable Works:
          - [OmniXtreme](https://extreme-humanoid.github.io/): A unified policy framework for high-dynamic humanoid motion tracking.
+         - [CLONE](https://humanoid-clone.github.io/): A whole-body teleoperation system that achieves comprehensive robot control using a VR headset.
 
       </details>
 
