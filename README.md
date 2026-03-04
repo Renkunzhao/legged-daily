@@ -168,6 +168,19 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 <details>
 <summary><strong>🇨🇳 Asia</strong></summary>
 
+   <!--  -->
+   - <details>
+      <summary><strong>Siyuan Huang — PKU</strong></summary>
+
+      - Research Interests: 
+         Computer vision, robotics, machine learning, and cognition.
+
+      - [Website](https://siyuanhuang.com/) | [Google Scholar](https://scholar.google.com/citations?user=1NN7Ee8AAAAJ&hl=en&citsig=AMstHGQ_eDX956QVraGalRBAEWGG0ltzRw)
+
+      - Notable Works:
+         - [OmniXtreme](https://extreme-humanoid.github.io/): A unified policy framework for high-dynamic humanoid motion tracking.
+
+      </details>
 
 </details>
 
