@@ -190,6 +190,17 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 ## 📚 Paper Lists
 
 <details>
+<summary><strong>Basic</strong></summary>
+
+- [Rigid Body Dynamics Algorithms](resources/books/Rigid%20Body%20Dynamics%20Algorithms.pdf)
+
+- [仿人机器人](resources/books/仿人机器人.pdf)
+
+- [Robot Dynamics Lecture Notes - ETH](https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/documents/RobotDynamics2017/RD_HS2017script.pdf)
+
+</details>
+
+<details>
 <summary><strong>DAPC</strong></summary>
 
 - [Learning quadrupedal locomotion on deformable terrain](https://www.science.org/doi/pdf/10.1126/scirobotics.ade2256)
