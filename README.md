@@ -40,6 +40,7 @@ for students and researchers working on legged locomotion and related areas.
 | [mink](https://github.com/kevinzakka/mink) | Python inverse kinematics based on MuJoCo
 | [pyroki](https://github.com/chungmin99/pyroki) | A Modular Toolkit for Robot Kinematic Optimization
 | [PlaCo](https://github.com/Rhoban/placo.git) | Task-space inverse kinematics and dynamics for whole-body control tasks
+| [cuRobo](https://github.com/NVlabs/curobo) | A CUDA accelerated library containing a suite of robotics algorithms (FK, IK, TO).
 | [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives
 
 ### Dataset
