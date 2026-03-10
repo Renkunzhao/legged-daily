@@ -42,6 +42,8 @@ for students and researchers working on legged locomotion and related areas.
 | [PlaCo](https://github.com/Rhoban/placo.git) | Task-space inverse kinematics and dynamics for whole-body control tasks
 | [cuRobo](https://github.com/NVlabs/curobo) | A CUDA accelerated library containing a suite of robotics algorithms (FK, IK, TO).
 | [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives
+| [MuJoCo](https://github.com/google-deepmind/mujoco.git) | Multi-Joint dynamics with Contact. A general purpose physics simulator.
+| [mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie.git) | A collection of high-quality models for the MuJoCo physics engine, curated by Google DeepMind.
 
 ### Dataset
 | Project | Description |
@@ -55,6 +57,7 @@ for students and researchers working on legged locomotion and related areas.
 | Project | Tasks | Methods | Robots | Training simulator | Deploy | Description |
 |--------|-------|------|------|------|------|-------------|
 | [mjlab](https://github.com/mujocolab/mjlab.git) | Locomotion, Mimic | RL, IL | Humanoid (G1) & Quadruped (Go1) | Mujoco |  | Isaac Lab API, powered by MuJoCo-Warp, for RL and robotics research. |
+| [mujoco_playground](https://github.com/google-deepmind/mujoco_playground.git) | Locomotion | RL | Humanoid (G1, H1) & Quadruped (Go1) | Mujoco | | An open-source library for GPU-accelerated robot learning and sim-to-real transfer.
 | [unitree_rl_mjlab](https://github.com/unitreerobotics/unitree_rl_mjlab.git) | Locomotion, Mimic | RL, IL | Humanoid (H1_2, G1) & Quadruped (Go2)| Mujoco | Mujoco, HW | Real-world RL deployment on Unitree robots |
 | [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion, Mimic | RL, IL | Humanoid (H1, G1) & Quadruped (Go2)| IsaacSim | Mujoco, HW | Real-world RL deployment on Unitree robots |
 | [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | RL | Quadruped (Go1) | IsaacGym |  | Learning challenge acrobatic maneuvers for quadrupeds |
