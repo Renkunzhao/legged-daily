@@ -56,13 +56,14 @@ for students and researchers working on legged locomotion and related areas.
 
 | Project | Tasks | Methods | Robots | Training simulator | Deploy | Description |
 |--------|-------|------|------|------|------|-------------|
-| [mjlab](https://github.com/mujocolab/mjlab.git) | Locomotion, Mimic | RL, IL | Humanoid (G1) & Quadruped (Go1) | Mujoco |  | Isaac Lab API, powered by MuJoCo-Warp, for RL and robotics research. |
+| [mjlab](https://github.com/mujocolab/mjlab.git) | Locomotion, Mimic | RL | Humanoid (G1) & Quadruped (Go1) | Mujoco |  | Isaac Lab API, powered by MuJoCo-Warp, for RL and robotics research. |
 | [mujoco_playground](https://github.com/google-deepmind/mujoco_playground.git) | Locomotion | RL | Humanoid (G1, H1) & Quadruped (Go1) | Mujoco | | An open-source library for GPU-accelerated robot learning and sim-to-real transfer.
-| [unitree_rl_mjlab](https://github.com/unitreerobotics/unitree_rl_mjlab.git) | Locomotion, Mimic | RL, IL | Humanoid (H1_2, G1) & Quadruped (Go2)| Mujoco | Mujoco, HW | Real-world RL deployment on Unitree robots |
-| [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion, Mimic | RL, IL | Humanoid (H1, G1) & Quadruped (Go2)| IsaacSim | Mujoco, HW | Real-world RL deployment on Unitree robots |
+| [unitree_rl_mjlab](https://github.com/unitreerobotics/unitree_rl_mjlab.git) | Locomotion, Mimic | RL | Humanoid (H1_2, G1) & Quadruped (Go2)| Mujoco | Mujoco, HW | Real-world RL deployment on Unitree robots |
+| [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion, Mimic | RL | Humanoid (H1, G1) & Quadruped (Go2)| IsaacSim | Mujoco, HW | Real-world RL deployment on Unitree robots |
 | [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | RL | Quadruped (Go1) | IsaacGym |  | Learning challenge acrobatic maneuvers for quadrupeds |
 | [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (~~Flip~~, Stand) | RL | Quadruped (Go2) | IsaacGym | Mujoco | |
-| [TWIST2](https://github.com/amazon-far/TWIST2) | Teleoperation | IL | Humanoid (G1) | IsaacGym | Mujoco HW | Teleoperated Whole-Body Imitation System |
+| [TWIST2](https://github.com/amazon-far/TWIST2) | Teleoperation | RL | Humanoid (G1) | IsaacGym | Mujoco HW | Teleoperated Whole-Body Imitation System |
+| [OmniXtreme](https://extreme-humanoid.github.io/) | Mimic | RL | Humanoid (G1) |  | HW | A unified policy framework for high-dynamic humanoid motion tracking |
 | [OCS2](https://github.com/leggedrobotics/ocs2/tree/ros2) | Locomotion | MB | Quadruped (Anymal) |  | Raisim | Optimal Control for Switched Systems |
 | [Quadruped-PyMPC](https://github.com/iit-DLSLab/Quadruped-PyMPC/tree/main) | Locomotion | MB | Quadruped (Anymal) |  | Mujoco | Model Predictive Control for Quadrupedal Robots | A model predictive controller for quadruped robots based on the single rigid body model and written in python. Gradient-based (acados) or Sampling-based (jax) |
 | [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software) | Locomotion | MB | Quadruped (MIT Cheetah) |  | custom | Software for the MIT Cheetah robot, including control and simulation tools. |
