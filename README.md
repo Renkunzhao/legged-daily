@@ -131,7 +131,21 @@ Entries are intended for **research discovery and reference**, not ranking or ev
          - [BeyondMimic](https://beyondmimic.github.io/): From Motion Tracking to Versatile Humanoid Control via Guided Diffusion.
 
       - PhD
-         - Yanjie Ze
+         <!--  -->
+         - <details>
+            <summary><strong>Yanjie Ze (PhD) — Standford</strong></summary>
+
+            - Research Interests: 
+               General intelligent humanoid robots.
+
+            - [Website](https://yanjieze.com/) | [Google Scholar](https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao)
+
+            - Notable Works:
+               - [TWIST2](https://github.com/amazon-far/TWIST2): Scalable, Portable, and Holistic Humanoid Data Collection System.
+               - [TWIST](https://github.com/YanjieZe/TWIST): TWIST: Teleoperated Whole-Body Imitation System.
+               - [GMR](https://github.com/YanjieZe/GMR): Retarget human motions into diverse humanoid robots in real time on CPU.
+
+            </details>
 
       </details>
 
@@ -162,22 +176,6 @@ Entries are intended for **research discovery and reference**, not ranking or ev
          - [GMT](https://github.com/zixuan417/humanoid-general-motion-tracking): General Motion Tracking for Humanoid Whole-Body Control.
 
       </details>  
-
-   <!--  -->
-   - <details>
-      <summary><strong>Yanjie Ze (PhD) — Standford</strong></summary>
-
-      - Research Interests: 
-         General intelligent humanoid robots.
-
-      - [Website](https://yanjieze.com/) | [Google Scholar](https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao)
-
-      - Notable Works:
-         - [TWIST2](https://github.com/amazon-far/TWIST2): Scalable, Portable, and Holistic Humanoid Data Collection System.
-         - [TWIST](https://github.com/YanjieZe/TWIST): TWIST: Teleoperated Whole-Body Imitation System.
-         - [GMR](https://github.com/YanjieZe/GMR): Retarget human motions into diverse humanoid robots in real time on CPU.
-
-      </details>
 
 </details>
 
