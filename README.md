@@ -120,6 +120,23 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
    <!--  -->
    - <details>
+      <summary><strong>Karen Liu — Stanford</strong></summary>
+
+      - Research Interests: 
+         Embodied AI, humanoid robotics, human motion modeling, reinforcement learning, imitation learning, physics simulation, and sim-to-real transfer.
+
+      - [Website](https://stanford-tml.github.io/main/) | [Google Scholar](https://scholar.google.com/citations?user=i28fU0MAAAAJ&hl=en)
+
+      - Notable Works:
+         - [BeyondMimic](https://beyondmimic.github.io/): From Motion Tracking to Versatile Humanoid Control via Guided Diffusion.
+
+      - PhD
+         - Yanjie Ze
+
+      </details>
+
+   <!--  -->
+   - <details>
       <summary><strong>Xue Bin (Jason) Peng — SFU</strong></summary>
 
       - Research Interests: 
