@@ -192,6 +192,21 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
       </details>
 
+   <!--  -->
+   - <details>
+      <summary><strong>Li Yi — THU</strong></summary>
+
+      - Research Interests: 
+         3D perception, humanoid robot learning, and human-robot interaction, with the goal of equipping robotic agent with the ability of understanding and interacting with the 3D world.
+
+      - [Website](https://ericyi.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en) | [X](https://x.com/ericyi0124)
+
+      - Notable Works:
+         - [Any2Track](https://zzk273.github.io/Any2Track/): Track Any Motions under Any Disturbances.
+         - [Humanoid-GPT](https://qizekun.github.io/humanoid-gpt/): A GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control.
+
+      </details>
+
 </details>
 
 ---
