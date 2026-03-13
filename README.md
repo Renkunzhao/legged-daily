@@ -54,19 +54,27 @@ for students and researchers working on legged locomotion and related areas.
 
 ## 📦 Project List
 
-| Project | Tasks | Methods | Robots | Training simulator | Deploy | Description |
-|--------|-------|------|------|------|------|-------------|
-| [mjlab](https://github.com/mujocolab/mjlab.git) | Locomotion, Mimic | RL | Humanoid (G1) & Quadruped (Go1) | Mujoco |  | Isaac Lab API, powered by MuJoCo-Warp, for RL and robotics research. |
-| [mujoco_playground](https://github.com/google-deepmind/mujoco_playground.git) | Locomotion | RL | Humanoid (G1, H1) & Quadruped (Go1) | Mujoco | | An open-source library for GPU-accelerated robot learning and sim-to-real transfer.
-| [unitree_rl_mjlab](https://github.com/unitreerobotics/unitree_rl_mjlab.git) | Locomotion, Mimic | RL | Humanoid (H1_2, G1) & Quadruped (Go2)| Mujoco | Mujoco, HW | Real-world RL deployment on Unitree robots |
-| [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion, Mimic | RL | Humanoid (H1, G1) & Quadruped (Go2)| IsaacSim | Mujoco, HW | Real-world RL deployment on Unitree robots |
-| [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | RL | Quadruped (Go1) | IsaacGym |  | Learning challenge acrobatic maneuvers for quadrupeds |
-| [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (~~Flip~~, Stand) | RL | Quadruped (Go2) | IsaacGym | Mujoco | |
-| [TWIST2](https://github.com/amazon-far/TWIST2) | Teleoperation | RL | Humanoid (G1) | IsaacGym | Mujoco HW | Teleoperated Whole-Body Imitation System |
-| [OmniXtreme](https://extreme-humanoid.github.io/) | Mimic | RL | Humanoid (G1) |  | HW | A unified policy framework for high-dynamic humanoid motion tracking |
-| [OCS2](https://github.com/leggedrobotics/ocs2/tree/ros2) | Locomotion | MB | Quadruped (Anymal) |  | Raisim | Optimal Control for Switched Systems |
-| [Quadruped-PyMPC](https://github.com/iit-DLSLab/Quadruped-PyMPC/tree/main) | Locomotion | MB | Quadruped (Anymal) |  | Mujoco | Model Predictive Control for Quadrupedal Robots | A model predictive controller for quadruped robots based on the single rigid body model and written in python. Gradient-based (acados) or Sampling-based (jax) |
-| [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software) | Locomotion | MB | Quadruped (MIT Cheetah) |  | custom | Software for the MIT Cheetah robot, including control and simulation tools. |
+### RL
+| Project | Tasks | Robots | Training simulator | Deploy | Description |
+|--------|-------|------|------|------|-------------|
+| [mjlab](https://github.com/mujocolab/mjlab.git) | Locomotion, Mimic | Humanoid (G1) & Quadruped (Go1) | Mujoco |  | Isaac Lab API, powered by MuJoCo-Warp, for RL and robotics research. |
+| [mujoco_playground](https://github.com/google-deepmind/mujoco_playground.git) | Locomotion | Humanoid (G1, H1) & Quadruped (Go1) | Mujoco | | An open-source library for GPU-accelerated robot learning and sim-to-real transfer.
+| [unitree_rl_mjlab](https://github.com/unitreerobotics/unitree_rl_mjlab.git) | Locomotion, Mimic | Humanoid (H1_2, G1) & Quadruped (Go2)| Mujoco | Mujoco, HW | Real-world RL deployment on Unitree robots |
+| [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) | Locomotion, Mimic | Humanoid (H1, G1) & Quadruped (Go2)| IsaacSim | Mujoco, HW | Real-world RL deployment on Unitree robots |
+| [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | Quadruped (Go1) | IsaacGym |  | Learning challenge acrobatic maneuvers for quadrupeds |
+| [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (~~Flip~~, Stand) | Quadruped (Go2) | IsaacGym | Mujoco | |
+| [TWIST2](https://github.com/amazon-far/TWIST2) | Teleoperation | Humanoid (G1) | IsaacGym | Mujoco HW | Teleoperated Whole-Body Imitation System |
+| [OmniXtreme](https://extreme-humanoid.github.io/) | Mimic | Humanoid (G1) |  | HW | A unified policy framework for high-dynamic humanoid motion tracking |
+
+### Optimization
+| Project | Tasks | Robots | Deploy | Description |
+|--------|-------|------|------|-------------|
+| [OCS2](https://github.com/leggedrobotics/ocs2/tree/ros2) | Locomotion | Quadruped (Anymal) | Raisim | Optimal Control for Switched Systems |
+| [MuJoCo MPC](https://github.com/google-deepmind/mujoco_mpc) | Locomotion & Acrobatics | Humanoid & Quadruped | Mujoco | An interactive application and software framework for real-time predictive control with MuJoCo, developed by Google DeepMind |
+| [DIAL-MPC](https://github.com/LeCAR-Lab/dial-mpc) | Locomotion & Acrobatics | Quadruped (go2) |  |  A novel sampling-based MPC framework for legged robot full-order torque-level control with both precision and agility in a training-free manner. |
+| [se3_trajopt](https://github.com/upatras-lar/se3_trajopt) | Locomotion & Acrobatics | Humanoid & Quadruped (go2) |  |  Trajectory Optimization on the SE(3) Tangent Space. |
+| [Quadruped-PyMPC](https://github.com/iit-DLSLab/Quadruped-PyMPC/tree/main) | Locomotion | Quadruped | Mujoco | Model Predictive Control for Quadrupedal Robots | A model predictive controller for quadruped robots based on the single rigid body model and written in python. Gradient-based (acados) or Sampling-based (jax) |
+| [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software) | Locomotion | Quadruped (MIT Cheetah) | custom | Software for the MIT Cheetah robot, including control and simulation tools. |
 
 ## 🔖 Tag Legend
 
@@ -83,23 +91,19 @@ Use tags to mix and match method, robot, simulator, and deployment.
      - **Ground Parkour/Rolling**: Falling, rolling, and getting up
    - **Perception/Navigation**: Stairs, gaps, obstacles, uneven surfaces
    - **Manipulation**: Coordinated arm-leg or multi-limb actions
-2. Methods
-   - **IL**: Imitation learning / motion tracking
-   - **RL**: Reinforcement learning
-   - **MB**: Model-based control / optimization
-3. Robots (Unitree G1/Go2 are explicitly noted when supported)
+2. Robots (Unitree G1/Go2 are explicitly noted when supported)
    - **Humanoid(W)**: (Wheeled) humanoid platforms
    - **Quadruped(W)**: (Wheeled) quadruped platforms
    - **Dual-Arm(W)**: (Wheeled) dual-arm platforms
    - **G1**: Unitree G1 humanoid
    - **Go2**: Unitree Go2 quadruped
-4. Sim Platforms
+3. Sim Platforms
    - **Mujoco**
    - **IsaacSim/Gym**
    - **Gazebo**
    - **Raisim**
    - **PyBullet**
-5. Deployment
+4. Deployment
    - **Sim**: Simulation-focused
    - **HW**: Hardware deployment
 
