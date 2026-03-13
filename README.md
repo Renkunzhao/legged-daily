@@ -224,6 +224,12 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 </details>
 
+<summary><strong>Learning-based Simulation</strong></summary>
+
+- [A review of learning-based dynamics models for robotic manipulation](https://www.science.org/doi/epdf/10.1126/scirobotics.adt1497)
+
+</details>
+
 <details>
 <summary><strong>DAPC</strong></summary>
 
