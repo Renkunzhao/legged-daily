@@ -239,9 +239,13 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 </details>
 
+<details>
+
 <summary><strong>Learning-based Simulation</strong></summary>
 
 - [A review of learning-based dynamics models for robotic manipulation](https://www.science.org/doi/epdf/10.1126/scirobotics.adt1497)
+
+- [prescyent](https://github.com/hucebot/prescyent): Data-driven trajectory prediction library (python)
 
 </details>
 
