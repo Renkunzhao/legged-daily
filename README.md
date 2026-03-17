@@ -125,12 +125,12 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - Research Interests: 
          Embodied AI, humanoid robotics, human motion modeling, reinforcement learning, imitation learning, physics simulation, and sim-to-real transfer.
 
-      - [Website](https://stanford-tml.github.io/main/) | [Google Scholar](https://scholar.google.com/citations?user=i28fU0MAAAAJ&hl=en)
+      - [Homepage](https://stanford-tml.github.io/main/) | [Google Scholar](https://scholar.google.com/citations?user=i28fU0MAAAAJ&hl=en)
 
       - Notable Works:
          - [BeyondMimic](https://beyondmimic.github.io/): From Motion Tracking to Versatile Humanoid Control via Guided Diffusion.
 
-      - PhD
+      - PhD:
          <!--  -->
          - <details>
             <summary><strong>Yanjie Ze (PhD) — Standford</strong></summary>
@@ -138,7 +138,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
             - Research Interests: 
                General intelligent humanoid robots.
 
-            - [Website](https://yanjieze.com/) | [Google Scholar](https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao)
+            - [Homepage](https://yanjieze.com/) | [Google Scholar](https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao)
 
             - Notable Works:
                - [TWIST2](https://github.com/amazon-far/TWIST2): Scalable, Portable, and Holistic Humanoid Data Collection System.
@@ -156,7 +156,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - Research Interests: 
          Computer graphics and machine learning, with a focus on reinforcement learning for motion control of simulated characters
 
-      - [Website](https://xbpeng.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=FwxfQosAAAAJ&hl=en)
+      - [Homepage](https://xbpeng.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=FwxfQosAAAAJ&hl=en)
 
       - Notable Works:
          - [MimicKit](https://github.com/xbpeng/MimicKit): A framework for imitation learning of physics-based character skills using reinforcement learning.
@@ -170,7 +170,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - Research Interests: 
          General intelligent humanoid robots, including robust locomotion and general manipulation.
 
-      - [Website](https://zixuan417.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en)
+      - [Homepage](https://zixuan417.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en)
 
       - Notable Works:
          - [GMT](https://github.com/zixuan417/humanoid-general-motion-tracking): General Motion Tracking for Humanoid Whole-Body Control.
@@ -199,7 +199,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - Research Interests: 
          Computer vision, robotics, machine learning, and cognition.
 
-      - [Website](https://siyuanhuang.com/) | [Google Scholar](https://scholar.google.com/citations?user=1NN7Ee8AAAAJ&hl=en&citsig=AMstHGQ_eDX956QVraGalRBAEWGG0ltzRw)
+      - [Homepage](https://siyuanhuang.com/) | [Google Scholar](https://scholar.google.com/citations?user=1NN7Ee8AAAAJ&hl=en&citsig=AMstHGQ_eDX956QVraGalRBAEWGG0ltzRw)
 
       - Notable Works:
          - [OmniXtreme](https://extreme-humanoid.github.io/): A unified policy framework for high-dynamic humanoid motion tracking.
@@ -214,11 +214,83 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - Research Interests: 
          3D perception, humanoid robot learning, and human-robot interaction, with the goal of equipping robotic agent with the ability of understanding and interacting with the 3D world.
 
-      - [Website](https://ericyi.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en) | [X](https://x.com/ericyi0124)
+      - [Homepage](https://ericyi.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en) | [X](https://x.com/ericyi0124)
+
+      - PhD:
+         <!--  -->
+         - <details>
+            <summary><strong>Zhikai Zhang (PhD)</strong></summary>
+
+            - [Homepage](https://zzk273.github.io/)
+
+            - Notable Works:
+               - [Any2Track](https://zzk273.github.io/Any2Track/): Track Any Motions under Any Disturbances.
+               - [OpenWBT](https://zzk273.github.io/R2S2/): Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space
+
+            </details>
 
       - Notable Works:
-         - [Any2Track](https://zzk273.github.io/Any2Track/): Track Any Motions under Any Disturbances.
          - [Humanoid-GPT](https://qizekun.github.io/humanoid-gpt/): A GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control.
+
+      </details>
+
+   <!--  -->
+   - <details>
+      <summary><strong>Hang zhao — THU</strong></summary>
+
+      - Research Interests: 
+         Multi-modal machine learning, autonomous driving and robot learning.
+
+      - [Homepage](https://hangzhaomit.github.io/) | [MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)
+
+      - Students:
+         <!--  -->
+         - <details>
+            <summary><strong>Ziwen Zhuang (PhD)</strong></summary>
+
+            - Research Interests: 
+               Robotics, Machine Learning, and Control.
+
+            - [Homepage](https://ziwenzhuang.github.io/)
+
+            - Notable Works:
+               - [Humanoid Parkour Learning](https://humanoid4parkour.github.io/).
+               - [Robot Parkour Learning](https://robot-parkour.github.io/).
+            </details>
+
+      </details>
+
+   <!--  -->
+   - <details>
+      <summary><strong>Jianyu Chen — THU</strong></summary>
+
+      - Research Interests: 
+         3D perception, humanoid robot learning, and human-robot interaction, with the goal of equipping robotic agent with the ability of understanding and interacting with the 3D world.
+
+      - [Homepage](https://people.iiis.tsinghua.edu.cn/~jychen/) | [ISR Lab](https://group.iiis.tsinghua.edu.cn/~isrlab/) | [Google Scholar](https://scholar.google.com/citations?user=rc9jIf0AAAAJ&hl=zh-CN&oi=ao)
+
+      - Students:
+         <!--  -->
+         - <details>
+            <summary><strong>Xiang Zhu (PhD)</strong></summary>
+
+            - Research Interests: 
+               Robotics, embodied AI, manipulation.
+
+            - [Homepage](https://canva4.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=aItG_loAAAAJ&hl)
+
+            </details>
+
+         <!--  -->
+         - <details>
+            <summary><strong>Yanjiang Guo (PhD)</strong></summary>
+
+            - Research Interests: 
+               Training embodied foundation models that can perform a wide range of tasks in the physical world.
+
+            - [Homepage](https://robert-gyj.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=rBeZZPMAAAAJ&hl=en&oi=ao)
+
+            </details>
 
       </details>
 
@@ -245,7 +317,11 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 - [A review of learning-based dynamics models for robotic manipulation](https://www.science.org/doi/epdf/10.1126/scirobotics.adt1497)
 
-- [prescyent](https://github.com/hucebot/prescyent): Data-driven trajectory prediction library (python)
+- Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics. [[cite]](https://sites.google.com/view/roboticworldmodel) [[code]](https://github.com/leggedrobotics/robotic_world_model.git)
+
+- Uncertainty-Aware Robotic World Model Makes Offline Model-Based Reinforcement Learning Work on Real Robots. [[cite]](https://sites.google.com/view/uncertainty-aware-rwm) [[code]](https://github.dev/Renkunzhao/legged-robotics-lab)
+
+- [prescyent](https://github.com/hucebot/prescyent): Data-driven trajectory prediction library (python).
 
 </details>
 
