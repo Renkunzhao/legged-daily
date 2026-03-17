@@ -294,6 +294,39 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
       </details>
 
+   <!--  -->
+   - <details>
+      <summary><strong>Peng Lu — HKU</strong></summary>
+
+      - [Google Scholar](https://scholar.google.com/citations?user=ts7ItWgAAAAJ&hl=en) 
+      | [Arc Lab](https://arclab.hku.hk/) | [Bilibili](https://space.bilibili.com/1778365431?spm_id_from=333.788.upinfo.head.click)
+
+      - Students:
+         <!--  -->
+         - <details>
+            <summary><strong>Yeke Chen (PhD)</strong></summary>
+
+            - Research Interests: 
+               Sim-to-Real RL for agile robot control, spanning from aerial platforms to legged systems.
+
+            - [Homepage](https://shieldkeke.github.io/) 
+            - Notable Works:
+               - Learning Human-Like Badminton Skills for Humanoid Robots.[[cite]](https://astrorix.github.io/LHBS/).
+
+            </details>
+
+         <!--  -->
+         - <details>
+            <summary><strong>Zeren Luo (PhD)</strong></summary>
+
+            - [LinkedIn](https://www.linkedin.com/in/zeren-luo-4077051a6/) 
+            - Notable Works:
+               - MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces. [[Video]](https://www.youtube.com/watch?v=80Zg2vUkM7A).
+
+            </details>
+
+      </details>
+
 </details>
 
 ---
