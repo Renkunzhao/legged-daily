@@ -327,6 +327,27 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
       </details>
 
+   <!--  -->
+   - <details>
+      <summary><strong>Yunhui Liu — CUHK</strong></summary>
+
+      - [Google Scholar](https://scholar.google.com/citations?user=WzmDQTMAAAAJ&hl=en) 
+      | [CUHK-LRL](https://cuhkleggedrobotlab.github.io/)
+
+      - Students:
+         <!--  -->
+         - <details>
+            <summary><strong>Linzhu Yue - 乐林株 (PhD)</strong></summary>
+
+            - Research Interests: 
+               Optimal Control, Legged Robot, Reinforcement Learning.
+
+            - [Homepage](https://linzhuyue.github.io/) 
+
+            </details>
+
+      </details>
+
 </details>
 
 ---
