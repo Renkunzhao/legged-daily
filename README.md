@@ -17,7 +17,7 @@ for students and researchers working on legged locomotion and related areas.
 
 ---
 
-## Toolkits
+## 📦 Project List
 
 ### Websites
 
@@ -32,27 +32,36 @@ for students and researchers working on legged locomotion and related areas.
 | [mjswan](https://github.com/ttktjmt/mjswan) | MuJoco Simulation on Web Assembly with Neural netwroks.
 | [mujoco_wasm](https://zalo.github.io/mujoco_wasm/) | Simulate and Render MuJoCo Models in the Browser.
 
-### Repos
-
+### Robotics (Kinematics, Dynamics, TO)
 | Project | Description |
 |--------|------- |
-| [GMR](https://github.com/YanjieZe/GMR) | Retarget human motions into diverse humanoid robots in real time on CPU.
-| [mink](https://github.com/kevinzakka/mink) | Python inverse kinematics based on MuJoCo
-| [pyroki](https://github.com/chungmin99/pyroki) | A Modular Toolkit for Robot Kinematic Optimization
-| [PlaCo](https://github.com/Rhoban/placo.git) | Task-space inverse kinematics and dynamics for whole-body control tasks
+| [mink](https://github.com/kevinzakka/mink) | Python inverse kinematics based on MuJoCo.
+| [pyroki](https://github.com/chungmin99/pyroki) | A Modular Toolkit for Robot Kinematic Optimization.
+| [PlaCo](https://github.com/Rhoban/placo.git) | Task-space inverse kinematics and dynamics for whole-body control tasks.
 | [cuRobo](https://github.com/NVlabs/curobo) | A CUDA accelerated library containing a suite of robotics algorithms (FK, IK, TO).
-| [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives
+| [pinocchio](https://github.com/stack-of-tasks/pinocchio) | Rigid Body Dynamics algorithms and their analytical derivatives.
+| [se3_trajopt](https://github.com/upatras-lar/se3_trajopt) | Trajectory Optimization on the SE(3) Tangent Space. |
+
+### Simulator & Models
+| Project | Description |
+|--------|------- |
 | [MuJoCo](https://github.com/google-deepmind/mujoco.git) | Multi-Joint dynamics with Contact. A general purpose physics simulator.
 | [mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie.git) | A collection of high-quality models for the MuJoCo physics engine, curated by Google DeepMind.
 
-### Dataset
+### Dataset & Models
 | Project | Description |
 |--------|------- |
 | [KungFuAthleteBot](https://github.com/NPCLEI/KungFuAthleteBot.git) | Athletes’ daily martial arts training videos processed using GVHMR.
+| [BONES-SEED](https://huggingface.co/datasets/bones-studio/seed) | BONES-SEED (Skeletal Everyday Embodiment Dataset) is an open dataset of 142,220 annotated human motion animations for humanoid robotics. It provides motion capture data in SOMA and Unitree G1 formats, with natural language descriptions, temporal segmentation, and detailed skeletal metadata.
+| [SOMA-X](https://github.com/NVlabs/SOMA-X.git) | A canonical body topology and rig that acts as a universal pivot for all supported parametric human body models.
 
----
-
-## 📦 Project List
+### Motion Generation, Retargeting, Editing
+| Project | Description |
+|--------|------- |
+| [GMR](https://github.com/YanjieZe/GMR) | Retarget human motions into diverse humanoid robots in real time on CPU.
+| [SOMA Retargeter](https://github.com/NVIDIA/soma-retargeter.git) | SOMA BVH to humanoid robot motion retargeting library built with Newton and NVIDIA Warp.
+| [Kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/) | A kinematic motion diffusion model trained on large-scale optical mocap data. It is controlled through text and constraints to generate high-quality 3D human and robot motions.
+| [GEM-X](https://github.com/NVlabs/GEM-X.git) | Monocular whole-body 3D human pose estimation using the SOMA body model.
 
 ### RL
 | Project | Tasks | Robots | Training simulator | Deploy | Description |
@@ -64,15 +73,15 @@ for students and researchers working on legged locomotion and related areas.
 | [Stage-Wise CMORL](https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main) | Acrobatics (Flip, Stand) | Quadruped (Go1) | IsaacGym |  | Learning challenge acrobatic maneuvers for quadrupeds |
 | [My_unitree_go2_gym](https://github.com/yusongmin1/My_unitree_go2_gym.git) | Locomotion (Trot, Hop), Acrobatics (~~Flip~~, Stand) | Quadruped (Go2) | IsaacGym | Mujoco | |
 | [TWIST2](https://github.com/amazon-far/TWIST2) | Teleoperation | Humanoid (G1) | IsaacGym | Mujoco HW | Teleoperated Whole-Body Imitation System |
+| [SONIC](https://nvlabs.github.io/GEAR-SONIC/) | Mimic | Humanoid (G1) |  | HW | Supersizing Motion Tracking for Natural Humanoid Whole-Body Control |
 | [OmniXtreme](https://extreme-humanoid.github.io/) | Mimic | Humanoid (G1) |  | HW | A unified policy framework for high-dynamic humanoid motion tracking |
 
-### Optimization
+### MPC
 | Project | Tasks | Robots | Deploy | Description |
 |--------|-------|------|------|-------------|
 | [OCS2](https://github.com/leggedrobotics/ocs2/tree/ros2) | Locomotion | Quadruped (Anymal) | Raisim | Optimal Control for Switched Systems |
 | [MuJoCo MPC](https://github.com/google-deepmind/mujoco_mpc) | Locomotion & Acrobatics | Humanoid & Quadruped | Mujoco | An interactive application and software framework for real-time predictive control with MuJoCo, developed by Google DeepMind |
 | [DIAL-MPC](https://github.com/LeCAR-Lab/dial-mpc) | Locomotion & Acrobatics | Quadruped (go2) |  |  A novel sampling-based MPC framework for legged robot full-order torque-level control with both precision and agility in a training-free manner. |
-| [se3_trajopt](https://github.com/upatras-lar/se3_trajopt) | Locomotion & Acrobatics | Humanoid & Quadruped (go2) |  |  Trajectory Optimization on the SE(3) Tangent Space. |
 | [Quadruped-PyMPC](https://github.com/iit-DLSLab/Quadruped-PyMPC/tree/main) | Locomotion | Quadruped | Mujoco | Model Predictive Control for Quadrupedal Robots | A model predictive controller for quadruped robots based on the single rigid body model and written in python. Gradient-based (acados) or Sampling-based (jax) |
 | [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software) | Locomotion | Quadruped (MIT Cheetah) | custom | Software for the MIT Cheetah robot, including control and simulation tools. |
 
