@@ -311,7 +311,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
             - [Homepage](https://shieldkeke.github.io/) 
             - Notable Works:
-               - Learning Human-Like Badminton Skills for Humanoid Robots.[[cite]](https://astrorix.github.io/LHBS/).
+               - Learning Human-Like Badminton Skills for Humanoid Robots.[[cite]](https://astrorix.github.io/LHBS/)
 
             </details>
 
@@ -321,7 +321,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
             - [LinkedIn](https://www.linkedin.com/in/zeren-luo-4077051a6/) 
             - Notable Works:
-               - MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces. [[Video]](https://www.youtube.com/watch?v=80Zg2vUkM7A).
+               - MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces. [[video]](https://www.youtube.com/watch?v=80Zg2vUkM7A)
 
             </details>
 
