@@ -151,6 +151,34 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
    <!--  -->
    - <details>
+      <summary><strong>Guanya Shi — CMU</strong></summary>
+
+      - Research Interests: 
+         AI, robotics, and control.
+
+      - [Homepage](https://www.gshi.me/) | [Google Scholar](https://scholar.google.com/citations?user=joR1Z4UAAAAJ&hl=en&oi=ao)
+
+      - PhD:
+         <!--  -->
+         - <details>
+            <summary><strong>Yanjie Ze (PhD) — Standford</strong></summary>
+
+            - Research Interests: 
+               General intelligent humanoid robots.
+
+            - [Homepage](https://yanjieze.com/) | [Google Scholar](https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao)
+
+            - Notable Works:
+               - [TWIST2](https://github.com/amazon-far/TWIST2): Scalable, Portable, and Holistic Humanoid Data Collection System.
+               - [TWIST](https://github.com/YanjieZe/TWIST): TWIST: Teleoperated Whole-Body Imitation System.
+               - [GMR](https://github.com/YanjieZe/GMR): Retarget human motions into diverse humanoid robots in real time on CPU.
+
+            </details>
+
+      </details>
+
+   <!--  -->
+   - <details>
       <summary><strong>Xue Bin (Jason) Peng — SFU</strong></summary>
 
       - Research Interests: 
@@ -324,6 +352,18 @@ Entries are intended for **research discovery and reference**, not ranking or ev
                - MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces. [[video]](https://www.youtube.com/watch?v=80Zg2vUkM7A)
 
             </details>
+
+      </details>
+
+   <!--  -->
+   - <details>
+      <summary><strong>Zhongyu Li — CUHK</strong></summary>
+
+      - [Homepage](https://zyliatzju.github.io/) 
+      | [X](https://x.com/ZhongyuLi4)
+
+      - Research Interests:
+         Control, optimization, motion planning, reinforcement learning, imitation learning, and multi-agent interaction.
 
       </details>
 
