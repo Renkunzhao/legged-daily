@@ -43,9 +43,10 @@ for students and researchers working on legged locomotion and related areas.
 | [se3_trajopt](https://github.com/upatras-lar/se3_trajopt) | Trajectory Optimization on the SE(3) Tangent Space. |
 
 ### Simulator & Models
+[Physics Simulation Stack: Core Concepts and Roles](https://renkunzhao.github.io/present/slides/meeting/#/5)
+
 | Project | Description |
 |--------|------- |
-| [MuJoCo](https://github.com/google-deepmind/mujoco.git) | Multi-Joint dynamics with Contact. A general purpose physics simulator.
 | [mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie.git) | A collection of high-quality models for the MuJoCo physics engine, curated by Google DeepMind.
 
 ### Dataset & Models
@@ -423,6 +424,8 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 - Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics. [[cite]](https://sites.google.com/view/roboticworldmodel) [[code]](https://github.com/leggedrobotics/robotic_world_model.git)
 
 - Uncertainty-Aware Robotic World Model Makes Offline Model-Based Reinforcement Learning Work on Real Robots. [[cite]](https://sites.google.com/view/uncertainty-aware-rwm) [[code]](https://github.dev/Renkunzhao/legged-robotics-lab)
+
+- Neural Robot Dynamics. [[cite]](https://neural-robot-dynamics.github.io/)
 
 - [prescyent](https://github.com/hucebot/prescyent): Data-driven trajectory prediction library (python).
 
