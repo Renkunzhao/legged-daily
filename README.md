@@ -184,6 +184,18 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
             </details>
 
+         <!--  -->
+         - <details>
+            <summary><strong>Yuanhang Zhang (Ms)</strong></summary>
+
+            - [Homepage](https://yuanhangz.com/) | [Google Scholar](https://scholar.google.com/citations?user=6YPgr80AAAAJ&hl=en&oi=ao)
+
+            - Notable Works:
+               - [RPL](https://rpl-humanoid.github.io/): Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains.
+               - [FALCON](https://lecar-lab.github.io/falcon-humanoid/): Learning Force-Adaptive Humanoid Loco-Manipulation.
+
+            </details>
+
       </details>
 
    <!--  -->
