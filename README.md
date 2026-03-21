@@ -247,6 +247,17 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
    <!--  -->
    - <details>
+      <summary><strong>He Wang — PKU</strong></summary>
+
+      - Research Interests: 
+         3D visual perception and robotics.
+
+      - [Homepage](https://hughw19.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=roCAWkoAAAAJ&hl=en) | [X](https://x.com/HughWang19)
+
+      </details>
+
+   <!--  -->
+   - <details>
       <summary><strong>Li Yi — THU</strong></summary>
 
       - Research Interests: 
@@ -267,8 +278,16 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
             </details>
 
-      - Notable Works:
-         - [Humanoid-GPT](https://qizekun.github.io/humanoid-gpt/): A GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control.
+         <!--  -->
+         - <details>
+            <summary><strong>Zekun Qi (PhD)</strong></summary>
+
+            - [Homepage](https://qizekun.github.io/)
+
+            - Notable Works:
+               - [Humanoid-GPT](https://qizekun.github.io/humanoid-gpt/): A GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control.
+
+            </details>
 
       </details>
 
