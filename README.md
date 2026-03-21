@@ -143,7 +143,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - PhD:
          <!--  -->
          - <details>
-            <summary><strong>Yanjie Ze (PhD) — Standford</strong></summary>
+            <summary><strong>Yanjie Ze (PhD)</strong></summary>
 
             - Research Interests: 
                General intelligent humanoid robots.
@@ -171,19 +171,67 @@ Entries are intended for **research discovery and reference**, not ranking or ev
       - PhD:
          <!--  -->
          - <details>
-            <summary><strong>Yanjie Ze (PhD) — Standford</strong></summary>
+            <summary><strong>Tairan He (PhD)</strong></summary>
 
             - Research Interests: 
-               General intelligent humanoid robots.
+               Robotics, large-scale machine learning, and general-purpose loco-manipulation.
 
-            - [Homepage](https://yanjieze.com/) | [Google Scholar](https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao)
+            - [Homepage](https://tairanhe.com/) | [Google Scholar](https://scholar.google.com/citations?user=TVWH2U8AAAAJ)
 
             - Notable Works:
-               - [TWIST2](https://github.com/amazon-far/TWIST2): Scalable, Portable, and Holistic Humanoid Data Collection System.
-               - [TWIST](https://github.com/YanjieZe/TWIST): TWIST: Teleoperated Whole-Body Imitation System.
-               - [GMR](https://github.com/YanjieZe/GMR): Retarget human motions into diverse humanoid robots in real time on CPU.
+               - [VIRAL](https://viral-humanoid.github.io/): Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation.
+               - [ASAP](https://agile.human2humanoid.com/): Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills.
 
             </details>
+
+      </details>
+
+   <!--  -->
+   - <details>
+      <summary><strong>Xiaolong Wang — UC San Diego</strong></summary>
+
+      - Research Interests: 
+         Representation learning through videos and physical robotic interaction data.
+
+      - [Homepage](https://xiaolonw.github.io/index.html) | [Google Scholar](https://scholar.google.com/citations?user=Y8O9N_0AAAAJ&hl=en)
+
+      - PhD:
+         <!--  -->
+         - <details>
+            <summary><strong>Zixuan (Eric) Chen (PhD)</strong></summary>
+
+            - Research Interests: 
+               General intelligent humanoid robots, including robust locomotion and general manipulation.
+
+            - [Homepage](https://zixuan417.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en)
+
+            - Notable Works:
+               - [GMT](https://github.com/zixuan417/humanoid-general-motion-tracking): General Motion Tracking for Humanoid Whole-Body Control.
+
+            </details>  
+
+         <!--  -->
+         - <details>
+            <summary><strong>Xuxin Cheng (PhD)</strong></summary>
+
+            - [Homepage](https://xuxin.ai/) | [Google Scholar](https://scholar.google.com/citations?hl=en&user=Z8vhOxYAAAAJ&view_op=list_works)
+
+            - Notable Works:
+               - [ExBody](https://expressive-humanoid.github.io/): Expressive Whole-Body Control for Humanoid Robots.
+               - [Extreme Parkour with Legged Robots](https://extreme-parkour.github.io/).
+
+            </details>  
+
+         <!--  -->
+         - <details>
+            <summary><strong>Mazeyu Ji (Master)</strong></summary>
+
+            - [Homepage](https://jimazeyu.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=j1zLfKwAAAAJ&hl=en)
+
+            - Notable Works:
+               - [ExBody2](https://exbody2.github.io/): Advanced expressive humanoid whole-body control.
+
+            </details>  
 
       </details>
 
@@ -200,20 +248,6 @@ Entries are intended for **research discovery and reference**, not ranking or ev
          - [MimicKit](https://github.com/xbpeng/MimicKit): A framework for imitation learning of physics-based character skills using reinforcement learning.
 
       </details>
-
-   <!--  -->
-   - <details>
-      <summary><strong>Zixuan (Eric) Chen (PhD) — UCSD</strong></summary>
-
-      - Research Interests: 
-         General intelligent humanoid robots, including robust locomotion and general manipulation.
-
-      - [Homepage](https://zixuan417.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en)
-
-      - Notable Works:
-         - [GMT](https://github.com/zixuan417/humanoid-general-motion-tracking): General Motion Tracking for Humanoid Whole-Body Control.
-
-      </details>  
 
 </details>
 
@@ -390,6 +424,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
       - [Homepage](https://zyliatzju.github.io/) 
       | [X](https://x.com/ZhongyuLi4)
+      | [Department](https://www4.mae.cuhk.edu.hk/peoples/li-zhongyu/)
 
       - Research Interests:
          Control, optimization, motion planning, reinforcement learning, imitation learning, and multi-agent interaction.
