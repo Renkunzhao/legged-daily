@@ -186,6 +186,17 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
          <!--  -->
          - <details>
+            <summary><strong>Cunxi (Jimmy) Dai (PhD)</strong></summary>
+
+            - Research Interests: 
+               Robotics, loco-manipulation.
+
+            - [Homepage](https://cunxid.github.io/) | [Google Scholar](https://scholar.google.com/citations?user=nJkhpJ0AAAAJ&hl=en&oi=ao)
+
+            </details>
+
+         <!--  -->
+         - <details>
             <summary><strong>Yuanhang Zhang (Ms)</strong></summary>
 
             - [Homepage](https://yuanhangz.com/) | [Google Scholar](https://scholar.google.com/citations?user=6YPgr80AAAAJ&hl=en&oi=ao)
@@ -470,6 +481,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 ## 📚 Paper Lists
 
+<!--  -->
 <details>
 <summary><strong>Basic</strong></summary>
 
@@ -481,19 +493,29 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 </details>
 
+<!--  -->
 <details>
-
 <summary><strong>Learning-based Simulation</strong></summary>
 
-- [A review of learning-based dynamics models for robotic manipulation](https://www.science.org/doi/epdf/10.1126/scirobotics.adt1497)
+- A review of learning-based dynamics models for robotic manipulation.[[pdf]](https://www.science.org/doi/epdf/10.1126/scirobotics.adt1497)
 
-- Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics. [[cite]](https://sites.google.com/view/roboticworldmodel) [[code]](https://github.com/leggedrobotics/robotic_world_model.git)
+- Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics. [[cite]](https://sites.google.com/view/roboticworldmodel) [[code]](https://github.com/leggedrobotics/robotic_world_model.git) 
 
 - Uncertainty-Aware Robotic World Model Makes Offline Model-Based Reinforcement Learning Work on Real Robots. [[cite]](https://sites.google.com/view/uncertainty-aware-rwm) [[code]](https://github.dev/Renkunzhao/legged-robotics-lab)
 
 - Neural Robot Dynamics. [[cite]](https://neural-robot-dynamics.github.io/)
 
 - [prescyent](https://github.com/hucebot/prescyent): Data-driven trajectory prediction library (python).
+
+</details>
+
+<!--  -->
+<details>
+<summary><strong>Dexterous Manipulation</strong></summary>
+
+- SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation. [[cite]](https://simtoolreal.github.io/) [[pdf]](https://arxiv.org/pdf/2602.16863) [[code]](https://github.com/tylerlum/simtoolreal) 
+
+- TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment. [[cite]](https://yswi.github.io/tactalign/) [[pdf]](https://arxiv.org/pdf/2602.13579)  
 
 </details>
 
