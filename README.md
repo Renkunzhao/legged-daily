@@ -435,7 +435,7 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
             - [LinkedIn](https://www.linkedin.com/in/zeren-luo-4077051a6/) 
             - Notable Works:
-               - MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces. [[video]](https://www.youtube.com/watch?v=80Zg2vUkM7A)
+               - MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces. [[pdf]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11302803) [[video]](https://www.youtube.com/watch?v=80Zg2vUkM7A)
 
             </details>
 
