@@ -47,6 +47,8 @@ for students and researchers working on legged locomotion and related areas.
 
 | Project | Description |
 |--------|------- |
+| [sofa](https://github.com/sofa-framework/sofa) | Real-time multi-physics simulation with an emphasis on medical simulation.
+| [chrono](https://github.com/projectchrono/chrono) | High-performance C++ library for multiphysics and multibody dynamics simulations.
 | [mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie.git) | A collection of high-quality models for the MuJoCo physics engine, curated by Google DeepMind.
 
 ### Dataset & Models
@@ -505,8 +507,6 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 - Neural Robot Dynamics. [[cite]](https://neural-robot-dynamics.github.io/)
 
-- [prescyent](https://github.com/hucebot/prescyent): Data-driven trajectory prediction library (python).
-
 </details>
 
 <!--  -->
@@ -519,8 +519,17 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 </details>
 
+<!--  -->
 <details>
-<summary><strong>DAPC</strong></summary>
+<summary><strong> Contact Modeling </strong></summary>
+
+- Learning quadrupedal locomotion ondeformable terrain. [[pdf]](https://www.science.org/doi/epdf/10.1126/scirobotics.ade2256)
+
+</details>
+
+<!--  -->
+<details>
+<summary><strong>Data-driven Optimization</strong></summary>
 
 - [Learning quadrupedal locomotion on deformable terrain](https://www.science.org/doi/pdf/10.1126/scirobotics.ade2256)
 
@@ -533,6 +542,8 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 - [Toward a Data-Driven Template Model for Quadrupedal Locomotion](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9799758)
 
 - [Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning](https://aiche.onlinelibrary.wiley.com/doi/pdf/10.1002/aic.18644)
+
+- [prescyent](https://github.com/hucebot/prescyent): Data-driven trajectory prediction library (python).
 
 </details>
 
