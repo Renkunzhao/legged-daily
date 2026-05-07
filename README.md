@@ -521,9 +521,11 @@ Entries are intended for **research discovery and reference**, not ranking or ev
 
 <!--  -->
 <details>
-<summary><strong> Contact Modeling </strong></summary>
+<summary><strong> Trampoline </strong></summary>
 
-- Learning quadrupedal locomotion ondeformable terrain. [[pdf]](https://www.science.org/doi/epdf/10.1126/scirobotics.ade2256)
+- Learning quadrupedal locomotion on deformable terrain. [[pdf]](https://www.science.org/doi/epdf/10.1126/scirobotics.ade2256)
+
+- RMA: Rapid Motor Adaptation for Legged Robots. [[pdf]](https://arxiv.org/pdf/2107.04034)
 
 </details>
 
