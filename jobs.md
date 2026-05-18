@@ -2,14 +2,14 @@
 
 > Dynamic list of active and recent academic or industry opportunities relevant to legged robotics.
 
-This draft is the initial opportunity file for the repository split.
-Unlike `papers.md` or `repos.md`, this file should remain **dynamic** and should not try to preserve every old opening forever.
+This file is intentionally **dynamic**.
+It should surface roles that are still actionable or worth monitoring, not preserve every old opening forever.
 
 ---
 
 ## How to Use This File
 
-Use this file to track opportunities that are still actionable or recently relevant, including:
+Use this file to track opportunities such as:
 - PhD openings
 - RA positions
 - internships
@@ -17,60 +17,77 @@ Use this file to track opportunities that are still actionable or recently relev
 - research engineer roles
 - robotics company opportunities
 
-This file should prefer:
+Prefer:
 - active openings
 - recent hiring signals
 - official sources
 
-Expired postings should be removed or clearly marked and later cleaned out.
-
 ---
 
-## Recommended Entry Format
+<details>
+<summary><strong>Academic Opportunities</strong></summary>
 
-### Institution / Company / Lab / Team
-- Type: PhD / RA / Internship / Research Engineer / Postdoc
-- Location: ...
-- Source: official website / careers page / X / LinkedIn / lab page
-- Deadline: YYYY-MM-DD / rolling / unknown
-- Topics: locomotion / humanoid / quadruped / RL / MPC / perception / robotics systems / manipulation
-- Status: active / watching / expired
-- Notes: optional comments on fit, relevance, or context
+_Currently no durable academic opening has been added beyond watchlist status._
 
----
+</details>
 
-## Suggested Organization
+<details>
+<summary><strong>Industry Opportunities</strong></summary>
 
-To keep the file readable on GitHub, use lightweight sections such as:
-- Academic Opportunities
-- Industry Opportunities
-- Watching / Early Signals
+### NVIDIA GEAR
+- Type: Research Scientist
+- Location: Santa Clara, CA / US Remote
+- Source: NVIDIA careers
+- Deadline: unknown
+- Topics: humanoid foundation models / embodied agents / robot learning / generative models
+- Status: active
+- Notes: PhD new-grad 2026 role focused on humanoid robot foundation models and embodied-agent systems around Project GR00T.
 
-If the file grows significantly, it can later be reorganized by region, type, or source.
+### Amazon Personal Robotics Group
+- Type: Research Scientist II Intern / Co-op
+- Location: multiple locations
+- Source: Amazon.jobs
+- Deadline: rolling
+- Topics: locomotion / controls / reinforcement learning / perception / planning / HRI
+- Status: active
+- Notes: 2026 PhD intern and co-op pipeline with explicit locomotion relevance.
 
----
+### Amazon Frontier AI & Robotics
+- Type: Advanced Robotics Controls Engineer
+- Location: San Francisco, CA
+- Source: Amazon.jobs
+- Deadline: unknown
+- Topics: humanoid controls / actuation / low-level control / sensor integration / IK
+- Status: active
+- Notes: High-DOF humanoid controls role with clear relevance to embodied robotics hardware and control-stack work.
 
-## Seed Watchlist Categories
+### Amazon RIVR
+- Type: Robotics Field Engineer
+- Location: Austin, TX
+- Source: Lever / official company hiring page
+- Deadline: unknown
+- Topics: wheeled-legged robots / deployment / ROS 2 / field robotics
+- Status: active
+- Notes: Useful applied legged-mobility signal after the March 2026 Amazon acquisition of RIVR.
 
-### Academic Opportunities
-Track labs, professors, and universities that regularly publish:
-- PhD openings
-- RA positions
-- postdoc roles
-- project-funded research positions
+</details>
 
-### Industry Opportunities
-Track robotics companies and teams relevant to legged robotics, including examples such as:
-- NVIDIA GEAR Lab
-- Amazon
+<details>
+<summary><strong>Watching / Early Signals</strong></summary>
+
 - Unitree
-- other robotics companies, labs, and applied research groups added over time
+  - Status: watching
+  - Notes: Continue checking official product and hiring channels for humanoid and quadruped development roles.
 
-### Watching / Early Signals
-Use this section for:
-- soft signals from official social accounts
-- early recruiting hints from labs or companies
-- repeated mentions that may later become formal openings
+- NVIDIA GEAR
+  - Status: watching
+  - Notes: Continue checking for additional research engineer and systems roles tied to Project GR00T and humanoid deployment.
+
+- Amazon Robotics / FAR / Personal Robotics
+  - Status: watching
+  - Notes: Continue checking for controls, locomotion, embodied-AI, and deployment roles.
+
+</details>
 
 ---
 
