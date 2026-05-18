@@ -2,26 +2,25 @@
 
 > Long-term curated paper list for legged robotics.
 
-This draft is the initial long-term paper file for the repository split.
-Unlike `legged-daily/YYYY-MM-DD.md`, this file is meant for **persistent retrieval**, not daily triage.
-It now includes the current paper-related content that already exists in the source `README.md`.
+This file is for **persistent retrieval**, not daily triage.
+Use it for papers that remain useful after the day they were discovered.
 
 ---
 
 ## How to Use This File
 
-Use this file for papers that are worth preserving beyond a single daily update.
 Good candidates include:
 - representative papers in a subtopic
 - papers that introduce strong methods, datasets, benchmarks, or systems
-- papers repeatedly connected to new repos, labs, or coauthor networks
+- papers that repeatedly connect to new repos, labs, or coauthor networks
 - papers that help orient future reading
 
 Do **not** store daily-only importance labels here.
 
 ---
 
-## Basics
+<details>
+<summary><strong>Basics</strong></summary>
 
 ### Rigid Body Dynamics Algorithms
 - Link: resources/books/Rigid%20Body%20Dynamics%20Algorithms.pdf
@@ -41,9 +40,10 @@ Do **not** store daily-only importance labels here.
 - Topics: robot dynamics / fundamentals
 - Summary: ETH lecture notes on robot dynamics.
 
----
+</details>
 
-## Learning-based Simulation
+<details>
+<summary><strong>Learning-based Simulation</strong></summary>
 
 ### A review of learning-based dynamics models for robotic manipulation
 - Link: https://www.science.org/doi/epdf/10.1126/scirobotics.adt1497
@@ -56,14 +56,13 @@ Do **not** store daily-only importance labels here.
 - Source: project page
 - Topics: world model / simulation / policy optimization
 - Summary: Neural network simulator for robust policy optimization in robotics.
-- Notes: Code link in current README: https://github.com/leggedrobotics/robotic_world_model.git
+- Notes: Code link in the original README points to https://github.com/leggedrobotics/robotic_world_model.git.
 
 ### Uncertainty-Aware Robotic World Model Makes Offline Model-Based Reinforcement Learning Work on Real Robots
 - Link: https://sites.google.com/view/uncertainty-aware-rwm
 - Source: project page
 - Topics: world model / offline RL / model-based reinforcement learning
 - Summary: Uncertainty-aware robotic world model for offline model-based RL on real robots.
-- Notes: Current README also links a GitHub code reference.
 
 ### Neural Robot Dynamics
 - Link: https://neural-robot-dynamics.github.io/
@@ -71,34 +70,30 @@ Do **not** store daily-only importance labels here.
 - Topics: robot dynamics / learned dynamics
 - Summary: Project focused on neural robot dynamics.
 
----
+</details>
 
-## Dexterous Manipulation
+<details>
+<summary><strong>Humanoid Locomotion</strong></summary>
 
-### SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation
-- Link: https://simtoolreal.github.io/
-- Source: project page
-- Topics: dexterous manipulation / sim-to-real / policy learning
-- Summary: Object-centric policy for zero-shot dexterous tool manipulation.
-- Notes: PDF: https://arxiv.org/pdf/2602.16863 and code: https://github.com/tylerlum/simtoolreal
+### Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking
+- Link: https://arxiv.org/abs/2604.17335
+- Source: arXiv
+- Date: 2026-04-19
+- Authors: Zewei Zhang, Kehan Wen, Michael Xu, Junzhe He, Chenhao Li, Takahiro Miki, Clemens Schwarke, Chong Zhang, Xue Bin Peng, Marco Hutter
+- Topics: humanoid / locomotion / whole-body control / robot learning / perception / sim-to-real
+- Summary: Terrain-aware whole-body humanoid locomotion framework that combines diffusion-based motion generation with RL motion tracking and demonstrates hardware traversal on Unitree G1.
+- Notes: Strong ETH / RSL signal and a good anchor for current whole-body humanoid locomotion work.
 
-### TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment
-- Link: https://yswi.github.io/tactalign/
-- Source: project page
-- Topics: dexterous manipulation / tactile alignment / policy transfer
-- Summary: Human-to-robot policy transfer through tactile alignment.
-- Notes: PDF: https://arxiv.org/pdf/2602.13579
+</details>
 
----
-
-## Trampoline / Deformable Terrain
+<details>
+<summary><strong>Quadruped Locomotion</strong></summary>
 
 ### Learning quadrupedal locomotion on deformable terrain
 - Link: https://www.science.org/doi/pdf/10.1126/scirobotics.ade2256
 - Source: Science Robotics
 - Topics: quadruped / deformable terrain / locomotion / adaptation
-- Summary: Learning quadrupedal locomotion on deformable terrain.
-- Notes: Also described in the source README under data-driven optimization with method and result notes.
+- Summary: Learning-based quadruped locomotion on deformable terrain with successful transfer emphasis.
 
 ### RMA: Rapid Motor Adaptation for Legged Robots
 - Link: https://arxiv.org/pdf/2107.04034
@@ -106,16 +101,19 @@ Do **not** store daily-only importance labels here.
 - Topics: locomotion / adaptation / legged robots
 - Summary: Rapid motor adaptation for legged robots.
 
----
+### Evaluation of an Actuated Spine in Agile Quadruped Locomotion
+- Link: https://arxiv.org/abs/2605.07988
+- Source: arXiv
+- Date: 2026-05-08
+- Authors: Nico Bohlinger, Piotr Kicki, Davide Tateo, Krzysztof Walas, Jan Peters
+- Topics: quadruped / locomotion / morphology / agile locomotion / simulation
+- Summary: Empirical study of how a 1-DOF actuated spine affects agile quadruped locomotion across high-speed running, stairs, slopes, hurdling, and crawling tasks.
+- Notes: Useful reference for morphology-aware locomotion design rather than controller-only comparison.
 
-## Data-driven Optimization
+</details>
 
-### Learning quadrupedal locomotion on deformable terrain
-- Link: https://www.science.org/doi/pdf/10.1126/scirobotics.ade2256
-- Source: Science Robotics
-- Topics: quadruped / deformable terrain / RL / adaptation
-- Summary: Trains a quadruped RL policy in simulation with a parameterized deformable-terrain contact model and broad terrain randomization.
-- Notes: Current README includes detailed method and result notes about recurrent inference of terrain properties and successful hardware transfer.
+<details>
+<summary><strong>Data-driven Optimization</strong></summary>
 
 ### Data-Enabled Predictive Control: In the Shallows of the DeePC
 - Link: https://arxiv.org/pdf/1811.05890
@@ -141,9 +139,66 @@ Do **not** store daily-only importance labels here.
 - Topics: data-driven control / trajectory prediction
 - Summary: Data-driven trajectory prediction library in Python.
 
----
+</details>
 
-## Surveys and Collections
+<details>
+<summary><strong>Dexterous Manipulation</strong></summary>
+
+### SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation
+- Link: https://simtoolreal.github.io/
+- Source: project page
+- Topics: dexterous manipulation / sim-to-real / policy learning
+- Summary: Object-centric policy for zero-shot dexterous tool manipulation.
+- Notes: PDF: https://arxiv.org/pdf/2602.16863 and code: https://github.com/tylerlum/simtoolreal.
+
+### TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment
+- Link: https://yswi.github.io/tactalign/
+- Source: project page
+- Topics: dexterous manipulation / tactile alignment / policy transfer
+- Summary: Human-to-robot policy transfer through tactile alignment.
+- Notes: PDF: https://arxiv.org/pdf/2602.13579.
+
+</details>
+
+<details>
+<summary><strong>Datasets and Benchmarks</strong></summary>
+
+### GrandTour: A Legged Robotics Dataset in the Wild for Multi-Modal Perception and State Estimation
+- Link: https://arxiv.org/abs/2602.18164
+- Source: arXiv
+- Date: 2026-02-20
+- Authors: Jonas Frey, Turcan Tuna, Frank Fu, Katharine Patterson, Tianao Xu, Maurice Fallon, Cesar Cadena, Marco Hutter
+- Topics: quadruped / dataset / perception / state estimation / navigation / SLAM
+- Summary: Large-scale multi-modal legged-robotics dataset collected with ANYmal-D across diverse indoor and outdoor environments with high-precision ground truth.
+- Notes: Especially relevant for perception, state estimation, and navigation work that needs real-world legged data.
+
+</details>
+
+<details>
+<summary><strong>Surveys and Reviews</strong></summary>
+
+### A Survey of Legged Robotics in Non-Inertial Environments: Past, Present, and Future
+- Link: https://arxiv.org/abs/2604.20990
+- Source: arXiv
+- Date: 2026-04-22
+- Authors: I-Chia Chang, Xinyan Huang, Tzu-Yuan Lin, Sangli Teng, Wenjing Li, Maani Ghaffari, Jingang Yi, Yan Gu
+- Topics: legged robots / locomotion / state estimation / control / dynamic environments
+- Summary: Survey of modeling, estimation, and control challenges for legged robots on moving, tilting, or accelerating support surfaces.
+- Notes: Good orientation entry for non-stationary-ground locomotion.
+
+### Learning Perceptive Legged Robot Locomotion in the Real World: A Systematic Review
+- Link: https://ieeexplore.ieee.org/document/11313692
+- Source: IEEE Robotics & Automation Magazine
+- Date: 2026-04-17
+- Authors: Irfan Tito Kurniawan, Wei Zhu, Dai Owaki, Mitsuhiro Hayashibe
+- Topics: perceptive locomotion / legged robots / learning / real-world deployment / review
+- Summary: Systematic review of learning-based perceptive legged locomotion, covering capabilities, methods for integrating perception, and open challenges.
+- Notes: Useful overview paper for situating new perception-for-locomotion work.
+
+</details>
+
+<details>
+<summary><strong>Surveys and Collections</strong></summary>
 
 ### many-quadrupeds
 - Link: https://github.com/beduffy/many-quadrupeds
@@ -151,20 +206,7 @@ Do **not** store daily-only importance labels here.
 - Topics: survey / collection / quadrupeds
 - Summary: Awesome-style collection of many quadruped-related resources.
 
----
-
-## Suggested Future Topic Organization
-
-As the file grows, it can be reorganized under stable headings such as:
-- Humanoids
-- Quadrupeds
-- RL
-- MPC / Model-based Control
-- Motion Tracking / Mimic
-- Perception / Navigation
-- Sim-to-real / Foundation Models
-
-The current draft keeps closer alignment with the existing README content so migration is easier to verify.
+</details>
 
 ---
 
