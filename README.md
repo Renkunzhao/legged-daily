@@ -23,6 +23,14 @@ This repository is intended to support **research discovery, orientation, and lo
 
 - [legged-daily/](legged-daily/) — dated daily updates and new findings
 
+## Templates
+
+- [templates/legged-daily-template.md](templates/legged-daily-template.md) — daily log template
+- [templates/papers-template.md](templates/papers-template.md) — paper master-list template
+- [templates/repos-template.md](templates/repos-template.md) — repository master-list template
+- [templates/labs-template.md](templates/labs-template.md) — lab and professor source-network template
+- [templates/jobs-template.md](templates/jobs-template.md) — jobs and opportunities template
+
 ---
 
 ## How This Repository Works
@@ -60,4 +68,4 @@ This repository focuses on legged robotics and nearby topics, including:
 ## Notes
 
 This file should remain lightweight.
-Detailed repository lists, researcher entries, and future paper or job collections should live in the split Markdown files rather than being kept here.
+Detailed repository lists, researcher entries, templates, and future paper or job collections should live in the dedicated Markdown files rather than being kept here.
