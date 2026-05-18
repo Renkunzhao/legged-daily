@@ -35,6 +35,78 @@ Suggested growth paths:
 - Key Topics: embodied AI / humanoid robotics / human motion modeling / reinforcement learning / imitation learning / physics simulation / sim-to-real
 - Notes: Existing README already includes Karen Liu as a strong seed entry. Good anchor for expanding the Stanford / embodied control network.
 
+#### Yanjie Ze
+- Institution: Stanford University
+- Region: North America
+- Homepage: https://yanjieze.com/
+- Google Scholar: https://scholar.google.com/citations?user=BO_b2O8AAAAJ&hl=zh-CN&oi=ao
+- Key Topics: humanoid robots / motion retargeting / teleoperation / whole-body imitation
+- Notes: Current README lists TWIST2, TWIST, and GMR under this Stanford branch.
+
+### Guanya Shi
+- Institution: Carnegie Mellon University
+- Region: North America
+- Homepage: https://www.gshi.me/
+- Google Scholar: https://scholar.google.com/citations?user=joR1Z4UAAAAJ&hl=en&oi=ao
+- Key Topics: AI / robotics / control
+- Notes: Current README includes multiple student entries and notable humanoid loco-manipulation work under this group.
+
+#### Tairan He
+- Institution: Carnegie Mellon University
+- Region: North America
+- Homepage: https://tairanhe.com/
+- Google Scholar: https://scholar.google.com/citations?user=TVWH2U8AAAAJ
+- Key Topics: robotics / large-scale machine learning / loco-manipulation
+- Notes: Current README lists VIRAL and ASAP under this entry.
+
+#### Cunxi (Jimmy) Dai
+- Institution: Carnegie Mellon University
+- Region: North America
+- Homepage: https://cunxid.github.io/
+- Google Scholar: https://scholar.google.com/citations?user=nJkhpJ0AAAAJ&hl=en&oi=ao
+- Key Topics: robotics / loco-manipulation
+- Notes: Existing student entry in the source README.
+
+#### Yuanhang Zhang
+- Institution: Carnegie Mellon University
+- Region: North America
+- Homepage: https://yuanhangz.com/
+- Google Scholar: https://scholar.google.com/citations?user=6YPgr80AAAAJ&hl=en&oi=ao
+- Key Topics: humanoid locomotion / perceptive locomotion / loco-manipulation
+- Notes: Current README lists RPL and FALCON under this entry.
+
+### Xiaolong Wang
+- Institution: University of California San Diego
+- Region: North America
+- Homepage: https://xiaolonw.github.io/index.html
+- Google Scholar: https://scholar.google.com/citations?user=Y8O9N_0AAAAJ&hl=en
+- Key Topics: representation learning / video learning / robotic interaction data
+- Notes: Current README includes multiple student entries under this group.
+
+#### Zixuan (Eric) Chen
+- Institution: University of California San Diego
+- Region: North America
+- Homepage: https://zixuan417.github.io/
+- Google Scholar: https://scholar.google.com/citations?user=lmsiq6oAAAAJ&hl=en
+- Key Topics: humanoid robots / robust locomotion / manipulation
+- Notes: Current README lists GMT under this entry.
+
+#### Xuxin Cheng
+- Institution: University of California San Diego
+- Region: North America
+- Homepage: https://xuxin.ai/
+- Google Scholar: https://scholar.google.com/citations?hl=en&user=Z8vhOxYAAAAJ&view_op=list_works
+- Key Topics: humanoid control / parkour / whole-body control
+- Notes: Current README lists ExBody and Extreme Parkour with Legged Robots under this entry.
+
+#### Mazeyu Ji
+- Institution: University of California San Diego
+- Region: North America
+- Homepage: https://jimazeyu.github.io/
+- Google Scholar: https://scholar.google.com/citations?user=j1zLfKwAAAAJ&hl=en
+- Key Topics: humanoid whole-body control
+- Notes: Current README lists ExBody2 under this entry.
+
 ### Xue Bin (Jason) Peng
 - Institution: Simon Fraser University
 - Region: North America
