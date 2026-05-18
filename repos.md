@@ -2,12 +2,13 @@
 
 > Long-term curated repository and toolkit list for legged robotics.
 
-This draft is a first split from the current monolithic `README.md`.
-It preserves the major repository-oriented sections while moving them into a dedicated file that is easier to browse on GitHub.
+This file keeps repositories that are worth revisiting over time.
+It is organized for fast browsing on GitHub and now follows the collapsible style used in the original README.
 
 ---
 
-## Websites and Viewers
+<details>
+<summary><strong>Websites and Viewers</strong></summary>
 
 ### motion_viewer
 - Link: https://renkunzhao.github.io/motion_viewer/
@@ -73,9 +74,10 @@ It preserves the major repository-oriented sections while moving them into a ded
 - Deploy: browser
 - Summary: Simulate and render MuJoCo models in the browser.
 
----
+</details>
 
-## Control, Kinematics, Dynamics, and Optimization
+<details>
+<summary><strong>Control, Kinematics, Dynamics, and Optimization</strong></summary>
 
 ### mink
 - Link: https://github.com/kevinzakka/mink
@@ -125,9 +127,10 @@ It preserves the major repository-oriented sections while moving them into a ded
 - Deploy: sim
 - Summary: Trajectory optimization on the SE(3) tangent space.
 
----
+</details>
 
-## Simulators and Models
+<details>
+<summary><strong>Simulators and Models</strong></summary>
 
 ### sofa
 - Link: https://github.com/sofa-framework/sofa
@@ -153,9 +156,10 @@ It preserves the major repository-oriented sections while moving them into a ded
 - Deploy: sim
 - Summary: A collection of high-quality MuJoCo models curated by Google DeepMind.
 
----
+</details>
 
-## Datasets and Models
+<details>
+<summary><strong>Datasets and Models</strong></summary>
 
 ### KungFuAthleteBot
 - Link: https://github.com/NPCLEI/KungFuAthleteBot.git
@@ -181,9 +185,19 @@ It preserves the major repository-oriented sections while moving them into a ded
 - Deploy: data
 - Summary: Canonical body topology and rig for supported parametric human body models.
 
----
+### grand_tour_dataset
+- Link: https://github.com/leggedrobotics/grand_tour_dataset
+- Category: dataset
+- Robot Type: quadruped
+- Simulator: none
+- Deploy: data
+- Summary: Official starter repository for the GrandTour legged-robotics dataset with Hugging Face examples, ROS1 examples, and Python utilities.
+- Notes: Companion tooling for the GrandTour dataset release from ETH RSL.
 
-## Motion Generation, Retargeting, and Editing
+</details>
+
+<details>
+<summary><strong>Motion Generation, Retargeting, and Editing</strong></summary>
 
 ### GMR
 - Link: https://github.com/YanjieZe/GMR
@@ -217,9 +231,10 @@ It preserves the major repository-oriented sections while moving them into a ded
 - Deploy: sim
 - Summary: Monocular whole-body 3D human pose estimation using the SOMA body model.
 
----
+</details>
 
-## Reinforcement Learning
+<details>
+<summary><strong>Reinforcement Learning</strong></summary>
 
 ### mjlab
 - Link: https://github.com/mujocolab/mjlab.git
@@ -293,9 +308,24 @@ It preserves the major repository-oriented sections while moving them into a ded
 - Deploy: hardware
 - Summary: Unified policy framework for high-dynamic humanoid motion tracking.
 
----
+</details>
 
-## MPC and Model-Based Control
+<details>
+<summary><strong>Humanoid Whole-Body Control</strong></summary>
+
+### GR00T-WholeBodyControl
+- Link: https://github.com/NVlabs/GR00T-WholeBodyControl
+- Category: control / toolkit
+- Robot Type: humanoid
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: sim / hardware
+- Summary: Unified NVIDIA GEAR platform for humanoid whole-body control, teleoperation, deployment, and SONIC-based training workflows.
+- Notes: Strong current reference for Unitree G1-oriented whole-body control and teleop-to-deployment workflows.
+
+</details>
+
+<details>
+<summary><strong>MPC and Model-Based Control</strong></summary>
 
 ### OCS2
 - Link: https://github.com/leggedrobotics/ocs2/tree/ros2
@@ -337,9 +367,12 @@ It preserves the major repository-oriented sections while moving them into a ded
 - Deploy: sim / hardware
 - Summary: Software stack for MIT Cheetah robots.
 
+</details>
+
 ---
 
-## Notes
-- This is a first structural split from the existing README, not a final cleaned master list.
-- Future cleanup can normalize category names, robot-type labels, and deployment metadata.
-- Future confirmed updates should continue in this file rather than expanding the top-level README again.
+## Maintenance Rules
+- Prefer repositories worth long-term reference.
+- Do not include daily-only importance scores here.
+- Keep entries short enough to skim comfortably on GitHub.
+- Normalize categories, robot labels, and deployment fields over time rather than expanding the top-level README again.
