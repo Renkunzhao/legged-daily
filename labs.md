@@ -7,23 +7,6 @@ The structure below follows the collapsible style of the original README so it s
 
 ---
 
-## How to Use This File
-
-Track entries here when they improve future discovery by making it easy to revisit:
-- who to watch
-- which public sources to monitor
-- what topics they are associated with
-- how they connect to nearby labs, coauthors, or repositories
-
-Good growth paths include:
-- coauthors on newly found papers
-- project pages
-- repository maintainers
-- advisor and lab affiliations
-- recurring authors in priority venues
-
----
-
 <details>
 <summary><strong>North America</strong></summary>
 
@@ -230,11 +213,3 @@ Good growth paths include:
   </details>
 
 </details>
-
----
-
-## Maintenance Rules
-- This file is a source network, not just a static lab directory.
-- If a field is unknown, omit it instead of writing placeholder text.
-- Add entries when they improve future discovery, even if some fields are still missing.
-- Keep entries easy to browse directly in GitHub Markdown preview.

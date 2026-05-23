@@ -1,8 +1,8 @@
 # Jobs
 
-> Dynamic list of active and recent academic or industry opportunities relevant to legged robotics.
+> Dynamic list of active or watchlisted academic and industry opportunities relevant to legged robotics.
 
-Use collapsible sections so academic and industry opportunities stay readable on GitHub and expired items can be removed cleanly.
+Use collapsible sections so academic and industry opportunities stay readable on GitHub and stale items can be removed cleanly.
 
 ---
 
@@ -59,14 +59,5 @@ Use collapsible sections in this style:
 - Source: official website / careers page / X / LinkedIn / lab page
 - Deadline: YYYY-MM-DD / rolling / unknown
 - Topics: locomotion / humanoid / quadruped / RL / MPC / perception / robotics systems / manipulation
-- Status: active / watching / expired
+- Status: active / watching
 - Notes: optional comments on fit, team relevance, or application context
-
----
-
-## Maintenance Rules
-- Use collapsible `<details>` sections for the major opportunity buckets.
-- This file is dynamic, not archival.
-- Remove or stop surfacing expired roles.
-- Track both academic and industry opportunities.
-- Keep entries concise and skimmable in GitHub Markdown preview.

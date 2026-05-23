@@ -2,21 +2,7 @@
 
 > Long-term curated paper list for legged robotics.
 
-This file is meant for **persistent retrieval**, not daily triage.
-Unlike `legged-daily/YYYY-MM-DD.md`, it should organize papers into collapsible topic sections that stay readable on GitHub.
-
----
-
-## How to Use This File
-
-Use this file for papers that are worth preserving beyond a single daily update.
-Good candidates include:
-- representative papers in a subtopic
-- papers that introduce strong methods, datasets, benchmarks, or systems
-- papers repeatedly connected to new repos, labs, or coauthor networks
-- papers that help orient future reading
-
-Do **not** store daily-only importance labels here.
+Organize papers into collapsible topic sections that stay readable on GitHub.
 
 ---
 
@@ -108,12 +94,3 @@ Use collapsible topic sections in this style:
   - Topics: ...
   - Summary: concise long-term description
   - Notes: optional retrieval notes, relation to nearby work, key ideas, or follow-up comments
-
----
-
-## Maintenance Rules
-- Use collapsible `<details>` sections for major topic groups.
-- Keep bullets concise enough for GitHub Markdown browsing.
-- Prefer curation over exhaustiveness.
-- When a paper is first discovered in a daily log, only move it here if it is worth long-term retrieval.
-- Use notes to preserve context that helps future search and review.

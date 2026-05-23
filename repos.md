@@ -368,11 +368,3 @@ It is organized for fast browsing on GitHub and now follows the collapsible styl
 - Summary: Software stack for MIT Cheetah robots.
 
 </details>
-
----
-
-## Maintenance Rules
-- Prefer repositories worth long-term reference.
-- Do not include daily-only importance scores here.
-- Keep entries short enough to skim comfortably on GitHub.
-- Normalize categories, robot labels, and deployment fields over time rather than expanding the top-level README again.

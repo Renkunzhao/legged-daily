@@ -7,18 +7,6 @@ Use it for papers that remain useful after the day they were discovered.
 
 ---
 
-## How to Use This File
-
-Good candidates include:
-- representative papers in a subtopic
-- papers that introduce strong methods, datasets, benchmarks, or systems
-- papers that repeatedly connect to new repos, labs, or coauthor networks
-- papers that help orient future reading
-
-Do **not** store daily-only importance labels here.
-
----
-
 <details>
 <summary><strong>Basics</strong></summary>
 
@@ -207,11 +195,3 @@ Do **not** store daily-only importance labels here.
 - Summary: Awesome-style collection of many quadruped-related resources.
 
 </details>
-
----
-
-## Maintenance Rules
-- Keep entries concise enough for GitHub Markdown browsing.
-- Prefer curation over exhaustiveness.
-- When a paper is first discovered in a daily log, only move it here if it is worth long-term retrieval.
-- Use notes to preserve the context that helps future search and review.

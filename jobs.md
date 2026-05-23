@@ -1,26 +1,9 @@
 # Jobs
 
-> Dynamic list of active and recent academic or industry opportunities relevant to legged robotics.
+> Dynamic list of active or watchlisted academic and industry opportunities relevant to legged robotics.
 
 This file is intentionally **dynamic**.
 It should surface roles that are still actionable or worth monitoring, not preserve every old opening forever.
-
----
-
-## How to Use This File
-
-Use this file to track opportunities such as:
-- PhD openings
-- RA positions
-- internships
-- postdocs
-- research engineer roles
-- robotics company opportunities
-
-Prefer:
-- active openings
-- recent hiring signals
-- official sources
 
 ---
 
@@ -88,12 +71,3 @@ _Currently no durable academic opening has been added beyond watchlist status._
   - Notes: Continue checking for controls, locomotion, embodied-AI, and deployment roles.
 
 </details>
-
----
-
-## Maintenance Rules
-- Prefer official sources over reposted summaries.
-- Remove or stop surfacing expired roles.
-- Keep entries concise and skimmable in GitHub Markdown preview.
-- Preserve only enough detail to help future search and action.
-- When a role first appears in a daily log, only move it here if it is still worth tracking as active or watchlisted.

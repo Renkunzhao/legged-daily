@@ -16,11 +16,6 @@
   Importance: ...
   Summary: ...
 
-### Rules for New Papers
-- Sort items by `Importance`, highest first.
-- Use `Importance` only in daily logs, not in `papers.md`.
-- Do not include `Suggested action` fields.
-
 ## New Repos
 - [Repo Name](URL)
   Topic: locomotion / humanoid / quadruped / RL / MPC / simulator / toolkit / dataset / retargeting / viewer
@@ -32,11 +27,6 @@
   Importance: ...
   Summary: ...
 
-### Rules for New Repos
-- Sort items by `Importance`, highest first.
-- Use `Importance` only in daily logs, not in `repos.md`.
-- Do not include `Suggested action` fields.
-
 ## Lab / Professor Signals
 - Name / Lab: ...
   Source: homepage / lab page / X / LinkedIn / GitHub / YouTube / arXiv / Google Scholar
@@ -45,11 +35,6 @@
 - Name / Lab: ...
   Source: ...
   Update: ...
-
-### Rules for Lab / Professor Signals
-- Do not add a separate `Why it matters` field.
-- Focus on new signals that help expand or refine the source network.
-- Use this section to surface new coauthors, collaborators, maintainers, affiliations, or public activity worth tracking.
 
 ## Job Signals
 - Institution / Company / Lab / Team: ...
@@ -63,13 +48,3 @@
   Source: ...
   Deadline: ...
   Summary: ...
-
-### Rules for Job Signals
-- Include academic and industry opportunities.
-- Prefer active and recent signals.
-- Keep this section useful for fast daily review.
-
-## Notes
-- Do not put proposed master-list updates inside this file.
-- Proposed edits for `papers.md`, `repos.md`, `labs.md`, and `jobs.md` should be shown separately in chat when needed.
-- Keep the whole file optimized for direct GitHub Markdown browsing.
