@@ -8,7 +8,32 @@
 <details>
 <summary><strong>学术机会</strong></summary>
 
-_目前除 watchlist 状态外，尚未加入持久学术 opening。_
+### EPFL Biorobotics Laboratory / Auke Ijspeert
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official website
+- Deadline: Fall 2026 opening；EPFL doctoral program deadlines 通常为 April 15 和 December 15
+- Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
+- Status: active
+- Notes: 官方页面列出 1 个 Postdoc 和 1 个 PhD opening，方向是用 humanoid robots 研究并利用 human locomotion neuromechanics，结合 numerical neuromechanical simulations、bio-inspired humanoid locomotion controllers 与 reinforcement learning。
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
+- Location: Zurich, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
+- Status: active
+- Notes: 与腿足和野外机器人相关的滚动研究与工程岗位。
+
+### HIER Lab / NC State University
+- Type: PhD / Postdoc
+- Location: Raleigh, NC, USA
+- Source: official lab page
+- Deadline: 2027 cycle / official admissions required
+- Topics: humanoid / whole-body control / hierarchical reinforcement learning / teleoperation / loco-manipulation
+- Status: watching
+- Notes: 预计 2027 年会有 hierarchical RL-based whole-body control 与 humanoid tele whole-body control 方向 PhD/Postdoc 机会。
 
 </details>
 

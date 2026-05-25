@@ -193,3 +193,78 @@
 - Summary: awesome-style 四足机器人相关资源集合。
 
 </details>
+
+---
+
+<details>
+<summary><strong>腿足状态估计与动力学</strong></summary>
+
+### PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots
+- Link: https://arxiv.org/abs/2605.17681
+- Source: arXiv / RSS 2026
+- Date: 2026-05-22
+- Authors: Jiarong Kang, Kunzhao Ren, Linxuan Wang, Jingbo Wang, Tao Pang, Xiaobin Xiong
+- Topics: legged robots / humanoid robots / state estimation / motion estimation / contact dynamics / inertial parameters
+- Summary: 基于 MAP 的运动估计方法，把运动学测量和执行器命令修正为动力学一致轨迹，同时估计腿足和人形机器人的接触力与惯性参数。
+- Notes: 适合继续跟踪其物理一致机器人数据重建、力/接触标注相关代码或数据释放。
+
+</details>
+
+---
+
+<details>
+<summary><strong>人形导航与移动操作</strong></summary>
+
+### Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments
+- Link: https://arxiv.org/abs/2605.21935
+- Source: arXiv / RSS 2026 / project page
+- Date: 2026-05-21
+- Authors: Peifeng Jiang, Hong Liu, Jin Jin, Wenshuai Wang, Xia Li
+- Topics: humanoid / navigation / semantic mapping / 3D Gaussian Splatting / dynamic environments / Unitree G1
+- Summary: MIF 结合 semantic 3D Gaussian Splatting、memory updates 和 task-driven geometry reconstruction，用于动态室内环境中 Unitree G1 稳健导航。
+- Notes: 具有真实办公室结果的 perception-aware humanoid navigation 强信号。
+
+### SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework
+- Link: https://arxiv.org/abs/2605.20373
+- Source: arXiv / project page
+- Date: 2026-05-19
+- Authors: Tianshu Wu, Xiangqi Kong, Yue Chen, Qize Yu, Hang Ye, Jia Li, Yizhou Wang, Hao Dong
+- Topics: humanoid / loco-manipulation / human video / imitation learning / reinforcement learning / sim-to-real
+- Summary: 将非结构化人类视频转成可部署 humanoid loco-manipulation skills 的框架，包含 interaction-prior extraction、physical refinement 和 hierarchical policy learning。
+- Notes: 对减少 humanoid loco-manipulation 中 reward design 与遥操作负担有参考价值。
+
+</details>
+
+---
+
+<details>
+<summary><strong>轮足与可变形机器人</strong></summary>
+
+### WiXus: A Wheeled-Legged Robot with Wire-Driven Environmental Utilizing to Integrate Mobility and Manipulation
+- Link: https://arxiv.org/abs/2605.20932
+- Source: arXiv / ICRA 2026 / project page
+- Date: 2026-05-20
+- Authors: Shintaro Inoue, Kento Kawaharazuka, Temma Suzuki, Sota Yuzaki, Kei Okada
+- Topics: wheeled-legged robot / mobility / manipulation / environmental wire actuation / hardware system
+- Summary: 使用环境钢索锚定的轮足硬件系统，让腿同时支持移动、操作和工具使用角色。
+- Notes: JSK 网络中值得关注的 mobility-manipulation integration 信号。
+
+### MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots
+- Link: https://arxiv.org/abs/2605.13058
+- Source: arXiv
+- Date: 2026-05-17
+- Authors: Wanming Yu, Xinshuo Yang, Wenxuan Wei, ZhuoJia Huang, Junzheng Wang
+- Topics: wheeled-legged robots / reinforcement learning / proprioceptive control / sim-to-real / fall recovery
+- Summary: 面向轮足机器人的统一本体感知多技能控制器，覆盖全向移动、高台攀爬和摔倒恢复。
+- Notes: Unitree Go2-W 真实实验使其成为实用 sim-to-real 控制参考。
+
+### X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation
+- Link: https://arxiv.org/abs/2604.21541
+- Source: arXiv
+- Date: 2026-04-28
+- Authors: Shengjie Wang, Hui Zhang, Zixuan Wu, Wenhao Yu, Guifeng Yuan, Guohui Tian, Wenhao Zhang, Junyao Gao, Weijia Liu, Zhennan Tang, Jing Peng, Weixia Liu, Wensheng Zhang, Qiang Huang
+- Topics: humanoid / wheeled-legged robot / transformable robot / whole-body control / reinforcement learning / manipulation
+- Summary: 可在人形与轮足模式之间切换的高自由度机器人，使用 RL 全身控制实现混合移动和操作。
+- Notes: 双模式人形移动方向的有用硬件系统参考。
+
+</details>

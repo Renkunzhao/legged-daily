@@ -193,3 +193,78 @@
 - Summary: Awesome-style collection of many quadruped-related resources.
 
 </details>
+
+---
+
+<details>
+<summary><strong>Legged State Estimation and Dynamics</strong></summary>
+
+### PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots
+- Link: https://arxiv.org/abs/2605.17681
+- Source: arXiv / RSS 2026
+- Date: 2026-05-22
+- Authors: Jiarong Kang, Kunzhao Ren, Linxuan Wang, Jingbo Wang, Tao Pang, Xiaobin Xiong
+- Topics: legged robots / humanoid robots / state estimation / motion estimation / contact dynamics / inertial parameters
+- Summary: MAP-based motion-estimation method that refines kinematics and actuator commands into dynamically consistent trajectories while estimating contact forces and inertial parameters for legged and humanoid robots.
+- Notes: Useful to track for physically consistent robot-data reconstruction and force/contact annotation.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Humanoid Navigation and Loco-Manipulation</strong></summary>
+
+### Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments
+- Link: https://arxiv.org/abs/2605.21935
+- Source: arXiv / RSS 2026 / project page
+- Date: 2026-05-21
+- Authors: Peifeng Jiang, Hong Liu, Jin Jin, Wenshuai Wang, Xia Li
+- Topics: humanoid / navigation / semantic mapping / 3D Gaussian Splatting / dynamic environments / Unitree G1
+- Summary: MIF combines semantic 3D Gaussian Splatting, memory updates, and task-driven geometry reconstruction for robust Unitree G1 navigation in dynamic indoor environments.
+- Notes: Strong perception-aware humanoid navigation signal with real-office results.
+
+### SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework
+- Link: https://arxiv.org/abs/2605.20373
+- Source: arXiv / project page
+- Date: 2026-05-19
+- Authors: Tianshu Wu, Xiangqi Kong, Yue Chen, Qize Yu, Hang Ye, Jia Li, Yizhou Wang, Hao Dong
+- Topics: humanoid / loco-manipulation / human video / imitation learning / reinforcement learning / sim-to-real
+- Summary: Framework that converts unstructured human videos into deployable humanoid loco-manipulation skills through interaction-prior extraction, physical refinement, and hierarchical policy learning.
+- Notes: Useful reference for reducing reward-design and teleoperation burden in humanoid loco-manipulation.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Wheeled-Legged and Transformable Robots</strong></summary>
+
+### WiXus: A Wheeled-Legged Robot with Wire-Driven Environmental Utilizing to Integrate Mobility and Manipulation
+- Link: https://arxiv.org/abs/2605.20932
+- Source: arXiv / ICRA 2026 / project page
+- Date: 2026-05-20
+- Authors: Shintaro Inoue, Kento Kawaharazuka, Temma Suzuki, Sota Yuzaki, Kei Okada
+- Topics: wheeled-legged robot / mobility / manipulation / environmental wire actuation / hardware system
+- Summary: Wheeled-legged hardware system that uses wire-driven environmental anchoring so legs can support mobility, manipulation, and tool-use roles.
+- Notes: Notable mobility-manipulation integration signal from the JSK network.
+
+### MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots
+- Link: https://arxiv.org/abs/2605.13058
+- Source: arXiv
+- Date: 2026-05-17
+- Authors: Wanming Yu, Xinshuo Yang, Wenxuan Wei, ZhuoJia Huang, Junzheng Wang
+- Topics: wheeled-legged robots / reinforcement learning / proprioceptive control / sim-to-real / fall recovery
+- Summary: Unified proprioceptive multi-skill controller for omnidirectional movement, high-platform climbing, and fall recovery on wheeled-legged robots.
+- Notes: Real Unitree Go2-W experiments make it a practical sim-to-real control reference.
+
+### X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation
+- Link: https://arxiv.org/abs/2604.21541
+- Source: arXiv
+- Date: 2026-04-28
+- Authors: Shengjie Wang, Hui Zhang, Zixuan Wu, Wenhao Yu, Guifeng Yuan, Guohui Tian, Wenhao Zhang, Junyao Gao, Weijia Liu, Zhennan Tang, Jing Peng, Weixia Liu, Wensheng Zhang, Qiang Huang
+- Topics: humanoid / wheeled-legged robot / transformable robot / whole-body control / reinforcement learning / manipulation
+- Summary: Transformable high-DoF robot that switches between humanoid and wheel-legged modes with RL-based whole-body control for hybrid locomotion and manipulation.
+- Notes: Useful hardware-system reference for dual-mode humanoid mobility.
+
+</details>

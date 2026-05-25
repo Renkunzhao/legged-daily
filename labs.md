@@ -197,3 +197,42 @@
   </details>
 
 </details>
+
+---
+
+<details>
+<summary><strong>Additional Source Signals</strong></summary>
+
+### HIER Lab — North Carolina State University
+- Institution: North Carolina State University
+- Homepage: https://hierlab.github.io/
+- Lab / Department: HIER Lab
+- Key Topics: humanoid / animaloid legged robots / loco-manipulation / whole-body control / teleoperation / safety-critical control / generative AI for motion
+- Notes: Active source for humanoid and animaloid robot intelligence; lab page reports student paper submissions and NVIDIA Academic Award support for humanoid research.
+
+### Peifeng Jiang et al. / MIF author network
+- Institution: Peking University Shenzhen Graduate School / Oxford Robotics Institute / ETH Zurich
+- arXiv: https://arxiv.org/abs/2605.21935
+- Key Topics: humanoid / navigation / semantic mapping / 3D Gaussian Splatting / dynamic scenes / Unitree G1
+- Notes: Source network behind MIF, a high-signal perception-aware humanoid navigation system.
+
+### CFCS, School of Computer Science, Peking University + Beihang University
+- Institution: Peking University / Beihang University
+- arXiv: https://arxiv.org/abs/2605.20373
+- Key Topics: humanoid / loco-manipulation / human video / imitation learning / reinforcement learning
+- Notes: Source network behind SUGAR, a human-video-driven humanoid loco-manipulation framework.
+
+### JSK Robotics Laboratory — The University of Tokyo
+- Institution: The University of Tokyo
+- Homepage: https://www.jsk.t.u-tokyo.ac.jp/
+- arXiv: https://arxiv.org/abs/2605.20932
+- Key Topics: wheeled-legged robots / mobility / manipulation / wire-driven environmental utilization / hardware systems
+- Notes: Source network behind WiXus and a useful hardware-system source to track.
+
+### PRIME author network
+- Institution: mixed author network; verify individual affiliations before deeper curation
+- arXiv: https://arxiv.org/abs/2605.17681
+- Key Topics: legged robots / humanoid robots / motion estimation / contact dynamics / inertial parameter estimation
+- Notes: Source network behind PRIME, a high-signal physically consistent motion-estimation work for legged and humanoid robots.
+
+</details>

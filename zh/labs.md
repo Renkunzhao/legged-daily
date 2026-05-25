@@ -197,3 +197,42 @@
   </details>
 
 </details>
+
+---
+
+<details>
+<summary><strong>新增来源信号</strong></summary>
+
+### HIER Lab — North Carolina State University
+- Institution: North Carolina State University
+- Homepage: https://hierlab.github.io/
+- Lab / Department: HIER Lab
+- Key Topics: humanoid / animaloid legged robots / loco-manipulation / whole-body control / teleoperation / safety-critical control / generative AI for motion
+- Notes: 人形和动物型机器人智能方向的活跃来源；实验室页面显示学生论文提交，以及 NVIDIA Academic Award 对人形研究的支持。
+
+### Peifeng Jiang et al. / MIF author network
+- Institution: Peking University Shenzhen Graduate School / Oxford Robotics Institute / ETH Zurich
+- arXiv: https://arxiv.org/abs/2605.21935
+- Key Topics: humanoid / navigation / semantic mapping / 3D Gaussian Splatting / dynamic scenes / Unitree G1
+- Notes: MIF 背后的来源网络，是 perception-aware humanoid navigation 高信号系统。
+
+### CFCS, School of Computer Science, Peking University + Beihang University
+- Institution: Peking University / Beihang University
+- arXiv: https://arxiv.org/abs/2605.20373
+- Key Topics: humanoid / loco-manipulation / human video / imitation learning / reinforcement learning
+- Notes: SUGAR 背后的来源网络，方向是 human-video-driven humanoid loco-manipulation。
+
+### JSK Robotics Laboratory — The University of Tokyo
+- Institution: The University of Tokyo
+- Homepage: https://www.jsk.t.u-tokyo.ac.jp/
+- arXiv: https://arxiv.org/abs/2605.20932
+- Key Topics: wheeled-legged robots / mobility / manipulation / wire-driven environmental utilization / hardware systems
+- Notes: WiXus 背后的来源网络，是值得持续跟踪的硬件系统来源。
+
+### PRIME author network
+- Institution: 混合作者网络；深度整理前需进一步确认个人单位
+- arXiv: https://arxiv.org/abs/2605.17681
+- Key Topics: legged robots / humanoid robots / motion estimation / contact dynamics / inertial parameter estimation
+- Notes: PRIME 背后的来源网络，是腿足和人形机器人物理一致运动估计方向的高信号工作。
+
+</details>

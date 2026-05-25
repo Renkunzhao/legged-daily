@@ -366,3 +366,62 @@
 - Summary: Software stack for MIT Cheetah robots.
 
 </details>
+
+---
+
+<details>
+<summary><strong>Robot Operation and Loco-Manipulation Toolkits</strong></summary>
+
+### BotBrain
+- Link: https://github.com/botbotrobotics/BotBrain
+- Category: toolkit / teleoperation / navigation
+- Robot Type: humanoid / quadruped / biped / general
+- Simulator: none
+- Deploy: hardware
+- Summary: Modular ROS2 robot brain with web UI support for teleoperation, autonomous navigation, mapping, monitoring, and 3D-printable hardware.
+- Notes: Targets Jetson / RealSense deployments and Unitree Go2/G1-style platforms.
+
+### EgoHumanoid
+- Link: https://github.com/OpenDriveLab/EgoHumanoid
+- Category: imitation learning / VLA / loco-manipulation
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: hardware
+- Summary: Framework for training humanoid whole-body loco-manipulation from egocentric human demonstrations plus limited robot data.
+- Notes: Uses view alignment and action alignment before deploying VLA policies on Unitree G1 hardware.
+
+### SIMPLE
+- Link: https://github.com/physical-superintelligence-lab/SIMPLE
+- Category: simulator / benchmark / loco-manipulation
+- Robot Type: humanoid
+- Simulator: IsaacSim / MuJoCo
+- Deploy: sim
+- Summary: Simulation-based policy learning and evaluation environment for humanoid whole-body loco-manipulation.
+- Notes: Includes Unitree G1 support, large Objaverse/HSSD assets, and 50+ humanoid whole-body loco-manipulation tasks.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Humanoid MPC and Watchlists</strong></summary>
+
+### g1_locomotion
+- Link: https://github.com/ioloizou/g1_locomotion
+- Category: control / MPC
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: Unitree G1 locomotion stack combining Single Rigid Body Dynamics and Whole-Body Inverse Dynamics in a cascaded linear control pipeline.
+- Notes: README reports MuJoCo straight-line walking support and states that physical-robot testing has not yet been performed.
+
+### awesome-unitree-humanoid-papers
+- Link: https://github.com/eai2-repos/awesome-unitree-humanoid-papers
+- Category: toolkit
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: data
+- Summary: Curated list of Unitree humanoid papers and projects covering G1, H1, and H1-2 work from 2025-2026.
+- Notes: Best treated as a source-discovery watchlist rather than a research implementation repository.
+
+</details>

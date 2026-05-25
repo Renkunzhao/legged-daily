@@ -366,3 +366,62 @@
 - Summary: MIT Cheetah 机器人软件栈。
 
 </details>
+
+---
+
+<details>
+<summary><strong>机器人操作与移动操作工具</strong></summary>
+
+### BotBrain
+- Link: https://github.com/botbotrobotics/BotBrain
+- Category: toolkit / teleoperation / navigation
+- Robot Type: humanoid / quadruped / biped / general
+- Simulator: none
+- Deploy: hardware
+- Summary: 模块化 ROS2 robot brain，提供 Web UI、teleoperation、autonomous navigation、mapping、monitoring 与 3D-printable hardware。
+- Notes: 面向 Jetson / RealSense 和 Unitree Go2/G1 类平台部署。
+
+### EgoHumanoid
+- Link: https://github.com/OpenDriveLab/EgoHumanoid
+- Category: imitation learning / VLA / loco-manipulation
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: hardware
+- Summary: 用 egocentric human demonstrations 加少量 robot data 训练 humanoid whole-body loco-manipulation 的框架。
+- Notes: 使用 view alignment 和 action alignment 后，将 VLA policy 部署到 Unitree G1 硬件。
+
+### SIMPLE
+- Link: https://github.com/physical-superintelligence-lab/SIMPLE
+- Category: simulator / benchmark / loco-manipulation
+- Robot Type: humanoid
+- Simulator: IsaacSim / MuJoCo
+- Deploy: sim
+- Summary: 面向 humanoid whole-body loco-manipulation 的 simulation-based policy learning and evaluation 环境。
+- Notes: 包含 Unitree G1 支持、大规模 Objaverse/HSSD assets，以及 50+ humanoid whole-body loco-manipulation tasks。
+
+</details>
+
+---
+
+<details>
+<summary><strong>人形 MPC 与 Watchlists</strong></summary>
+
+### g1_locomotion
+- Link: https://github.com/ioloizou/g1_locomotion
+- Category: control / MPC
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: Unitree G1 运动控制栈，把 Single Rigid Body Dynamics 与 Whole-Body Inverse Dynamics 组合成级联线性控制流程。
+- Notes: README 显示支持 MuJoCo 直线行走，并说明尚未在真实机器人上测试。
+
+### awesome-unitree-humanoid-papers
+- Link: https://github.com/eai2-repos/awesome-unitree-humanoid-papers
+- Category: toolkit
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: data
+- Summary: Unitree 人形论文和项目整理列表，覆盖 2025-2026 年 G1、H1、H1-2 相关工作。
+- Notes: 更适合作为来源发现 watchlist，而不是研究实现仓库。
+
+</details>
