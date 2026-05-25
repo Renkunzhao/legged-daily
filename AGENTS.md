@@ -25,11 +25,11 @@ Maintain the repository around these files and folders:
 - `labs.md` — lab, professor, and researcher list
 - `jobs.md` — jobs and opportunity list
 - `legged-daily/YYYY-MM-DD.md` — daily update logs
-- `templates/` — formatting references
+- `templates/` — contains the canonical daily template
 - `drafts/` — preview drafts before confirmation
 - `zh/` — Chinese mirrors (see **Bilingual Repository Policy** below)
 
-Treat templates as structural references, not text to copy verbatim into output files.
+Use `templates/legged-daily-template.md` only as a structural reference; replace placeholder text with real entries.
 
 ## Bilingual Repository Policy
 
@@ -45,7 +45,7 @@ Every bilingual file must begin with a language-switch line as the first line of
 
 When applying a template, insert the language-switch line before the template H1. Create missing mirror directories as needed.
 
-Whenever any non-exception file is created, updated, or removed, the matching version in the other language must be created, updated, or removed in the same change. Do not commit or merge an update that breaks bilingual parity.
+Whenever any non-exception file is created, updated, or removed, the matching version in the other language must be created, updated, or removed in the same change. Mirror files must contain synchronized translated content, not only matching structure. Do not commit or merge an update that breaks bilingual parity.
 
 ## Core Responsibilities
 
@@ -80,27 +80,29 @@ Use `templates/legged-daily-template.md` as the canonical structure.
 
 ### Daily Paper and Repo Rules
 
-In the daily log only:
+In the daily log:
 
 - include at most **3** paper items
 - include at most **3** repository items
-- include an `Importance` field for papers and repos, use values such as `high`, `medium`, or `low`
-- sort paper and repo items by importance, highest first
+- order paper and repo items by long-term relevance, highest first
 - prefer fewer high-signal items over broad coverage
-
-Do **not** include daily-only `Importance` fields in `papers.md` or `repos.md`.
 
 ### Daily Update Writing Rules
 
 - Keep the daily log focused on new findings for that date.
-- Do not put master-list update planning inside the daily Markdown file.
+- For new additions and updates, use only the entry fields defined in the corresponding sections of `templates/legged-daily-template.md`.
+- Do not add daily-only fields such as `Importance`; confirmed additions should be insertable into master lists without cleanup.
+- Use `Proposed Removal / Stale Item` only for job-review actions that are not meant to be inserted into a master list.
+- Do not put separate master-list update plans inside the daily Markdown file; keep item-level additions, updates, and proposed job removals in their relevant sections.
 - Prefer concise, factual summaries over broad commentary.
 
 ## Master List Rules
 
+Formal master-list files should contain reader-facing descriptions and curated entries only. Keep maintenance rules, workflow notes, and process explanations in `AGENTS.md`; structural examples live in `templates/legged-daily-template.md`.
+
 ### `papers.md`
 
-Maintain `papers.md` as a long-term curated paper list. Use `templates/papers-template.md` for structure and entry fields.
+Maintain `papers.md` as a long-term curated paper list. Use the `New Papers` section of `templates/legged-daily-template.md` for entry fields.
 
 Good candidates include:
 
@@ -111,11 +113,13 @@ Good candidates include:
 
 ### `repos.md`
 
-Maintain `repos.md` as a long-term curated repository and toolkit list. Use `templates/repos-template.md` for structure and entry fields.
+Maintain `repos.md` as a long-term curated repository and toolkit list. Use the `New Repos` section of `templates/legged-daily-template.md` for entry fields.
 
 ### `labs.md`
 
-Maintain `labs.md` as a source-network list, not just a static directory. Use `templates/labs-template.md` for structure, entry fields, and source channels.
+Maintain `labs.md` as a source-network list, not just a static directory. Use the `Lab / Professor Signals` section of `templates/legged-daily-template.md` for entry fields and source channels.
+
+When listing students, use `Students and Representative Works` entries in the form `[Student Name](student URL) — [Representative Work](work URL)`. Only include students with a verified representative work; omit unavailable works rather than adding topical placeholders.
 
 Expand the list through:
 
@@ -128,7 +132,7 @@ Expand the list through:
 
 ### `jobs.md`
 
-Maintain `jobs.md` as a dynamic opportunity list. Use `templates/jobs-template.md` for structure and entry fields.
+Maintain `jobs.md` as a dynamic opportunity list. Use the `Job Signals` section of `templates/legged-daily-template.md` for entry fields.
 
 Because jobs are time-sensitive:
 
@@ -165,7 +169,8 @@ The scheduled update should:
 - summarize the most important new findings since the previous daily run when possible
 - group findings into papers, repos, lab/professor signals, and job signals (apply **Daily Paper and Repo Rules** for caps and sorting)
 - write the daily draft per **Draft GitHub Preview Policy**
-- separately draft proposed edits for `papers.md`, `repos.md`, `labs.md`, and `jobs.md` when warranted, using `templates/` as format references
+- write additions and updates with the template-defined fields so confirmed items can later be inserted into `papers.md`, `repos.md`, `labs.md`, and `jobs.md`
+- mark proposed job additions, updates, and removals/stale items clearly inside the daily draft
 - send the Telegram daily message per **Telegram Daily Message Contract**
 
 ## Draft GitHub Preview Policy
@@ -177,22 +182,24 @@ This is the **single source of truth** for the draft-vs-formal push rule. Other 
 For scheduled daily runs, the default behavior is:
 
 1. Write the full daily draft to `drafts/legged-daily-YYYY-MM-DD.md` **and** its Chinese mirror at `zh/drafts/legged-daily-YYYY-MM-DD.md`.
-2. Check `git status` and relevant draft diffs.
-3. Commit and push **draft / preview files only** so the user can review the draft on GitHub. Use commit message `Draft legged daily YYYY-MM-DD`. If the push fails, report clearly in the Telegram message that the draft is local only and GitHub preview is incomplete.
-4. Do not move draft content into `legged-daily/`, update formal files, or push formal-file changes until the user explicitly confirms.
+2. Do not generate separate master-list drafts during the scheduled run; use the daily draft as the review source for later master-list insertion.
+3. Check `git status` and relevant draft diffs.
+4. Commit and push **draft / preview files only** so the user can review the draft on GitHub. Use commit message `Draft legged daily YYYY-MM-DD`. If the push fails, report clearly in the Telegram message that the draft is local only and GitHub preview is incomplete.
+5. Do not move draft content into `legged-daily/`, update formal files, or push formal-file changes until the user explicitly confirms.
+6. After user confirmation, publish the daily log and insert approved daily entries into the corresponding master lists.
 
 ## Telegram Daily Message Contract
 
-The Telegram daily update must be written in **Chinese only**, and must let the user understand every item without opening the Markdown file. It must not be only a meta-summary such as “3 篇论文：A、B、C”.
+The Telegram daily update must be written in **Chinese only** and must contain the actual daily content. The user should understand every selected item without opening the Markdown file. Do **not** send only counts or a meta-summary such as “收录 3 篇论文、2 个仓库”.
 
 Every scheduled daily message should include, in compact form:
 
-1. `状态`: 运行完成/未完成、本地草稿路径、GitHub 草稿预览是否已推送。
+1. `状态`: 运行完成/未完成、本地日更草稿路径、GitHub 草稿预览是否已推送。
 2. `摘要`: 3-6 个关键要点。
-3. `新论文`: 最多 3 项；每项包含标题、链接、来源、重要性、一句话摘要。
-4. `新仓库`: 最多 3 项；每项包含名称、链接、主题、重要性、一句话摘要。
-5. `实验室 / 教授信号`: 每项包含名称/实验室、来源、更新。
-6. `招聘信号`: 每项包含机构/团队、类型、来源、截止时间、摘要。
+3. `新论文`: 最多 3 项；每项包含标题、链接、来源、日期、作者、主题、一句话摘要。
+4. `新仓库`: 最多 3 项；每项包含名称、链接、类别、机器人类型、仿真器/部署信息、一句话摘要。
+5. `实验室 / 教授信号`: 每项包含名称/实验室、机构、来源链接、关键主题、更新。
+6. `招聘信号`: 每项包含机构/团队、类型、来源、截止时间、状态、摘要；若有拟删除/过期条目，也要明确列出。
 7. 明确的确认提示，例如：“确认发布 / 仅保留草稿 / 修改后重发”。
 
 ## Safety and Quality Bar

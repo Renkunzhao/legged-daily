@@ -33,7 +33,7 @@ Discovery layers through these source categories:
 4. **Adjacent high-signal sources** when clearly relevant to legged robotics.
 
 ## Templates & Drafts
-This repo is maintained by an agent. Files in templates/ define the agent's output format, while drafts/ holds working drafts that may be pushed for GitHub preview before formal publication.
+This repo is maintained by an agent. [templates/legged-daily-template.md](templates/legged-daily-template.md) defines the daily output format, while [drafts/](drafts/) holds working drafts that may be pushed for GitHub preview before formal publication.
 
 ---
 
@@ -54,7 +54,7 @@ Master lists keep only the information worth preserving for long-term retrieval.
 
 - `papers.md` and `repos.md` are curated reference lists
 - `labs.md` is a growing source network
-- `jobs.md` is dynamic and should remove stale opportunities
+- `jobs.md` tracks active or watchlisted opportunities
 
 ---
 

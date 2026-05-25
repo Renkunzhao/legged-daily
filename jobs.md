@@ -2,9 +2,6 @@
 
 > Dynamic list of active or watchlisted academic and industry opportunities relevant to legged robotics.
 
-This file is intentionally **dynamic**.
-It should surface roles that are still actionable or worth monitoring, not preserve every old opening forever.
-
 ---
 
 <details>

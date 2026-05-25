@@ -2,9 +2,6 @@
 
 > Long-term curated paper list for legged robotics.
 
-This file is for **persistent retrieval**, not daily triage.
-Use it for papers that remain useful after the day they were discovered.
-
 ---
 
 <details>
@@ -44,7 +41,7 @@ Use it for papers that remain useful after the day they were discovered.
 - Source: project page
 - Topics: world model / simulation / policy optimization
 - Summary: Neural network simulator for robust policy optimization in robotics.
-- Notes: Code link in the original README points to https://github.com/leggedrobotics/robotic_world_model.git.
+- Notes: Code: https://github.com/leggedrobotics/robotic_world_model.git.
 
 ### Uncertainty-Aware Robotic World Model Makes Offline Model-Based Reinforcement Learning Work on Real Robots
 - Link: https://sites.google.com/view/uncertainty-aware-rwm

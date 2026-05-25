@@ -2,9 +2,6 @@
 
 > Curated source-network list for labs, professors, and adjacent researchers relevant to legged robotics.
 
-This file is a **source network**, not just a static directory.
-The structure below follows the collapsible style of the original README so it stays readable on GitHub.
-
 ---
 
 <details>
@@ -19,8 +16,8 @@ The structure below follows the collapsible style of the original README so it s
   - Key Topics: embodied AI / humanoid robotics / human motion modeling / reinforcement learning / imitation learning / physics simulation / sim-to-real
   - Notes: Strong Stanford seed entry for humanoid control and embodied locomotion tracking.
 
-  - Students and nearby sources:
-    - Yanjie Ze — https://yanjieze.com/ — humanoid robots / motion retargeting / teleoperation / whole-body imitation
+  - Students and Representative Works:
+    - [Yanjie Ze](https://yanjieze.com/) — [GMR](https://github.com/YanjieZe/GMR)
 
   </details>
 
@@ -33,10 +30,8 @@ The structure below follows the collapsible style of the original README so it s
   - Key Topics: AI / robotics / control / loco-manipulation
   - Notes: Strong source for humanoid loco-manipulation and related CMU student signals.
 
-  - Students and nearby sources:
-    - Tairan He — https://tairanhe.com/ — robotics / large-scale machine learning / loco-manipulation
-    - Cunxi (Jimmy) Dai — https://cunxid.github.io/ — robotics / loco-manipulation
-    - Yuanhang Zhang — https://yuanhangz.com/ — humanoid locomotion / perceptive locomotion / loco-manipulation
+  - Students and Representative Works:
+    - [Tairan He](https://tairanhe.com/) — [VIRAL](https://viral-humanoid.github.io/)
 
   </details>
 
@@ -48,11 +43,6 @@ The structure below follows the collapsible style of the original README so it s
   - Google Scholar: https://scholar.google.com/citations?user=Y8O9N_0AAAAJ&hl=en
   - Key Topics: representation learning / video learning / robotic interaction data
   - Notes: Strong source for humanoid control, motion, and robot-learning-adjacent signals.
-
-  - Students and nearby sources:
-    - Zixuan (Eric) Chen — https://zixuan417.github.io/ — humanoid robots / robust locomotion / manipulation
-    - Xuxin Cheng — https://xuxin.ai/ — humanoid control / parkour / whole-body control
-    - Mazeyu Ji — https://jimazeyu.github.io/ — humanoid whole-body control
 
   </details>
 
@@ -125,9 +115,9 @@ The structure below follows the collapsible style of the original README so it s
   - Key Topics: 3D perception / humanoid robot learning / human-robot interaction
   - Notes: Strong source for humanoid perception and learning.
 
-  - Students and nearby sources:
-    - Zhikai Zhang — https://zzk273.github.io/ — humanoid tracking / robust motion tracking
-    - Zekun Qi — https://qizekun.github.io/ — whole-body control / transformers / motion models
+  - Students and Representative Works:
+    - [Zhikai Zhang](https://zzk273.github.io/) — [Any2Track](https://zzk273.github.io/Any2Track/) / [OpenWBT](https://zzk273.github.io/R2S2/)
+    - [Zekun Qi](https://qizekun.github.io/) — [Humanoid-GPT](https://qizekun.github.io/humanoid-gpt/)
 
   </details>
 
@@ -140,8 +130,8 @@ The structure below follows the collapsible style of the original README so it s
   - Key Topics: multimodal machine learning / autonomous driving / robot learning
   - Notes: Useful adjacent source for robot-learning and humanoid control signals.
 
-  - Students and nearby sources:
-    - Ziwen Zhuang — https://ziwenzhuang.github.io/ — robotics / machine learning / control
+  - Students and Representative Works:
+    - [Ziwen Zhuang](https://ziwenzhuang.github.io/) — [Humanoid Parkour Learning](https://humanoid4parkour.github.io/) / [Robot Parkour Learning](https://robot-parkour.github.io/)
 
   </details>
 
@@ -155,10 +145,6 @@ The structure below follows the collapsible style of the original README so it s
   - Key Topics: 3D perception / humanoid robot learning / human-robot interaction
   - Notes: Good source-network anchor for perception plus humanoid learning.
 
-  - Students and nearby sources:
-    - Xiang Zhu — https://canva4.github.io/ — robotics / embodied AI / manipulation
-    - Yanjiang Guo — https://robert-gyj.github.io/ — embodied foundation models / physical-world task generalization
-
   </details>
 
 - <details>
@@ -170,9 +156,9 @@ The structure below follows the collapsible style of the original README so it s
   - Bilibili: https://space.bilibili.com/1778365431?spm_id_from=333.788.upinfo.head.click
   - Notes: Good source for sim-to-real and dynamic control signals.
 
-  - Students and nearby sources:
-    - Yeke Chen — https://shieldkeke.github.io/ — sim-to-real RL / agile robot control / aerial and legged systems
-    - Zeren Luo — https://www.linkedin.com/in/zeren-luo-4077051a6/ — deformable terrain / bipedal locomotion
+  - Students and Representative Works:
+    - [Yeke Chen](https://shieldkeke.github.io/) — [Learning Human-Like Badminton Skills for Humanoid Robots](https://astrorix.github.io/LHBS/)
+    - [Zeren Luo](https://www.linkedin.com/in/zeren-luo-4077051a6/) — [MILD](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11302803)
 
   </details>
 
@@ -195,9 +181,6 @@ The structure below follows the collapsible style of the original README so it s
   - Lab: https://cuhkleggedrobotlab.github.io/
   - Google Scholar: https://scholar.google.com/citations?user=WzmDQTMAAAAJ&hl=en
   - Notes: Useful standing watchlist entry for legged robotics work from CUHK.
-
-  - Students and nearby sources:
-    - Linzhu Yue — https://linzhuyue.github.io/ — optimal control / legged robots / reinforcement learning
 
   </details>
 

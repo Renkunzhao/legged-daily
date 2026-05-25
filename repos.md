@@ -2,9 +2,6 @@
 
 > Long-term curated repository and toolkit list for legged robotics.
 
-This file keeps repositories that are worth revisiting over time.
-It is organized for fast browsing on GitHub and now follows the collapsible style used in the original README.
-
 ---
 
 <details>
