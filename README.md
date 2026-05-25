@@ -1,3 +1,4 @@
+**English** | [中文](zh/README.md)
 # Legged Robotics Research Index
 
 A curated research-oriented index for **legged robotics**, focused on:

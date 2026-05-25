@@ -1,12 +1,12 @@
-**English** | [中文](zh/repos.md)
-# Repositories
+[English](../repos.md) | **中文**
+# 仓库
 
-> Long-term curated repository and toolkit list for legged robotics.
+> 腿足机器人长期 curated 仓库和工具列表。
 
 ---
 
 <details>
-<summary><strong>Websites and Viewers</strong></summary>
+<summary><strong>网站与查看器</strong></summary>
 
 ### motion_viewer
 - Link: https://renkunzhao.github.io/motion_viewer/
@@ -14,7 +14,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: browser
-- Summary: A web-based visualization tool for robot models and motion data.
+- Summary: 面向机器人模型和运动数据的 Web 可视化工具。
 
 ### robot_viewer
 - Link: https://viewer.robotsfan.com/
@@ -22,7 +22,7 @@
 - Robot Type: general
 - Simulator: general
 - Deploy: browser
-- Summary: A web-based 3D viewer for robot models and scenes supporting URDF, MJCF, and partial USD.
+- Summary: 支持 URDF、MJCF 和部分 USD 的 Web 3D 机器人模型/场景查看器。
 
 ### netron
 - Link: https://netron.app/
@@ -30,7 +30,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: browser
-- Summary: A web-based viewer for neural network models, including models used in robotics research.
+- Summary: 神经网络模型 Web 查看器，也适合查看机器人研究中的模型。
 
 ### BVHView
 - Link: https://theorangeduck.com/media/uploads/BVHView/bvhview.html
@@ -38,7 +38,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: browser
-- Summary: A simple viewer for `.bvh` animation files.
+- Summary: 简单的 `.bvh` 动画文件查看器。
 
 ### sketchfab
 - Link: https://sketchfab.com/feed#upload
@@ -46,7 +46,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: browser
-- Summary: A web-based FBX player and model viewer.
+- Summary: Web FBX 播放器和模型查看器。
 
 ### rokoko
 - Link: https://vision.rokoko.com/
@@ -54,7 +54,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: browser
-- Summary: Converts video to animation.
+- Summary: 将视频转换为动画。
 
 ### mjswan
 - Link: https://github.com/ttktjmt/mjswan
@@ -62,7 +62,7 @@
 - Robot Type: general
 - Simulator: MuJoCo
 - Deploy: browser
-- Summary: MuJoCo simulation on WebAssembly with neural networks.
+- Summary: 带神经网络支持的 WebAssembly MuJoCo 仿真。
 
 ### mujoco_wasm
 - Link: https://zalo.github.io/mujoco_wasm/
@@ -70,12 +70,12 @@
 - Robot Type: general
 - Simulator: MuJoCo
 - Deploy: browser
-- Summary: Simulate and render MuJoCo models in the browser.
+- Summary: 在浏览器中仿真和渲染 MuJoCo 模型。
 
 </details>
 
 <details>
-<summary><strong>Control, Kinematics, Dynamics, and Optimization</strong></summary>
+<summary><strong>控制、运动学、动力学与优化</strong></summary>
 
 ### mink
 - Link: https://github.com/kevinzakka/mink
@@ -83,7 +83,7 @@
 - Robot Type: general
 - Simulator: MuJoCo
 - Deploy: sim
-- Summary: Python inverse kinematics based on MuJoCo.
+- Summary: 基于 MuJoCo 的 Python inverse kinematics 工具。
 
 ### pyroki
 - Link: https://github.com/chungmin99/pyroki
@@ -91,7 +91,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: sim
-- Summary: A modular toolkit for robot kinematic optimization.
+- Summary: 模块化机器人运动学优化工具包。
 
 ### PlaCo
 - Link: https://github.com/Rhoban/placo.git
@@ -99,7 +99,7 @@
 - Robot Type: humanoid / general
 - Simulator: none
 - Deploy: sim
-- Summary: Task-space inverse kinematics and dynamics for whole-body control tasks.
+- Summary: 面向全身控制任务的 task-space inverse kinematics 与 dynamics 工具。
 
 ### cuRobo
 - Link: https://github.com/NVlabs/curobo
@@ -107,7 +107,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: sim
-- Summary: CUDA-accelerated robotics algorithms including FK, IK, and trajectory optimization.
+- Summary: CUDA 加速的机器人算法库，包括 FK、IK 和轨迹优化。
 
 ### pinocchio
 - Link: https://github.com/stack-of-tasks/pinocchio
@@ -115,7 +115,7 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: sim
-- Summary: Rigid body dynamics algorithms and analytical derivatives.
+- Summary: 刚体动力学算法与解析导数库。
 
 ### se3_trajopt
 - Link: https://github.com/upatras-lar/se3_trajopt
@@ -123,12 +123,12 @@
 - Robot Type: general
 - Simulator: none
 - Deploy: sim
-- Summary: Trajectory optimization on the SE(3) tangent space.
+- Summary: SE(3) 切空间轨迹优化工具。
 
 </details>
 
 <details>
-<summary><strong>Simulators and Models</strong></summary>
+<summary><strong>仿真器与模型</strong></summary>
 
 ### sofa
 - Link: https://github.com/sofa-framework/sofa
@@ -136,7 +136,7 @@
 - Robot Type: general
 - Simulator: SOFA
 - Deploy: sim
-- Summary: Real-time multi-physics simulation with emphasis on medical and deformable simulation.
+- Summary: 实时多物理仿真框架，重点覆盖医学和可变形仿真。
 
 ### chrono
 - Link: https://github.com/projectchrono/chrono
@@ -144,7 +144,7 @@
 - Robot Type: general
 - Simulator: Chrono
 - Deploy: sim
-- Summary: High-performance multiphysics and multibody simulation library.
+- Summary: 高性能多物理和多体仿真库。
 
 ### mujoco_menagerie
 - Link: https://github.com/google-deepmind/mujoco_menagerie.git
@@ -152,12 +152,12 @@
 - Robot Type: humanoid / quadruped / general
 - Simulator: MuJoCo
 - Deploy: sim
-- Summary: A collection of high-quality MuJoCo models curated by Google DeepMind.
+- Summary: Google DeepMind curated 高质量 MuJoCo 模型集合。
 
 </details>
 
 <details>
-<summary><strong>Datasets and Models</strong></summary>
+<summary><strong>数据集与模型</strong></summary>
 
 ### KungFuAthleteBot
 - Link: https://github.com/NPCLEI/KungFuAthleteBot.git
@@ -165,7 +165,7 @@
 - Robot Type: humanoid
 - Simulator: none
 - Deploy: data
-- Summary: Athlete martial arts training videos processed using GVHMR.
+- Summary: 使用 GVHMR 处理的运动员武术训练视频数据。
 
 ### BONES-SEED
 - Link: https://huggingface.co/datasets/bones-studio/seed
@@ -173,7 +173,7 @@
 - Robot Type: humanoid
 - Simulator: none
 - Deploy: data
-- Summary: Large-scale annotated human motion dataset with SOMA and Unitree G1 formats.
+- Summary: 带 SOMA 和 Unitree G1 格式的大规模标注人体运动数据集。
 
 ### SOMA-X
 - Link: https://github.com/NVlabs/SOMA-X.git
@@ -181,7 +181,7 @@
 - Robot Type: humanoid
 - Simulator: none
 - Deploy: data
-- Summary: Canonical body topology and rig for supported parametric human body models.
+- Summary: 支持的参数化人体模型的 canonical body topology 与 rig。
 
 ### grand_tour_dataset
 - Link: https://github.com/leggedrobotics/grand_tour_dataset
@@ -189,13 +189,13 @@
 - Robot Type: quadruped
 - Simulator: none
 - Deploy: data
-- Summary: Official starter repository for the GrandTour legged-robotics dataset with Hugging Face examples, ROS1 examples, and Python utilities.
-- Notes: Companion tooling for the GrandTour dataset release from ETH RSL.
+- Summary: GrandTour 腿足机器人数据集官方 starter 仓库，包含 Hugging Face examples、ROS1 examples 和 Python utilities。
+- Notes: ETH RSL GrandTour 数据集发布的配套工具。
 
 </details>
 
 <details>
-<summary><strong>Motion Generation, Retargeting, and Editing</strong></summary>
+<summary><strong>运动生成、重定向与编辑</strong></summary>
 
 ### GMR
 - Link: https://github.com/YanjieZe/GMR
@@ -203,7 +203,7 @@
 - Robot Type: humanoid
 - Simulator: none
 - Deploy: sim
-- Summary: Real-time human motion retargeting to diverse humanoid robots.
+- Summary: 面向多种人形机器人的实时人体动作重定向。
 
 ### SOMA Retargeter
 - Link: https://github.com/NVIDIA/soma-retargeter.git
@@ -211,7 +211,7 @@
 - Robot Type: humanoid
 - Simulator: Newton / Warp
 - Deploy: sim
-- Summary: BVH-to-humanoid robot motion retargeting library.
+- Summary: BVH 到人形机器人动作重定向库。
 
 ### Kimodo
 - Link: https://research.nvidia.com/labs/sil/projects/kimodo/
@@ -219,7 +219,7 @@
 - Robot Type: human / humanoid
 - Simulator: none
 - Deploy: sim
-- Summary: Kinematic motion diffusion model for text- and constraint-driven motion generation.
+- Summary: 支持文本和约束驱动运动生成的 kinematic motion diffusion model。
 
 ### GEM-X
 - Link: https://github.com/NVlabs/GEM-X.git
@@ -227,12 +227,12 @@
 - Robot Type: humanoid
 - Simulator: none
 - Deploy: sim
-- Summary: Monocular whole-body 3D human pose estimation using the SOMA body model.
+- Summary: 使用 SOMA body model 的 monocular whole-body 3D human pose estimation。
 
 </details>
 
 <details>
-<summary><strong>Reinforcement Learning</strong></summary>
+<summary><strong>强化学习</strong></summary>
 
 ### mjlab
 - Link: https://github.com/mujocolab/mjlab.git
@@ -240,7 +240,7 @@
 - Robot Type: humanoid / quadruped
 - Simulator: MuJoCo
 - Deploy: sim
-- Summary: Isaac Lab API powered by MuJoCo-Warp for RL and robotics research.
+- Summary: 基于 MuJoCo-Warp、兼容 Isaac Lab API 的 RL 与机器人研究库。
 
 ### mujoco_playground
 - Link: https://github.com/google-deepmind/mujoco_playground.git
@@ -248,7 +248,7 @@
 - Robot Type: humanoid / quadruped
 - Simulator: MuJoCo
 - Deploy: sim
-- Summary: GPU-accelerated library for robot learning and sim-to-real transfer.
+- Summary: 面向机器人学习和 sim-to-real 迁移的 GPU 加速库。
 
 ### unitree_rl_mjlab
 - Link: https://github.com/unitreerobotics/unitree_rl_mjlab.git
@@ -256,7 +256,7 @@
 - Robot Type: humanoid / quadruped
 - Simulator: MuJoCo
 - Deploy: sim / hardware
-- Summary: Real-world RL deployment pipeline for Unitree robots using MuJoCo.
+- Summary: 使用 MuJoCo 的 Unitree 机器人真实部署 RL pipeline。
 
 ### unitree_rl_lab
 - Link: https://github.com/unitreerobotics/unitree_rl_lab
@@ -264,7 +264,7 @@
 - Robot Type: humanoid / quadruped
 - Simulator: IsaacSim
 - Deploy: sim / hardware
-- Summary: Real-world RL deployment pipeline for Unitree robots using IsaacSim.
+- Summary: 使用 IsaacSim 的 Unitree 机器人真实部署 RL pipeline。
 
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
@@ -272,7 +272,7 @@
 - Robot Type: quadruped
 - Simulator: IsaacGym
 - Deploy: sim
-- Summary: Stage-wise curriculum RL for acrobatic maneuvers in quadrupeds.
+- Summary: 面向四足杂技动作的 stage-wise curriculum RL。
 
 ### My_unitree_go2_gym
 - Link: https://github.com/yusongmin1/My_unitree_go2_gym.git
@@ -280,7 +280,7 @@
 - Robot Type: quadruped
 - Simulator: IsaacGym
 - Deploy: sim / MuJoCo
-- Summary: Locomotion and acrobatics work for Unitree Go2.
+- Summary: Unitree Go2 运动和杂技动作相关工作。
 
 ### TWIST2
 - Link: https://github.com/amazon-far/TWIST2
@@ -288,7 +288,7 @@
 - Robot Type: humanoid
 - Simulator: IsaacGym
 - Deploy: MuJoCo / hardware
-- Summary: Teleoperated whole-body imitation system.
+- Summary: 遥操作全身 imitation system。
 
 ### SONIC
 - Link: https://nvlabs.github.io/GEAR-SONIC/
@@ -296,7 +296,7 @@
 - Robot Type: humanoid
 - Simulator: none
 - Deploy: hardware
-- Summary: Large-scale humanoid whole-body motion tracking work.
+- Summary: 大规模人形全身 motion tracking 工作。
 
 ### OmniXtreme
 - Link: https://extreme-humanoid.github.io/
@@ -304,12 +304,12 @@
 - Robot Type: humanoid
 - Simulator: none
 - Deploy: hardware
-- Summary: Unified policy framework for high-dynamic humanoid motion tracking.
+- Summary: 面向高动态人形运动跟踪的统一策略框架。
 
 </details>
 
 <details>
-<summary><strong>Humanoid Whole-Body Control</strong></summary>
+<summary><strong>人形全身控制</strong></summary>
 
 ### GR00T-WholeBodyControl
 - Link: https://github.com/NVlabs/GR00T-WholeBodyControl
@@ -317,13 +317,13 @@
 - Robot Type: humanoid
 - Simulator: Isaac Lab / MuJoCo
 - Deploy: sim / hardware
-- Summary: Unified NVIDIA GEAR platform for humanoid whole-body control, teleoperation, deployment, and SONIC-based training workflows.
-- Notes: Strong current reference for Unitree G1-oriented whole-body control and teleop-to-deployment workflows.
+- Summary: NVIDIA GEAR 面向人形全身控制、遥操作、部署和 SONIC-based training workflows 的统一平台。
+- Notes: Unitree G1-oriented whole-body control 与 teleop-to-deployment workflow 的强参考。
 
 </details>
 
 <details>
-<summary><strong>MPC and Model-Based Control</strong></summary>
+<summary><strong>MPC 与模型控制</strong></summary>
 
 ### OCS2
 - Link: https://github.com/leggedrobotics/ocs2/tree/ros2
@@ -331,7 +331,7 @@
 - Robot Type: quadruped
 - Simulator: Raisim
 - Deploy: sim
-- Summary: Optimal control for switched systems with strong legged locomotion applications.
+- Summary: 面向 switched systems 的 optimal control 框架，在腿足运动中应用广泛。
 
 ### MuJoCo MPC
 - Link: https://github.com/google-deepmind/mujoco_mpc
@@ -339,7 +339,7 @@
 - Robot Type: humanoid / quadruped
 - Simulator: MuJoCo
 - Deploy: sim
-- Summary: Real-time predictive control framework built on MuJoCo.
+- Summary: 基于 MuJoCo 的实时预测控制框架。
 
 ### DIAL-MPC
 - Link: https://github.com/LeCAR-Lab/dial-mpc
@@ -347,7 +347,7 @@
 - Robot Type: quadruped
 - Simulator: none
 - Deploy: sim
-- Summary: Sampling-based MPC for full-order torque-level legged control.
+- Summary: 面向 full-order torque-level legged control 的 sampling-based MPC。
 
 ### Quadruped-PyMPC
 - Link: https://github.com/iit-DLSLab/Quadruped-PyMPC/tree/main
@@ -355,7 +355,7 @@
 - Robot Type: quadruped
 - Simulator: MuJoCo
 - Deploy: sim
-- Summary: Python MPC for quadruped robots using SRBM and gradient-based or sampling-based solvers.
+- Summary: 使用 SRBM 和 gradient-based / sampling-based solver 的 Python 四足 MPC。
 
 ### Cheetah-Software
 - Link: https://github.com/mit-biomimetics/Cheetah-Software
@@ -363,6 +363,6 @@
 - Robot Type: quadruped
 - Simulator: custom
 - Deploy: sim / hardware
-- Summary: Software stack for MIT Cheetah robots.
+- Summary: MIT Cheetah 机器人软件栈。
 
 </details>

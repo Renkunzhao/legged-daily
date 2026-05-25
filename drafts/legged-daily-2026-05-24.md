@@ -2,62 +2,111 @@
 # Legged Daily - 2026-05-24
 
 ## Summary
-- The strongest paper signal today is PRIME, an RSS 2026 work on physically consistent inertial and motion estimation for legged and humanoid robots, evaluated on quadrupeds and Unitree G1.
-- MUJICA adds a unified proprioceptive multi-skill controller for wheeled-legged robots, combining omnidirectional motion, high-platform climbing, and fall recovery on Unitree Go2-W.
-- X2-N is a hardware-and-control signal for transformable wheel-legged humanoids, combining humanoid mode, wheel-legged mode, transformation, and manipulation under one RL-based whole-body control framework.
-- DreamWaQ++ is a T-RO 2026 quadruped locomotion project with multimodal RL, reporting robust stair, slope, obstacle, payload, and multi-platform results.
-- Repository signals are practical but lower-confidence than the paper signals: `g1_locomotion` provides a Unitree G1 MPC/WBID simulation stack, while `awesome-unitree-humanoid-papers` is a useful curated watchlist rather than a research codebase.
-- Job signals remain active from official pages: ETH RSL lists rolling PhD/PostDoc/research-engineering roles, and NC State HIER Lab expects 2027 PhD/PostDoc openings in humanoid whole-body control.
+- PRIME is today's strongest paper signal: an RSS 2026 method for physically consistent inertial and motion estimation on legged and humanoid robots.
+- MUJICA contributes a unified proprioceptive multi-skill controller for wheeled-legged robots, with real Unitree Go2-W experiments.
+- X2-N is a hardware-and-control signal for transformable wheel-legged humanoids, connecting dual-mode locomotion, transformation, and manipulation.
+- DreamWaQ++ remains a strong quadruped locomotion source-network signal around multimodal RL, stairs, slopes, obstacle robustness, payloads, and multi-platform transfer.
+- Practical repository signals today are `g1_locomotion` for Unitree G1 MPC/WBID simulation and `awesome-unitree-humanoid-papers` as a Unitree humanoid literature watchlist.
+- Official job signals remain active or watchlisted at ETH RSL and NC State HIER Lab.
 
-## New Papers
-- [PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots](https://arxiv.org/abs/2605.17681)
-  Source: arXiv / RSS 2026
-  Importance: high
-  Summary: PRIME formulates motion estimation as a MAP optimization that refines kinematics and actuator commands into dynamically consistent trajectories while estimating contact forces and inertial parameters; it is evaluated on quadrupeds and Unitree G1 and is notable because force/contact-annotated reconstructions could improve feedback control and downstream robot-learning datasets.
+<details>
+<summary><strong>New Papers</strong></summary>
 
-- [MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots](https://arxiv.org/abs/2605.13058)
-  Source: arXiv
-  Importance: medium
-  Summary: MUJICA trains a single fully proprioceptive policy with skill indicators for omnidirectional moving, high-platform climbing, and fall recovery, plus a high-level skill selector; real-world Unitree Go2-W experiments make it relevant for robust wheeled-legged sim-to-real control.
+### PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots
+- Link: https://arxiv.org/abs/2605.17681
+- Source: arXiv / RSS 2026
+- Date: 2026-05-22
+- Authors: Jiarong Kang, Kunzhao Ren, Linxuan Wang, Jingbo Wang, Tao Pang, Xiaobin Xiong
+- Topics: legged robots / humanoid robots / state estimation / motion estimation / contact dynamics / inertial parameters
+- Summary: MAP-based motion-estimation method that refines kinematics and actuator commands into dynamically consistent trajectories while estimating contact forces and inertial parameters for legged and humanoid robots.
+- Notes: Evaluated on quadrupeds and Unitree G1; useful to track for physically consistent robot-data reconstruction and force/contact annotation.
 
-- [X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation](https://arxiv.org/abs/2604.21541)
-  Source: arXiv
-  Importance: medium
-  Summary: X2-N presents a high-DoF robot that can switch between humanoid and wheel-legged forms, with an RL-based whole-body controller for hybrid locomotion, transformation, stair climbing, skating-like motion, package delivery, and manipulation.
+### MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots
+- Link: https://arxiv.org/abs/2605.13058
+- Source: arXiv
+- Date: 2026-05-17
+- Authors: Wanming Yu, Xinshuo Yang, Wenxuan Wei, ZhuoJia Huang, Junzheng Wang
+- Topics: wheeled-legged robots / reinforcement learning / proprioceptive control / sim-to-real / fall recovery
+- Summary: Unified controller that trains one fully proprioceptive policy with skill indicators for omnidirectional movement, high-platform climbing, and fall recovery, plus a high-level skill selector.
+- Notes: Real-world Unitree Go2-W experiments make it relevant for robust wheeled-legged deployment.
 
-## New Repos
-- [g1_locomotion](https://github.com/ioloizou/g1_locomotion)
-  Topic: humanoid / Unitree G1 / MPC / whole-body inverse dynamics / MuJoCo / ROS
-  Importance: medium
-  Summary: A Unitree G1 locomotion stack combining Single Rigid Body Dynamics and Whole-Body Inverse Dynamics in a cascaded linear control pipeline; the README reports MuJoCo straight-line walking support but explicitly notes that it has not yet been tested on the physical robot.
+### X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation
+- Link: https://arxiv.org/abs/2604.21541
+- Source: arXiv
+- Date: 2026-04-28
+- Authors: Shengjie Wang, Hui Zhang, Zixuan Wu, Wenhao Yu, Guifeng Yuan, Guohui Tian, Wenhao Zhang, Junyao Gao, Weijia Liu, Zhennan Tang, Jing Peng, Weixia Liu, Wensheng Zhang, Qiang Huang
+- Topics: humanoid / wheeled-legged robot / transformable robot / whole-body control / reinforcement learning / manipulation
+- Summary: Transformable high-DoF robot that switches between humanoid and wheel-legged modes, with an RL-based whole-body controller for hybrid locomotion, transformation, stair climbing, skating-like motion, package delivery, and manipulation.
+- Notes: Useful hardware-system signal for dual-mode humanoid mobility and manipulation.
 
-- [awesome-unitree-humanoid-papers](https://github.com/eai2-repos/awesome-unitree-humanoid-papers)
-  Topic: curated list / Unitree humanoids / G1 / H1 / locomotion / manipulation / foundation models
-  Importance: low
-  Summary: A curated list of Unitree humanoid papers and projects covering G1/H1/H1-2 work from 2025-2026; useful as a source-discovery watchlist, but it is not itself a research implementation repository.
+</details>
 
-## Lab / Professor Signals
-- Name / Lab: Jiarong Kang, Kunzhao Ren, Tao Pang, Xiaobin Xiong / PRIME author network
-  Source: arXiv / RSS 2026
-  Update: PRIME is a high-signal contact-dynamics and motion-estimation work for legged and humanoid robots; track the authors for future releases related to physically consistent data reconstruction and robot foundation-model datasets.
+<details>
+<summary><strong>New Repos</strong></summary>
 
-- Name / Lab: DreamWaQ++ team / KAIST + KRAFTON + URobotics + MIT
-  Source: project page / IEEE Transactions on Robotics 2026
-  Update: DreamWaQ++ reports resilient multimodal RL for quadruped locomotion, including 97.8% success on challenging stairs, 35° slope climbing, 4 robot platforms, and 50 Hz real-time control.
+### g1_locomotion
+- Link: https://github.com/ioloizou/g1_locomotion
+- Category: control / MPC
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: Unitree G1 locomotion stack combining Single Rigid Body Dynamics and Whole-Body Inverse Dynamics in a cascaded linear control pipeline.
+- Notes: README reports MuJoCo straight-line walking support and states that physical-robot testing has not yet been performed.
 
-- Name / Lab: HIER Lab / NC State University
-  Source: official lab homepage
-  Update: The lab lists humanoid and animaloid robotics, autonomous loco-manipulation, whole-body control, teleoperation, safety-critical control, and generative AI for motion as active directions; the page also reports 2026 student paper submissions and NVIDIA Academic Award support for humanoid research.
+### awesome-unitree-humanoid-papers
+- Link: https://github.com/eai2-repos/awesome-unitree-humanoid-papers
+- Category: toolkit
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: data
+- Summary: Curated list of Unitree humanoid papers and projects covering G1, H1, and H1-2 work from 2025-2026.
+- Notes: Best treated as a source-discovery watchlist rather than a research implementation repository.
 
-## Job Signals
-- Institution / Company / Lab / Team: ETH Zurich Robotic Systems Lab
-  Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
-  Source: official RSL open positions page
-  Deadline: rolling / unknown
-  Summary: RSL lists rolling openings connected to legged robots, mobile manipulators, large-scale field robots, motion planning, MPC, reinforcement learning, perception, navigation, actuation, teleoperation, and ROS/C++ systems work.
+</details>
 
-- Institution / Company / Lab / Team: HIER Lab / NC State University
-  Type: PhD / Postdoc
-  Source: official lab homepage
-  Deadline: 2027 cycle / official admissions required
-  Summary: HIER Lab expects openings for 2027 PhD students and postdocs in hierarchical RL-based whole-body control and tele whole-body control of humanoids, with an interest form plus official graduate admissions requirement.
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Jiarong Kang, Kunzhao Ren, Tao Pang, Xiaobin Xiong / PRIME author network
+- Institution: mixed author network; verify individual affiliations before adding to master list
+- arXiv: https://arxiv.org/abs/2605.17681
+- Key Topics: legged robots / humanoid robots / motion estimation / contact dynamics / inertial parameter estimation
+- Notes: PRIME is a high-signal contact-dynamics and motion-estimation work for legged and humanoid robots; track for future code, data, and physically consistent reconstruction releases.
+
+### DreamWaQ++ team
+- Institution: KAIST / KRAFTON / URobotics / MIT
+- Homepage: https://kaist-dmlab.github.io/DreamWaQ-Plus-Plus-Site/
+- Key Topics: quadruped / locomotion / reinforcement learning / multimodal perception / terrain adaptation / sim-to-real
+- Notes: DreamWaQ++ reports resilient multimodal RL for quadruped locomotion, including challenging stairs, slope climbing, obstacle traversal, payload robustness, multi-platform results, and 50 Hz real-time control.
+
+### HIER Lab / NC State University
+- Institution: North Carolina State University
+- Homepage: https://hierlab.github.io/
+- Lab / Department: HIER Lab
+- Key Topics: humanoid / animaloid legged robots / loco-manipulation / whole-body control / teleoperation / safety-critical control / generative AI for motion
+- Notes: Active source for humanoid and animaloid robot intelligence; the lab page reports 2026 student paper submissions and NVIDIA Academic Award support for humanoid research.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
+- Location: Zurich, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
+- Status: active
+- Notes: RSL lists rolling openings connected to legged and field robotics, including research and engineering roles.
+
+### HIER Lab / NC State University
+- Type: PhD / Postdoc
+- Location: Raleigh, NC, USA
+- Source: official lab page
+- Deadline: 2027 cycle / official admissions required
+- Topics: humanoid / whole-body control / hierarchical reinforcement learning / teleoperation / loco-manipulation
+- Status: watching
+- Notes: Lab page expects 2027 PhD and postdoc openings in hierarchical RL-based whole-body control and humanoid tele whole-body control; official graduate admissions are still required.
+
+</details>

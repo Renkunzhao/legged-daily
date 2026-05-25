@@ -2,62 +2,111 @@
 # Legged Daily - 2026-05-24
 
 ## 摘要
-- 今天最强论文信号是 PRIME：RSS 2026 工作，面向腿足和人形机器人的物理一致惯性与运动估计，在四足机器人和 Unitree G1 上验证。
-- MUJICA 给轮足机器人提供统一的本体感知多技能控制器，把全向移动、高台攀爬、摔倒恢复合在一个策略中，并在 Unitree Go2-W 上做了真实实验。
-- X2-N 是一个硬件与控制结合的信号：可在人形和轮足形态之间切换，用 RL 全身控制覆盖变形、混合移动和操作。
-- DreamWaQ++ 是 T-RO 2026 四足运动项目，使用多模态 RL，展示了楼梯、坡面、障碍、负载和多平台鲁棒性。
-- 仓库信号实用但整体低于论文信号：`g1_locomotion` 提供 Unitree G1 的 MPC/WBID 仿真栈；`awesome-unitree-humanoid-papers` 更适合作为 Unitree 人形方向的来源 watchlist，而不是研究代码库。
-- 招聘信号来自官方页面：ETH RSL 有滚动 PhD/PostDoc/Research Engineer 等岗位；NC State HIER Lab 预计有 2027 PhD/PostDoc 机会，方向是人形机器人全身控制。
+- PRIME 是今天最强论文信号：RSS 2026，面向腿足和人形机器人的物理一致惯性与运动估计。
+- MUJICA 提供轮足机器人统一本体感知多技能控制器，并在 Unitree Go2-W 上完成真实实验。
+- X2-N 是硬件与控制结合的信号，把可变形轮足人形机器人的双模式移动、形态切换和操作连接起来。
+- DreamWaQ++ 仍是四足运动方向的强来源网络信号，覆盖多模态 RL、楼梯、坡面、障碍鲁棒性、负载和多平台迁移。
+- 今天的实用仓库信号包括 Unitree G1 MPC/WBID 仿真栈 `g1_locomotion`，以及适合作为 Unitree 人形论文 watchlist 的 `awesome-unitree-humanoid-papers`。
+- 官方招聘信号方面，ETH RSL 仍有活跃滚动岗位，NC State HIER Lab 处于 2027 PhD/Postdoc watchlist 状态。
 
-## 新论文
-- [PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots](https://arxiv.org/abs/2605.17681)
-  Source: arXiv / RSS 2026
-  Importance: high
-  Summary: PRIME 把运动估计建模为 MAP 优化，把运动学测量和执行器命令修正为动力学一致轨迹，同时估计接触力和惯性参数；它在四足机器人和 Unitree G1 上验证，重要性在于可生成带力/接触标注的真实机器人运动重建数据，服务反馈控制和后续机器人学习数据集。
+<details>
+<summary><strong>新论文</strong></summary>
 
-- [MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots](https://arxiv.org/abs/2605.13058)
-  Source: arXiv
-  Importance: medium
-  Summary: MUJICA 用技能指示变量训练一个全本体感知策略，统一全向移动、高台攀爬和摔倒恢复，并加入高层技能选择器；Unitree Go2-W 真实实验使它对轮足机器人鲁棒 sim-to-real 控制很有参考价值。
+### PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots
+- Link: https://arxiv.org/abs/2605.17681
+- Source: arXiv / RSS 2026
+- Date: 2026-05-22
+- Authors: Jiarong Kang, Kunzhao Ren, Linxuan Wang, Jingbo Wang, Tao Pang, Xiaobin Xiong
+- Topics: legged robots / humanoid robots / state estimation / motion estimation / contact dynamics / inertial parameters
+- Summary: 基于 MAP 的运动估计方法，把运动学测量和执行器命令修正为动力学一致轨迹，同时估计腿足和人形机器人的接触力与惯性参数。
+- Notes: 已在四足机器人和 Unitree G1 上验证；值得继续跟踪其面向物理一致机器人数据重建、力/接触标注的数据或代码释放。
 
-- [X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation](https://arxiv.org/abs/2604.21541)
-  Source: arXiv
-  Importance: medium
-  Summary: X2-N 提出一种高自由度可变形机器人，可在人形和轮足形态之间切换，并用 RL 全身控制覆盖混合运动、变形、爬楼梯、滑行动作、包裹递送和操作任务。
+### MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots
+- Link: https://arxiv.org/abs/2605.13058
+- Source: arXiv
+- Date: 2026-05-17
+- Authors: Wanming Yu, Xinshuo Yang, Wenxuan Wei, ZhuoJia Huang, Junzheng Wang
+- Topics: wheeled-legged robots / reinforcement learning / proprioceptive control / sim-to-real / fall recovery
+- Summary: 统一控制器，用技能指示变量训练一个全本体感知策略，覆盖全向移动、高台攀爬和摔倒恢复，并配合高层技能选择器。
+- Notes: Unitree Go2-W 真实实验使它对轮足机器人鲁棒部署有参考价值。
 
-## 新仓库
-- [g1_locomotion](https://github.com/ioloizou/g1_locomotion)
-  Topic: humanoid / Unitree G1 / MPC / whole-body inverse dynamics / MuJoCo / ROS
-  Importance: medium
-  Summary: 一个 Unitree G1 运动控制栈，把 Single Rigid Body Dynamics 和 Whole-Body Inverse Dynamics 组合成级联线性控制流程；README 显示支持 MuJoCo 直线行走实验，但也明确说明尚未在真实机器人上测试。
+### X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation
+- Link: https://arxiv.org/abs/2604.21541
+- Source: arXiv
+- Date: 2026-04-28
+- Authors: Shengjie Wang, Hui Zhang, Zixuan Wu, Wenhao Yu, Guifeng Yuan, Guohui Tian, Wenhao Zhang, Junyao Gao, Weijia Liu, Zhennan Tang, Jing Peng, Weixia Liu, Wensheng Zhang, Qiang Huang
+- Topics: humanoid / wheeled-legged robot / transformable robot / whole-body control / reinforcement learning / manipulation
+- Summary: 高自由度可变形机器人，可在人形与轮足模式之间切换，并使用 RL 全身控制完成混合移动、变形、爬楼、滑行动作、包裹递送和操作。
+- Notes: 是双模式人形移动与操作方向有价值的硬件系统信号。
 
-- [awesome-unitree-humanoid-papers](https://github.com/eai2-repos/awesome-unitree-humanoid-papers)
-  Topic: curated list / Unitree humanoids / G1 / H1 / locomotion / manipulation / foundation models
-  Importance: low
-  Summary: 一个整理 2025-2026 年 Unitree G1/H1/H1-2 人形机器人论文和项目的列表；适合作为来源发现 watchlist，但它本身不是研究实现仓库。
+</details>
 
-## 实验室 / 教授信号
-- Name / Lab: Jiarong Kang, Kunzhao Ren, Tao Pang, Xiaobin Xiong / PRIME author network
-  Source: arXiv / RSS 2026
-  Update: PRIME 是腿足/人形机器人接触动力学与运动估计方向的高信号工作；建议继续跟踪作者后续是否发布代码、数据或面向 robot foundation models 的物理一致重建数据。
+<details>
+<summary><strong>新仓库</strong></summary>
 
-- Name / Lab: DreamWaQ++ team / KAIST + KRAFTON + URobotics + MIT
-  Source: project page / IEEE Transactions on Robotics 2026
-  Update: DreamWaQ++ 报告了面向四足机器人的鲁棒多模态 RL：挑战楼梯成功率 97.8%、可爬 35° 坡、验证 4 个机器人平台，并以 50 Hz 实时控制运行。
+### g1_locomotion
+- Link: https://github.com/ioloizou/g1_locomotion
+- Category: control / MPC
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: Unitree G1 运动控制栈，把 Single Rigid Body Dynamics 与 Whole-Body Inverse Dynamics 组合成级联线性控制流程。
+- Notes: README 显示支持 MuJoCo 直线行走，并说明尚未在真实机器人上测试。
 
-- Name / Lab: HIER Lab / NC State University
-  Source: official lab homepage
-  Update: HIER Lab 当前方向包括人形和动物型腿足机器人、自主 loco-manipulation、全身控制、遥操作、安全关键控制和生成式 AI for motion；页面还显示 2026 年学生论文提交和 NVIDIA Academic Award 对人形研究的支持。
+### awesome-unitree-humanoid-papers
+- Link: https://github.com/eai2-repos/awesome-unitree-humanoid-papers
+- Category: toolkit
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: data
+- Summary: Unitree 人形论文和项目整理列表，覆盖 2025-2026 年 G1、H1、H1-2 相关工作。
+- Notes: 更适合作为来源发现 watchlist，而不是研究实现仓库。
 
-## 招聘信号
-- Institution / Company / Lab / Team: ETH Zurich Robotic Systems Lab
-  Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
-  Source: official RSL open positions page
-  Deadline: rolling / unknown
-  Summary: RSL 官方页面列出滚动岗位，方向覆盖腿足机器人、移动操作、大型野外机器人、运动规划、MPC、强化学习、感知、导航、驱动设计、遥操作，以及 ROS/C++ 系统工程。
+</details>
 
-- Institution / Company / Lab / Team: HIER Lab / NC State University
-  Type: PhD / Postdoc
-  Source: official lab homepage
-  Deadline: 2027 cycle / official admissions required
-  Summary: HIER Lab 预计招收 2027 PhD 和 Postdoc，方向包括 hierarchical RL-based whole-body control 与 humanoid tele whole-body control；需要填写 interest form，并仍需走官方研究生申请系统。
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### Jiarong Kang, Kunzhao Ren, Tao Pang, Xiaobin Xiong / PRIME author network
+- Institution: 混合作者网络；加入 master list 前需进一步确认个人单位
+- arXiv: https://arxiv.org/abs/2605.17681
+- Key Topics: legged robots / humanoid robots / motion estimation / contact dynamics / inertial parameter estimation
+- Notes: PRIME 是腿足和人形机器人接触动力学与运动估计方向的高信号工作；建议跟踪后续代码、数据和物理一致重建释放。
+
+### DreamWaQ++ team
+- Institution: KAIST / KRAFTON / URobotics / MIT
+- Homepage: https://kaist-dmlab.github.io/DreamWaQ-Plus-Plus-Site/
+- Key Topics: quadruped / locomotion / reinforcement learning / multimodal perception / terrain adaptation / sim-to-real
+- Notes: DreamWaQ++ 报告面向四足运动的鲁棒多模态 RL，覆盖挑战楼梯、坡面、障碍、负载、多平台结果和 50 Hz 实时控制。
+
+### HIER Lab / NC State University
+- Institution: North Carolina State University
+- Homepage: https://hierlab.github.io/
+- Lab / Department: HIER Lab
+- Key Topics: humanoid / animaloid legged robots / loco-manipulation / whole-body control / teleoperation / safety-critical control / generative AI for motion
+- Notes: 人形和动物型机器人智能方向的活跃来源；实验室页面显示 2026 年学生论文提交，以及 NVIDIA Academic Award 对人形研究的支持。
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
+- Location: Zurich, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
+- Status: active
+- Notes: RSL 官方页面列出与腿足和野外机器人相关的滚动研究与工程岗位。
+
+### HIER Lab / NC State University
+- Type: PhD / Postdoc
+- Location: Raleigh, NC, USA
+- Source: official lab page
+- Deadline: 2027 cycle / official admissions required
+- Topics: humanoid / whole-body control / hierarchical reinforcement learning / teleoperation / loco-manipulation
+- Status: watching
+- Notes: 实验室页面预计 2027 年会有 hierarchical RL-based whole-body control 与 humanoid tele whole-body control 方向 PhD/Postdoc 机会；仍需通过官方研究生申请系统。
+
+</details>
