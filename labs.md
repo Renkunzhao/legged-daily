@@ -235,4 +235,11 @@
 - Key Topics: legged robots / humanoid robots / motion estimation / contact dynamics / inertial parameter estimation
 - Notes: Source network behind PRIME, a high-signal physically consistent motion-estimation work for legged and humanoid robots.
 
+
+### Hugging Face LeRobot / LeRobot Humanoid contributors
+- Institution: Hugging Face / open-source LeRobot ecosystem
+- Homepage: https://huggingface.co/blog/VirgileBatto/lerobot-humanoid
+- GitHub: https://github.com/Virgileboat/lerobot-humanoid
+- Key Topics: humanoid / open hardware / robot learning / simulation / identification / real-world control
+- Notes: Strong source to track because the release connects affordable humanoid hardware with data collection, simulator identification, policy training, and deployment rather than only publishing a robot model or controller.
 </details>

@@ -96,6 +96,15 @@
 - Summary: Empirical study of how a 1-DOF actuated spine affects agile quadruped locomotion across high-speed running, stairs, slopes, hurdling, and crawling tasks.
 - Notes: Useful reference for morphology-aware locomotion design rather than controller-only comparison.
 
+### Learning to Balance Motor Thermal Safety and Quadrupedal Locomotion Performance with Residual Policy
+- Link: https://arxiv.org/abs/2605.27046
+- Source: arXiv
+- Date: 2026-05-26
+- Authors: Yuhang Wan, Weixian Lin, Letian Qian, Yiqi Zou, Weiwei Wu, Shengwei Wu, Chuanlin Zhao, Xin Luo
+- Topics: quadruped / reinforcement learning / motor thermal safety / residual policy / sim-to-real / Unitree A1
+- Summary: Integrates a whole-body motor thermal model into quadruped RL and trains a residual policy on top of a nominal terrain locomotion policy so the robot can trade tracking performance against actuator overheating risk.
+- Notes: Real-world Unitree A1 validation reports stable multi-terrain locomotion under a 3 kg payload for over 13 minutes, versus nominal-policy overheating after about 5 minutes.
+
 </details>
 
 <details>

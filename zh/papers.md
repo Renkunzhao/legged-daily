@@ -96,6 +96,15 @@
 - Summary: 研究 1-DOF 主动脊柱在高速奔跑、楼梯、坡面、跨栏和爬行等四足敏捷任务中的作用。
 - Notes: 是 morphology-aware locomotion design 的有用参考，而不仅是控制器比较。
 
+### Learning to Balance Motor Thermal Safety and Quadrupedal Locomotion Performance with Residual Policy
+- Link: https://arxiv.org/abs/2605.27046
+- Source: arXiv
+- Date: 2026-05-26
+- Authors: Yuhang Wan, Weixian Lin, Letian Qian, Yiqi Zou, Weiwei Wu, Shengwei Wu, Chuanlin Zhao, Xin Luo
+- Topics: quadruped / reinforcement learning / motor thermal safety / residual policy / sim-to-real / Unitree A1
+- Summary: 将全身电机热模型集成进四足强化学习，在名义地形运动策略之上训练残差策略，让机器人在轨迹跟踪性能与电机过热风险之间权衡。
+- Notes: Unitree A1 真机实验报告在 3 kg 负载下可在多种地形稳定行走超过 13 分钟，而名义策略约 5 分钟后出现电机过热。
+
 </details>
 
 <details>

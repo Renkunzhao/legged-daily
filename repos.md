@@ -320,6 +320,15 @@
 - Summary: Unified NVIDIA GEAR platform for humanoid whole-body control, teleoperation, deployment, and SONIC-based training workflows.
 - Notes: Strong current reference for Unitree G1-oriented whole-body control and teleop-to-deployment workflows.
 
+### LeRobot Humanoid
+- Link: https://github.com/Virgileboat/lerobot-humanoid
+- Category: toolkit / hardware / simulator / identification / runtime
+- Robot Type: humanoid
+- Simulator: MuJoCo / MJLab
+- Deploy: sim / hardware
+- Summary: Full-stack open low-cost humanoid project from the Hugging Face / LeRobot ecosystem, grouping hardware build assets, model assets, runtime, simulation-based identification, and training environments for a reproducible 3D-printed bipedal platform.
+- Notes: Umbrella repository for component repos including `lerobot-humanoid-hardware`, `lerobot-humanoid-model`, `lerobot-humanoid-runtime`, and `lerobot-humanoid-identification`.
+
 </details>
 
 <details>
