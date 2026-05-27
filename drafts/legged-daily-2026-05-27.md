@@ -1,0 +1,68 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-05-27.md)
+# Legged Daily - 2026-05-27
+
+## Summary
+- The strongest new paper signal is a May 26 arXiv quadruped RL paper on motor thermal safety: it models actuator temperature inside training and reports longer payload locomotion on Unitree A1.
+- Hugging Face / LeRobot surfaced a high-signal open humanoid hardware stack: low-cost 3D-printed bipedal platform, model/runtime/identification repositories, and training environments.
+- The PRIME RSS 2026 page from the Legged AI / UW-Madison network is worth tracking as a lab signal for dynamics-consistent motion and inertial estimation on quadrupeds and Unitree G1.
+- EPFL Biorob officially lists one Postdoc and one PhD opening for neuromechanics of human locomotion using humanoid robots, with Fall 2026 timing.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### Learning to Balance Motor Thermal Safety and Quadrupedal Locomotion Performance with Residual Policy
+- Link: https://arxiv.org/abs/2605.27046
+- Source: arXiv
+- Date: 2026-05-26
+- Authors: Yuhang Wan, Weixian Lin, Letian Qian, Yiqi Zou, Weiwei Wu, Shengwei Wu, Chuanlin Zhao, Xin Luo
+- Topics: quadruped / reinforcement learning / motor thermal safety / residual policy / sim-to-real / Unitree A1
+- Summary: Integrates a whole-body motor thermal model into quadruped RL and trains a residual policy on top of a nominal terrain locomotion policy so the robot can trade speed or tracking performance against actuator overheating risk.
+- Notes: The abstract reports real-world Unitree A1 validation under a 3 kg payload, with stable multi-terrain locomotion for over 13 minutes, while the nominal policy overheats in about 5 minutes; useful for long-duration deployment and payload-aware locomotion.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### LeRobot Humanoid
+- Link: https://github.com/Virgileboat/lerobot-humanoid
+- Category: toolkit / hardware / simulator / identification / runtime
+- Robot Type: humanoid
+- Simulator: MuJoCo / MJLab
+- Deploy: both
+- Summary: Full-stack open low-cost humanoid project from the Hugging Face / LeRobot ecosystem, grouping hardware build assets, design tools, model assets, runtime, simulation-based identification, and training environments for a reproducible 3D-printed bipedal platform.
+- Notes: Official Hugging Face blog describes an experimental roughly USD 2,500 parts-cost bipedal platform with printable parts, off-the-shelf components, assembly documentation, simulation assets, LeRobot integration, identification pipelines, training environments, and real-world control loop; the umbrella repo links component repos such as `lerobot-humanoid-hardware`, `lerobot-humanoid-model`, `lerobot-humanoid-runtime`, and `lerobot-humanoid-identification`.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Hugging Face LeRobot / LeRobot Humanoid contributors
+- Institution: Hugging Face / open-source LeRobot ecosystem
+- Homepage: https://huggingface.co/blog/VirgileBatto/lerobot-humanoid
+- GitHub: https://github.com/Virgileboat/lerobot-humanoid
+- Key Topics: humanoid / open hardware / robot learning / simulation / identification / real-world control
+- Notes: The LeRobot Humanoid release is a strong source to track because it connects affordable humanoid hardware with data collection, simulator identification, policy training, and deployment rather than only publishing a robot model or controller.
+
+### Legged AI / UW-Madison PRIME network
+- Institution: University of Wisconsin-Madison and collaborators; verify full affiliations before master-list insertion
+- Homepage: https://www.leggedai.com/publication/2026rss_prime/
+- Key Topics: legged robots / humanoid / motion estimation / contact dynamics / inertial parameter identification / robot foundation model data
+- Notes: PRIME is listed as an RSS 2026 publication and targets physically consistent trajectory, contact-force, and inertial-parameter reconstruction from onboard kinematics and actuator sensing on quadrupeds and Unitree G1; useful source signal for estimation, calibration, and learning-ready real-robot data.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### EPFL Biorobotics Laboratory / Auke Ijspeert
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official website
+- Deadline: Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
+- Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning / computational neuroscience
+- Status: active
+- Notes: Official EPFL Biorob openings page lists one Postdoc and one PhD position for investigating and leveraging neuromechanics of human locomotion using humanoid robots, combining numerical neuromechanical simulations, bio-inspired humanoid locomotion controllers, and reinforcement learning; already present in the master jobs list but re-verified today from the official source.
+
+</details>
