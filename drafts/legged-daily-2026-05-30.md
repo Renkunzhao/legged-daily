@@ -1,0 +1,116 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-05-30.md)
+# Legged Daily - 2026-05-30
+
+## Summary
+- No additional high-confidence new legged-robotics paper was selected beyond the 2026-05-29 SPRINT / HumanoidMimicGen / SAC findings; today's arXiv cs.RO recent page only surfaced SPRINT as a direct legged-locomotion match, so the paper section is intentionally left sparse instead of padding.
+- Repository signal is stronger than paper signal today: `rl_sar` is a mature simulation-to-real deployment framework spanning quadrupeds, wheeled-legged robots, and humanoids, with ROS / ROS 2, Gazebo, MuJoCo, IsaacGym, and IsaacSim coverage.
+- `legged_rl_lab` is a useful Isaac Lab/RSL-RL training stack for Unitree Go1/Go2/G1, rough-terrain walking, G1 AMP, depth parkour, and cross-embodiment experiments.
+- `BipedRobot` is a smaller but technically rich personal biped project with custom RL algorithms, Isaac Lab + MuJoCo parity, motion imitation, domain randomization, and real hardware iteration.
+- Lab and hiring signals are active: CUHK Legged Robot Lab lists Fall 2027 PhD plus RA/engineer openings and reports an RSS 2026 actuation paper; SII Legged AI Lab says it moved from UW-Madison to Shanghai Innovation Institute and is actively recruiting.
+- Job watch additions worth review: Field AI has an explicit Robotics Autonomy Engineer - Locomotion role for RL controllers on legged/humanoid robots; RoMI Lab lists a fully funded PhD position in legged robotics / optimization / RL / MPC.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+No additional high-confidence new paper selected for 2026-05-30. The only direct legged-locomotion match found on the current arXiv cs.RO recent page was SPRINT, already drafted on 2026-05-29; this section is intentionally not padded.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### rl_sar
+- Link: https://github.com/fan-ziqi/rl_sar
+- Category: RL / deployment / simulator / toolkit
+- Robot Type: quadruped / wheeled-legged / humanoid
+- Simulator: IsaacGym / IsaacSim / Gazebo / MuJoCo
+- Deploy: both
+- Summary: Simulation-verification and real-robot deployment framework for robot reinforcement-learning policies, with support for ROS Noetic, ROS 2 Foxy/Humble, libtorch, onnxruntime, Linux, and partial macOS MuJoCo simulation.
+- Notes: GitHub API showed 1321 stars, Apache-2.0 license, and a 2026-05-27 push at discovery time; README lists hardware-oriented support for Unitree A1/Go2/Go2W/B2/B2W/G1, Fourier GR1, zhiniao L4W4, Deeprobotics Lite3, Agibot D1, and DDTRobot Tita, including G1 locomotion and dance policies.
+
+### legged_rl_lab
+- Link: https://github.com/zhw0422/legged_rl_lab
+- Category: RL / simulator / toolkit
+- Robot Type: humanoid / quadruped / general
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim / sim2sim2real
+- Summary: Isaac Lab-based legged-RL training stack for Unitree Go1, Go2, and G1, covering flat and rough walking, G1 humanoid AMP, depth-based parkour, and cross-embodiment experiments across procedural humanoids and quadrupeds.
+- Notes: GitHub API showed 21 stars and a 2026-05-30 push at discovery time; README documents RSL-RL training, multi-GPU training, cross-embodied G1+Go2 tasks, mask / Transformer / GCN morphology encoders, AMASS/LAFAN1 retargeted G1 motion data, and skrl AMP alternatives.
+
+### BipedRobot
+- Link: https://github.com/AsterisCrack/BipedRobot
+- Category: RL / simulator / hardware / imitation learning
+- Robot Type: biped / humanoid-adjacent
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: both
+- Summary: Custom biped locomotion project with a physical 12-DoF robot, Isaac Lab and MuJoCo environments sharing observation/action/reward interfaces, custom PPO/SAC/DDPG/D4PG/MPO implementations, motion-imitation support, and sim-to-real randomization.
+- Notes: GitHub API showed 15 stars, MIT license, and a 2026-05-29 push at discovery time; best treated as a technically detailed individual project rather than a widely adopted lab framework.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### CUHK Legged Robot Lab / Yunhui Liu
+- Institution: The Chinese University of Hong Kong
+- Homepage: https://cuhkleggedrobotlab.github.io/
+- Lab / Department: Department of Mechanical and Automation Engineering; CUHK Legged Robot Lab
+- Key Topics: quadruped / legged locomotion / loco-manipulation / perception and navigation / actuator and mechanical system design
+- Notes: Official lab page states active recruiting for Fall 2027 PhD applicants plus multiple RA and engineer openings; recent news also reports the 2026 launch of the Hong Kong Embodied AI Lab and acceptance of Zhang Linwei's paper “VRA: Grounding Discrete-Time Joint Acceleration in Voltage-Constrained Actuation” to RSS 2026.
+
+### Legged AI Lab / Xiaobin Xiong
+- Institution: Shanghai Innovation Institute; formerly University of Wisconsin-Madison
+- Homepage: https://www.leggedai.com/
+- Lab / Department: Legged AI Lab
+- Key Topics: legged robots / physical AI / locomotion / manipulation / control theory / numerical optimization / machine learning / robot design
+- Notes: Official lab page says the lab was founded at UW-Madison in 2023 and moved as a group to Shanghai Innovation Institute in 2026; it reports strong funding and active recruitment for PhD-interested students, research assistants, and a robot systems engineer role.
+
+### RoMI Lab / Carlos Mastalli
+- Institution: University of Edinburgh / Edinburgh Centre for Robotics
+- Homepage: https://www.romilab.org/joining
+- Lab / Department: Robot Motor Intelligence Lab
+- Key Topics: legged robotics / model predictive control / numerical optimization / reinforcement learning / robot control / contact physics
+- Notes: Joining page lists continuous PhD recruitment plus one fully funded PhD position to be filled as soon as possible, with focus areas including MPC in legged robotics, optimal control, RL for robot control, and symmetries/contact physics.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### Field AI
+- Type: Research Engineer / Robotics Autonomy Engineer - Locomotion
+- Location: Mission Viejo / Irvine area, California, USA; US/global team context
+- Source: official Lever careers page
+- Deadline: unknown
+- Topics: legged robots / humanoid robots / reinforcement learning / locomotion / manipulation / Isaac Gym / Isaac Lab / MuJoCo / sim-to-real / field deployment
+- Status: active
+- Notes: Official posting asks for ownership of RL-based locomotion pipelines, deployment of agile behaviors on quadruped and humanoid platforms, scalable simulation infrastructure, and collaboration across perception, embedded, and systems teams; salary range shown as USD 70k-300k.
+
+### RoMI Lab / Carlos Mastalli
+- Type: PhD
+- Location: Edinburgh, United Kingdom
+- Source: official lab joining page
+- Deadline: as soon as possible / rolling
+- Topics: legged robotics / MPC / numerical optimization / optimal control / reinforcement learning / robot control / state estimation / perception
+- Status: active
+- Notes: Official joining page says RoMI currently has a fully funded PhD position to be filled as soon as possible and also has PhD routes through D2AIR and SPADS; applicants should discuss the project proposal with Carlos Mastalli and mention RoMI Lab during application.
+
+### CUHK Legged Robot Lab
+- Type: PhD / Research Assistant / Engineer
+- Location: Hong Kong
+- Source: official lab page
+- Deadline: Fall 2027 PhD cycle / rolling for RA and engineer roles
+- Topics: robust locomotion / whole-body loco-manipulation / perception and navigation / actuator and mechanical system design
+- Status: active
+- Notes: Official lab page says the group is actively seeking self-motivated PhD applicants for Fall 2027 and has multiple RA and engineer openings; this overlaps with the lab signal and may be worth adding to the jobs master list after review.
+
+### Legged AI Lab / Shanghai Innovation Institute
+- Type: PhD / Research Assistant / Robotics Systems Engineer
+- Location: Shanghai, China
+- Source: official lab page
+- Deadline: rolling / SII admissions activities
+- Topics: legged robots / physical AI / locomotion / manipulation / control / optimization / machine learning / robot body systems
+- Status: active
+- Notes: Official page says the lab is well-funded and recruiting actively; PhD-interested students should follow Shanghai Innovation Institute admissions activities, research assistants are expected to work on-site in principle, and the systems engineer role focuses on robot body/system R&D.
+
+</details>
