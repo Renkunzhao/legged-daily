@@ -76,6 +76,17 @@
 
   </details>
 
+- <details>
+  <summary><strong>Carlos Mastalli — University of Edinburgh / RoMI Lab</strong></summary>
+
+  - Institution: University of Edinburgh / Edinburgh Centre for Robotics
+  - Homepage: https://www.romilab.org/joining
+  - Lab: Robot Motor Intelligence Lab
+  - Key Topics: legged robotics / model predictive control / numerical optimization / reinforcement learning / robot control / contact physics
+  - Notes: joining 页面列出持续 PhD 招募，并说明目前有一个 fully funded PhD position 希望尽快招满；方向包括腿足机器人 MPC、最优控制、机器人控制中的 RL，以及对称性/contact physics。
+
+  </details>
+
 </details>
 
 ---
@@ -181,7 +192,18 @@
   - Institution: The Chinese University of Hong Kong
   - Lab: https://cuhkleggedrobotlab.github.io/
   - Google Scholar: https://scholar.google.com/citations?user=WzmDQTMAAAAJ&hl=en
-  - Notes: CUHK 腿足机器人工作的 standing watchlist entry。
+  - Key Topics: quadruped / legged locomotion / loco-manipulation / perception and navigation / actuator and mechanical system design
+  - Notes: CUHK 腿足机器人工作的 standing watchlist entry；官方实验室页面列出 Fall 2027 PhD、RA 和工程师机会，并报告 RSS 2026 执行器论文 “VRA: Grounding Discrete-Time Joint Acceleration in Voltage-Constrained Actuation”。
+
+  </details>
+
+- <details>
+  <summary><strong>Xiaobin Xiong — Shanghai Innovation Institute / Legged AI Lab</strong></summary>
+
+  - Institution: Shanghai Innovation Institute; formerly University of Wisconsin-Madison
+  - Lab: https://www.leggedai.com/
+  - Key Topics: legged robots / physical AI / locomotion / manipulation / control theory / numerical optimization / machine learning / robot design
+  - Notes: 官方页面说明实验室 2023 年成立于 UW-Madison，并于 2026 年整体转入上海创智学院；目前经费充足，正在招收博士意向学生、科研助理和机器人系统工程师。
 
   </details>
 

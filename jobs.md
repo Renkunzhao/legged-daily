@@ -35,10 +35,46 @@
 - Status: watching
 - Notes: Expected 2027 PhD and postdoc openings in hierarchical RL-based whole-body control and humanoid tele whole-body control.
 
+### RoMI Lab / Carlos Mastalli
+- Type: PhD
+- Location: Edinburgh, United Kingdom
+- Source: official lab joining page
+- Deadline: as soon as possible / rolling
+- Topics: legged robotics / MPC / numerical optimization / optimal control / reinforcement learning / robot control / state estimation / perception
+- Status: active
+- Notes: Official joining page says RoMI currently has a fully funded PhD position to be filled as soon as possible and also has PhD routes through D2AIR and SPADS; applicants should discuss the project proposal with Carlos Mastalli and mention RoMI Lab during application.
+
+### CUHK Legged Robot Lab
+- Type: PhD / Research Assistant / Engineer
+- Location: Hong Kong
+- Source: official lab page
+- Deadline: Fall 2027 PhD cycle / rolling for RA and engineer roles
+- Topics: robust locomotion / whole-body loco-manipulation / perception and navigation / actuator and mechanical system design
+- Status: active
+- Notes: Official page says the group is actively seeking self-motivated PhD applicants for Fall 2027 and has multiple RA and engineer openings.
+
+### Legged AI Lab / Shanghai Innovation Institute
+- Type: PhD / Research Assistant / Robotics Systems Engineer
+- Location: Shanghai, China
+- Source: official lab page
+- Deadline: rolling / SII admissions activities
+- Topics: legged robots / physical AI / locomotion / manipulation / control / optimization / machine learning / robot body systems
+- Status: active
+- Notes: Official page says the lab is well-funded and recruiting actively; PhD-interested students should follow Shanghai Innovation Institute admissions activities, research assistants are expected to work on-site in principle, and the systems engineer role focuses on robot body/system R&D.
+
 </details>
 
 <details>
 <summary><strong>Industry Opportunities</strong></summary>
+
+### Field AI
+- Type: Research Engineer / Robotics Autonomy Engineer - Locomotion
+- Location: Mission Viejo / Irvine area, California, USA; US/global team context
+- Source: official Lever careers page
+- Deadline: unknown
+- Topics: legged robots / humanoid robots / reinforcement learning / locomotion / manipulation / Isaac Gym / Isaac Lab / MuJoCo / sim-to-real / field deployment
+- Status: active
+- Notes: Official posting asks for ownership of RL-based locomotion pipelines, deployment of agile behaviors on quadruped and humanoid platforms, scalable simulation infrastructure, and collaboration across perception, embedded, and systems teams; salary range shown as USD 70k-300k.
 
 ### NVIDIA GEAR
 - Type: Research Scientist

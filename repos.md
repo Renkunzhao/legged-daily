@@ -266,6 +266,33 @@
 - Deploy: sim / hardware
 - Summary: Real-world RL deployment pipeline for Unitree robots using IsaacSim.
 
+### rl_sar
+- Link: https://github.com/fan-ziqi/rl_sar
+- Category: RL / deployment / simulator / toolkit
+- Robot Type: quadruped / wheeled-legged / humanoid
+- Simulator: IsaacGym / IsaacSim / Gazebo / MuJoCo
+- Deploy: sim / hardware
+- Summary: Simulation-verification and real-robot deployment framework for reinforcement-learning policies across quadrupeds, wheeled-legged robots, and humanoids.
+- Notes: Supports ROS Noetic, ROS 2 Foxy/Humble, libtorch, onnxruntime, Linux, and partial macOS MuJoCo simulation; README lists Unitree A1/Go2/Go2W/B2/B2W/G1, Fourier GR1, zhiniao L4W4, Deeprobotics Lite3, Agibot D1, and DDTRobot Tita support.
+
+### legged_rl_lab
+- Link: https://github.com/zhw0422/legged_rl_lab
+- Category: RL / simulator / toolkit
+- Robot Type: humanoid / quadruped / general
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim / sim2sim2real
+- Summary: Isaac Lab-based legged-RL training stack for Unitree Go1, Go2, and G1, including rough-terrain walking, G1 AMP, depth parkour, and cross-embodiment experiments.
+- Notes: Documents RSL-RL training, multi-GPU training, cross-embodied G1+Go2 tasks, morphology encoders, retargeted motion data, and skrl AMP alternatives.
+
+### BipedRobot
+- Link: https://github.com/AsterisCrack/BipedRobot
+- Category: RL / simulator / hardware / imitation learning
+- Robot Type: biped / humanoid-adjacent
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: sim / hardware
+- Summary: Custom biped locomotion project with a physical 12-DoF robot, Isaac Lab and MuJoCo environments, custom RL algorithms, motion imitation, and sim-to-real randomization.
+- Notes: Technically detailed individual project rather than a widely adopted lab framework.
+
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
 - Category: RL

@@ -76,6 +76,17 @@
 
   </details>
 
+- <details>
+  <summary><strong>Carlos Mastalli — University of Edinburgh / RoMI Lab</strong></summary>
+
+  - Institution: University of Edinburgh / Edinburgh Centre for Robotics
+  - Homepage: https://www.romilab.org/joining
+  - Lab: Robot Motor Intelligence Lab
+  - Key Topics: legged robotics / model predictive control / numerical optimization / reinforcement learning / robot control / contact physics
+  - Notes: Joining page lists continuous PhD recruitment plus one fully funded PhD position to be filled as soon as possible, with focus areas including MPC in legged robotics, optimal control, RL for robot control, and symmetries/contact physics.
+
+  </details>
+
 </details>
 
 ---
@@ -181,7 +192,18 @@
   - Institution: The Chinese University of Hong Kong
   - Lab: https://cuhkleggedrobotlab.github.io/
   - Google Scholar: https://scholar.google.com/citations?user=WzmDQTMAAAAJ&hl=en
-  - Notes: Useful standing watchlist entry for legged robotics work from CUHK.
+  - Key Topics: quadruped / legged locomotion / loco-manipulation / perception and navigation / actuator and mechanical system design
+  - Notes: Useful standing watchlist entry for CUHK legged robotics; official lab page lists Fall 2027 PhD plus RA/engineer openings and reports the RSS 2026 actuation paper “VRA: Grounding Discrete-Time Joint Acceleration in Voltage-Constrained Actuation”.
+
+  </details>
+
+- <details>
+  <summary><strong>Xiaobin Xiong — Shanghai Innovation Institute / Legged AI Lab</strong></summary>
+
+  - Institution: Shanghai Innovation Institute; formerly University of Wisconsin-Madison
+  - Lab: https://www.leggedai.com/
+  - Key Topics: legged robots / physical AI / locomotion / manipulation / control theory / numerical optimization / machine learning / robot design
+  - Notes: Official lab page says the lab was founded at UW-Madison in 2023 and moved as a group to Shanghai Innovation Institute in 2026; it reports strong funding and active recruitment for PhD-interested students, research assistants, and a robot systems engineer role.
 
   </details>
 

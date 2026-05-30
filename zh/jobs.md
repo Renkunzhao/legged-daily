@@ -35,10 +35,46 @@
 - Status: watching
 - Notes: 预计 2027 年会有 hierarchical RL-based whole-body control 与 humanoid tele whole-body control 方向 PhD/Postdoc 机会。
 
+### RoMI Lab / Carlos Mastalli
+- 类型: PhD
+- 地点: Edinburgh, United Kingdom
+- 来源: official lab joining page
+- 截止时间: as soon as possible / rolling
+- 主题: legged robotics / MPC / numerical optimization / optimal control / reinforcement learning / robot control / state estimation / perception
+- 状态: active
+- 备注: 官方 joining 页面显示 RoMI 当前有一个 fully funded PhD position 希望尽快招满，也可通过 D2AIR 和 SPADS 博士路径申请；申请前应与 Carlos Mastalli 讨论项目提案，并在申请中说明希望加入 RoMI Lab。
+
+### CUHK Legged Robot Lab
+- 类型: PhD / Research Assistant / Engineer
+- 地点: Hong Kong
+- 来源: official lab page
+- 截止时间: Fall 2027 PhD cycle / rolling for RA and engineer roles
+- 主题: robust locomotion / whole-body loco-manipulation / perception and navigation / actuator and mechanical system design
+- 状态: active
+- 备注: 官方页面显示实验室正在积极寻找 Fall 2027 PhD 申请者，并有多个 RA 和工程师机会。
+
+### Legged AI Lab / Shanghai Innovation Institute
+- 类型: PhD / Research Assistant / Robotics Systems Engineer
+- 地点: Shanghai, China
+- 来源: official lab page
+- 截止时间: rolling / SII admissions activities
+- 主题: legged robots / physical AI / locomotion / manipulation / control / optimization / machine learning / robot body systems
+- 状态: active
+- 备注: 官方页面称实验室经费充足并正在大力招人；博士意向学生需参与上海创智学院统一招生活动，科研助理原则上需要线下科研，系统工程师方向聚焦机器人本体系统研发。
+
 </details>
 
 <details>
 <summary><strong>工业机会</strong></summary>
+
+### Field AI
+- 类型: Research Engineer / Robotics Autonomy Engineer - Locomotion
+- 地点: Mission Viejo / Irvine area, California, USA; US/global team context
+- 来源: official Lever careers page
+- 截止时间: unknown
+- 主题: legged robots / humanoid robots / reinforcement learning / locomotion / manipulation / Isaac Gym / Isaac Lab / MuJoCo / sim-to-real / field deployment
+- 状态: active
+- 备注: 官方岗位要求负责 RL-based locomotion pipelines，在四足和人形平台上部署敏捷运动行为，建设可扩展仿真基础设施，并与感知、嵌入式、系统团队协作；页面显示薪资范围为 USD 70k-300k。
 
 ### NVIDIA GEAR
 - Type: Research Scientist

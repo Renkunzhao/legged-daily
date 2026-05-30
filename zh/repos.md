@@ -266,6 +266,33 @@
 - Deploy: sim / hardware
 - Summary: 使用 IsaacSim 的 Unitree 机器人真实部署 RL pipeline。
 
+### rl_sar
+- 链接: https://github.com/fan-ziqi/rl_sar
+- 类别: RL / deployment / simulator / toolkit
+- 机器人类型: quadruped / wheeled-legged / humanoid
+- 仿真器: IsaacGym / IsaacSim / Gazebo / MuJoCo
+- 部署: sim / hardware
+- 摘要: 面向强化学习策略的仿真验证与实机部署框架，覆盖四足、轮足和人形机器人。
+- 备注: 支持 ROS Noetic、ROS 2 Foxy/Humble、libtorch、onnxruntime、Linux 和部分 macOS MuJoCo 仿真；README 列出 Unitree A1/Go2/Go2W/B2/B2W/G1、傅利叶 GR1、智脑 L4W4、DeepRobotics Lite3、Agibot D1、DDTRobot Tita 等硬件支持。
+
+### legged_rl_lab
+- 链接: https://github.com/zhw0422/legged_rl_lab
+- 类别: RL / simulator / toolkit
+- 机器人类型: humanoid / quadruped / general
+- 仿真器: Isaac Lab / Isaac Sim
+- 部署: sim / sim2sim2real
+- 摘要: 基于 Isaac Lab 的腿足 RL 训练栈，面向 Unitree Go1、Go2 和 G1，覆盖粗糙地形行走、G1 AMP、深度 parkour 和跨形态实验。
+- 备注: 记录 RSL-RL 训练、多 GPU 训练、G1+Go2 cross-embodied 任务、形态编码器、retargeted 运动数据和 skrl AMP 替代实现。
+
+### BipedRobot
+- 链接: https://github.com/AsterisCrack/BipedRobot
+- 类别: RL / simulator / hardware / imitation learning
+- 机器人类型: biped / humanoid-adjacent
+- 仿真器: Isaac Lab / MuJoCo
+- 部署: sim / hardware
+- 摘要: 自制双足运动项目，包含 12 自由度实物机器人、Isaac Lab 与 MuJoCo 环境、自写 RL 算法、动作模仿和 sim-to-real randomization。
+- 备注: 更适合作为技术细节丰富的个人项目跟踪，而不是已广泛采用的实验室框架。
+
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
 - Category: RL
