@@ -293,6 +293,24 @@
 - Summary: Custom biped locomotion project with a physical 12-DoF robot, Isaac Lab and MuJoCo environments, custom RL algorithms, motion imitation, and sim-to-real randomization.
 - Notes: Technically detailed individual project rather than a widely adopted lab framework.
 
+### ASAP-G1-RL
+- Link: https://github.com/Lurrkkking/ASAP-G1-RL
+- Category: RL / imitation learning / simulator / sim-to-sim
+- Robot Type: humanoid
+- Simulator: Isaac Gym / Genesis / MuJoCo
+- Deploy: sim
+- Summary: Unitree G1 experiment repository built on ASAP, covering motion tracking, rough-terrain locomotion, MuJoCo-to-IsaacGym residual-action reproduction, closed-loop fine-tuning, and football kickup / juggling task redesign.
+- Notes: Individual experiment repo rather than a mature reusable framework; useful for ASAP-style residual action learning and Unitree G1 task-design references.
+
+### legged-locomotion-control
+- Link: https://github.com/BrilliantCarrot/legged-locomotion-control
+- Category: RL / simulator / navigation / toolkit
+- Robot Type: quadruped
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim / ROS 2 integration
+- Summary: Unitree Go2 locomotion-control workspace for Isaac Lab PPO experiments, gait/contact analysis, terrain and domain randomization, disturbance testing, and ROS 2 navigation command generation.
+- Notes: Small transparent educational / experiment-log style workspace; useful for Go2 pretrained-policy probes, reward tracking, joint-limit analysis, and ROS 2 command integration.
+
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
 - Category: RL

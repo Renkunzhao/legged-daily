@@ -293,6 +293,24 @@
 - 摘要: 自制双足运动项目，包含 12 自由度实物机器人、Isaac Lab 与 MuJoCo 环境、自写 RL 算法、动作模仿和 sim-to-real randomization。
 - 备注: 更适合作为技术细节丰富的个人项目跟踪，而不是已广泛采用的实验室框架。
 
+### ASAP-G1-RL
+- 链接: https://github.com/Lurrkkking/ASAP-G1-RL
+- 类别: RL / imitation learning / simulator / sim-to-sim
+- 机器人类型: humanoid
+- 仿真器: Isaac Gym / Genesis / MuJoCo
+- 部署: sim
+- 摘要: 基于 ASAP 的 Unitree G1 实验仓库，覆盖动作跟踪、崎岖地形 locomotion、MuJoCo-to-IsaacGym residual-action 复现、闭环 fine-tuning，以及足球 kickup / juggling 任务重设计。
+- 备注: 更适合作为个人实验仓库跟踪，而不是成熟通用框架；可作为 ASAP 风格 residual action learning 和 Unitree G1 任务设计参考。
+
+### legged-locomotion-control
+- 链接: https://github.com/BrilliantCarrot/legged-locomotion-control
+- 类别: RL / simulator / navigation / toolkit
+- 机器人类型: quadruped
+- 仿真器: Isaac Lab / Isaac Sim
+- 部署: sim / ROS 2 integration
+- 摘要: 面向 Unitree Go2 的 locomotion-control 工作区，用于 Isaac Lab PPO 实验、步态/接触分析、地形与域随机化、扰动测试，以及 ROS 2 导航命令生成。
+- 备注: 小型但透明的教学 / 实验记录式工作区；可参考 Go2 pretrained-policy probe、reward tracking、joint-limit analysis 和 ROS 2 命令集成。
+
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
 - Category: RL
