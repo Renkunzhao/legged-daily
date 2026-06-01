@@ -112,6 +112,15 @@
 - Status: active
 - Notes: Useful applied legged-mobility signal after the March 2026 Amazon acquisition of RIVR.
 
+### Dyna Robotics
+- Type: Research Engineer / Scientist
+- Location: likely San Francisco Bay Area, CA, USA / unknown
+- Source: official careers page / Ashby posting / company press releases
+- Deadline: unknown
+- Topics: robot foundation models / embodied AI / reinforcement learning / robot learning / manipulation / commercial deployment / physical AGI
+- Status: active
+- Notes: Dyna was co-founded by Lindon Gao, York Yang, and Jason Ma; official press releases say it raised a $23.5M seed round and later a $120M Series A, launched the DYNA-1 robotic foundation model, and is scaling commercial deployments across environments such as hotels, restaurants, laundromats, and gyms. This is adjacent to legged robotics rather than a dedicated legged/humanoid locomotion role, but high-signal for robot foundation models and deployment-oriented embodied AI.
+
 </details>
 
 <details>

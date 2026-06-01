@@ -112,6 +112,15 @@
 - Status: active
 - Notes: Amazon 2026 年 3 月收购 RIVR 后的应用型腿足移动信号。
 
+### Dyna Robotics
+- Type: Research Engineer / Scientist
+- Location: likely San Francisco Bay Area, CA, USA / unknown
+- Source: official careers page / Ashby posting / company press releases
+- Deadline: unknown
+- Topics: robot foundation models / embodied AI / reinforcement learning / robot learning / manipulation / commercial deployment / physical AGI
+- Status: active
+- Notes: Dyna 由 Lindon Gao、York Yang 和 Jason Ma 共同创立；官方 press releases 显示公司先后完成 $23.5M seed round 和 $120M Series A，发布 DYNA-1 robotic foundation model，并在酒店、餐厅、洗衣店、健身房等商业环境扩展部署。它更偏 robot foundation models / embodied AI / manipulation，与腿足机器人相邻，但对机器人基础模型和部署型 embodied AI 很有跟踪价值。
+
 </details>
 
 <details>

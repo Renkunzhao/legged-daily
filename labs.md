@@ -77,6 +77,23 @@
 
   </details>
 
+- <details>
+  <summary><strong>Yecheng (Jason) Ma — Dyna Robotics / UPenn GRASP</strong></summary>
+
+  - Institution: Dyna Robotics; University of Pennsylvania GRASP Laboratory alumni
+  - Homepage: https://jasonma2016.github.io/
+  - Google Scholar: https://scholar.google.com/citations?user=cZzmemAAAAAJ&hl=en
+  - GitHub: https://github.com/JasonMa2016
+  - LinkedIn: https://www.linkedin.com/in/jason-ma-742224a2
+  - Lab / Department: UPenn GRASP Laboratory; Dyna Robotics
+  - Key Topics: robot foundation models / reinforcement learning / robot learning / embodied agents / sim-to-real / language-model-guided robot learning
+  - Notes: Co-founder and Chief Scientist of Dyna Robotics; UPenn GRASP page says his PhD advisors were Dinesh Jayaraman and Osbert Bastani. Useful source-network anchor for robot foundation models and commercial embodied-AI deployment, adjacent to humanoid and manipulation-heavy robotics.
+
+  - Students and Representative Works:
+    - [Yecheng (Jason) Ma](https://jasonma2016.github.io/) — [DrEureka](https://eureka-research.github.io/dr-eureka/) / [Vision-Language Models are In-Context Value Learners](https://generative-value-learning.github.io/)
+
+  </details>
+
 </details>
 
 ---
