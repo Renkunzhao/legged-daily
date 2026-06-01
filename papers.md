@@ -70,6 +70,15 @@
 - Summary: Terrain-aware whole-body humanoid locomotion framework that combines diffusion-based motion generation with RL motion tracking and demonstrates hardware traversal on Unitree G1.
 - Notes: Strong ETH / RSL signal and a good anchor for current whole-body humanoid locomotion work.
 
+### SoftMimic: Learning Compliant Whole-body Control from Examples
+- Link: https://arxiv.org/abs/2510.17792
+- Source: arXiv
+- Date: 2025-10-20
+- Authors: Gabriel B. Margolis, Michelle Wang, Nolan Fey, Pulkit Agrawal
+- Topics: humanoid / whole-body control / imitation learning / compliance / reinforcement learning / sim-to-real / Unitree G1
+- Summary: Framework for learning compliant humanoid whole-body control from example motions by generating feasible compliant-motion augmentations with inverse kinematics and training an RL policy to absorb disturbances instead of rigidly tracking references.
+- Notes: Project page: https://gmargo11.github.io/softmimic/; code: https://github.com/Improbable-AI/softmimic. Paper lists Improbable AI Lab, MIT, and correspondence to Gabriel B. Margolis and Michelle Wang.
+
 </details>
 
 <details>

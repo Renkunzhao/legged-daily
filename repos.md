@@ -293,6 +293,15 @@
 - Summary: Custom biped locomotion project with a physical 12-DoF robot, Isaac Lab and MuJoCo environments, custom RL algorithms, motion imitation, and sim-to-real randomization.
 - Notes: Technically detailed individual project rather than a widely adopted lab framework.
 
+### SoftMimic
+- Link: https://github.com/Improbable-AI/softmimic
+- Category: RL / imitation learning / whole-body control / deployment
+- Robot Type: humanoid
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: sim / hardware
+- Summary: Official implementation of SoftMimic for compliant Unitree G1 whole-body motion imitation, including compliant-motion augmentation, Isaac Lab training/evaluation, pretrained policies, MuJoCo rollout, and deployment utilities.
+- Notes: From MIT Improbable AI Lab; depends on Isaac Lab, RSL-RL, Mink, MuJoCo, and Unitree SDK2, and is distributed under an MIT license.
+
 ### ASAP-G1-RL
 - Link: https://github.com/Lurrkkking/ASAP-G1-RL
 - Category: RL / imitation learning / simulator / sim-to-sim

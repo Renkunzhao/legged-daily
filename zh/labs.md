@@ -58,6 +58,25 @@
 
   </details>
 
+- <details>
+  <summary><strong>Pulkit Agrawal — Massachusetts Institute of Technology / Improbable AI Lab</strong></summary>
+
+  - Institution: Massachusetts Institute of Technology
+  - Homepage: https://people.csail.mit.edu/pulkitag/
+  - Lab: https://improbableai.com/
+  - Google Scholar: https://scholar.google.com/citations?user=UpZmJI0AAAAJ&hl=en
+  - X: https://twitter.com/pulkitology
+  - Lab / Department: MIT CSAIL / EECS
+  - Key Topics: humanoid / legged robotics / whole-body control / locomotion / manipulation / reinforcement learning / computational sensorimotor learning
+  - Notes: MIT 人形与腿足机器人学习方向的强 source-network anchor。SoftMimic 标注所有作者来自 MIT Improbable AI Lab，通讯作者为 Gabriel B. Margolis 和 Michelle Wang。
+
+  - Students and Representative Works:
+    - [Gabriel B. Margolis](https://gmargo11.github.io/) — [SoftMimic](https://gmargo11.github.io/softmimic/)
+    - [Michelle Wang](https://www.linkedin.com/in/mwangjoy/) — [SoftMimic](https://gmargo11.github.io/softmimic/)
+    - [Nolan Fey](https://nolie-rolie.github.io/) — [SoftMimic](https://gmargo11.github.io/softmimic/)
+
+  </details>
+
 </details>
 
 ---

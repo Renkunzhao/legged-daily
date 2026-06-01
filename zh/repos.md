@@ -293,6 +293,15 @@
 - 摘要: 自制双足运动项目，包含 12 自由度实物机器人、Isaac Lab 与 MuJoCo 环境、自写 RL 算法、动作模仿和 sim-to-real randomization。
 - 备注: 更适合作为技术细节丰富的个人项目跟踪，而不是已广泛采用的实验室框架。
 
+### SoftMimic
+- 链接: https://github.com/Improbable-AI/softmimic
+- 类别: RL / imitation learning / whole-body control / deployment
+- 机器人类型: humanoid
+- 仿真器: Isaac Lab / MuJoCo
+- 部署: sim / hardware
+- 摘要: SoftMimic 官方实现，面向 Unitree G1 柔顺全身动作模仿，包含 compliant-motion augmentation、Isaac Lab 训练/评估、预训练策略、MuJoCo rollout 和部署工具。
+- 备注: 来自 MIT Improbable AI Lab；依赖 Isaac Lab、RSL-RL、Mink、MuJoCo 和 Unitree SDK2，并采用 MIT license。
+
 ### ASAP-G1-RL
 - 链接: https://github.com/Lurrkkking/ASAP-G1-RL
 - 类别: RL / imitation learning / simulator / sim-to-sim

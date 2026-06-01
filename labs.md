@@ -58,6 +58,25 @@
 
   </details>
 
+- <details>
+  <summary><strong>Pulkit Agrawal — Massachusetts Institute of Technology / Improbable AI Lab</strong></summary>
+
+  - Institution: Massachusetts Institute of Technology
+  - Homepage: https://people.csail.mit.edu/pulkitag/
+  - Lab: https://improbableai.com/
+  - Google Scholar: https://scholar.google.com/citations?user=UpZmJI0AAAAJ&hl=en
+  - X: https://twitter.com/pulkitology
+  - Lab / Department: MIT CSAIL / EECS
+  - Key Topics: humanoid / legged robotics / whole-body control / locomotion / manipulation / reinforcement learning / computational sensorimotor learning
+  - Notes: Strong MIT source-network anchor for humanoid and legged robot learning. SoftMimic lists all authors with Improbable AI Lab, MIT, and correspondence to Gabriel B. Margolis and Michelle Wang.
+
+  - Students and Representative Works:
+    - [Gabriel B. Margolis](https://gmargo11.github.io/) — [SoftMimic](https://gmargo11.github.io/softmimic/)
+    - [Michelle Wang](https://www.linkedin.com/in/mwangjoy/) — [SoftMimic](https://gmargo11.github.io/softmimic/)
+    - [Nolan Fey](https://nolie-rolie.github.io/) — [SoftMimic](https://gmargo11.github.io/softmimic/)
+
+  </details>
+
 </details>
 
 ---
