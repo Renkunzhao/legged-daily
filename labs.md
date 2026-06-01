@@ -123,6 +123,17 @@
 
   </details>
 
+- <details>
+  <summary><strong>EPFL BioRob / Auke Ijspeert</strong></summary>
+
+  - Institution: EPFL
+  - Homepage: https://www.epfl.ch/labs/biorob/openings/
+  - Lab / Department: Biorobotics Laboratory
+  - Key Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
+  - Notes: Official openings page currently lists a Postdoc and PhD position on using humanoid robots to investigate and leverage human locomotion neuromechanics.
+
+  </details>
+
 </details>
 
 ---
@@ -300,4 +311,12 @@
 - GitHub: https://github.com/Virgileboat/lerobot-humanoid
 - Key Topics: humanoid / open hardware / robot learning / simulation / identification / real-world control
 - Notes: Strong source to track because the release connects affordable humanoid hardware with data collection, simulator identification, policy training, and deployment rather than only publishing a robot model or controller.
+### MARS Lab — Nanyang Technological University
+- Institution: Nanyang Technological University
+- Homepage: https://arxiv.org/abs/2605.30282
+- GitHub: https://github.com/zuo-kuangji/Gaze2Act
+- Lab / Department: MARS Lab
+- Key Topics: humanoid / VLA / human-robot interaction / gaze-conditioned manipulation / Unitree G1
+- Notes: Gaze2Act lists MARS Lab, NTU affiliation and evaluates human gaze-conditioned VLA policies on a Unitree G1 humanoid, making the group a useful watch source for humanoid interaction and manipulation signals.
+
 </details>

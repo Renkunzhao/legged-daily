@@ -12,10 +12,10 @@
 - Type: PhD / Postdoc
 - Location: Lausanne, Switzerland
 - Source: official website
-- Deadline: Fall 2026 opening；EPFL doctoral program deadlines 通常为 April 15 和 December 15
+- Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
 - Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
 - Status: active
-- Notes: 官方页面列出 1 个 Postdoc 和 1 个 PhD opening，方向是用 humanoid robots 研究并利用 human locomotion neuromechanics，结合 numerical neuromechanical simulations、bio-inspired humanoid locomotion controllers 与 reinforcement learning。
+- Notes: 官方页面显示 1 个 Postdoc 和 1 个 PhD 机会，项目结合数值神经力学仿真、生物启发人形步态控制器和强化学习；申请从现在开始持续考虑直到招满。
 
 ### ETH Zurich Robotic Systems Lab
 - Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer

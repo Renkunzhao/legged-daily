@@ -125,6 +125,15 @@
 - Deploy: sim
 - Summary: Trajectory optimization on the SE(3) tangent space.
 
+### BARD PyTorch Dynamics
+- Link: https://github.com/YueWang996/bard-pytorch-dynamics
+- Category: dynamics / toolkit
+- Robot Type: general / quadruped
+- Simulator: Isaac Lab integration reported in paper
+- Deploy: sim
+- Summary: PyTorch-native rigid-body dynamics library for URDF-loaded robots with batched CPU/GPU computation, autograd, floating-base support, FK, Jacobians, RNEA, ABA, and CRBA.
+- Notes: GitHub README reports PyTorch-native ML workflow integration and benchmark comparisons against Pinocchio; arXiv paper reports use inside an 11-DOF spined quadruped AMP pipeline.
+
 </details>
 
 <details>
@@ -382,6 +391,15 @@
 - Deploy: sim / hardware
 - Summary: Full-stack open low-cost humanoid project from the Hugging Face / LeRobot ecosystem, grouping hardware build assets, model assets, runtime, simulation-based identification, and training environments for a reproducible 3D-printed bipedal platform.
 - Notes: Umbrella repository for component repos including `lerobot-humanoid-hardware`, `lerobot-humanoid-model`, `lerobot-humanoid-runtime`, and `lerobot-humanoid-identification`.
+
+### LeRobot Legged Zoo
+- Link: https://github.com/Virgileboat/lerobot-legged-zoo
+- Category: simulator / RL / training environments
+- Robot Type: humanoid / legged
+- Simulator: MJLab
+- Deploy: sim
+- Summary: MJLab training examples and legged robot models for LeRobot/Pollen platforms, including LeRobot Humanoid; the repository description notes that it does not provide pretrained policies.
+- Notes: Useful as the training-environment side of the LeRobot Humanoid release; currently early-stage and should be treated as experimental.
 
 </details>
 

@@ -125,6 +125,15 @@
 - Deploy: sim
 - Summary: SE(3) 切空间轨迹优化工具。
 
+### BARD PyTorch Dynamics
+- Link: https://github.com/YueWang996/bard-pytorch-dynamics
+- Category: dynamics / toolkit
+- Robot Type: general / quadruped
+- Simulator: 论文报告 Isaac Lab 集成
+- Deploy: sim
+- Summary: PyTorch 原生刚体动力学库，支持 URDF 机器人、CPU/GPU 批量计算、autograd、floating base、FK、Jacobian、RNEA、ABA 和 CRBA。
+- Notes: README 强调可直接嵌入 ML/机器人学习流水线并与 Pinocchio benchmark；论文报告其用于 11 自由度带脊柱四足的 AMP 训练。
+
 </details>
 
 <details>
@@ -383,6 +392,15 @@
 - Summary: Hugging Face / LeRobot 生态的全栈开源低成本人形机器人项目，聚合硬件搭建资产、模型资产、运行时、基于仿真的参数辨识和训练环境，用于可复现的 3D 打印双足平台。
 - Notes: umbrella repo 连接 `lerobot-humanoid-hardware`、`lerobot-humanoid-model`、`lerobot-humanoid-runtime`、`lerobot-humanoid-identification` 等组件仓库。
 
+
+### LeRobot Legged Zoo
+- Link: https://github.com/Virgileboat/lerobot-legged-zoo
+- Category: simulator / RL / training environments
+- Robot Type: humanoid / legged
+- Simulator: MJLab
+- Deploy: sim
+- Summary: LeRobot/Pollen 腿足机器人模型与 MJLab 训练示例，包含 LeRobot Humanoid；仓库描述明确不提供 pretrained policies。
+- Notes: 可作为 LeRobot Humanoid 发布中的训练环境侧入口；目前早期阶段，适合跟踪但不应视为成熟基准。
 </details>
 
 <details>

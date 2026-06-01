@@ -56,6 +56,15 @@
 - Topics: robot dynamics / learned dynamics
 - Summary: Project focused on neural robot dynamics.
 
+### Batched Differentiable Rigid Body Dynamics in PyTorch for GPU-Accelerated Robot Learning
+- Link: https://arxiv.org/abs/2605.31481
+- Source: arXiv
+- Date: 2026-05-29
+- Authors: Yue Wang, Yanran Xu, Wenbo Wu, Chuanhang Qiu, Zhaoxing Li
+- Topics: robot dynamics / differentiable simulation / PyTorch / GPU acceleration / reinforcement learning / quadruped
+- Summary: Presents BARD, a PyTorch-native batched articulated rigid-body dynamics library that supports GPU acceleration and autograd, matching Pinocchio numerically while reporting large throughput gains for FK/Jacobians and integration into Isaac Lab AMP training for an 11-DOF spined quadruped.
+- Notes: Repository: https://github.com/YueWang996/bard-pytorch-dynamics.
+
 </details>
 
 <details>
@@ -250,6 +259,24 @@
 - Topics: humanoid / loco-manipulation / human video / imitation learning / reinforcement learning / sim-to-real
 - Summary: Framework that converts unstructured human videos into deployable humanoid loco-manipulation skills through interaction-prior extraction, physical refinement, and hierarchical policy learning.
 - Notes: Useful reference for reducing reward-design and teleoperation burden in humanoid loco-manipulation.
+
+### Learning Terrain-Aware Whole-Body Control for Perceptive Legged Loco-Manipulation
+- Link: https://arxiv.org/abs/2605.31343
+- Source: arXiv
+- Date: 2026-05-29
+- Authors: Sikai Guo, Yudong Zhong, Guoyang Zhao, Botao Dang, Zhihai Bi, Jun Ma
+- Topics: legged manipulators / whole-body control / loco-manipulation / terrain perception / reinforcement learning / sim-to-real
+- Summary: Introduces TA-WBC, an RL-based terrain-aware whole-body control framework for legged manipulators that uses hybrid exteroception, foot-contact-plane-based end-effector sampling, and dual-policy distillation to improve cross-terrain loco-manipulation in simulation and real-world experiments.
+- Notes: Strong daily candidate because it directly links terrain perception, foothold/posture adaptation, and legged mobile manipulation.
+
+### Gaze2Act: Gaze-Conditioned Vision-Language-Action Policies for Interactive Robot Manipulation
+- Link: https://arxiv.org/abs/2605.30282
+- Source: arXiv
+- Date: 2026-05-28
+- Authors: Kuangji Zuo, Gen Li, Bofan Lyu, Yanshuo Lu, Boyu Ma, Shijia Han, Xinyu Zhou, Xichen Yuan, Chuhao Zhou, Jiaqi Bai, Geng Li, Jianfei Yang
+- Topics: humanoid / VLA / human-robot interaction / gaze conditioning / manipulation / Unitree G1
+- Summary: Proposes using human gaze as a continuous intent signal for VLA manipulation, projecting first-person gaze into the robot view and evaluating across 16 real-robot tasks on a Unitree G1 humanoid.
+- Notes: Adjacent to locomotion but high-signal for humanoid interaction stacks; project/GitHub page: https://github.com/zuo-kuangji/Gaze2Act.
 
 </details>
 

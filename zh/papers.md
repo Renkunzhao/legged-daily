@@ -56,6 +56,15 @@
 - Topics: robot dynamics / learned dynamics
 - Summary: 聚焦 neural robot dynamics 的项目。
 
+### Batched Differentiable Rigid Body Dynamics in PyTorch for GPU-Accelerated Robot Learning
+- Link: https://arxiv.org/abs/2605.31481
+- Source: arXiv
+- Date: 2026-05-29
+- Authors: Yue Wang, Yanran Xu, Wenbo Wu, Chuanhang Qiu, Zhaoxing Li
+- Topics: 机器人动力学 / 可微仿真 / PyTorch / GPU 加速 / 强化学习 / 四足机器人
+- Summary: 提出 BARD，一个 PyTorch 原生的批量可微刚体动力学库，支持 GPU 与 autograd；论文报告其数值上匹配 Pinocchio，并在 FK/Jacobian 吞吐上有大幅提升，还集成到 Isaac Lab AMP 的 11 自由度带脊柱四足训练流水线中。
+- Notes: 仓库：https://github.com/YueWang996/bard-pytorch-dynamics。
+
 </details>
 
 <details>
@@ -250,6 +259,24 @@
 - Topics: humanoid / loco-manipulation / human video / imitation learning / reinforcement learning / sim-to-real
 - Summary: 将非结构化人类视频转成可部署 humanoid loco-manipulation skills 的框架，包含 interaction-prior extraction、physical refinement 和 hierarchical policy learning。
 - Notes: 对减少 humanoid loco-manipulation 中 reward design 与遥操作负担有参考价值。
+
+### Learning Terrain-Aware Whole-Body Control for Perceptive Legged Loco-Manipulation
+- Link: https://arxiv.org/abs/2605.31343
+- Source: arXiv
+- Date: 2026-05-29
+- Authors: Sikai Guo, Yudong Zhong, Guoyang Zhao, Botao Dang, Zhihai Bi, Jun Ma
+- Topics: 腿足移动操作 / 全身控制 / 地形感知 / 强化学习 / sim-to-real
+- Summary: 提出 TA-WBC，一个面向腿足移动操作机器人的地形感知全身控制框架；它结合混合外感知编码、基于足端接触平面的末端采样，以及双策略蒸馏，在仿真和真实实验中提升复杂地形下的移动操作稳定性和可达性。
+- Notes: 与腿足方向强相关，重点在地形拓扑感知、姿态/落足自适应和 legged loco-manipulation 的统一控制。
+
+### Gaze2Act: Gaze-Conditioned Vision-Language-Action Policies for Interactive Robot Manipulation
+- Link: https://arxiv.org/abs/2605.30282
+- Source: arXiv
+- Date: 2026-05-28
+- Authors: Kuangji Zuo, Gen Li, Bofan Lyu, Yanshuo Lu, Boyu Ma, Shijia Han, Xinyu Zhou, Xichen Yuan, Chuhao Zhou, Jiaqi Bai, Geng Li, Jianfei Yang
+- Topics: 人形机器人 / VLA / 人机交互 / gaze conditioning / 操作 / Unitree G1
+- Summary: 用人类视线作为连续意图信号来增强 VLA 操作策略，将第一视角 gaze 映射到机器人视角，并在 Unitree G1 人形机器人上完成 7 类、16 个真实任务评测。
+- Notes: 不是纯 locomotion，但对人形机器人交互与操作栈有价值；项目/GitHub 页面：https://github.com/zuo-kuangji/Gaze2Act。
 
 </details>
 
