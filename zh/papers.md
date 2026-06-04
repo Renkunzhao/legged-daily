@@ -65,6 +65,15 @@
 - Summary: 提出 BARD，一个 PyTorch 原生的批量可微刚体动力学库，支持 GPU 与 autograd；论文报告其数值上匹配 Pinocchio，并在 FK/Jacobian 吞吐上有大幅提升，还集成到 Isaac Lab AMP 的 11 自由度带脊柱四足训练流水线中。
 - Notes: 仓库：https://github.com/YueWang996/bard-pytorch-dynamics。
 
+
+### UniLab: A Heterogeneous Architecture for Robot RL Beyond GPU-Dominant Paradigms
+- Link: https://arxiv.org/abs/2605.30313
+- Source: arXiv / project page / GitHub
+- Date: 2026-05-28; v3 on 2026-06-02
+- Authors: Yufei Jia, Zhanxiang Cao, Mingrui Yu, Heng Zhang, Shenyu Chen, Dixuan Jiang, Meng Li, Xiaofan Li, Yiyang Liu, Junzhe Wu, Zheng Li, XiLin Fang, Ting-Yu Tsui, Shengcheng Fu, Haoyang Li, Anqi Wang, Zifan Wang, Dongjie Zhu, Chenyu Cao, Zhenbiao Huang, Ziang Zheng, Jie Lu, Xin Ma, Zhengyang Wei, Xiang Zhao, Tianyue Zhan, Ye He, Yuxiang Chen, Yizhou Jiang, Yue Li, Haizhou Ge, Yuhang Dong, Fan Jia, Ziheng Zhang, Meng Zhang, Xiwa Deng, Zhixing Chen, Hanyang Shao, Chenxin Dong, Yixuan Li, Yizhi Chen, Bokui Chen, Kaifeng Zhang, Hanqing Cui, Yusen Qin, Ruqi Huang, Lei Han, Tiancai Wang, Xiang Li, Yue Gao, Guyue Zhou
+- Topics: robot RL / simulation infrastructure / heterogeneous CPU-GPU training / MuJoCoUni / MotrixSim / cross-platform training / quadruped / humanoid / wheeled-legged / loco-manipulation
+- Summary: 提出 UniLab，一个面向机器人 RL 的异构 CPU-simulation / GPU-learning 架构；它通过共享内存缓冲与同步机制，将 CPU 并行物理 rollout 与 GPU 策略更新解耦，并使用 MuJoCoUni 和 MotrixSim 后端；论文报告在代表性机器人控制任务上取得 3-10× 端到端训练效率提升，同时支持 CUDA、Apple Silicon、AMD ROCm 和 Intel XPU。
+- Notes: 项目页：https://unilabsim.github.io/。官方代码：https://github.com/unilabsim/UniLab。对腿足机器人相关，因为已发布任务覆盖 Go1/Go2 四足、Unitree G1 walking / motion tracking / whole-body skills、Go2W 轮足运动，以及 Go2+arm 移动操作。
 </details>
 
 <details>

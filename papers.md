@@ -65,6 +65,15 @@
 - Summary: Presents BARD, a PyTorch-native batched articulated rigid-body dynamics library that supports GPU acceleration and autograd, matching Pinocchio numerically while reporting large throughput gains for FK/Jacobians and integration into Isaac Lab AMP training for an 11-DOF spined quadruped.
 - Notes: Repository: https://github.com/YueWang996/bard-pytorch-dynamics.
 
+
+### UniLab: A Heterogeneous Architecture for Robot RL Beyond GPU-Dominant Paradigms
+- Link: https://arxiv.org/abs/2605.30313
+- Source: arXiv / project page / GitHub
+- Date: 2026-05-28; v3 on 2026-06-02
+- Authors: Yufei Jia, Zhanxiang Cao, Mingrui Yu, Heng Zhang, Shenyu Chen, Dixuan Jiang, Meng Li, Xiaofan Li, Yiyang Liu, Junzhe Wu, Zheng Li, XiLin Fang, Ting-Yu Tsui, Shengcheng Fu, Haoyang Li, Anqi Wang, Zifan Wang, Dongjie Zhu, Chenyu Cao, Zhenbiao Huang, Ziang Zheng, Jie Lu, Xin Ma, Zhengyang Wei, Xiang Zhao, Tianyue Zhan, Ye He, Yuxiang Chen, Yizhou Jiang, Yue Li, Haizhou Ge, Yuhang Dong, Fan Jia, Ziheng Zhang, Meng Zhang, Xiwa Deng, Zhixing Chen, Hanyang Shao, Chenxin Dong, Yixuan Li, Yizhi Chen, Bokui Chen, Kaifeng Zhang, Hanqing Cui, Yusen Qin, Ruqi Huang, Lei Han, Tiancai Wang, Xiang Li, Yue Gao, Guyue Zhou
+- Topics: robot RL / simulation infrastructure / heterogeneous CPU-GPU training / MuJoCoUni / MotrixSim / cross-platform training / quadruped / humanoid / wheeled-legged / loco-manipulation
+- Summary: Presents UniLab, a heterogeneous CPU-simulation / GPU-learning architecture for robot RL that decouples CPU-parallel physics rollouts from GPU policy updates through shared-memory buffering and synchronization, using MuJoCoUni and MotrixSim backends; the paper reports 3-10× end-to-end training-efficiency gains on representative robot-control tasks while supporting CUDA, Apple Silicon, AMD ROCm, and Intel XPU execution.
+- Notes: Project page: https://unilabsim.github.io/. Official code: https://github.com/unilabsim/UniLab. Relevant for legged robotics because released tasks include Go1/Go2 quadrupeds, Unitree G1 walking / motion tracking / whole-body skills, Go2W wheeled-leg locomotion, and Go2+arm loco-manipulation.
 </details>
 
 <details>

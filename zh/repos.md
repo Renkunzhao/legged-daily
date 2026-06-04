@@ -302,6 +302,15 @@
 - 摘要: 自制双足运动项目，包含 12 自由度实物机器人、Isaac Lab 与 MuJoCo 环境、自写 RL 算法、动作模仿和 sim-to-real randomization。
 - 备注: 更适合作为技术细节丰富的个人项目跟踪，而不是已广泛采用的实验室框架。
 
+
+### UniLab
+- Link: https://github.com/unilabsim/UniLab
+- Category: RL / simulator / heterogeneous training runtime / toolkit
+- Robot Type: quadruped / humanoid / wheeled-legged / dexterous hand / manipulator
+- Simulator: MuJoCoUni / MotrixSim
+- Deploy: sim / hardware
+- Summary: UniLab 官方仓库；它是一个异构机器人 RL 训练框架，通过共享内存运行时异步执行 CPU 物理仿真与 GPU 策略学习，并用统一 CLI 支持 PPO、APPO、SAC、TD3、FlashSAC、HORA 和 HIM-PPO，可运行在 CUDA、Apple Silicon、ROCm 和 Intel XPU 上。
+- Notes: 已发布 demo / task 覆盖 Go1/Go2 运动控制、Unitree G1 walk / dance / motion tracking / backflip / climb / box tracking、Go2W 轮足运动、Sharpa / Allegro 灵巧操作，以及 Go2+arm 移动操作；项目页：https://unilabsim.github.io/。
 ### SoftMimic
 - 链接: https://github.com/Improbable-AI/softmimic
 - 类别: RL / imitation learning / whole-body control / deployment

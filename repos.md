@@ -302,6 +302,15 @@
 - Summary: Custom biped locomotion project with a physical 12-DoF robot, Isaac Lab and MuJoCo environments, custom RL algorithms, motion imitation, and sim-to-real randomization.
 - Notes: Technically detailed individual project rather than a widely adopted lab framework.
 
+
+### UniLab
+- Link: https://github.com/unilabsim/UniLab
+- Category: RL / simulator / heterogeneous training runtime / toolkit
+- Robot Type: quadruped / humanoid / wheeled-legged / dexterous hand / manipulator
+- Simulator: MuJoCoUni / MotrixSim
+- Deploy: sim / hardware
+- Summary: Official repository for UniLab, a heterogeneous robot-RL training framework that runs CPU physics simulation and GPU policy learning asynchronously through a shared-memory runtime, with unified CLI support for PPO, APPO, SAC, TD3, FlashSAC, HORA, and HIM-PPO across CUDA, Apple Silicon, ROCm, and Intel XPU.
+- Notes: Released demos and tasks include Go1/Go2 locomotion, Unitree G1 walk / dance / motion tracking / backflip / climb / box tracking, Go2W wheeled-leg locomotion, Sharpa / Allegro dexterous manipulation, and Go2+arm loco-manipulation; project page: https://unilabsim.github.io/.
 ### SoftMimic
 - Link: https://github.com/Improbable-AI/softmimic
 - Category: RL / imitation learning / whole-body control / deployment
