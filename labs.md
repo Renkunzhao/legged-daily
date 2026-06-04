@@ -319,4 +319,25 @@
 - Key Topics: humanoid / VLA / human-robot interaction / gaze-conditioned manipulation / Unitree G1
 - Notes: Gaze2Act lists MARS Lab, NTU affiliation and evaluates human gaze-conditioned VLA policies on a Unitree G1 humanoid, making the group a useful watch source for humanoid interaction and manipulation signals.
 
+### NVIDIA DAIR / GRAIL collaborators
+- Institution: NVIDIA; UT Austin and collaborating groups are represented in the author network
+- Homepage: https://research.nvidia.com/labs/dair/grail/
+- GitHub: https://github.com/NVlabs/GRAIL
+- Key Topics: humanoid / loco-manipulation / synthetic data / video foundation models / retargeting / Unitree G1
+- Notes: GRAIL is a high-signal source for scalable humanoid loco-manipulation data generation. The author list includes Sanja Fidler, Jan Kautz, Linxi Fan, Yuke Zhu, Zhengyi Luo, Umar Iqbal, and Ye Yuan, making this project a useful bridge between graphics, video priors, embodied AI, and humanoid deployment.
+
+### Physical Superintelligence Lab
+- Institution: University of Southern California
+- Homepage: https://github.com/physical-superintelligence-lab
+- GitHub: https://github.com/physical-superintelligence-lab/SIMPLE
+- Lab / Department: Physical Superintelligence Lab
+- Key Topics: humanoid / loco-manipulation / VLA / simulation / benchmarking / Unitree G1
+- Notes: The lab's GitHub organization describes Psi-Zero as a humanoid VLA and hosts SIMPLE, a current G1 loco-manipulation simulation/evaluation stack with VLA baselines. Track for open-source humanoid foundation-model and benchmark updates.
+
+### Renjing Xu / Haohui Huang and CoRe-MoE author network
+- Institution: HKUST(GZ), South China Agricultural University, Guangdong University of Technology
+- arXiv: https://arxiv.org/abs/2606.04718
+- Key Topics: humanoid / locomotion / gait adaptation / mixture of experts / multi-terrain RL / Unitree G1
+- Notes: CoRe-MoE gives a concrete multi-institution signal around walking-running transition plus terrain-aware expert specialization, with arXiv reporting zero-shot Unitree G1 deployment. Corresponding authors are Renjing Xu and Haohui Huang.
+
 </details>

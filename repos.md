@@ -480,6 +480,33 @@
 - Summary: Simulation-based policy learning and evaluation environment for humanoid whole-body loco-manipulation.
 - Notes: Includes Unitree G1 support, large Objaverse/HSSD assets, and 50+ humanoid whole-body loco-manipulation tasks.
 
+### GRAIL
+- Link: https://github.com/NVlabs/GRAIL
+- Category: dataset / synthetic data / retargeting / loco-manipulation toolkit
+- Robot Type: humanoid
+- Simulator: Isaac / MuJoCo-adjacent pipeline components; Blender and generated 3D assets are used in the pipeline
+- Deploy: data / sim / hardware
+- Summary: Official NVIDIA repository for GRAIL, a digital humanoid loco-manipulation data-generation pipeline that synthesizes metric 4D human-object interaction trajectories from 3D assets and video priors, retargets them to Unitree G1, and supports task-general tracking for pickup, manipulation, sitting, and terrain traversal.
+- Notes: README includes Docker setup, Blender/checkpoint dependencies, pipeline entrypoints for terrain/asset generation, 2D HOI generation, 4D reconstruction, retargeting, tracking, export, visualization, and a web visualizer. License is NVIDIA non-commercial except for NVIDIA and affiliates.
+
+### SIMPLE
+- Link: https://github.com/physical-superintelligence-lab/SIMPLE
+- Category: simulator / benchmark / VLA evaluation / loco-manipulation toolkit
+- Robot Type: humanoid / general
+- Simulator: Isaac Sim 4.5 / MuJoCo 3.3
+- Deploy: sim
+- Summary: Full-stack simulation environment from USC Physical Superintelligence Lab for humanoid loco-manipulation, with Unitree G1 support, 1000+ Objaverse assets, 50+ Habitat HSSD scenes, 50+ whole-body loco-manipulation tasks, and integrated evaluation for VLA policies such as Psi-0, π0.5, GR00T, and others.
+- Notes: README reports preliminary benchmark results on six G1 whole-body tasks and provides installation through uv, robo-nix, and Docker; useful as a current benchmark/evaluation environment for humanoid VLA loco-manipulation.
+
+### FORGE
+- Link: https://github.com/bb0928/FORGE
+- Category: RL / control / loco-manipulation
+- Robot Type: humanoid
+- Simulator: Isaac Gym / MuJoCo deployment planned
+- Deploy: sim; real-robot deployment script not yet open-sourced
+- Summary: Official implementation for FORGE, a force-aware multi-granularity control approach for efficient humanoid loco-manipulation, exposing residual-policy training and evaluation scripts around Isaac Gym, rsl_rl, and legged_gym.
+- Notes: README states the base-policy training script, MuJoCo deployment script, and real-robot deployment script are not yet open-sourced, so the current repository should be treated as partial but relevant for force/load-aware humanoid manipulation control.
+
 </details>
 
 ---

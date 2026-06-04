@@ -319,4 +319,25 @@
 - Key Topics: humanoid / VLA / human-robot interaction / gaze-conditioned manipulation / Unitree G1
 - Notes: Gaze2Act 标注 MARS Lab, NTU，并在 Unitree G1 人形机器人上评测 gaze-conditioned VLA 策略；适合作为人形交互和操作方向的 watch source。
 
+### NVIDIA DAIR / GRAIL collaborators
+- Institution: NVIDIA；作者网络中也包含 UT Austin 和其他合作团队
+- Homepage: https://research.nvidia.com/labs/dair/grail/
+- GitHub: https://github.com/NVlabs/GRAIL
+- Key Topics: humanoid / loco-manipulation / synthetic data / video foundation models / retargeting / Unitree G1
+- Notes: GRAIL 是可扩展人形移动操作数据生成方向的强信号来源。作者列表包括 Sanja Fidler、Jan Kautz、Linxi Fan、Yuke Zhu、Zhengyi Luo、Umar Iqbal 和 Ye Yuan，使该项目成为图形学、视频先验、具身 AI 与人形部署之间的重要交叉信号。
+
+### Physical Superintelligence Lab
+- Institution: University of Southern California
+- Homepage: https://github.com/physical-superintelligence-lab
+- GitHub: https://github.com/physical-superintelligence-lab/SIMPLE
+- Lab / Department: Physical Superintelligence Lab
+- Key Topics: humanoid / loco-manipulation / VLA / simulation / benchmarking / Unitree G1
+- Notes: 该实验室 GitHub 组织将 Psi-Zero 描述为 humanoid VLA，并托管 SIMPLE；SIMPLE 是当前 G1 移动操作仿真/评测栈，包含 VLA baseline。建议继续跟踪其人形 foundation model 和 benchmark 开源更新。
+
+### Renjing Xu / Haohui Huang and CoRe-MoE author network
+- Institution: HKUST(GZ), South China Agricultural University, Guangdong University of Technology
+- arXiv: https://arxiv.org/abs/2606.04718
+- Key Topics: humanoid / locomotion / gait adaptation / mixture of experts / multi-terrain RL / Unitree G1
+- Notes: CoRe-MoE 提供了一个围绕步行-跑步切换和 terrain-aware expert specialization 的多机构信号；arXiv 摘要报告了 Unitree G1 零样本部署。通讯作者为 Renjing Xu 和 Haohui Huang。
+
 </details>

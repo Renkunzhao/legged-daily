@@ -480,6 +480,33 @@
 - Summary: 面向 humanoid whole-body loco-manipulation 的 simulation-based policy learning and evaluation 环境。
 - Notes: 包含 Unitree G1 支持、大规模 Objaverse/HSSD assets，以及 50+ humanoid whole-body loco-manipulation tasks。
 
+### GRAIL
+- Link: https://github.com/NVlabs/GRAIL
+- Category: dataset / synthetic data / retargeting / loco-manipulation toolkit
+- Robot Type: humanoid
+- Simulator: Isaac / MuJoCo-adjacent pipeline components; Blender and generated 3D assets are used in the pipeline
+- Deploy: data / sim / hardware
+- Summary: GRAIL 的 NVIDIA 官方仓库；它是数字化人形移动操作数据生成流水线，可从 3D 资产和视频先验合成 metric 4D human-object interaction 轨迹，重定向到 Unitree G1，并支持 pickup、manipulation、sitting、terrain traversal 等任务的 task-general tracking。
+- Notes: README 包含 Docker 安装、Blender/checkpoint 依赖，以及 terrain/asset generation、2D HOI generation、4D reconstruction、retargeting、tracking、export、visualization 和 web visualizer 等流水线入口。许可证为 NVIDIA non-commercial，NVIDIA 及其关联方例外。
+
+### SIMPLE
+- Link: https://github.com/physical-superintelligence-lab/SIMPLE
+- Category: simulator / benchmark / VLA evaluation / loco-manipulation toolkit
+- Robot Type: humanoid / general
+- Simulator: Isaac Sim 4.5 / MuJoCo 3.3
+- Deploy: sim
+- Summary: USC Physical Superintelligence Lab 的全栈人形移动操作仿真环境；支持 Unitree G1、1000+ Objaverse 资产、50+ Habitat HSSD 场景、50+ 全身移动操作任务，并集成 Psi-0、π0.5、GR00T 等 VLA 策略评测。
+- Notes: README 报告了 6 个 G1 全身任务上的初步 benchmark 结果，并提供 uv、robo-nix 和 Docker 安装路径；适合作为当前人形 VLA 移动操作的 benchmark / evaluation 环境跟踪。
+
+### FORGE
+- Link: https://github.com/bb0928/FORGE
+- Category: RL / control / loco-manipulation
+- Robot Type: humanoid
+- Simulator: Isaac Gym / MuJoCo deployment planned
+- Deploy: sim; real-robot deployment script not yet open-sourced
+- Summary: FORGE 的官方实现；FORGE 是一种用于高效人形移动操作的 force-aware multi-granularity control 方法，当前仓库开放了围绕 Isaac Gym、rsl_rl 和 legged_gym 的 residual policy 训练与评估脚本。
+- Notes: README 明确说明 base-policy training script、MuJoCo deployment script 和 real-robot deployment script 尚未开源，所以当前仓库应视为部分开放，但对力/负载感知的人形操作控制仍有参考价值。
+
 </details>
 
 ---

@@ -15,16 +15,16 @@
 - Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
 - Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
 - Status: active
-- Notes: 官方页面显示 1 个 Postdoc 和 1 个 PhD 机会，项目结合数值神经力学仿真、生物启发人形步态控制器和强化学习；申请从现在开始持续考虑直到招满。
+- Notes: 官方 openings 页面仍列出 1 个 Postdoc 和 1 个 PhD 位置，研究方向是用人形机器人研究并利用人类运动神经力学，包含数值神经机械仿真、bio-inspired controllers 和 reinforcement learning；申请会持续评估直到招满，页面写明 2026 年 9 月是理想开始时间。
 
 ### ETH Zurich Robotic Systems Lab
-- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
+- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
 - Location: Zurich, Switzerland
 - Source: official website
 - Deadline: rolling / unknown
 - Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
 - Status: active
-- Notes: 与腿足和野外机器人相关的滚动研究与工程岗位。
+- Notes: ETH RSL 官方页面仍列出滚动 PhD、postdoc、research staff / software engineer、robot design、embedded systems 和 electronic engineer 机会，方向覆盖腿足机器人、移动操作、field robotics、控制、学习、规划与部署。
 
 ### HIER Lab / NC State University
 - Type: PhD / Postdoc

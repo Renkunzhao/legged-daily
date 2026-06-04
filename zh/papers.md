@@ -278,6 +278,33 @@
 - Summary: 用人类视线作为连续意图信号来增强 VLA 操作策略，将第一视角 gaze 映射到机器人视角，并在 Unitree G1 人形机器人上完成 7 类、16 个真实任务评测。
 - Notes: 不是纯 locomotion，但对人形机器人交互与操作栈有价值；项目/GitHub 页面：https://github.com/zuo-kuangji/Gaze2Act。
 
+### GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors
+- Link: https://arxiv.org/abs/2606.05160
+- Source: arXiv
+- Date: 2026-06-03
+- Authors: Tianyi Xie, Haotian Zhang, Jinhyung Park, Zi Wang, Bowen Wen, Jiefeng Li, Xueting Li, Qingwei Ben, Haoyang Weng, Yufei Ye, David Minor, Tingwu Wang, Chenfanfu Jiang, Sanja Fidler, Jan Kautz, Linxi Fan, Yuke Zhu, Zhengyi Luo, Umar Iqbal, Ye Yuan
+- Topics: humanoid / loco-manipulation / synthetic data / video foundation models / 3D assets / sim-to-real / Unitree G1
+- Summary: 提出 GRAIL，一个全数字化数据生成流水线：组合 3D 资产、可用于仿真的场景、机器人比例角色和视频基础模型先验，恢复 metric 4D human-object interaction 轨迹，再重定向到人形机器人并训练面向操作和地形穿越的 task-general trackers；论文报告生成 20,000+ 序列，并在 Unitree G1 上实现 84% 物体抓取成功率和 90% 爬楼梯成功率。
+- Notes: 项目页：https://research.nvidia.com/labs/dair/grail/。官方代码：https://github.com/NVlabs/GRAIL。它是近期 teleoperation-free 人形移动操作数据工作的强相关补充。
+
+### Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking
+- Link: https://arxiv.org/abs/2606.03985
+- Source: arXiv / CVPR 2026
+- Date: 2026-06-02
+- Authors: Zekun Qi, Xuchuan Chen, Dairu Liu, Chenghuai Lin, Yunrui Lian, Sikai Liang, Zhikai Zhang, Yu Guan, Jilong Wang, Wenyao Zhang, Xinqiang Yu, He Wang, Li Yi
+- Topics: humanoid / whole-body control / motion tracking / Transformer / large-scale motion data / zero-shot generalization
+- Summary: 提出 Humanoid-GPT，一个用于全身控制的 GPT-style causal Transformer；它在 2B-frame 重定向 motion corpus 上预训练，语料结合主要 mocap 数据集和自采数据，目标是对未见动态动作和控制任务进行 zero-shot tracking。
+- Notes: 已被 CVPR 2026 接收。今天快速检查中没有验证到真机细节或公开代码；建议先作为「数据规模化 / 架构」高信号条目跟踪，不把它写成部署结论。
+
+### CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation
+- Link: https://arxiv.org/abs/2606.04718
+- Source: arXiv
+- Date: 2026-06-03
+- Authors: Kailun Huang, Zikang Xie, Yanzhe Xie, Panpan Liao, Fanghai Zhang, Yanheng Mai, Wenhao Xu, Yunheng Wang, Renjing Xu, Haohui Huang
+- Topics: humanoid / reinforcement learning / mixture of experts / gait transition / terrain adaptation / Unitree G1
+- Summary: 提出 CoRe-MoE，一个两阶段 RL 框架：先学习稳定的步行/跑步切换，再加入 terrain-aware mixture-of-experts 分支，并用 contrastive gating 促进专家分化和多地形适应；摘要报告了在 Unitree G1 上零样本部署于楼梯、斜坡、台阶、障碍物和户外非结构化地形。
+- Notes: arXiv 摘要列出的机构包括 HKUST(GZ)、South China Agricultural University 和 Guangdong University of Technology；通讯作者为 Renjing Xu 和 Haohui Huang。
+
 </details>
 
 ---

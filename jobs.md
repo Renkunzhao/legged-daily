@@ -15,16 +15,16 @@
 - Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
 - Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
 - Status: active
-- Notes: Official page lists one Postdoc and one PhD opening for a project combining numerical neuromechanical simulations, bio-inspired humanoid locomotion controllers, and reinforcement learning; applications are considered continuously until filled.
+- Notes: Official openings page still lists one Postdoc and one PhD position for investigating and leveraging human locomotion neuromechanics using humanoid robots, numerical neuromechanical simulation, bio-inspired controllers, and reinforcement learning; applications are considered continuously until filled, with September 2026 described as a good starting date.
 
 ### ETH Zurich Robotic Systems Lab
-- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
+- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
 - Location: Zurich, Switzerland
 - Source: official website
 - Deadline: rolling / unknown
 - Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
 - Status: active
-- Notes: Rolling openings connected to legged and field robotics, including research and engineering roles.
+- Notes: Official RSL page continues to list rolling PhD, postdoc, research staff/software engineer, robot design, embedded-systems, and electronic-engineer openings connected to legged robots, mobile manipulators, field robotics, control, learning, planning, and deployment.
 
 ### HIER Lab / NC State University
 - Type: PhD / Postdoc

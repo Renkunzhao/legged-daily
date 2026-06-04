@@ -278,6 +278,34 @@
 - Summary: Proposes using human gaze as a continuous intent signal for VLA manipulation, projecting first-person gaze into the robot view and evaluating across 16 real-robot tasks on a Unitree G1 humanoid.
 - Notes: Adjacent to locomotion but high-signal for humanoid interaction stacks; project/GitHub page: https://github.com/zuo-kuangji/Gaze2Act.
 
+### GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors
+- Link: https://arxiv.org/abs/2606.05160
+- Source: arXiv
+- Date: 2026-06-03
+- Authors: Tianyi Xie, Haotian Zhang, Jinhyung Park, Zi Wang, Bowen Wen, Jiefeng Li, Xueting Li, Qingwei Ben, Haoyang Weng, Yufei Ye, David Minor, Tingwu Wang, Chenfanfu Jiang, Sanja Fidler, Jan Kautz, Linxi Fan, Yuke Zhu, Zhengyi Luo, Umar Iqbal, Ye Yuan
+- Topics: humanoid / loco-manipulation / synthetic data / video foundation models / 3D assets / sim-to-real / Unitree G1
+- Summary: Presents GRAIL, a fully digital data-generation pipeline that composes 3D assets, simulator-ready scenes, robot-proportioned characters, and video foundation model priors to recover metric 4D human-object interaction trajectories, retarget them to humanoids, and train task-general trackers for manipulation and terrain traversal; the paper reports more than 20,000 generated sequences and real Unitree G1 deployment with 84% object-pickup success and 90% stair-climbing success.
+- Notes: Project page: https://research.nvidia.com/labs/dair/grail/. Official code: https://github.com/NVlabs/GRAIL. Strong data-generation counterpart to recent teleoperation-free humanoid loco-manipulation work.
+
+### Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking
+- Link: https://arxiv.org/abs/2606.03985
+- Source: arXiv / CVPR 2026
+- Date: 2026-06-02
+- Authors: Zekun Qi, Xuchuan Chen, Dairu Liu, Chenghuai Lin, Yunrui Lian, Sikai Liang, Zhikai Zhang, Yu Guan, Jilong Wang, Wenyao Zhang, Xinqiang Yu, He Wang, Li Yi
+- Topics: humanoid / whole-body control / motion tracking / Transformer / large-scale motion data / zero-shot generalization
+- Summary: Introduces Humanoid-GPT, a GPT-style causal Transformer for whole-body control pretrained on a 2B-frame retargeted motion corpus combining major mocap datasets and in-house recordings, targeting zero-shot tracking of unseen dynamic motions and control tasks.
+- Notes: Accepted at CVPR 2026. Hardware details and public code were not verified in today's quick pass; keep as a high-signal data-scaling / architecture item rather than a deployment claim.
+
+### CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation
+- Link: https://arxiv.org/abs/2606.04718
+- Source: arXiv
+- Date: 2026-06-03
+- Authors: Kailun Huang, Zikang Xie, Yanzhe Xie, Panpan Liao, Fanghai Zhang, Yanheng Mai, Wenhao Xu, Yunheng Wang, Renjing Xu, Haohui Huang
+- Topics: humanoid / reinforcement learning / mixture of experts / gait transition / terrain adaptation / Unitree G1
+- Summary: Proposes CoRe-MoE, a two-stage RL framework that first learns stable walking/running transitions and then adds a terrain-aware mixture-of-experts branch with contrastive gating to improve expert specialization and multi-terrain adaptation; the abstract reports zero-shot Unitree G1 deployment over stairs, slopes, steps, obstacles, and outdoor unstructured terrain.
+- Notes: Affiliations listed in the arXiv abstract include HKUST(GZ), South China Agricultural University, and Guangdong University of Technology; corresponding authors are Renjing Xu and Haohui Huang.
+
+
 </details>
 
 ---
