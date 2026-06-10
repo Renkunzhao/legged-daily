@@ -1,0 +1,125 @@
+[English](../../drafts/legged-daily-2026-06-10.md) | **中文**
+# 腿足机器人日报 - 2026-06-10
+
+## 摘要
+- 今天 arXiv 上的人形机器人运动更新很密集，重点包括高冲击足球射门、地形感知自主导航、稀疏落脚点感知运动控制。
+- RoboNaldo 是今天最偏真实硬件的论文信号：报告了 Unitree G1 上板载感知的人形足球射门，3 m 目标距离下平均误差低于 1 m。
+- GuideWalk 和 MARCH 都在补高层导航/落脚决策与低层人形运动控制之间的断层，值得和近期 foothold tracking、parkour、模型辅助 RL 工作一起看。
+- 仓库方面，两条较有用：IIT DLS 的 IsaacLab 四足运动栈，带 sim-to-real；PHUMA 人形运动数据集，带代码、Hugging Face 数据和 G1/H1-2 支持。
+- CUHK Legged Robot Lab 值得加入跟踪源：主页显示 Fall 2027 博士意向、RA/工程师机会，以及 RSS 2026 腿足执行器相关论文。
+- 招聘信号方面，EPFL BioRob 与 Field AI 的人形/腿足运动、RL、规划、sim-to-real 机会仍处于 active/watching 状态。
+
+<details>
+<summary><strong>新论文</strong></summary>
+
+### RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning
+- Link: https://arxiv.org/abs/2606.11092
+- Source: arXiv
+- Date: 2026-06-09
+- Authors: Yichao Zhong, Yidan Lu, Yuhang Lu, Tianyang Tang, Haoguang Mai, Yixuan Pan, Tianyu Li, Li Chen, Jingbo Wang, Zhongyu Li, Peng Lu, Hongyang Li
+- Topics: humanoid / locomotion / reinforcement learning / motion tracking / whole-body interaction
+- Summary: 提出三阶段 motion-guided curriculum RL，用单个人类踢球参考动作作为 scaffold，再逐步适配静止球与移动球场景；真实 Unitree G1 实验中，3 m 射门距离下静止球/移动球平均目标误差分别为 0.73 m / 0.86 m，触球后球速达 13.10 m/s。
+- Notes: 项目页：https://opendrivelab.com/RoboNaldo/ 。项目页列出 Code 链接，但 2026-06-10 检查时对应 GitHub 返回 404，因此代码可用性未确认。
+
+### GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains
+- Link: https://arxiv.org/abs/2606.10449
+- Source: arXiv
+- Date: 2026-06-09
+- Authors: Haoxuan Han, Chen Chen, Linao Gong, Xin Yang, Hao Hu, Junhong Guo, Zhicheng He, Yao Su, Fenghua He
+- Topics: humanoid / navigation / locomotion / terrain adaptation / robot learning
+- Summary: 提出端到端人形导航与运动框架，把 traversability-aware navigation guidance 与 terrain-adaptive locomotion teacher 结合，目标是在复杂地形上同时处理避障与动力学可行的人形运动。
+- Notes: 对“高层导航如何落到低层人形运动策略”这个方向很相关。
+
+### MARCH: Model-Assisted Reinforcement Learning for the Perceptive Control of Humanoids over Sparse Footholds
+- Link: https://arxiv.org/abs/2606.10288
+- Source: arXiv
+- Date: 2026-06-09
+- Authors: Codrin Crismariu, Ryan K. Cosner
+- Topics: humanoid / bipedal locomotion / perceptive control / sparse footholds / model-assisted RL
+- Summary: 将简化模型生成的安全参考轨迹与强化学习结合，用于人形机器人在稀疏落脚点上的感知运动控制，重点解决纯 model-free 方法难以探索精确、安全接触行为的问题。
+- Notes: 适合与 foothold tracking、humanoid parkour、模型-学习混合控制方向一起跟踪。
+
+</details>
+
+<details>
+<summary><strong>新仓库</strong></summary>
+
+### basic-locomotion-isaaclab
+- Link: https://github.com/iit-DLSLab/basic-locomotion-isaaclab
+- Category: RL / simulator / toolkit
+- Robot Type: quadruped
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: both
+- Summary: IIT DLS 的 IsaacLab 四足运动扩展，支持 Aliengo、Go2、B2、HyQReal2 等机器人，包含 sim-to-sim 与 sim-to-real 流程。
+- Notes: README 列出 concurrent state estimator、rapid motor adaptation、morphological symmetries、adversarial motion priors、ROS2 部署、Unitree 通信和机器人参数辨识支持。
+
+### PHUMA
+- Link: https://github.com/DAVIAN-Robotics/PHUMA
+- Category: dataset / retargeting / toolkit
+- Robot Type: humanoid
+- Simulator: Isaac Gym / Isaac Sim
+- Deploy: both
+- Summary: “PHUMA: Physically Reliable Humanoid Locomotion Dataset”的代码与数据流水线，提供 73 小时经过物理筛选与重定向的人形运动数据，并支持 G1 与 H1-2。
+- Notes: 项目页与数据集：https://davian-robotics.github.io/PHUMA/ 和 https://huggingface.co/datasets/DAVIAN-Robotics/PHUMA 。README 提到 PHUMA 已被 NVIDIA ProtoMotions 原生支持。
+
+### WholebodyVLA
+- Link: https://github.com/OpenDriveLab/WholebodyVLA
+- Category: toolkit / viewer
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: data
+- Summary: “Towards Unified Latent VLA for Whole-body Loco-manipulation Control”的资源仓库，整理项目链接和人形 VLA / loco-manipulation 相关工作列表。
+- Notes: README 明确说明目前没有开源代码的具体时间表，因此应视为参考/资源仓库，而不是可运行代码仓库。
+
+</details>
+
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### CUHK Legged Robot Lab / Prof. Liu Yun-Hui
+- Institution: The Chinese University of Hong Kong
+- Homepage: https://cuhkleggedrobotlab.github.io/
+- Lab / Department: Department of Mechanical and Automation Engineering, CUHK
+- Key Topics: quadruped / humanoid / locomotion / loco-manipulation / perception / navigation / actuator design
+- Notes: 实验室主页称其关注腿足机器人真实部署，方向包括鲁棒精确运动、全身协调 loco-manipulation、可通行性感知与导航、安全执行器和机械系统设计。页面还显示 2026 年 Hong Kong Embodied AI Lab 启动信号，以及 RSS 2026 录用论文 “VRA: Grounding Discrete-Time Joint Acceleration in Voltage-Constrained Actuation”。主页同时列出 Fall 2027 博士申请意向和多个 RA/工程师机会。
+
+### OpenDriveLab humanoid loco-manipulation line
+- Institution: The University of Hong Kong / The Chinese University of Hong Kong / Archon Robotics collaborations, as listed on RoboNaldo project page
+- Homepage: https://opendrivelab.com/RoboNaldo/
+- GitHub: https://github.com/OpenDriveLab/WholebodyVLA
+- Key Topics: humanoid / locomotion / whole-body control / loco-manipulation / reinforcement learning / VLA
+- Notes: RoboNaldo 与 WholeBodyVLA 显示出围绕 Unitree G1、足球射门、latent VLA 和 loco-manipulation 的活跃人形全身学习方向。代码可用性需谨慎处理：RoboNaldo 项目页列出的代码链接检查时尚未可访问。
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+### EPFL BioRob / Biorobotics Laboratory
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: humanoid / locomotion / RL / bio-inspired control / neuromechanics / computational neuroscience
+- Status: active
+- Notes: BioRob 官方 openings 页面列出 Fall 2026 的 1 个 Postdoc 与 1 个 PhD 位置，主题是利用人形机器人研究并借鉴人类运动神经力学，包含神经肌肉仿真、生物启发人形运动控制器和强化学习。来源：https://www.epfl.ch/labs/biorob/openings/
+
+### Field AI
+- Type: Internship
+- Location: Irvine, CA, USA
+- Source: official careers page
+- Deadline: unknown
+- Topics: legged locomotion / planning / RL / sim-to-real / robotics systems
+- Status: active
+- Notes: Summer 2026 onsite Robotics Research Internship，面向博士生，聚焦 learning-based locomotion and planning；职责包括 RL pipeline、learned planning、Isaac Gym/Isaac Lab/MuJoCo 仿真、sim-to-real 和真实腿足机器人验证。来源：https://jobs.lever.co/field-ai/ce04c5b3-17c3-49aa-b833-a6bebbf9d23f
+
+### CUHK Legged Robot Lab
+- Type: PhD / RA / Research Engineer
+- Location: Hong Kong
+- Source: lab page
+- Deadline: unknown
+- Topics: legged locomotion / loco-manipulation / perception / navigation / actuator design
+- Status: watching
+- Notes: 实验室主页称正在寻找 Fall 2027 自驱型 PhD 申请者，并有多个 Research Assistant 和 engineer 开口。来源：https://cuhkleggedrobotlab.github.io/
+
+</details>
