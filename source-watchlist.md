@@ -21,6 +21,10 @@ This file is a **single-language exception** under the **Bilingual Repository Po
 
 - `@_akhaliq` on X — daily arXiv paper highlights (general AI, includes robotics)
 
+## Curated Paper Lists
+
+- Awesome Humanoid Robot Learning — https://github.com/YanjieZe/awesome-humanoid-robot-learning — humanoid robot learning paper list; filter for real-robot results, open-source code, locomotion, whole-body control, loco-manipulation, parkour, sim-to-real, and contact-rich humanoid work.
+
 ## Industry Media
 
 - The Robot Report — https://www.therobotreport.com
