@@ -1,0 +1,113 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-06-13.md)
+# Legged Daily - 2026-06-13
+
+## Summary
+- The strongest new paper signal is still humanoid whole-body control: WT-UMI adds force-supervised tactile planning for bulky/deformable/shared-load manipulation, while Stubborn targets unified humanoid motion tracking and fall recovery.
+- Quadruped embodied-agent work is also active: Y-BotFrame frames a quadruped as an extensible voice/vision/LiDAR/LLM assistant rather than only a locomotion platform.
+- Repository signals are implementation-heavy and useful for reproducibility: `mpc-rl` provides training environments plus a batched GPU MPC solver for humanoid locomotion/manipulation RL, and Unitree's `unitree_lerobot` connects LeRobot-style imitation learning to G1 + dexterous-hand data and deployment.
+- ACT Lab at SUSTech is worth tracking for humanoid robust motion tracking and fall recovery; Xidian's XDEI group is worth tracking for quadruped embodied-agent deployment.
+- Official job checks still show EPFL BioRob humanoid-neuromechanics PhD/Postdoc and ETH RSL rolling legged-robotics openings as active.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### WT-UMI: Tactile-based Whole-Body Manipulation via Force-Supervised Contact-Aware Planning
+- Link: https://arxiv.org/abs/2606.13232
+- Source: arXiv
+- Date: 2026-06-11
+- Authors: Jaehwi Jang, Zhaoyuan Gu, Alfred Cueva, Zimeng Chai, Junjie Sheng, Thong Nguyen, Himank Galundia, Yifan Wu, Huishu Xue, Isaac Legene, Ojas Mediratta, Davin Doan, Andrew Collins, Sarah Sadegh, KyoungMok Kim, Rishita Dhalbisoi, Zun Chen, Ye Zhao
+- Topics: humanoid / whole-body manipulation / tactile sensing / contact force / imitation learning / admittance control
+- Summary: Presents WT-UMI, a wearable whole-body tactile interface for human demonstration and humanoid teleoperation that records tactile images, contact forces, and end-effector poses, then uses force-conditioned pose correction, force-supervised planning, and tactile admittance control for contact-rich humanoid manipulation.
+- Notes: Project page: https://wt-umi.github.io/WTUMI/ . Especially relevant for whole-body humanoid manipulation tasks involving bulky, deformable, or shared-load objects where contact force is not adequately handled by purely pose-based imitation.
+
+### Stubborn: A Streamlined and Unified Reinforcement Learning Framework for Robust Motion Tracking and Fall Recovery for Humanoids
+- Link: https://arxiv.org/abs/2606.12814
+- Source: arXiv
+- Date: 2026-06-11
+- Authors: Xiao Ren, Yuhui Yang, Zongbiao Weng, Zhijie Liu, He Kong
+- Topics: humanoid / reinforcement learning / motion tracking / fall recovery / robustness
+- Summary: Proposes a unified RL framework for humanoid motion tracking and fall recovery using yaw-aligned tracking, asymmetric actor-critic training, Bernoulli-based probabilistic termination, and adaptive sampling, avoiding separate recovery policies or heavily staged training.
+- Notes: Project page: https://aislab-sustech.github.io/Stubborn/ . The project reports comparisons with SOTA tracking methods plus real-world demonstrations; code availability was not verified in this pass.
+
+### Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants
+- Link: https://arxiv.org/abs/2606.13049
+- Source: arXiv
+- Date: 2026-06-11
+- Authors: Luyao Zhang, Ke Li, Yuan Ding, Xulong Zhao, Guo Yu, Chengwei Yan, Fuyu Dong, Jiawei Hu, Di Wang, Nan Luo, Gang Liu, Quan Wang
+- Topics: quadruped / embodied agents / multimodal perception / LLM planning / navigation / human-robot interaction
+- Summary: Introduces Y-BotFrame, a quadruped embodied-agent framework that combines speech, vision, LiDAR, LLM-based reasoning, task planning, executable modules, and robot-side feedback to turn a quadruped platform into an instruction-driven ground assistant.
+- Notes: Project page: https://xdei-group.github.io/Y-BotFrame/ . This is more embodied-agent integration than locomotion control, but is relevant as a quadruped deployment and interaction stack.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### mpc-rl
+- Link: https://github.com/junhengl/mpc-rl
+- Category: RL / MPC / simulator / toolkit
+- Robot Type: humanoid
+- Simulator: MuJoCo / mujoco-warp
+- Deploy: sim / hardware-related training validation
+- Summary: Official code for “Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation,” containing humanoid locomotion and loco-manipulation training environments plus a batched GPU centroidal MPC solver for training-time RL guidance.
+- Notes: GitHub API check on 2026-06-13 showed the repository was created 2026-06-03 and updated 2026-06-13. README says the repo includes training environments, MPC, and the proposed JAX/PyTorch batched solver, with locomotion and box-pushing loco-manipulation tasks.
+
+### unitree_lerobot
+- Link: https://github.com/unitreerobotics/unitree_lerobot
+- Category: imitation learning / dataset / toolkit / deployment
+- Robot Type: humanoid / manipulator
+- Simulator: Isaac Lab via linked Unitree simulation environment
+- Deploy: both
+- Summary: Unitree-maintained LeRobot adaptation for training, data conversion, dataset replay, model deployment, and real-machine validation with Unitree G1, Z1, Dex1, and Dex3 hardware.
+- Notes: Official Unitree open-source page describes `unitree_il_lerobot` as supporting data collection, algorithm development, model training, and real-machine deployment testing. GitHub redirects to `unitreerobotics/unitree_lerobot`; API check on 2026-06-13 showed 687 stars and an update on 2026-06-11.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### ACT Lab / He Kong
+- Institution: Southern University of Science and Technology
+- Homepage: https://hekong-sustech.github.io/index.html
+- Lab / Department: ACT Lab
+- Key Topics: humanoid / reinforcement learning / motion tracking / fall recovery / robust control
+- Notes: The Stubborn project page lists ACT Lab at SUSTech and presents a focused humanoid robustness line around unified motion tracking and fall recovery. Track for possible code release and follow-up work on recovery-aware humanoid policies.
+
+### XDEI Group / Xidian University
+- Institution: Xidian University
+- Homepage: https://xdei-group.github.io/Y-BotFrame/
+- Lab / Department: XDEI Group
+- Key Topics: quadruped / embodied agents / multimodal interaction / LLM planning / navigation
+- Notes: Y-BotFrame identifies a quadruped embodied-agent line from Xidian University, combining robot mobility with voice, vision, LiDAR, and LLM task planning. Track as a deployment/integration source rather than a pure locomotion-control source.
+
+### Unitree Robotics open-source ecosystem
+- Institution: Unitree Robotics
+- Homepage: https://www.unitree.com/mobile/opensource/
+- GitHub: https://github.com/unitreerobotics/unitree_lerobot
+- Key Topics: humanoid / imitation learning / G1 / dexterous hands / data collection / deployment
+- Notes: Unitree's official open-source page now surfaces LeRobot-based imitation-learning tooling for G1 + dexterous hands, linked datasets, teleoperation, and Isaac Lab simulation. This is a useful recurring source for practical G1 data/deployment infrastructure.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### EPFL Biorobotics Laboratory / Auke Ijspeert
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official website
+- Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
+- Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
+- Status: active
+- Notes: Official BioRob openings page still lists one Postdoc and one PhD student position for investigating and leveraging human locomotion neuromechanics using humanoid robots, combining numerical neuromechanical simulations, bio-inspired humanoid locomotion controllers, and reinforcement learning. Source checked: https://www.epfl.ch/labs/biorob/openings/
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer
+- Location: Zurich, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: legged robots / mobile manipulators / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
+- Status: active
+- Notes: Official RSL page continues to list continuous PhD/PostDoc searches plus research staff/software engineering and robot-design roles for legged robots, mobile manipulators, control, learning, planning, perception, deployment, and hardware design. Source checked: https://rsl.ethz.ch/the-lab/open-positions.html
+
+</details>
