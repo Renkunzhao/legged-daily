@@ -1,0 +1,126 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-06-14.md)
+# Legged Daily - 2026-06-14
+
+## Summary
+- Weekend run found no newer June 14 arXiv batch signal yet; the strongest recent items remain June 9-11 humanoid control, navigation, and loco-manipulation papers.
+- Selected three high-signal papers: generated-video humanoid object interaction, unified humanoid navigation + locomotion, and omni-modal whole-body motion generation.
+- Selected three useful repositories/resources: WholeBodyVLA as a humanoid loco-manipulation VLA resource hub, `legged_lab` for Isaac Lab humanoid AMP/DeepMimic workflows, and `legged-loco` for Go2/H1 low-level locomotion training.
+- Lab-source signal: Tsinghua MARS Lab / Hang Zhao network surfaced again through OMG; USC Dynamic Robotics and Control Lab is worth adding to the source network because its official page explicitly tracks legged, humanoid, and wheel-legged robot control/RL topics.
+- Job signal: Field AI has a specific Summer 2026 locomotion/planning research internship in addition to the already tracked locomotion engineer role; EPFL BioRob and ETH RSL openings remain active from official pages.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### GenHOI: Contact-Aware Humanoid-Object Interaction by Imitating Generated Videos without Task-Specific Training
+- Link: https://arxiv.org/abs/2606.12995
+- Source: arXiv
+- Date: 2026-06-11
+- Authors: Zhihai Bi, Qiang Zhang, Guoyang Zhao, Jiahang Cao, Xueyin Luo, Yushan Zhang, Jinglan Xu, Ruoyu Geng, Yulin Li, Andrew F. Luo, Jun Ma
+- Topics: humanoid-object interaction / loco-manipulation / generated video / contact-aware planning / whole-body control
+- Summary: Proposes a zero-shot humanoid-object interaction pipeline that turns a generated task video into contact-region constraints and optimized reference trajectories, then executes them with a closed-loop tracking controller.
+- Notes: High relevance for humanoid loco-manipulation because it explicitly handles balance, hand-object contact, and real-world object-interaction tasks such as grasping, carrying, lifting, and enveloping.
+
+### GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains
+- Link: https://arxiv.org/abs/2606.10449
+- Source: arXiv
+- Date: 2026-06-09
+- Authors: Haoxuan Han, Chen Chen, Linao Gong, Xin Yang, Hao Hu, Junhong Guo, Zhicheng He, Yao Su
+- Topics: humanoid navigation / locomotion / terrain adaptation / teacher distillation / reinforcement learning
+- Summary: Introduces an end-to-end humanoid navigation and locomotion framework that combines traversability-aware velocity guidance, terrain-adaptive locomotion teaching, composite teacher distillation, and RL refinement.
+- Notes: Useful because it treats obstacle avoidance and dynamically feasible humanoid locomotion as a coupled problem rather than only a high-level planner plus low-level gait controller.
+
+### OMG: Omni-Modal Motion Generation for Generalist Humanoid Control
+- Link: https://arxiv.org/abs/2606.10340
+- Source: arXiv
+- Date: 2026-06-09
+- Authors: Siqiao Huang, Kun-Ying Lee, Dongming Qiao, Guanqi He, Zhenyu Wang, Yitang Li, Shaoting Zhu, Hang Zhao
+- Topics: humanoid whole-body control / motion generation / diffusion model / multimodal conditioning / foundation models
+- Summary: Presents an omni-modal humanoid whole-body controller with curated motion data and a diffusion-based generator conditioned on language, audio, and human reference motions.
+- Notes: Project page listed by the authors: https://tsinghua-mars-lab.github.io/OMG/ . This is a strong source-network signal for the Tsinghua MARS Lab / Hang Zhao humanoid-control line.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### OpenDriveLab/WholebodyVLA
+- Link: https://github.com/OpenDriveLab/WholebodyVLA
+- Category: toolkit / VLA / resource list / loco-manipulation
+- Robot Type: humanoid
+- Simulator: not specified
+- Deploy: data / reference resources
+- Summary: Repository for the ICLR 2026 WholeBodyVLA project and a curated humanoid VLA / loco-manipulation resource list, centered on unified latent actions for whole-body humanoid control.
+- Notes: The README states there is currently no concrete timeline for open-sourcing the codebase, so this should be tracked as a project/resource hub rather than a usable code release. GitHub API check: 476 stars, updated 2026-06-11.
+
+### zitongbai/legged_lab
+- Link: https://github.com/zitongbai/legged_lab
+- Category: RL / imitation / toolkit
+- Robot Type: humanoid
+- Simulator: Isaac Lab
+- Deploy: sim / possible hardware workflow dependency
+- Summary: Isaac Lab extension for legged robot reinforcement learning with DeepMimic and Adversarial Motion Priors support for Unitree G1, plus a forked RSL-RL AMP workflow.
+- Notes: README highlights GMR-based human-motion retargeting, Git LFS assets, Docker workflow added 2026-02-09, Isaac Lab 2.3.1 support, and AMP/symmetry data augmentation updates. GitHub API check: 353 stars, updated 2026-06-13.
+
+### yang-zj1026/legged-loco
+- Link: https://github.com/yang-zj1026/legged-loco
+- Category: RL / locomotion / toolkit
+- Robot Type: quadruped / humanoid
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim
+- Summary: Low-level locomotion policy training code for Unitree Go2 and H1 in Isaac Lab, with train/play scripts and extensible environment configs.
+- Notes: README says the code was tested with Isaac Lab 1.1.0 and a modified Isaac Lab fork, so compatibility should be checked before reuse on newer Isaac Lab releases. GitHub API check: 436 stars, updated 2026-06-14.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Hang Zhao — Tsinghua University / MARS Lab
+- Institution: Tsinghua University
+- Homepage: https://hangzhaomit.github.io/
+- Lab / Department: https://group.iiis.tsinghua.edu.cn/~marslab/#/
+- Key Topics: humanoid whole-body control / multimodal motion generation / robot learning / embodied AI
+- Notes: OMG (arXiv:2606.10340) lists Hang Zhao as a coauthor and uses a Tsinghua MARS Lab project page, reinforcing this source as a high-signal watch target for humanoid generalist-control work.
+- Students and Representative Works:
+  - [Ziwen Zhuang](https://ziwenzhuang.github.io/) — [Humanoid Parkour Learning](https://humanoid4parkour.github.io/)
+
+### Quan Nguyen — USC Dynamic Robotics and Control Laboratory
+- Institution: University of Southern California
+- Homepage: https://sites.usc.edu/quann/
+- Lab / Department: Dynamic Robotics and Control Laboratory
+- Key Topics: legged robots / humanoid robots / quadruped robots / wheel-legged robots / control / optimization / planning / reinforcement learning
+- Notes: Official lab page says the group is constantly looking for self-motivated students aligned with control, optimization, planning, and RL for legged robots including quadrupeds, humanoids, and wheel-legged robots. This is a candidate source-network addition; no specific funded opening beyond the general recruiting statement was verified today.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### Field AI — Robotics Research Internship: Locomotion & Planning (Summer 2026)
+- Type: Internship
+- Location: Mission Viejo / Irvine area, California, USA; Field AI team context
+- Source: official Lever careers page
+- Deadline: unknown
+- Topics: learning-based locomotion / planning / reinforcement learning / legged robots / autonomous field robotics
+- Status: active
+- Notes: Official posting describes a Summer 2026 internship for PhD students focused on learning-based locomotion and planning for autonomous legged robot capabilities in complex real-world environments.
+
+### EPFL BioRob / Auke Ijspeert
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official lab page
+- Deadline: rolling until filled; EPFL doctoral program deadlines typically April 15 and December 15
+- Topics: humanoid robots / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
+- Status: active
+- Notes: Official openings page still lists a Postdoc and PhD student position for investigating and leveraging human locomotion neuromechanics using humanoid robots, with Fall 2026 timing.
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / Postdoc / Research Staff / Software Engineer
+- Location: Zurich, Switzerland
+- Source: official lab page
+- Deadline: rolling / unknown
+- Topics: legged robots / mobile manipulators / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
+- Status: active
+- Notes: Official open-positions page continues to list PhD, PostDoc, and research staff/software engineering routes connected to legged robots, mobile manipulation, field deployment, control, learning, planning, perception, and system design.
+
+</details>
