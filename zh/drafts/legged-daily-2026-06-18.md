@@ -1,0 +1,106 @@
+[English](../../drafts/legged-daily-2026-06-18.md) | **中文**
+# 腿足机器人日报 - 2026-06-18
+
+## 摘要
+- Kine2Go 是今天最值得跟踪的 Unitree Go2 数据集与流水线信号：它把动物/四足 mocap 转成 Go2 可执行轨迹、策略和 rollout 数据。
+- VENOM 对跨具身人形全身运动跟踪很有参考价值：用 GPT-style tracker 在多个人形机器人的状态/动作/奖励数据上训练，不再拆成上半身/下半身控制。
+- 一篇 dual-vs-unified critic 对比给了人形 loco-manipulation RL 的紧凑结论：在 Unitree G1 行走并触达任务中，dual critics 明显优于 unified critic。
+- 近期开源信号主要集中在实用 Isaac/Genesis 腿足 RL 工具：Kine2Go、Quadrrl、Go2 push-recovery baseline。
+- EPFL BioRob 有 Fall 2026 PhD/Postdoc 机会，主题连接人形机器人、神经力学、生物启发 locomotion 和强化学习。
+
+<details>
+<summary><strong>新论文</strong></summary>
+
+### Kine2Go: Kinematic dataset for the Unitree Go2 robot with diverse gaits and motions
+- Link: https://arxiv.org/abs/2606.14433
+- Source: arXiv
+- Date: 2026-06-12
+- Authors: Władysław Pałucki, Paweł Siwak, Krzysztof Ciebiera, Marek Cygan
+- Topics: 四足 locomotion / Unitree Go2 / 数据集 / imitation learning / reinforcement learning / motion retargeting
+- Summary: 提出 Kine2Go：一个面向 Unitree Go2 的运动学轨迹数据集，包含由 40 个策略生成的 800 条多样 gait/motion 轨迹；同时给出把其他四足形态动作重定向到 Go2 并训练 RL 跟踪策略的流水线。
+- Notes: 这是很强的长期数据集/工具候选，因为论文、代码流水线和 Hugging Face 数据资产都能支撑 Go2 imitation-learning 工作流。
+
+### VENOM: Versatile Embodied Network for Omni-bodied Motion tracking
+- Link: https://arxiv.org/abs/2606.16696
+- Source: arXiv
+- Date: 2026-06-15
+- Authors: Siddharth Padmanabhan, Kazuki Miyazawa, Takato Horii
+- Topics: 人形机器人 / 全身运动跟踪 / 跨具身学习 / demonstration learning / GPT-style policy
+- Summary: 提出 VENOM：一个面向多个人形机器人仿真的 GPT-based 跨具身全身 motion tracker，在多 humanoid 的 states/actions/rewards 数据上训练，不需要把控制器拆成上半身和下半身模块。
+- Notes: 适合用来跟踪 humanoid motion tracking 从单机器人策略走向共享多具身策略模型的趋势。
+
+### Critic Architecture Matters: Dual vs. Unified Critics for Humanoid Loco-Manipulation
+- Link: https://arxiv.org/abs/2606.11891
+- Source: arXiv / ICRA 2026 RL4IL Workshop
+- Date: 2026-06-10
+- Authors: Mehmet Turan Yardımcı
+- Topics: 人形 loco-manipulation / reinforcement learning / multi-objective critics / Unitree G1 / Isaac Lab
+- Summary: 在 Isaac Lab 中比较 Unitree G1 loco-manipulation 的 unified critic 和 dual critic；报告结果显示 dual critics 的触达速度、吞吐量和 validated reach rate 都优于 unified critic。
+- Notes: 与多 critic 奖励分解、以及 imitation-learned humanoid manipulation policy 的 RL fine-tuning 直接相关。
+
+</details>
+
+<details>
+<summary><strong>新仓库</strong></summary>
+
+### nomagiclab/kine2go-pipeline
+- Link: https://github.com/nomagiclab/kine2go-pipeline
+- Category: retargeting / dataset / RL / toolkit
+- Robot Type: quadruped
+- Simulator: Genesis
+- Deploy: sim / data
+- Summary: 一个端到端流水线：把 AI4Animation dog、Vienna Horse Data Collection 和 Solo8 动作重定向到 Unitree Go2，训练 PPO imitation policies，并生成 rollout 数据集。
+- Notes: arXiv:2606.14433 的配套工具；产物作为 Kine2Go 数据集发布在 Hugging Face。
+
+### lbnmahs/quadrrl
+- Link: https://github.com/lbnmahs/quadrrl
+- Category: RL / benchmark / simulator toolkit
+- Robot Type: quadruped / wheeled-legged quadruped
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim
+- Summary: 基于 Isaac Lab 的四足 locomotion 训练与 benchmark 套件，覆盖多个腿式和轮腿式平台，包括 ANYmal C/D、Spot、Unitree Go2/B2、Go2W/B2W 等。
+- Notes: 更像比较训练/评测套件，而不是单一论文代码；README 标注支持 RSL-RL、RL Games、SKRL 和 HARL。
+
+### BrandoUlissi/isaaclab-go2-locomotion
+- Link: https://github.com/BrandoUlissi/isaaclab-go2-locomotion
+- Category: RL / control / reproducibility baseline
+- Robot Type: quadruped
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim
+- Summary: 一个实用的 Unitree Go2 velocity-tracking 与 push-recovery PPO baseline，基于 Isaac Lab，包含训练记录、扰动 curriculum 和 replay/evaluation 脚本。
+- Notes: 仓库自述定位为 portfolio/reproducibility project，不是论文 release；但 push-recovery 设置可作为工程参考。
+
+</details>
+
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### EPFL BioRob / Auke Ijspeert
+- Institution: EPFL
+- Homepage: https://www.epfl.ch/labs/biorob/
+- Lab / Department: Biorobotics Laboratory
+- Key Topics: humanoid / locomotion / neuromechanics / bio-inspired control / reinforcement learning
+- Notes: 实验室正在招 Fall 2026 项目，主题是使用人形机器人研究并利用人类 locomotion 神经力学；目标包括神经力学仿真、脊髓/高级中枢控制模型，以及生物启发的 RL locomotion controllers。
+
+### No Magic Lab / University of Warsaw robotics signal
+- Institution: University of Warsaw / No Magic Lab 相关来源信号
+- Homepage: https://nomagiclab.github.io/kine2go-pipeline/
+- GitHub: https://github.com/nomagiclab/kine2go-pipeline
+- Key Topics: quadruped / motion retargeting / Unitree Go2 / imitation learning / Genesis RL
+- Notes: Kine2Go 值得作为来源簇持续跟踪，因为它把 arXiv 论文、可执行 pipeline 和 Go2 demonstration-data 生成数据资产连在了一起。
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+### EPFL BioRob / Auke Ijspeert
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official lab page
+- Deadline: rolling / applications considered continuously until filled
+- Topics: humanoid / neuromechanics / locomotion / reinforcement learning / bio-inspired control
+- Status: active
+- Notes: Fall 2026 有一个 Postdoc 和一个 PhD 位置，主题是 human locomotion neuromechanics with humanoid robots；理想入职时间约 2026 年 9 月。PhD 申请人还需要被 EPFL doctoral school 录取。
+
+</details>
