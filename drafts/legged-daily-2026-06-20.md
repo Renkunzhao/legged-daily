@@ -1,0 +1,107 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-06-20.md)
+# Legged Daily - 2026-06-20
+
+## Summary
+- Today's strongest technical signal is SCAN-Planner: a Shanghai Jiao Tong University quadruped local planner that explicitly models yaw-aware whole-body collision in narrow / 3D scenes, with code promised for release.
+- ForEnt is a useful field-robotics dataset signal: 1.7 km of Unitree Go2 forest traversals, 11 sequences, and 69 labeled entrapment events with synchronized RGB-D, LiDAR, proprioception, and third-person video.
+- The humanoid data-standard paper is more infrastructure than control, but worth tracking because it ties humanoid dataset design to ISO/WD 26264-1 and argues for traceable embodied-interaction data.
+- Repository signals are intentionally sparse today: only AugMPC and IHMC Open Robotics Software are listed as useful / active signals; earlier BotBrain and Unitree RL Mjlab were not repeated.
+- Recruiting signal: no new official legged/humanoid opening was verified today. A third-party aggregator surfaced a Chalmers RAIL postdoc in legged humanoid robotics, but I did not find the official posting during this run, so treat it as unconfirmed.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### SCAN-Planner: Spatial Collision-Aware Local Planning for Route-Guided Long-Range Quadruped Navigation
+- Link: https://arxiv.org/abs/2606.19555
+- Source: arXiv
+- Date: 2026-06-17
+- Authors: Han Zheng, Zhe Chen, Yiwen Fu, Ming Yang, Tong Qin
+- Topics: quadruped, navigation, local planning, whole-body collision checking, 3D occupancy map, stair / clutter navigation
+- Summary: Proposes a spatial collision-aware local planner for long-range quadruped navigation, using a yaw-aware twin-cylinder footprint, sparse whole-body collision queries in an inflated 3D occupancy map, projected A* guidance, and a robot-centric sliding map.
+- Notes: The HTML paper lists Shanghai Jiao Tong University as the affiliation and says code will be released at https://github.com/wuyi2121/SCAN-Planner. The repository should be checked again later; availability was not confirmed in this run.
+
+### ForEnt: A Multi-Modal Dataset for Characterizing Quadruped Robot Entrapments in Forest Environments
+- Link: https://arxiv.org/abs/2606.19675
+- Source: arXiv
+- Date: 2026-06-18
+- Authors: Natapat Kirdwichai, Danesh Tarapore
+- Topics: quadruped, field robotics, forest autonomy, entrapment detection, dataset, Unitree Go2
+- Summary: Introduces ForEnt, a multimodal dataset collected with a Unitree Go2 across eight forest sites in Southampton Common Woodlands, UK, targeting leg entrapment / toppling failure modes in cluttered vegetation.
+- Notes: The abstract reports about 1.7 km of traversals, 11 sequences, and 69 entrapment events with synchronized RGB-D, LiDAR, proprioceptive data, and third-person video. Authors are with the University of Southampton Faculty of Engineering and Physical Sciences.
+
+### Data Standards for Humanoid Robotics: The Missing Infrastructure for Physical AI
+- Link: https://arxiv.org/abs/2606.19769
+- Source: arXiv
+- Date: 2026-06-18
+- Authors: Shaoshan Liu, Xiugong Qin, Xuan Wu, Xuan Xia, Ning Ding, Jialu Liu, Jie Tang
+- Topics: humanoid, datasets, Physical AI, standardization, ISO/TC 299/WG 16, data infrastructure
+- Summary: Argues that humanoid robot data needs standards for embodied interaction traces, physical coherence, metadata, provenance, quality, versioning, and capability-specific dataset grammars.
+- Notes: Not a locomotion method paper, but relevant to humanoid research infrastructure because it references ISO/WD 26264-1, Humanoid robot datasets -- Part 1: General requirements.
+
+</details>
+
+<details>
+<summary><strong>New Repositories</strong></summary>
+
+### AugMPC
+- Link: https://github.com/AndrePatri/AugMPC
+- Source: GitHub
+- Date: updated 2026-06-19
+- Language: Python / robotics stack
+- Topics: RL-augmented MPC, legged locomotion, hybrid locomotion, contact scheduling, sim-to-real
+- Summary: RL-Augmented Model Predictive Control stack for non-gaited legged and hybrid locomotion, where the RL agent selects contact schedules / twist commands for MPC controllers.
+- Notes: README reports 50+× real-time experience generation with 800 parallel environments / MPC instances at 20 Hz on a workstation, SAC / PPO support, and sim-to-sim / sim-to-real examples including Centauro. License shown by GitHub API: GPL-2.0. Not a new repository, but it was actively pushed on 2026-06-19 and was not previously in this archive.
+
+### IHMC Open Robotics Software
+- Link: https://github.com/ihmcrobotics/ihmc-open-robotics-software
+- Source: GitHub
+- Date: updated 2026-06-18
+- Language: Java / Gradle robotics stack
+- Topics: humanoid, legged locomotion, momentum-based control, optimization, robotics software infrastructure
+- Summary: Mature IHMC robotics software stack featuring legged locomotion algorithms and a momentum-based controller core, with support history across humanoids including Nadia, Valkyrie, and Alex.
+- Notes: This is not a fresh release, but it is an actively maintained infrastructure repo worth having in the watchlist. License shown by GitHub API: Apache-2.0.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Tong Qin group / Shanghai Jiao Tong University
+- Link: https://arxiv.org/html/2606.19555v1
+- Source: arXiv HTML
+- Date: 2026-06-17
+- Institution: Shanghai Jiao Tong University
+- People: Han Zheng, Zhe Chen, Yiwen Fu, Ming Yang, Tong Qin
+- Topics: quadruped navigation, local planning, whole-body collision checking, 3D unstructured scenes
+- Signal: SCAN-Planner's paper reports real-world quadruped navigation demonstrations in narrow indoor scenes, stairs, dense clutter, 3D unstructured scenes, and long-range campus navigation. The paper states that code will be released at `wuyi2121/SCAN-Planner`.
+
+### University of Southampton — Faculty of Engineering and Physical Sciences
+- Link: https://arxiv.org/html/2606.19675v1
+- Source: arXiv HTML
+- Date: 2026-06-18
+- Institution: University of Southampton
+- People: Natapat Kirdwichai, Danesh Tarapore
+- Topics: field quadrupeds, forest autonomy, entrapment detection, multimodal datasets
+- Signal: The ForEnt work indicates a concrete field-robotics dataset effort around forest entrapment failure modes, collected on Unitree Go2 in Southampton Common Woodlands.
+
+</details>
+
+<details>
+<summary><strong>Recruiting Signals</strong></summary>
+
+### Chalmers RAIL — possible Postdoctoral Researcher in Legged Humanoid Robotics
+- Link: https://scholarnexus.ai/position/Postdoctoral-Researcher-In-Legged-Humanoid-Robotics?id=f44b2959-d66a-4058-a362-01bf113aea2d
+- Type: Postdoc
+- Location: Gothenburg, Sweden
+- Source: third-party aggregator; official source not verified in this run
+- Deadline: unknown
+- Topics: legged humanoid robotics, locomotion, control, experimental platforms
+- Status: unconfirmed
+- Notes: A third-party page describes a postdoc at Chalmers University of Technology's Robot Athletic Intelligence Lab (RAIL) with Assistant Professor Shivesh Kumar. Because I could not verify the official Chalmers posting today, this should be treated as a lead to check manually, not a confirmed opening.
+
+</details>
+
+## Operator Notes
+- Draft only. Do not merge into official daily files until confirmed by 大天才.
+- Paper count: 3. Repository count: 2.
+- Search quality note: web search partially hit bot-detection for Chalmers queries; recruitment verification is therefore intentionally conservative.
