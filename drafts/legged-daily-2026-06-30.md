@@ -1,0 +1,107 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-06-30.md)
+# Legged Daily - 2026-06-30
+
+## Summary
+- Two new arXiv papers from 2026-06-29 are highly relevant to humanoid / non-humanoid loco-manipulation: VLK for Unitree G1 perception-based tasks, and X-Morph for transferring human motion priors to quadrupeds, hexapods, and quadruped manipulators.
+- KYON adds a hardware-platform signal: a semi-modular wheel-legged quadruped with a bimanual upper body, combining wheel/leg locomotion and manipulation.
+- LeggedGym-Ex remains an active practical repo signal, with June updates around cloud training Dockerfiles / visualization plus multi-simulator legged RL support.
+- Upkie remains a useful open-source wheeled-biped reference, recently updated and packaged for Python / C++ simulation-to-real development.
+- Job signal: EPFL BioRob has Fall 2026 PhD/Postdoc openings on neuromechanics of human locomotion and humanoid robot controllers; ETH RSL still lists rolling PhD/Postdoc/research engineer openings.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes
+- Link: https://arxiv.org/abs/2606.30645
+- Source: arXiv
+- Date: 2026-06-29
+- Authors: Yen-Jen Wang, Jiaman Li, Sirui Chen, Takara E. Truong, Pei Xu, Pieter Abbeel, Rocky Duan, Koushil Sreenath, Angjoo Kanazawa, Carmelo Sferrazza, Guanya Shi, C. Karen Liu
+- Topics: humanoid, loco-manipulation, vision-language-kinematics, 3D Gaussian Splatting, sim-to-real, Unitree G1
+- Summary: Generates 48,000 paired trajectories in reconstructed 3DGS indoor scenes, trains a vision-language-kinematics policy to predict short-horizon whole-body kinematic trajectories, and deploys through a whole-body tracker on a physical Unitree G1 for navigation and object transport.
+- Notes: Project page: https://vision-language-kinematics.github.io/. Strong lab-network signal across Amazon FAR, UC Berkeley, Stanford, and CMU.
+
+### X-Morph: Human Motion Priors for Scalable Robot Learning Across Morphologies
+- Link: https://arxiv.org/abs/2606.30290
+- Source: arXiv
+- Date: 2026-06-29
+- Authors: Shivam Sood, Arhaan Jain, Shyam Charan Kesavamoorthi, Chenyang He, Guillaume Adrien Sartoretti
+- Topics: quadruped, hexapod, quadruped manipulator, retargeting, reinforcement learning, behavior priors, teleoperation
+- Summary: Converts human motion into deployable locomotion and loco-manipulation policies for non-humanoid legged morphologies through cross-morphology retargeting, privileged RL tracking, and causal student-policy distillation.
+- Notes: Project page: https://maker-rat.github.io/morph/. No official code release was verified during this run.
+
+### KYON: Semi-Modular Wheel-Legged Quadruped With Agile Bimanual Capability
+- Link: https://arxiv.org/abs/2606.30243
+- Source: arXiv
+- Date: 2026-06-29
+- Authors: Luca Rossini et al.
+- Topics: wheel-legged quadruped, bimanual manipulation, whole-body control, reinforcement learning, hardware design
+- Summary: Presents KYON, a hybrid wheel-legged quadruped with a bimanual upper body; its semi-modular lower-leg design supports both wheeled and legged locomotion while reducing distal inertia through base-mounted actuation and transmission mechanisms.
+- Notes: Useful platform signal for loco-manipulation hardware; author list should be rechecked from the PDF before master-list insertion.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### LeggedGym-Ex
+- Link: https://github.com/lupinjia/LeggedGym-Ex
+- Category: RL / simulator / toolkit
+- Robot Type: quadruped / humanoid / biped
+- Simulator: IsaacGym / Genesis / IsaacSim
+- Deploy: both
+- Summary: A legged_gym-based framework for training legged robots across IsaacGym, Genesis, and IsaacSim, with examples for Unitree Go2, Unitree G1 DeepMimic, Booster K1, TRON1, DreamWaQ, AMP, teacher-student learning, and depth-based parkour.
+- Notes: README records recent 2026 updates including Dockerfiles / viser visualization for cloud training and warp-based height query / latest rsl-rl-lib support.
+
+### Upkie
+- Link: https://github.com/upkie/upkie
+- Category: toolkit / control / open hardware
+- Robot Type: wheeled biped
+- Simulator: PyBullet / Spine real-robot interface
+- Deploy: both
+- Summary: Open-source wheeled biped robot project with build materials, Python/C++ development paths, Gymnasium environments, simulation-to-real environment switching, and packaged conda / pip distribution.
+- Notes: GitHub topic page showed an update on 2026-06-28; repository README cites version 11.0.0 and active docs / discussion channels.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Amazon FAR / UC Berkeley / Stanford / CMU VLK collaboration
+- Institution: Amazon FAR, UC Berkeley, Stanford University, Carnegie Mellon University
+- Homepage: https://vision-language-kinematics.github.io/
+- arXiv: https://arxiv.org/abs/2606.30645
+- Lab / Department: Amazon Frontiers Robotics plus university collaborators
+- Key Topics: humanoid, loco-manipulation, vision-language-action, 3DGS, sim-to-real, whole-body tracking
+- Notes: VLK is a strong source-network signal because it connects humanoid locomotion/control, robot foundation models, and reconstructed-scene synthetic data, with contributors from Abbeel / Sreenath / Kanazawa / Shi / Liu-related groups.
+
+### Multi-Agent Robotics Lab / NUS X-Morph line
+- Institution: National University of Singapore
+- Homepage: https://maker-rat.github.io/morph/
+- arXiv: https://arxiv.org/abs/2606.30290
+- Key Topics: cross-morphology retargeting, quadruped, hexapod, quadruped manipulation, robot learning
+- Notes: X-Morph indicates a useful tracking thread around using abundant human motion data as a substrate for non-humanoid legged robot behavior priors.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### EPFL BioRob — Auke Ijspeert group
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official website
+- Deadline: rolling / until filled
+- Topics: humanoid, human locomotion, neuromechanics, bio-inspired control, reinforcement learning
+- Status: active
+- Notes: Fall 2026 project on investigating and leveraging neuromechanics of human locomotion with humanoid robots; aims to combine neuromechanical simulation, bio-inspired controllers, and reinforcement learning.
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / Postdoc / Research Engineer / Research Staff
+- Location: Zurich, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: legged robots, mobile manipulation, MPC, reinforcement learning, perception, planning, actuation, teleoperation
+- Status: active
+- Notes: RSL continues to list rolling openings across PhD, postdoc, software/research engineering, robot design, embedded systems, and electronics roles.
+
+</details>
