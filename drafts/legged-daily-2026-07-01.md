@@ -1,0 +1,97 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-07-01.md)
+# Legged Daily - 2026-07-01
+
+## Summary
+- No clearly newer arXiv 2607 legged-robotics batch was verified during this run; today's strongest addition is a high-signal ICRA 2026 paper candidate that had not appeared in this repository yet: whole-body MPC for quadrupeds and humanoids using MuJoCo iLQR.
+- The MuJoCo-iLQR work is useful as a reproducible model-based baseline because it reports real-time whole-body MPC across dynamic quadruped locomotion, a quadruped walking on two legs, and full-size humanoid bipedal locomotion.
+- Repository watch adds one focused EPFL BioRob student quadruped project combining CPG priors and PPO, plus the broader Google DeepMind MuJoCo MPC toolkit as the relevant software substrate around predictive-control workflows.
+- Opportunity watch adds an official Fall 2026 ASU PhD opening in robot learning/control for locomotion and mobile manipulation on quadruped and humanoid platforms.
+- EPFL BioRob and ETH RSL openings remain active from official pages; no stale-job removal is proposed today.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### Whole-Body Model-Predictive Control of Legged Robots with MuJoCo
+- Link: https://arxiv.org/abs/2503.04613
+- Source: arXiv
+- Date: 2026-03-06 (v3); ICRA 2026 note on arXiv page
+- Authors: John Z. Zhang, Taylor A. Howell, Zeji Yi, Chaoyi Pan, Guanya Shi, Guannan Qu, Tom Erez, Yuval Tassa, Zachary Manchester
+- Topics: quadruped, humanoid, whole-body MPC, iLQR, MuJoCo, sim-to-real, model-based control
+- Summary: Demonstrates a simple real-time whole-body MPC baseline using iLQR with MuJoCo dynamics and finite-difference derivatives, reporting hardware experiments across dynamic quadruped locomotion, quadruped two-leg walking, and full-size humanoid bipedal locomotion.
+- Notes: Project page: https://johnzhang3.github.io/mujoco_ilqr/. Strong baseline candidate for the master paper list because it provides a model-based counterpoint to recent RL-heavy locomotion systems.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### AlexandrosDellios/Legged-Robot
+- Link: https://github.com/AlexandrosDellios/Legged-Robot
+- Category: RL / CPG / quadruped locomotion / student project
+- Robot Type: quadruped
+- Simulator: PyBullet
+- Deploy: sim
+- Summary: EPFL BioRob M.Sc. project combining Hopf-oscillator CPG gait priors with PPO policies for quadruped locomotion, including trot/walk/pace/bound gaits, slope traversal, curriculum training, and action-space comparisons.
+- Notes: Useful lightweight reference for hybrid CPG + DRL design tradeoffs; README reports slope traversal up to 29% and lists sim-to-real considerations such as domain randomization, but no hardware deployment was verified.
+
+### google-deepmind/mujoco_mpc
+- Link: https://github.com/google-deepmind/mujoco_mpc
+- Category: MPC / predictive control / MuJoCo toolkit
+- Robot Type: general robotics; includes quadruped and humanoid examples in documentation/media
+- Simulator: MuJoCo
+- Deploy: sim / research prototype
+- Summary: Google DeepMind's MuJoCo MPC framework for real-time predictive control, supporting iLQG, gradient descent, and predictive sampling planners, with GUI and experimental Python API.
+- Notes: Not the specific released code for the 2026 whole-body legged MPC paper, but a relevant software substrate and background toolkit for MuJoCo-based predictive-control workflows.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### CMU / Google DeepMind MuJoCo-iLQR collaboration
+- Institution: Carnegie Mellon University; Google DeepMind
+- Homepage: https://johnzhang3.github.io/mujoco_ilqr/
+- arXiv: https://arxiv.org/abs/2503.04613
+- Key Topics: whole-body MPC, humanoid locomotion, quadruped locomotion, MuJoCo, iLQR, sim-to-real
+- Notes: Author network connects Zachary Manchester / CMU and Google DeepMind MuJoCo researchers; useful source line for model-based whole-body control that complements RL and VLA humanoid tracking trends.
+
+### EPFL BioRob / Auke Ijspeert group student-project signal
+- Institution: EPFL BioRobotics Laboratory
+- Homepage: https://www.epfl.ch/labs/biorob/
+- GitHub: https://github.com/AlexandrosDellios/Legged-Robot
+- Key Topics: bio-inspired locomotion, CPG, reinforcement learning, quadruped control, neuromechanics-inspired robotics
+- Notes: The Legged-Robot repository is an M.Sc. Robotics project supervised in the BioRob ecosystem; keep it as a lightweight source signal alongside BioRob's official humanoid neuromechanics opening.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### Arizona State University — Robotic Actuators and Dynamics Lab / Prof. Jiefeng Sun
+- Type: PhD
+- Location: Tempe, Arizona, USA
+- Source: official lab website
+- Deadline: Fall 2026 admission cycle / not specified on page
+- Topics: robot learning, control, locomotion, mobile manipulation, quadruped robots, humanoid robots, MuJoCo, Isaac Lab
+- Status: active
+- Notes: Official page advertises a fully funded Fall 2026 PhD opening on machine learning and control of robots for locomotion and mobile manipulation with customized quadruped and humanoid platforms. Source: https://sunrobotics.lab.asu.edu/blog/2025/opening/
+
+### EPFL BioRobotics Laboratory
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official lab page
+- Deadline: continuous until filled; good starting date September 2026
+- Topics: humanoid, human locomotion, neuromechanics, bio-inspired control, reinforcement learning
+- Status: active
+- Notes: Official openings page continues to list one Postdoc and one PhD position for Fall 2026 on neuromechanics of human locomotion using humanoid robots. Source: https://www.epfl.ch/labs/biorob/openings/
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / Postdoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
+- Location: Zurich, Switzerland
+- Source: official lab page
+- Deadline: rolling / unknown
+- Topics: legged robots, mobile manipulation, MPC, reinforcement learning, perception, planning, actuation, teleoperation
+- Status: active
+- Notes: Official RSL page continues to list rolling openings across research and engineering roles for legged robots, mobile manipulators, and field robotics. Source: https://rsl.ethz.ch/the-lab/open-positions.html
+
+</details>
