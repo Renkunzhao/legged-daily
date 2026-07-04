@@ -1,0 +1,95 @@
+[English](../../drafts/legged-daily-2026-07-04.md) | **中文**
+# 腿足机器人日报 - 2026-07-04
+
+## 摘要
+- 针对 2026-07-03 至 2026-07-04 UTC 的 arXiv API 定向检查没有发现新的高置信 humanoid / legged cs.RO 投稿；今天是轻量增量更新，不硬凑论文。
+- RSS 2026 官方 accepted-paper 页面仍是当前最强信号源：Humanoids session 里有多篇高价值 locomotion / loco-manipulation 论文，包括 Perceptive Humanoid Parkour 和开放式人形 loco-manipulation foundation model 方向。
+- GitHub 跟踪：`zitongbai/legged_lab` 在 2026-06-30 更新到 Isaac Lab v2.3.2；`yang-zj1026/legged-loco` 仍是 Go2/H1 低层运动策略训练基线，但今天不作为新仓库重复收录。
+- 实验室信号：Guanya Shi / Karen Liu / Pieter Abbeel / 合作者线在 RSS 2026 有 Unitree G1 真实机 parkour 论文，值得持续跟踪。
+- 招聘信号：EPFL BioRob 官方页面仍列出 Fall 2026 人形机器人神经力学 locomotion 项目；今日按 active-watch 处理，申请前需二次确认具体 PhD/Postdoc 名额状态。
+
+<details>
+<summary><strong>新论文</strong></summary>
+
+### Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching
+- 链接: https://roboticsconference.org/program/papers/20/
+- 来源: RSS 2026 accepted papers / 官方项目页
+- 日期: 2026-07-04 检查；RSS 2026 项目页
+- 作者: Zhen Wu, Xiaoyu Huang, Lujie Yang, Yuanhang Zhang, Xi Chen, Pieter Abbeel, Rocky Duan, Angjoo Kanazawa, Carmelo Sferrazza, Guanya Shi, Karen Liu
+- 主题: 人形机器人、parkour、motion matching、深度感知策略、强化学习、Unitree G1
+- 一句话摘要: 提出 Perceptive Humanoid Parkour：用 motion matching 组合重定向的人类动态技能，训练 motion-tracking RL experts，并蒸馏为基于深度感知的多技能 student policy，让 Unitree G1 自主完成复杂障碍 parkour。
+- 备注: 官方摘要报告真实机可爬上 1.25 m 障碍（约机器人身高 96%），并完成长时序多障碍穿越和实时扰动适应。
+
+### Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation
+- 链接: https://roboticsconference.org/program/papers/21/
+- 来源: RSS 2026 accepted papers / 官方项目页
+- 日期: 2026-07-04 检查；RSS 2026 项目页
+- 作者: Songlin Wei, Hongyi Jing, Boqian Li, Zhenyu Zhao, Jiageng Mao, Zhenhao Ni, Sicheng He, Sheng Zang, Xiawei Liu, Kaidi Kang, Jie Liu, Weiduo Yuan, Marco Pavone, Di Huang, Yue Wang
+- 主题: 人形机器人、loco-manipulation、foundation model、VLM、flow-based action expert、真实机器人数据
+- 一句话摘要: 提出 Psi-Zero：先用第一视角人类视频预训练 VLM backbone，再用人形机器人轨迹后训练 flow-based action expert，面向通用人形 loco-manipulation。
+- 备注: 官方摘要称将开源数据处理/训练 pipeline、人形 foundation model 和实时动作推理引擎；代码是否已发布需要后续复核。
+
+### HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model
+- 链接: https://roboticsconference.org/program/papers/13/
+- 来源: RSS 2026 accepted papers / 官方项目页
+- 日期: 2026-07-04 检查；RSS 2026 项目页
+- 作者: Dongting Li, Xingyu Chen, Qianyang Wu, Bo Chen, Sikai Wu, Hanyu Wu, Guoyao Zhang, Liang Li, Mingliang Zhou, Diyun Xiang, Jianzhu Ma, Qiang Zhang, Renjing Xu
+- 主题: 人形机器人、物体交互、world model、本体感知、Unitree G1、loco-manipulation
+- 一句话摘要: 提出面向欠驱动物体交互的 dynamics-aware world model，用本体感知历史推断物体速度/加速度，在 Unitree G1 上支持滑板、推车、拉车等敏捷交互任务。
+- 备注: 价值在于从纯 locomotion 扩展到接触丰富的人形-物体动力学，并避免依赖外部状态估计。
+
+</details>
+
+<details>
+<summary><strong>新仓库</strong></summary>
+
+### zitongbai/legged_lab
+- 链接: https://github.com/zitongbai/legged_lab
+- 类别: RL / 仿真器扩展 / 人形动作模仿
+- 机器人类型: 人形 / 腿足机器人；重点支持 Unitree G1
+- 仿真器: Isaac Lab v2.3.2
+- 部署信息: 仿真 / 策略训练栈
+- 一句话摘要: 基于 Isaac Lab 的腿足机器人强化学习扩展，支持 DeepMimic 和 adversarial motion priors；README news log 显示 2026-06-30 已适配 Isaac Lab v2.3.2，并修复 pretrained checkpoint import path。
+- 备注: 该仓库此前已跟踪；今天的价值是确认近期更新，不作为全新仓库重复夸大。
+
+</details>
+
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### Guanya Shi / Karen Liu / Pieter Abbeel / Angjoo Kanazawa 合作线
+- 机构: 基于 RSS 2026 作者信息，可视为 CMU / Stanford / UC Berkeley 合作线
+- 来源: https://roboticsconference.org/program/papers/20/
+- 关键主题: 人形 parkour、motion matching、人类技能重定向、深度感知 locomotion policy、Unitree G1
+- 更新: RSS 2026 Humanoids session 收录 Perceptive Humanoid Parkour，包含 Unitree G1 真实机高障碍攀爬和长时序 parkour 实验，是人形敏捷运动和人类动作组合方向的强跟踪线索。
+
+### Yue Wang / Di Huang / Marco Pavone 合作线
+- 机构: RSS 页面未单独验证机构归属
+- 来源: https://roboticsconference.org/program/papers/21/
+- 关键主题: 人形 loco-manipulation、foundation model、第一视角人类视频预训练、人形 action expert
+- 更新: RSS 2026 收录 Psi-Zero，定位为开放式人形 loco-manipulation foundation model，并声称后续开源训练/数据 pipeline、模型和推理引擎。
+
+### EPFL BioRob / Auke Ijspeert
+- 机构: EPFL
+- 来源: https://www.epfl.ch/labs/biorob/openings/
+- 关键主题: 人形 locomotion、人类神经力学、仿生控制、强化学习
+- 更新: 官方 openings 页面仍描述 Fall 2026 “利用人类 locomotion neuromechanics 发展人形机器人控制器”项目；由于此前检查显示具体岗位状态有细节差异，申请前需确认 PhD/Postdoc 是否仍开放。
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+### EPFL BioRob
+- 类型: PhD / Postdoc 项目页；具体名额状态需二次确认
+- 地点: Lausanne, Switzerland
+- 来源: 官方网站，https://www.epfl.ch/labs/biorob/openings/
+- 截止时间: rolling / until filled；EPFL 博士项目通常有 4 月 15 日和 12 月 15 日节点
+- 状态: active-watch
+- 摘要: 官方页面继续列出 Fall 2026 人形神经力学 locomotion 项目，方向包括 neuromechanical simulation、bio-inspired locomotion controller 和 reinforcement learning；建议继续监控，但申请前先核验 postdoc/PhD 具体开放状态。
+
+### 今日无新增高置信行业 / 教职岗位
+- 状态: no addition
+- 原因: 今日通用网页搜索多次遇到 bot-detection；除 EPFL BioRob 外，没有从官方来源验证到新的高置信招聘条目。
+
+</details>
