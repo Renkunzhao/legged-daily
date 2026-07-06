@@ -1,0 +1,125 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-06-02.md)
+# Legged Daily - 2026-06-02
+
+## Summary
+- Today's strongest paper signals are clustered around humanoid loco-manipulation data generation, perceptive locomotion over sparse footholds, and runtime safety constraints for learned humanoid tracking policies.
+- LEGS is high-signal because it reports teleoperation-free VLA fine-tuning with photorealistic 3D Gaussian Splatting scenes and real Unitree G1 loco-manipulation trials.
+- GLAD is a strong humanoid locomotion item: it separates global terrain context from local foothold geometry and reports zero-shot sim-to-real deployment on Unitree G1 with onboard LiDAR.
+- ConstrainedMimic is worth tracking for safety: it adds runtime kinematic/dynamic constraints to RL whole-body tracking policies through operational-space control and CBF-style enforcement.
+- Repository signals are practical and implementation-oriented: PHUMA for humanoid locomotion datasets, an AMP running baseline for Unitree G1 marathon-style locomotion, and a small MuJoCo convex-MPC biped stack.
+- Job signals remain active from official EPFL BioRob and ETH RSL pages; no stale removal was identified today.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### LEGS: Fine-Tuning Teleop-Free VLAs for Humanoid Loco-manipulation in an Embodied Gaussian Splatting World
+- Link: https://arxiv.org/abs/2606.01458
+- Source: arXiv
+- Date: 2026-05-31
+- Authors: Hojune Kim, Timothy Chen, Jiankai Sun, Lars W. Osterberg, Qianzhong Chen, Ke Wang, Mac Schwager
+- Topics: humanoid / loco-manipulation / VLA / synthetic data / 3D Gaussian Splatting / sim-to-real / Unitree G1
+- Summary: Presents LEGS, a hybrid simulator that composites robot/object meshes over photorealistic 3D Gaussian Splatting backgrounds and uses procedural motion primitives to generate labeled humanoid loco-manipulation demonstrations without human teleoperation; the paper reports real Unitree G1 pick-and-place experiments where LEGS-trained VLA policies match or exceed teleoperation-trained baselines.
+- Notes: Project page: https://legsvla.github.io/. The page describes 1,110 real-robot trials, three tasks, and three VLA backbones; affiliation is shown as anonymous on the project page, while the author list includes Mac Schwager.
+
+### Global-Local Attention Decomposition for Terrain Encoding in Humanoid Perceptive Locomotion
+- Link: https://arxiv.org/abs/2606.00637
+- Source: arXiv
+- Date: 2026-05-30
+- Authors: Shengcheng Fu, Yang Zhang, Zhanxiang Cao, Liyun Yan, Yizhi Chen, Yunpeng Yin, Yue Gao
+- Topics: humanoid / perceptive locomotion / terrain encoding / attention / reinforcement learning / sim-to-real / Unitree G1
+- Summary: Proposes GLAD, a coarse-to-fine terrain encoder that separates global attention over robot-centric elevation-map context from state-conditioned local attention over foothold-relevant geometry, improving humanoid locomotion over gaps, stepping stones, stairs, narrow paths, and obstacle-rich domains.
+- Notes: arXiv abstract reports real-world zero-shot sim-to-real deployment on a Unitree G1 humanoid using onboard LiDAR.
+
+### Constrained Whole-Body Tracking for Humanoid Robots
+- Link: https://arxiv.org/abs/2606.00374
+- Source: arXiv
+- Date: 2026-05-29
+- Authors: Daniel Morton, Pranit Mohnot, Marco Pavone
+- Topics: humanoid / whole-body tracking / reinforcement learning / safety constraints / control barrier functions / operational space control / Unitree G1
+- Summary: Introduces ConstrainedMimic, a framework that applies real-time runtime constraints to learned humanoid whole-body tracking policies by combining whole-body kinematics/dynamics, operational-space control ideas, and CBF-style enforcement; the paper demonstrates collision avoidance, joint limits, and center-of-mass stability constraints in simulated Unitree G1 tracking and teleoperation experiments.
+- Notes: The arXiv abstract says software will be freely available upon publication; no public code link was verified today.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### PHUMA
+- Link: https://github.com/DAVIAN-Robotics/PHUMA
+- Category: dataset / retargeting / toolkit
+- Robot Type: humanoid
+- Simulator: Isaac / ProtoMotions integration; dataset pipeline for humanoid locomotion
+- Deploy: data / sim
+- Summary: Code and dataset pipeline for PHUMA, a physically grounded humanoid locomotion dataset that curates human motion and retargets it with physics constraints for humanoid platforms including Unitree G1 and H1-2.
+- Notes: README links the arXiv paper, project page, and Hugging Face dataset, and notes native support in NVIDIA ProtoMotions; useful for humanoid imitation-learning and motion-prior pipelines.
+
+### AMP Running Baseline
+- Link: https://github.com/Jiarui-Xie/AMP_Running_baseline
+- Category: RL / imitation learning / locomotion baseline
+- Robot Type: humanoid
+- Simulator: Isaac Lab
+- Deploy: both
+- Summary: Unitree G1 locomotion training codebase for the 2026 Beijing Yizhuang Half Marathon Robot Race, built around Isaac Lab, Adversarial Motion Priors, motion imitation, domain randomization, checkpoints, and hardware-oriented deployment notes.
+- Notes: README describes BASE and high-speed post-training variants, SONIC-style actuator modeling, action-delay domain randomization, and a baseline checkpoint; useful as an applied G1 running baseline, though validation details should be checked before reuse.
+
+### convex-mpc-biped
+- Link: https://github.com/ispaik06/convex-mpc-biped
+- Category: MPC / control
+- Robot Type: humanoid / biped
+- Simulator: MuJoCo
+- Deploy: sim / browser viewer
+- Summary: Small MuJoCo humanoid locomotion stack centered on single-rigid-body convex MPC, contact-wrench optimization, heuristic swing-foot planning, touchdown handling, and robot-specific YAML tuning.
+- Notes: Repository was created in May 2026 and is smaller than major lab stacks, but it is a readable implementation candidate for studying convex-MPC biped walking and in-place turning.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Mac Schwager / Multi-Robot Systems Lab
+- Institution: Stanford University
+- Homepage: https://msl.stanford.edu/
+- Google Scholar: https://scholar.google.com/citations?user=-EqbTXoAAAAJ&hl=en
+- Lab / Department: Multi-Robot Systems Lab
+- Key Topics: humanoid / loco-manipulation / robot learning / synthetic data / multi-robot systems / autonomy
+- Notes: LEGS includes Mac Schwager in the author list and the MSL page describes work on data, robot learning, manipulators, humanoids, and autonomy; this is a useful source to track for humanoid loco-manipulation data and VLA transfer signals.
+
+### Marco Pavone / Autonomous Systems Lab
+- Institution: Stanford University
+- Homepage: https://web.stanford.edu/~pavone/
+- Lab / Department: Autonomous Systems Laboratory
+- Key Topics: humanoid / safety constraints / whole-body tracking / robot learning / autonomy
+- Notes: ConstrainedMimic lists Marco Pavone as a coauthor. Daniel Morton's homepage says he is a Stanford PhD candidate working with Marco Pavone in the Autonomous Systems Lab, making ASL a relevant watch source for safety-aware humanoid tracking and deployment constraints.
+
+### DAVIAN Robotics / KAIST AI
+- Institution: KAIST AI
+- Homepage: https://davian-robotics.github.io/PHUMA/
+- GitHub: https://github.com/DAVIAN-Robotics/PHUMA
+- Lab / Department: DAVIAN Robotics
+- Key Topics: humanoid / locomotion dataset / motion retargeting / physics-aware curation / imitation learning
+- Notes: PHUMA's repository identifies DAVIAN Robotics, KAIST AI and provides code plus dataset access for physically grounded humanoid locomotion data; useful to track for humanoid motion datasets and retargeting infrastructure.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### EPFL Biorobotics Laboratory / Auke Ijspeert
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official website
+- Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
+- Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
+- Status: active
+- Notes: Official openings page still lists one Postdoc and one PhD position for investigating and leveraging human locomotion neuromechanics using humanoid robots, numerical neuromechanical simulation, bio-inspired controllers, and reinforcement learning.
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer
+- Location: Zurich, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
+- Status: active
+- Notes: Official RSL page continues to list rolling openings for PhD students, postdocs, research staff/software engineers, robot designers, and embedded-systems engineers connected to legged robots, mobile manipulators, field robotics, control, learning, planning, and deployment.
+
+</details>

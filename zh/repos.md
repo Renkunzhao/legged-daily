@@ -163,6 +163,15 @@
 - Deploy: sim
 - Summary: Google DeepMind curated 高质量 MuJoCo 模型集合。
 
+### MuJoCo-LiDAR
+- Link: https://github.com/discoverse-dev/MuJoCo-LiDAR
+- Category: simulator / sensor simulation / perception toolkit
+- Robot Type: general / quadruped / humanoid
+- Simulator: MuJoCo
+- Deploy: sim / ROS1 / ROS2
+- Summary: 面向 MuJoCo 的高性能 LiDAR 仿真工具，支持 CPU、Taichi、JAX 和 NVIDIA Warp 后端，多种激光雷达扫描模式，Unitree Go2 / G1 示例，以及 ROS 集成。
+- Notes: 对腿足机器人感知与导航仿真有用，因为它支持 GPU ray casting、批量场景、动态 mesh、MJX/JAX 工作流，以及 Velodyne、Livox、Ouster 等常见 LiDAR 模型。
+
 </details>
 
 <details>

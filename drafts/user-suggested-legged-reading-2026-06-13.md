@@ -88,6 +88,172 @@ Capture papers and sources sent by the user for follow-up reading and possible i
 - Relevance: high; close to quadruped parkour and sparse foothold traversal.
 - Follow-up: inspect navigation/control decomposition, real-world speed, and terrain assumptions.
 
+## 2026-06-17 user additions: multi-skill locomotion / humanoid loco-manipulation
+
+### Discovery of skill-switching criteria for learning agile quadruped locomotion
+- Link: https://arxiv.org/abs/2502.06676
+- Date: 2025-02-10
+- Venue / status: Frontiers in Robotics and AI, 2026 / arXiv 2025
+- Best Paper: No confirmed
+- Type: quadruped agile locomotion / skill switching / reinforcement learning
+- Relevance: high; directly relevant to choosing when to switch among locomotion skills.
+- Follow-up: read the switching-criteria formulation and compare with mixture-of-experts or hierarchical skill selection.
+
+### MoE-Loco: Mixture of Experts for Multitask Locomotion
+- Link: https://arxiv.org/abs/2503.08564
+- Date: 2025-03-11
+- Venue / status: IROS 2025 / arXiv 2025
+- Best Paper: No confirmed
+- Type: multitask locomotion / mixture of experts / robot learning
+- Relevance: high; strong reference for expert specialization and routing in locomotion.
+- Follow-up: extract gating/routing design, task coverage, and sim-to-real assumptions.
+
+### MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots
+- Link: https://arxiv.org/abs/2605.13058
+- Date: 2026-05-13
+- Venue / status: arXiv 2026
+- Best Paper: N/A
+- Type: wheeled-legged robots / multi-skill unified control / Unitree Go2-W
+- Relevance: already tracked in daily/master lists; keep as part of this user-specified cluster.
+- Follow-up: revisit alongside MoE-Loco and skill-switching papers for unified multi-skill controller design.
+
+### Learning Multi-Skill Legged Locomotion Using Conditional Adversarial Motion Priors
+- Link: https://arxiv.org/abs/2509.21810
+- Date: 2025-09-26
+- Venue / status: arXiv 2025
+- Best Paper: N/A
+- Type: multi-skill legged locomotion / conditional AMP / imitation learning
+- Relevance: high; connects multi-skill locomotion with conditional adversarial motion priors.
+- Follow-up: inspect condition representation, AMP discriminator design, and task/skill library construction.
+
+### BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion
+- Link: https://arxiv.org/abs/2508.08241
+- Date: 2025-08-11
+- Venue / status: arXiv 2025
+- Best Paper: N/A
+- Type: humanoid control / motion tracking / guided diffusion
+- Relevance: high; useful bridge from motion tracking toward more versatile humanoid behaviors.
+- Follow-up: compare guided diffusion stage with residual/adaptation approaches such as ResMimic and SkillBlender.
+
+### SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control
+- Link: https://arxiv.org/abs/2511.07820
+- Date: 2025-11-11
+- Venue / status: Science Robotics, 2026
+- Best Paper: N/A
+- Type: humanoid whole-body control / motion tracking / large-scale data
+- Relevance: high; important NVIDIA GEAR/SONIC reference for natural humanoid motion tracking.
+- Follow-up: keep linked with the existing SONIC/GEAR repository entry and summarize data scaling + actuator modeling choices.
+
+### HoloMotion-1 Technical Report
+- Link: https://arxiv.org/abs/2605.15336
+- Date: 2026-05-14
+- Venue / status: arXiv Technical Report, 2026
+- Best Paper: N/A
+- Type: humanoid motion / technical report / whole-body learning
+- Relevance: medium-high; likely useful as a motion-data or whole-body-control reference.
+- Follow-up: verify project assets, data/code availability, and how it differs from SONIC/BeyondMimic-style tracking.
+
+### SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending
+- Link: https://arxiv.org/abs/2506.09366
+- Date: 2025-06-11
+- Venue / status: arXiv 2025
+- Best Paper: N/A
+- Type: humanoid loco-manipulation / skill blending / whole-body control
+- Relevance: high; directly relevant to combining locomotion and manipulation skills.
+- Follow-up: inspect blending mechanism, skill library assumptions, and real/sim validation.
+
+### ResMimic: From General Motion Tracking to Humanoid Whole-Body Loco-Manipulation via Residual Learning
+- Link: https://arxiv.org/abs/2510.05070
+- Date: 2025-10-06
+- Venue / status: arXiv 2025
+- Best Paper: N/A
+- Type: humanoid loco-manipulation / residual learning / motion tracking
+- Relevance: high; strong comparison point for turning general tracking policies into manipulation-capable humanoid controllers.
+- Follow-up: compare residual policy design against BeyondMimic guided diffusion and SkillBlender skill composition.
+
+### SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework
+- Link: https://arxiv.org/abs/2605.20373
+- Date: 2026-05-19
+- Venue / status: arXiv 2026
+- Best Paper: N/A
+- Type: humanoid loco-manipulation / human video / scalable skill learning
+- Relevance: already tracked in daily/master lists; keep as part of this user-specified cluster.
+- Follow-up: revisit when building a human-video-driven loco-manipulation reading path.
+
+### WholeBodyVLA: Towards Unified Latent VLA for Whole-Body Loco-Manipulation Control
+- Link: https://arxiv.org/abs/2512.11047
+- Date: 2025-12-11
+- Venue / status: ICLR 2026 Poster
+- Best Paper: No confirmed
+- Type: humanoid whole-body VLA / latent actions / loco-manipulation
+- Relevance: high; central VLA-style reference for whole-body humanoid loco-manipulation.
+- Follow-up: connect the paper to the existing WholeBodyVLA repository/resource entry and check benchmark/task definitions.
+
+### Learning a Unified Policy for Position and Force Control in Legged Loco-Manipulation
+- Link: https://arxiv.org/abs/2505.20829
+- Date: 2025-05-27
+- Venue / status: CoRL 2025
+- Best Paper: Yes, CoRL 2025 Best Paper
+- Type: legged loco-manipulation / position-force control / unified policy
+- Relevance: very high; user explicitly marked Best Paper and it is a core force-control loco-manipulation reference.
+- Follow-up: prioritize for detailed notes on force/position objective structure and real-robot evidence.
+
+### ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation
+- Link: https://arxiv.org/abs/2507.06905
+- Date: 2025-07-09
+- Venue / status: arXiv 2025 / in submission
+- Best Paper: N/A
+- Type: humanoid loco-manipulation / fine-grained whole-body controller
+- Relevance: high; complements SkillBlender, ResMimic, and WholeBodyVLA in unified controller design.
+- Follow-up: inspect controller granularity, command/action interface, and manipulation task suite.
+
+### MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation
+- Link: https://arxiv.org/abs/2606.06139
+- Date: 2026-06-04
+- Venue / status: arXiv 2026
+- Best Paper: N/A
+- Type: humanoid loco-manipulation / motion discovery / LLM-guided search / kinodynamic optimization
+- Relevance: already tracked in daily drafts; keep as part of this user-specified cluster.
+- Follow-up: revisit for the automated skill-discovery route, especially compared with human-video or motion-tracking-based methods.
+
+## 2026-06-29 user additions: legged odometry / state estimation / researcher signals
+
+### Online Learning of Robust Legged Odometry with Minimal Exteroceptive Supervision
+- Link: https://arxiv.org/abs/2606.21669
+- Date: 2026-06-19
+- Venue / status: arXiv 2026
+- Type: legged odometry / online learning / proprioception / exteroceptive supervision / InEKF
+- Authors: Abhijeet M. Kulkarni, Yuze Du, Guoquan Huang
+- Relevance: high; directly targets deployable legged odometry that can fall back from degraded exteroception to an online-learned proprioceptive velocity model.
+- Follow-up: compare with the March 2026 set-coverage state-estimation paper and with classical visual-inertial / legged kinematic fusion pipelines.
+
+### Proprioceptive-only State Estimation for Legged Robots with Set-Coverage Measurements of Learned Dynamics
+- Link: https://arxiv.org/abs/2603.18308
+- Date: 2026-03-18
+- Venue / status: arXiv 2026
+- Type: proprioceptive-only state estimation / learned dynamics / set coverage / Gaussian filtering / quadruped datasets
+- Authors: Abhijeet M. Kulkarni, Ioannis Poulakakis, Guoquan Huang
+- Relevance: high; complements robust odometry by replacing Gaussian learned-measurement assumptions with set-coverage statements for more consistent proprioceptive-only legged state estimation.
+- Follow-up: read the set-coverage measurement construction and note how it is fused with Gaussian filters under real noise.
+
+### Guoquan (Paul) Huang
+- Homepage: https://udel.edu/~ghuang/
+- Google Scholar: https://scholar.google.com/citations?user=trMUyZIAAAAJ&hl=en
+- Institution: University of Delaware
+- Type: researcher / lab signal
+- Key Topics: robotics state estimation / SLAM / visual-inertial navigation / legged odometry / probabilistic perception
+- Relevance: high; coauthor on both user-specified legged odometry / state-estimation papers and a useful source for robust estimation methods transferable to legged robots.
+- Follow-up: track publications from his group that connect VINS, calibration-free estimation, or learned measurements to legged platforms.
+
+### Mingyu Ding
+- Homepage: https://dingmyu.github.io/
+- Google Scholar: https://scholar.google.com/citations?user=w4yTWwoAAAAJ&hl=en
+- Institution: University of North Carolina at Chapel Hill / IDEAL@UNC
+- Type: researcher / lab signal
+- Key Topics: robot learning / embodied AI / humanoid loco-manipulation / VLAs / real-to-sim-to-real / dexterous manipulation
+- Relevance: high for humanoid and whole-body robot learning; his lab page explicitly lists humanoid loco-manipulation, VLAs, latent actions, and real-to-sim-to-real as active directions.
+- Follow-up: monitor IDEAL@UNC outputs for humanoid loco-manipulation, VLA, and robot-learning papers that fit future Legged Daily selections.
+
 ## Not added to legged tracking
 
 ### Telegram: @oci_helper

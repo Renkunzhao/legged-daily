@@ -97,6 +97,33 @@
 - Summary: 从示例动作学习人形机器人柔顺全身控制的方法：先用 inverse kinematics 生成可行的柔顺动作增强数据，再训练 RL policy 在跟踪参考动作的同时吸收外界扰动，而不是刚性纠偏。
 - Notes: 项目页: https://gmargo11.github.io/softmimic/；代码: https://github.com/Improbable-AI/softmimic。论文标注机构为 MIT Improbable AI Lab，通讯作者为 Gabriel B. Margolis 和 Michelle Wang。
 
+### BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion
+- Link: https://arxiv.org/abs/2508.08241
+- Source: arXiv
+- Date: 2025-08-11
+- Authors: Qiayuan Liao, Takara E. Truong, Xiaoyu Huang, Yuman Gao, Guy Tevet, Koushil Sreenath, C. Karen Liu
+- Topics: humanoid / motion tracking / guided diffusion / whole-body control / versatile control
+- Summary: 用 guided diffusion 将 motion-tracking 式人形控制扩展到更通用的行为生成与适配。
+- Notes: 适合与 residual learning、skill blending 等“超越纯 tracking”的路线对照。
+
+### SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control
+- Link: https://arxiv.org/abs/2511.07820
+- Source: Science Robotics / arXiv
+- Date: 2025-11-11
+- Authors: Zhengyi Luo, Ye Yuan, Tingwu Wang, Chenran Li, Fernando Castañeda, Sirui Chen, Zi-Ang Cao, Jiefeng Li, David Minor, Qingwei Ben, Jinhyung Park, David Sami, Zi Wang, Xingye Da, Runyu Ding, Cyrus Hogg, Lina Song, Edy Lim, Eugene Jeong, Tairan He, Haoru Xue, Wenli Xiao, Simon Yuen, Jan Kautz, Yan Chang, Umar Iqbal, Linxi "Jim" Fan, Yuke Zhu
+- Topics: humanoid / whole-body control / motion tracking / large-scale training / natural motion / GEAR
+- Summary: NVIDIA GEAR 方向的大规模人形全身 motion tracking 工作，目标是在广泛人类动作数据上学习自然的全身控制。
+- Notes: 后续跟踪代码、actuator modeling、部署和数据规模化细节时，应与现有 SONIC/GEAR 仓库条目关联。
+
+### HoloMotion-1 Technical Report
+- Link: https://arxiv.org/abs/2605.15336
+- Source: arXiv technical report
+- Date: 2026-05-14
+- Authors: Maiyue Chen, Kaihui Wang, Bo Zhang, Xihan Ma, Zhiyuan Yang, Yi Ren, Qijun Huang, Zihao Zhu, Yucheng Wang, Zhizhong Su
+- Topics: humanoid / motion learning / whole-body control / technical report
+- Summary: HoloMotion-1 相关技术报告，可作为近期人形动作学习和全身技能生成方向的参考。
+- Notes: 后续重点核查项目资产、数据/代码可用性，以及它和 SONIC、BeyondMimic 式 tracking pipeline 的差异。
+
 </details>
 
 <details>
@@ -131,6 +158,33 @@
 - Topics: quadruped / reinforcement learning / motor thermal safety / residual policy / sim-to-real / Unitree A1
 - Summary: 将全身电机热模型集成进四足强化学习，在名义地形运动策略之上训练残差策略，让机器人在轨迹跟踪性能与电机过热风险之间权衡。
 - Notes: Unitree A1 真机实验报告在 3 kg 负载下可在多种地形稳定行走超过 13 分钟，而名义策略约 5 分钟后出现电机过热。
+
+### Discovery of skill-switching criteria for learning agile quadruped locomotion
+- Link: https://arxiv.org/abs/2502.06676
+- Source: Frontiers in Robotics and AI / arXiv
+- Date: 2025-02-10
+- Authors: Wanming Yu, Fernando Acero, Vassil Atanassov, Chuanyu Yang, Ioannis Havoutis, Dimitrios Kanoulas, Zhibin Li
+- Topics: quadruped / agile locomotion / skill switching / reinforcement learning / hierarchical control
+- Summary: 研究如何发现 locomotion skills 之间的切换判据，使四足机器人能更稳定地执行敏捷运动。
+- Notes: 适合与 mixture-of-experts routing 和统一多技能策略中的技能选择机制对照。Best Paper: no confirmed。
+
+### MoE-Loco: Mixture of Experts for Multitask Locomotion
+- Link: https://arxiv.org/abs/2503.08564
+- Source: IROS 2025 / arXiv
+- Date: 2025-03-11
+- Authors: Runhan Huang, Shaoting Zhu, Yilun Du, Hang Zhao
+- Topics: locomotion / multitask learning / mixture of experts / reinforcement learning / expert routing
+- Summary: 将 mixture-of-experts 架构用于多任务 locomotion，强调不同专家在运动任务中的专门化和路由。
+- Notes: 是腿足控制中 MoE-style policy decomposition 的有用锚点。Best Paper: no confirmed。
+
+### Learning Multi-Skill Legged Locomotion Using Conditional Adversarial Motion Priors
+- Link: https://arxiv.org/abs/2509.21810
+- Source: arXiv
+- Date: 2025-09-26
+- Authors: Ning Huang, Zhentao Xie, Qinchuan Li
+- Topics: legged locomotion / multi-skill learning / conditional adversarial motion priors / imitation learning / reinforcement learning
+- Summary: 使用 conditional adversarial motion priors 学习多技能腿足运动，把 AMP 式模仿目标和 skill-conditioned control 连接起来。
+- Notes: 后续重点看条件表示、discriminator 结构和 skill-library 假设，并与 MoE / skill-switching 方法对比。
 
 </details>
 
@@ -314,6 +368,60 @@
 - Summary: 提出 CoRe-MoE，一个两阶段 RL 框架：先学习稳定的步行/跑步切换，再加入 terrain-aware mixture-of-experts 分支，并用 contrastive gating 促进专家分化和多地形适应；摘要报告了在 Unitree G1 上零样本部署于楼梯、斜坡、台阶、障碍物和户外非结构化地形。
 - Notes: arXiv 摘要列出的机构包括 HKUST(GZ)、South China Agricultural University 和 Guangdong University of Technology；通讯作者为 Renjing Xu 和 Haohui Huang。
 
+### SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending
+- Link: https://arxiv.org/abs/2506.09366
+- Source: arXiv
+- Date: 2025-06-11
+- Authors: Yuxuan Kuang, Haoran Geng, Amine Elhafsi, Tan-Dzung Do, Pieter Abbeel, Jitendra Malik, Marco Pavone, Yue Wang
+- Topics: humanoid / loco-manipulation / skill blending / whole-body control / reinforcement learning
+- Summary: 研究如何 blend 人形全身技能，使 locomotion 和 manipulation 行为能组合成更通用的移动操作策略。
+- Notes: 是 residual learning、latent VLA 和 motion discovery 路线的重要对照。
+
+### ResMimic: From General Motion Tracking to Humanoid Whole-Body Loco-Manipulation via Residual Learning
+- Link: https://arxiv.org/abs/2510.05070
+- Source: arXiv
+- Date: 2025-10-06
+- Authors: Siheng Zhao, Yanjie Ze, Yue Wang, C. Karen Liu, Pieter Abbeel, Guanya Shi, Rocky Duan
+- Topics: humanoid / loco-manipulation / residual learning / motion tracking / whole-body control
+- Summary: 用 residual learning 将通用人形 motion tracking 能力适配到 whole-body loco-manipulation 行为。
+- Notes: 是 BeyondMimic、SkillBlender 和 ULC 等控制器设计的强对照参考。
+
+### WholeBodyVLA: Towards Unified Latent VLA for Whole-Body Loco-Manipulation Control
+- Link: https://arxiv.org/abs/2512.11047
+- Source: ICLR 2026 Poster / arXiv
+- Date: 2025-12-11
+- Authors: Haoran Jiang, Jin Chen, Qingwen Bu, Li Chen, Modi Shi, Yanjie Zhang, Delong Li, Chuanzhe Suo, Chuang Wang, Zhihui Peng, Hongyang Li
+- Topics: humanoid / VLA / latent actions / whole-body control / loco-manipulation
+- Summary: 提出面向人形 whole-body loco-manipulation control 的 unified latent VLA 方向，把语言/视觉/动作抽象与 locomotion-aware manipulation 联系起来。
+- Notes: 应与现有 WholeBodyVLA 仓库/资源条目关联。Best Paper: no confirmed。
+
+### Learning a Unified Policy for Position and Force Control in Legged Loco-Manipulation
+- Link: https://arxiv.org/abs/2505.20829
+- Source: CoRL 2025 / arXiv
+- Date: 2025-05-27
+- Authors: Peiyuan Zhi, Peiyang Li, Jianqin Yin, Baoxiong Jia, Siyuan Huang
+- Topics: legged loco-manipulation / position control / force control / unified policy / whole-body control
+- Summary: 学习同时处理位置控制和力控制的统一策略，是接触丰富腿足移动操作的重要参考。
+- Notes: 用户标注为 CoRL 2025 Best Paper；优先精读 objective structure 和真实机器人证据。
+
+### ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation
+- Link: https://arxiv.org/abs/2507.06905
+- Source: arXiv / in submission
+- Date: 2025-07-09
+- Authors: Wandong Sun, Luying Feng, Baoshi Cao, Yang Liu, Yaochu Jin, Zongwu Xie
+- Topics: humanoid / loco-manipulation / unified controller / fine-grained control / whole-body control
+- Summary: 提出面向人形 loco-manipulation 的统一细粒度控制器，补充 skill blending、residual learning 和 latent VLA 等路线。
+- Notes: 后续重点检查 controller granularity、command/action interface 和 manipulation task suite。
+
+### MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation
+- Link: https://arxiv.org/abs/2606.06139
+- Source: arXiv
+- Date: 2026-06-04
+- Authors: Ilyass Taouil, Michal Ciebelski, Shafeef Omar, Haizhou Zhao, Angela Dai, Aaron M. Johnson, Majid Khadiv
+- Topics: humanoid / loco-manipulation / motion discovery / LLM-guided search / kinodynamic optimization / reinforcement learning
+- Summary: 通过 LLM 引导的进化搜索、kinodynamic 轨迹优化、剪枝和 RL tracking policies，从零发现接触丰富、长时域的人形移动操作动作。
+- Notes: 这是不主要依赖遥操作或人体动作重定向的自动技能发现路线，值得重点跟踪。
+
 </details>
 
 ---
@@ -333,11 +441,11 @@
 ### MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots
 - Link: https://arxiv.org/abs/2605.13058
 - Source: arXiv
-- Date: 2026-05-17
-- Authors: Wanming Yu, Xinshuo Yang, Wenxuan Wei, ZhuoJia Huang, Junzheng Wang
-- Topics: wheeled-legged robots / reinforcement learning / proprioceptive control / sim-to-real / fall recovery
-- Summary: 面向轮足机器人的统一本体感知多技能控制器，覆盖全向移动、高台攀爬和摔倒恢复。
-- Notes: Unitree Go2-W 真实实验使其成为实用 sim-to-real 控制参考。
+- Date: 2026-05-13
+- Authors: Yuqi Li, Peng Zhai, Yueqi Zhang, Xiaoyi Wei, Quancheng Qian, Zhengxu He, Qianxiang Yu, Lihua Zhang
+- Topics: wheeled-legged robots / reinforcement learning / multi-skill control / proprioceptive control / sim-to-real
+- Summary: 面向轮足机器人的统一多技能控制架构，目标是在 Unitree Go2-W 等平台上整合多种运动技能。
+- Notes: 是轮足机器人统一多技能控制的实用参考；已纳入用户指定的 multi-skill reading cluster。
 
 ### X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation
 - Link: https://arxiv.org/abs/2604.21541
