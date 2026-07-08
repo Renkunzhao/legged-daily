@@ -1,0 +1,125 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-07-08.md)
+# Legged Daily - 2026-07-08
+
+## Summary
+- Today's strongest new paper cluster is around humanoid whole-body control, humanoid manipulation retargeting, quadruped loco-manipulation morphology, and open-vocabulary mobile manipulation on a Unitree B2 + Z1 platform.
+- Athena-WBC is the most directly relevant humanoid control paper: it targets long-tail full-body motion tracking failures with capability-aligned policy experts and teacher-student distillation.
+- WristMimic is worth tracking for humanoid object-interaction retargeting: it separates contact-free body / wrist tracking from contact-rich finger manipulation and reports finger-agnostic transfer across hand embodiments.
+- Calf-Integrated Arms is a notable quadruped design signal: it mounts bimanual manipulators on a Unitree Go2's front calves so the robot can manipulate at ground level while keeping all four feet planted.
+- New GitHub signals are mainly Unitree G1 simulation/control stacks rather than fully validated hardware releases; both selected repos should be treated as watchlist candidates, not mature deployment baselines.
+- CUHK Legged Robot Lab still has active PhD / RA / engineer openings and recently signals the launch of the Hong Kong Embodied AI Lab plus an RSS 2026 paper acceptance.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### Athena-WBC: Capability-Aligned Policy Experts for Long-Tail Humanoid Whole-Body Control
+- Link: https://arxiv.org/abs/2607.04837
+- Source: arXiv
+- Date: 2026-07-06; v2 2026-07-07
+- Authors: Yuan Jiang, Ningyuan Zhang, Xicun Yang, Yuzhi Jiang, Jie Chen
+- Topics: humanoid, whole-body control, motion tracking, teacher-student distillation, policy experts, reinforcement learning
+- Summary: Athena-WBC targets long-tail failures in full-size humanoid motion-tracking controllers by routing hard motions to capability-aligned dynamic and balance experts, distilling privileged teachers into one deployable controller, then fine-tuning with RL.
+- Notes: High signal for humanoid motion-prior / whole-body-control tracking pipelines because it argues failures are not only data exposure problems, but also training-recipe / induced-capability mismatches.
+
+### WristMimic: Full-Body Humanoid Control with Wrist-Guided Manipulation
+- Link: https://arxiv.org/abs/2607.06438
+- Source: arXiv; accepted to ECCV 2026
+- Date: 2026-07-07
+- Authors: Wongyun Yu, Youngwoon Kim, Minsu Cho
+- Topics: humanoid, full-body control, human-object interaction, retargeting, manipulation, contact-rich control
+- Summary: WristMimic retargets human object-interaction demonstrations by tracking contact-free body and wrist targets while letting fingers learn manipulation from object tracking and contact outcomes, enabling finger-agnostic transfer across hand embodiments.
+- Notes: Useful adjacent signal for humanoid whole-body manipulation and motion retargeting; less locomotion-specific than Athena-WBC, but strong for full-body interaction.
+
+### Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation
+- Link: https://arxiv.org/abs/2607.06186
+- Source: arXiv
+- Date: 2026-07-07
+- Authors: Yan Pan, Yuanchuan Ren, Chipui Chan, Jingcheng Sun, Chengxu Zhou
+- Topics: quadruped, loco-manipulation, robot design, bimanual manipulation, VLM skill sequencing, Unitree Go2
+- Summary: The paper proposes adding a prismatic-slider / two-revolute-joint / gripper manipulator to each front calf of a Unitree Go2, enabling ground-level bimanual manipulation while all four feet remain planted and using a VLM to sequence predefined skills.
+- Notes: Current validation described in the abstract is simulation-only, but the morphology is a distinctive alternative to trunk-mounted arms or leg-as-manipulator schemes.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### ansh1113/humanoid-motion-planning
+- Link: https://github.com/ansh1113/humanoid-motion-planning
+- Category: motion planning / control / MPC / RL / simulation
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: A Unitree G1 MuJoCo motion-planning demo stack combining ZMP preview control, A* footstep planning, MPC balance, Jacobian IK manipulation, push recovery, and a pre-trained RL walking policy.
+- Notes: README reports a 2.01 m walking demo at about 0.4 m/s, 4/4 push recovery directions, and 49% MPC energy savings versus PD; no hardware deployment claim, so treat as a simulation / educational watchlist repo.
+
+### matteogoddi/labrob_mujoco_environment
+- Link: https://github.com/matteogoddi/labrob_mujoco_environment
+- Category: MPC / WBC / state estimation / simulator
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim / hardware-oriented setup notes
+- Summary: A Unitree G1 locomotion control environment built around an offline footstep planner, EKF state estimation, IS-MPC for CoM trajectory generation, and whole-body control for reference tracking and constraints.
+- Notes: README frames the goal as closed-loop experiments on Unitree G1 and includes Unitree SDK / network setup notes; the fetched GitHub page does not establish a polished hardware result, so keep it as a technical watchlist candidate.
+
+### ioloizou/g1_locomotion
+- Link: https://github.com/ioloizou/g1_locomotion
+- Category: MPC / whole-body inverse dynamics / simulation
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: A Unitree G1 linear locomotion-control stack from a Master's thesis, combining single rigid body dynamics with whole-body inverse dynamics in a cascaded control architecture.
+- Notes: README explicitly says the implementation has not yet been tested on the physical robot; still useful as a compact G1 MPC/WBID reference.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### CUHK Legged Robot Lab / Liu Yun-Hui
+- Institution: The Chinese University of Hong Kong
+- Homepage: https://cuhkleggedrobotlab.github.io/
+- Lab / Department: Department of Mechanical and Automation Engineering; CUHK Legged Robot Lab
+- Key Topics: legged robots, robust and precise locomotion, whole-body loco-manipulation, perception and navigation, actuator and mechanical-system design
+- Notes: Official site says the lab focuses on real-world deployment of legged robots through theoretical and experimental research. Recent 2026 news includes the launch of the Hong Kong Embodied AI Lab and acceptance of Zhang Linwei's "VRA: Grounding Discrete-Time Joint Acceleration in Voltage-Constrained Actuation" to RSS 2026.
+
+### RoMI Lab / Carlos Mastalli
+- Institution: University of Edinburgh / Edinburgh Centre for Robotics
+- Homepage: https://www.romilab.org/joining
+- Lab / Department: Robot Motor Intelligence Lab
+- Key Topics: legged robotics, model predictive control, numerical optimization, reinforcement learning, optimal control, state estimation, perception
+- Notes: Official joining page continues to list continuous PhD recruitment plus one fully funded PhD position to be filled as soon as possible; postdoc funding is not currently available, but fellowship-backed applicants are encouraged.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### CUHK Legged Robot Lab
+- Type: PhD / Research Assistant / Engineer
+- Location: Hong Kong
+- Source: official lab page
+- Deadline: Fall 2027 PhD cycle / rolling for RA and engineer roles
+- Topics: robust locomotion, whole-body loco-manipulation, perception and navigation, actuator and mechanical system design
+- Status: active
+- Notes: Official page says the lab is actively seeking self-motivated PhD applicants for Fall 2027 and has multiple Research Assistant and engineer openings.
+
+### RoMI Lab / Carlos Mastalli
+- Type: PhD
+- Location: Edinburgh, United Kingdom
+- Source: official lab joining page
+- Deadline: as soon as possible / rolling
+- Topics: legged robotics, MPC, numerical optimization, optimal control, reinforcement learning, robot control, state estimation, perception
+- Status: active
+- Notes: Official joining page says RoMI currently has a fully funded PhD position to be filled as soon as possible, plus PhD routes through D2AIR and SPADS.
+
+### EPFL Biorobotics Laboratory / Auke Ijspeert
+- Type: PhD / Postdoc
+- Location: Lausanne, Switzerland
+- Source: official lab openings page
+- Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
+- Topics: humanoid, human locomotion neuromechanics, bio-inspired locomotion control, reinforcement learning
+- Status: active
+- Notes: Official openings page still lists one postdoc and one PhD position on investigating and leveraging human locomotion neuromechanics using humanoid robots, numerical simulations, bio-inspired controllers, and reinforcement learning.
+
+</details>
