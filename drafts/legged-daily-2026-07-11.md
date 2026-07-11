@@ -1,0 +1,76 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-07-11.md)
+# Legged Daily - 2026-07-11
+
+## Summary
+- Recent arXiv updates include one directly relevant humanoid slope-locomotion paper and one high-signal quadruped generalist-control technical report.
+- ContactMimic is included as a nearby humanoid loco-manipulation signal because it reports real-world contact-controllable deployment on Unitree G1.
+- A new Isaac Lab tutorial repository is worth tracking as a practical legged-RL education resource spanning Unitree Go2 and H1.
+- EPFL BioRob’s humanoid-neuromechanics opening should be treated as stale/closed: the official openings page still describes the project but marks it CLOSED.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains
+- Link: https://arxiv.org/abs/2607.07830
+- Source: arXiv
+- Date: 2026-07-08
+- Authors: Xuanyu Chen, Mohan Liu, Dengchen Mei, Zhihao Gu, Haitian Zhang, Kaimin Mao, Haiyue Zhu, Shijun Yan, Lin Wang
+- Topics: humanoid / locomotion / slope traversal / reinforcement learning / sim-to-real / proprioception
+- Summary: Introduces HumoSlope, a two-stage physics-guided humanoid locomotion framework with a slope-adaptive ZMP regularizer and biomechanical gait adapter; reports blind proprioceptive outdoor traversal of grass slopes up to 62.7% / 32.1 degrees.
+- Notes: High relevance for robust humanoid terrain adaptation because it targets persistent gravitational bias on steep continuous slopes rather than flat or discrete obstacle settings.
+
+### Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report
+- Link: https://arxiv.org/abs/2607.07370
+- Source: arXiv
+- Date: 2026-07-07
+- Authors: Xufeng Zhao, Fuzhi Yang, Jianhui Chen, Li Gao, Zhang Meng, Jie Gao, Yao Zheng, Congyang Zhao, Tianxiong Lv, Menglin Yang, Minqi Gu, Yaru Zhao, Wenyu Liu, Honglin Han, Shihui Su, Zixiao Tang, Liu Liu, Mu Xu, Yang Cai, Wenbin Tang
+- Topics: quadruped / motion tracking / locomotion / scene interaction / foundation policy / data scaling / deployment
+- Summary: Presents ABot-C0, a quadruped behavior-foundation system built around a multi-source motion-data pipeline, flow-matching generalist motion policy, privileged-to-perceptive locomotion, and unified real-world deployment stack.
+- Notes: The abstract reports 16,074 physically feasible motion clips and a project page planned but not yet released; track for future code/data release.
+
+### ContactMimic: Humanoid Object Interaction via Contact Control
+- Link: https://arxiv.org/abs/2607.08742
+- Source: arXiv / project page
+- Date: 2026-07-09
+- Authors: Xinyao Li, Xialin He, Runpei Dong, Saurabh Gupta
+- Topics: humanoid / loco-manipulation / contact control / motion tracking / sim-to-real
+- Summary: Adds explicit part-level binary contact commands to humanoid keypoint tracking so policies can produce or suppress physical contact during object interaction, with simulation tests over 10 motions and real-world validation over 5 motions.
+- Notes: Project page: https://lixinyao11.github.io/contactmimic-page/. Adjacent to legged locomotion but useful for humanoid full-body control and real-world Unitree G1 contact-conditioned interaction.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### IsaacLab-Tutorial
+- Link: https://github.com/Lab-of-AI-and-Robotics/IsaacLab-Tutorial/
+- Category: RL / simulator / tutorial / toolkit
+- Robot Type: quadruped / humanoid
+- Simulator: Isaac Lab
+- Deploy: sim / sim-to-real tutorial material
+- Summary: Ten-chapter Isaac Lab tutorial for developing reinforcement-learning environments for legged robots, starting from Unitree Go2 quadruped baselines and extending toward Unitree H1 humanoid locomotion.
+- Notes: Created by Jihoon Moon from the Lab of AI and Robotics at Sungkyunkwan University; chapters cover project scaffolding, assets, kinematics, custom actions, reward shaping, curriculum, ActuatorNet sim-to-real bridging, and humanoid frontiers.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### BioRobotics Laboratory (BioRob)
+- Institution: EPFL
+- Homepage: https://www.epfl.ch/labs/biorob/
+- Lab / Department: Biorobotics Laboratory
+- Key Topics: humanoid / human locomotion / neuromechanics / reinforcement learning / bio-inspired control
+- Notes: The official openings page describes a humanoid-robot project linking neuromechanical simulations of healthy/pathological human locomotion with bio-inspired RL controllers for humanoids. The opening is currently marked CLOSED, so keep the lab as a source signal but do not surface the role as active.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### Proposed Removal / Stale Item
+- Current Status: stale / closed
+- Reason: EPFL BioRob’s “Postdoc and PhD student position in investigating and leveraging the neuromechanics of human locomotion using humanoid robots (Fall 2026)” is marked CLOSED on the official openings page, even though older LinkedIn reposts still describe it as rolling until filled.
+- Source Checked: https://www.epfl.ch/labs/biorob/openings/
+
+</details>
