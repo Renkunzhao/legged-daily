@@ -1,0 +1,99 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-07-12.md)
+# Legged Daily - 2026-07-12
+
+## Summary
+- Today's high-signal paper pick is HEFT, a full-size humanoid teleoperation system that explicitly targets noisy VR references and real two-hand payloads up to 24 kg.
+- Two nearby motion-generation papers, ARDY and GIRAF, are worth tracking because both address long-horizon full-body motion with locomotion/contact structure that may feed humanoid policy/data pipelines.
+- Two repositories are immediately useful: HEFT's official motion-tracking code and a MuJoCo MPC hardware-deployment wrapper for Unitree robots.
+- 1X's official careers page currently lists a Simulation Engineer role in San Carlos; treat it as an active industry signal for humanoid simulation infrastructure rather than a legged-control-specific opening.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum
+- Link: https://arxiv.org/abs/2607.02332
+- Source: arXiv / project page
+- Date: 2026-07-02
+- Authors: Chenxin Liu, Qingzhou Lu, Guangxiao Yang, Xuanyang Shi, Chenghan Yang, Yanjiang Guo, Jianyu Chen
+- Topics: humanoid / whole-body teleoperation / motion tracking / payload-aware locomotion / reinforcement learning
+- Summary: Presents HEFT, a full-size humanoid teleoperation framework that trains deployable policies on noisy VR references while using reconstructed motion as privileged guidance, plus a windowed payload curriculum for motion-dependent heavy-load robustness; reports deployment on the 175 cm, 65 kg L7 humanoid with motions including turns, forward/backward locomotion, squats, and two-hand payloads up to 24 kg.
+- Notes: Project page: https://heft.axell.top/. The arXiv HTML lists affiliations as Tsinghua University, RobotEra, and Shanghai Qizhi Institute.
+
+### ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation
+- Link: https://arxiv.org/abs/2607.08741
+- Source: arXiv / SIGGRAPH 2026 / project page
+- Date: 2026-07-09
+- Authors: Kaifeng Zhao, Mathis Petrovich, Haotian Zhang, Tingwu Wang, Siyu Tang, Davis Rempe
+- Topics: humanoid / human motion generation / interactive locomotion control / diffusion / text-conditioned control
+- Summary: Introduces a streaming autoregressive diffusion framework for real-time, controllable 3D human motion generation with online text prompts, kinematic constraints, path following, and interactive locomotion control.
+- Notes: Project page and planned code/model release: https://research.nvidia.com/labs/sil/projects/ardy/. Adjacent signal rather than a robot-control paper, but relevant to humanoid motion-data generation and interactive policy conditioning.
+
+### GIRAF: Towards Generalizable Human Interactions with Articulated Objects
+- Link: https://arxiv.org/abs/2607.07880
+- Source: arXiv / CVPR 2026 HuMoGen Workshop
+- Date: 2026-07-08
+- Authors: Xiaohan Zhang, Sebastian Starke, Alexander Winkler, Federica Bogo, Samir Aroudj, Yuting Ye
+- Topics: embodied AI / locomotion-to-manipulation transitions / full-body motion generation / articulated objects / contact
+- Summary: Proposes a text-conditioned diffusion model for full-body human interaction with articulated objects, emphasizing coordinated approach locomotion, hand-object contact, object articulation, and generalization to unseen object configurations.
+- Notes: Not a legged-robot deployment result, but useful for tracking data/model directions for humanoid loco-manipulation and contact-rich full-body behavior synthesis.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### Axellwppr/motion_tracking
+- Link: https://github.com/Axellwppr/motion_tracking
+- Category: RL / retargeting / dataset / deployment
+- Robot Type: humanoid
+- Simulator: MuJoCo / mjlab
+- Deploy: both
+- Summary: Official implementation for HEFT, with training, evaluation, export, and deployment-facing assets for humanoid whole-body motion tracking; branches cover HEFT training, G1 compliance work, and sim2real runtime/checkpoints.
+- Notes: README mentions PMG support, WPC support, public training datasets or samples, ONNX/PT export, and sim2real branch assets. Full HEFT datasets and some WPC payload labels appear planned for later release.
+
+### johnzhang3/mujoco_mpc_deploy
+- Link: https://github.com/johnzhang3/mujoco_mpc_deploy
+- Category: MPC / control / deployment
+- Robot Type: quadruped / humanoid-adjacent
+- Simulator: MuJoCo / MuJoCo MPC
+- Deploy: hardware
+- Summary: Hardware interface repository for deploying MuJoCo MPC on Unitree robots, paired with the ICRA 2026 paper "Whole-Body Model-Predictive Control of Legged Robots with MuJoCo" and the official MuJoCo MPC / Menagerie stacks.
+- Notes: README says the repo is still work in progress and points users to separate Go1/Go2 branches of MuJoCo MPC; useful as a practical bridge from model-based whole-body MPC to Unitree hardware.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Jianyu Chen group / Tsinghua University + RobotEra + Shanghai Qizhi Institute
+- Institution: Tsinghua University / RobotEra / Shanghai Qizhi Institute
+- Homepage: https://heft.axell.top/
+- GitHub: https://github.com/Axellwppr/motion_tracking
+- Lab / Department: arXiv affiliation signal from HEFT
+- Key Topics: humanoid / whole-body teleoperation / payload-aware locomotion / motion tracking / sim-to-real
+- Notes: HEFT is a strong signal that this Tsinghua-RobotEra-Qizhi collaboration is actively pushing full-size humanoid teleoperation with real payloads, not only compact G1-style platforms.
+- Students and Representative Works:
+  - Chenxin Liu — HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum
+
+### NVIDIA Spatial Intelligence Lab / human-motion generation line
+- Institution: NVIDIA Research
+- Homepage: https://research.nvidia.com/labs/sil/projects/ardy/
+- Lab / Department: Spatial Intelligence Lab
+- Key Topics: humanoid / human motion generation / diffusion / interactive control / motion priors
+- Notes: ARDY's planned code/model release is worth monitoring for motion priors and interactive constraints that could become useful upstream data or policy-conditioning tools for humanoids.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### 1X
+- Type: Simulation Engineer
+- Location: San Carlos, California
+- Source: official careers page
+- Deadline: unknown
+- Topics: humanoid / simulation / robotics systems / validation
+- Status: active / watching
+- Notes: 1X's official careers page lists a "Simulation Engineer" role under Hardware Engineering in San Carlos. The fetched job detail page exposed only the title, so treat the exact legged-control fit as unverified; still a useful humanoid-industry simulation-infrastructure signal.
+
+</details>
