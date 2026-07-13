@@ -1,0 +1,92 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-07-13.md)
+# Legged Daily - 2026-07-13
+
+## Summary
+- Today's arXiv signal is lighter for directly legged-control papers than the past week; the strongest new paper candidates are adjacent building blocks for terrain perception and compact VLA transfer rather than new humanoid locomotion controllers.
+- DRIFT is worth a light watch because multispectral terrain identification can become useful for legged navigation under lighting/material ambiguity.
+- CLAP is not legged-specific, but its compact VLM-to-VLA adaptation route is relevant to the humanoid loco-manipulation trend around WholebodyVLA, LEGS, GRAIL, VLK, and related data pipelines.
+- Repository signals are stronger today: OmniContact_sim2sim exposes executable MuJoCo paths for long-horizon humanoid contact-flow skills, while mjlab-homierl provides a detailed Unitree G1/H1 HOMIE-style locomotion training/deployment package.
+- CNRS / LAAS has an active PhD opening on hybrid RL + MPC locomotion for humanoid and wheeled-legged systems, with a 2026-07-31 application deadline.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### Differential Analysis of Multispectral Images for Terrain Identification
+- Link: https://arxiv.org/abs/2607.09319
+- Source: arXiv
+- Date: 2026-07-10
+- Authors: Omar Kashmar, Hemendra Arya, Fulvio Mastrogiovanni
+- Topics: terrain perception / multispectral sensing / autonomous navigation / edge deployment
+- Summary: Proposes DRIFT, a lightweight multispectral terrain-identification framework combining raw spectral bands, illumination-tolerant band-ratio features, and differential fusion; evaluates on oil-on-soil UAV multispectral data and a controlled water-on-grass study, reporting stronger robustness than RGB-style baselines under lighting and material ambiguity.
+- Notes: Not a legged-robot paper by itself, but terrain understanding under illumination/material shifts is relevant to outdoor quadruped and humanoid navigation stacks.
+
+### CLAP: Direct VLM-to-VLA Adaptation via Language-Action Grounding
+- Link: https://arxiv.org/abs/2607.08974
+- Source: arXiv / project page
+- Date: 2026-07-09
+- Authors: Yuri Ishitoya, Jeremy Siburian, Masashi Hamaya, Kuniaki Saito, Cristian C. Beltran-Hernandez, Mai Nishimura
+- Topics: vision-language-action models / robot learning / language-action grounding / compact VLA
+- Summary: Introduces CLAP, a Causal Language-Action Prediction method that prepends numeric action sequences with natural-language action descriptions so pretrained VLMs can be adapted into VLAs with minimal architectural changes; reports 90.8% on LIBERO with single-epoch fine-tuning and plans open-weight 0.8B, 2B, and 4B releases.
+- Notes: This is manipulation/VLA-focused rather than legged-specific; track as an adjacent compact-VLA signal for future humanoid loco-manipulation pipelines.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### OmniContact_sim2sim
+- Link: https://github.com/Ingrid789/OmniContact_sim2sim
+- Category: control / loco-manipulation / policy deployment / simulator
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim / sim2real-style execution path
+- Summary: Official implementation for OmniContact, a contact-flow framework for chaining humanoid loco-manipulation meta-skills such as carry, push, slide, relocate, kick, and multi-skill sequences; the repository provides scripted CFgen/NPZ motion tracking and joystick hot-switch execution paths for Unitree G1-style MuJoCo scenes.
+- Notes: Paper: https://arxiv.org/abs/2606.26201. The README links Noitom Robotics, HKUST, Wuhan University, and HKU affiliations and an OmniContact dataset on Hugging Face.
+
+### mjlab-homierl
+- Link: https://github.com/Nagi-ovo/mjlab-homierl
+- Category: RL / locomotion / deployment / toolkit
+- Robot Type: humanoid
+- Simulator: MuJoCo / mjlab
+- Deploy: both
+- Summary: External mjlab task package reproducing the lower-body locomotion RL portion of HOMIE on Unitree G1 and H1, including custom tasks/assets, HIM-PPO training, ONNX export metadata, pretrained checkpoints, sim playback, and a DDS-based real-robot deployment script for G1.
+- Notes: The repository is explicit about deviations from OpenHomie, domain-randomization choices, deployment-grade PD gains, G1/H1 variants, hand/payload attachments, and HOMIE+ torso-pitch extensions; treat as a practical implementation signal, not an official HOMIE release unless confirmed.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### OmniContact collaboration network
+- Institution: Noitom Robotics; The Hong Kong University of Science and Technology; Wuhan University; The University of Hong Kong
+- Homepage: https://omnicontact.github.io/
+- GitHub: https://github.com/Ingrid789/OmniContact_sim2sim
+- Lab / Department: project page / repository author affiliations
+- Key Topics: humanoid / loco-manipulation / contact flow / long-horizon skill chaining / MuJoCo
+- Notes: The repository lists Runyi Yu, Xiaoyi Lin, Ji Ma, Yinhuai Wang, Koukou Luo, Jiahao Ji, Huayi Wang, Wenjia Wang, Runhan Zhang, Ping Tan, Ting Wu, Ruoli Dai, Qifeng Chen, and Lei Han. This is a useful source network around contact-rich humanoid skill chaining and Unitree G1-style simulation.
+- Students and Representative Works:
+  - [Runyi Yu](https://ingrid789.github.io/IngridYu/) — [OmniContact](https://omnicontact.github.io/)
+  - [Xiaoyi Lin](https://github.com/XiaoyiLin-code) — [OmniContact](https://omnicontact.github.io/)
+
+### LAAS-CNRS hybrid locomotion PhD signal
+- Institution: CNRS / Laboratoire d'analyse et d'architecture des systèmes
+- Homepage: https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
+- Lab / Department: LAAS-CNRS
+- Key Topics: humanoid / wheeled-legged locomotion / RL / MPC / contact mode selection / safety constraints
+- Notes: The active PhD posting describes a hybrid dynamic locomotion architecture where RL supplies discrete high-level decisions such as contact mode, footstep or gait-pattern selection, while online MPC enforces whole-body feasibility, safety, and dynamic consistency. It mentions validation targets including TIRREX/RENOIR Kangaroo and Unitree humanoids.
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### CNRS / LAAS-CNRS
+- Type: PhD
+- Location: Toulouse, France
+- Source: official website
+- Deadline: 2026-07-31
+- Topics: humanoid / wheeled-legged locomotion / reinforcement learning / MPC / contact planning / whole-body control
+- Status: active
+- Notes: Official posting `UPR8001-OLISTA-018` lists a 36-month PhD contract, planned hire date 2026-10-01, and a thesis on hybrid RL + MPC locomotion where learned discrete decisions shape an online MPC for safe dynamic motion.
+
+</details>

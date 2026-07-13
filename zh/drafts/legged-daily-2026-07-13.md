@@ -1,0 +1,92 @@
+[English](../../drafts/legged-daily-2026-07-13.md) | **中文**
+# 腿足机器人日报 - 2026-07-13
+
+## 摘要
+- 今天 arXiv 里直接面向腿足控制的新论文信号比上周弱；更值得暂存的是地形感知、紧凑 VLA 迁移这类可服务未来腿足/人形系统的相邻模块。
+- DRIFT 值得轻量跟踪：它用多光谱与 band-ratio 特征做地形识别，对光照和材料歧义更稳，可能补到户外四足/人形导航感知栈里。
+- CLAP 不是腿足专用论文，但它提供了从 VLM 到紧凑 VLA 的低改造适配路径，可作为 WholebodyVLA、LEGS、GRAIL、VLK 等人形移动操作数据/策略方向的相邻信号。
+- 今天仓库信号更强：OmniContact_sim2sim 开放了长时程人形 contact-flow 技能的 MuJoCo 执行路径；mjlab-homierl 则是 Unitree G1/H1 上 HOMIE 风格下肢 locomotion 训练与部署包。
+- CNRS / LAAS 有一个活跃 PhD 机会，主题是人形与轮腿机器人 hybrid RL + MPC locomotion，申请截止 2026-07-31。
+
+<details>
+<summary><strong>新论文</strong></summary>
+
+### Differential Analysis of Multispectral Images for Terrain Identification
+- 链接: https://arxiv.org/abs/2607.09319
+- 来源: arXiv
+- 日期: 2026-07-10
+- 作者: Omar Kashmar, Hemendra Arya, Fulvio Mastrogiovanni
+- 主题: 地形感知 / 多光谱传感 / 自主导航 / 边缘部署
+- 摘要: 提出 DRIFT，一个轻量多光谱地形识别框架，结合原始光谱 band、对光照更鲁棒的 band-ratio 特征和 differential fusion；在 oil-on-soil UAV 多光谱数据和受控 water-on-grass 实验中，相比强基线在光照、材料歧义和噪声下更稳。
+- 备注: 它本身不是腿足机器人论文，但对光照/材料变化鲁棒的地形理解，对户外四足和人形导航栈有潜在价值。
+
+### CLAP: Direct VLM-to-VLA Adaptation via Language-Action Grounding
+- 链接: https://arxiv.org/abs/2607.08974
+- 来源: arXiv / 项目页
+- 日期: 2026-07-09
+- 作者: Yuri Ishitoya, Jeremy Siburian, Masashi Hamaya, Kuniaki Saito, Cristian C. Beltran-Hernandez, Mai Nishimura
+- 主题: vision-language-action models / robot learning / language-action grounding / compact VLA
+- 摘要: 提出 CLAP（Causal Language-Action Prediction），在数值动作序列前加入自然语言动作描述，让预训练 VLM 在尽量少改架构的情况下适配成 VLA；单 epoch 微调在 LIBERO 达到 90.8%，并计划开放 0.8B、2B、4B 多尺度权重。
+- 备注: 这是 manipulation/VLA 方向，不是腿足专用；但可作为未来人形移动操作 pipeline 的紧凑 VLA 相邻信号继续跟踪。
+
+</details>
+
+<details>
+<summary><strong>新仓库</strong></summary>
+
+### OmniContact_sim2sim
+- 链接: https://github.com/Ingrid789/OmniContact_sim2sim
+- 类别: control / loco-manipulation / policy deployment / simulator
+- 机器人类型: humanoid
+- 仿真器: MuJoCo
+- 部署: sim / sim2real-style execution path
+- 摘要: OmniContact 官方实现；OmniContact 是用于人形移动操作的 contact-flow 框架，支持 carry、push、slide、relocate、kick 以及多技能链式组合；仓库提供 CFgen/NPZ motion tracking 的脚本执行路径，以及面向 Unitree G1 风格 MuJoCo 场景的手柄热切换执行路径。
+- 备注: 论文：https://arxiv.org/abs/2606.26201。README 关联 Noitom Robotics、HKUST、Wuhan University、HKU，并链接了 Hugging Face 上的 OmniContact 数据集。
+
+### mjlab-homierl
+- 链接: https://github.com/Nagi-ovo/mjlab-homierl
+- 类别: RL / locomotion / deployment / toolkit
+- 机器人类型: humanoid
+- 仿真器: MuJoCo / mjlab
+- 部署: both
+- 摘要: 一个外部 mjlab task package，用于复现 HOMIE 在 Unitree G1 和 H1 上的下肢 locomotion RL 部分；包含自定义任务/资产、HIM-PPO 训练、ONNX export metadata、预训练 checkpoint、仿真播放，以及 G1 上基于 DDS 的真机部署脚本。
+- 备注: 仓库详细说明了与 OpenHomie 的差异、domain randomization 选择、deployment-grade PD gains、G1/H1 变体、手部/负载附件和 HOMIE+ torso-pitch 扩展；先作为实用实现信号跟踪，不直接视作官方 HOMIE 发布，除非后续确认。
+
+</details>
+
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### OmniContact collaboration network
+- 机构: Noitom Robotics; The Hong Kong University of Science and Technology; Wuhan University; The University of Hong Kong
+- 主页: https://omnicontact.github.io/
+- GitHub: https://github.com/Ingrid789/OmniContact_sim2sim
+- 实验室 / 部门: project page / repository author affiliations
+- 关键主题: humanoid / loco-manipulation / contact flow / long-horizon skill chaining / MuJoCo
+- 备注: 仓库列出 Runyi Yu、Xiaoyi Lin、Ji Ma、Yinhuai Wang、Koukou Luo、Jiahao Ji、Huayi Wang、Wenjia Wang、Runhan Zhang、Ping Tan、Ting Wu、Ruoli Dai、Qifeng Chen、Lei Han。这个网络值得作为 contact-rich 人形技能链和 Unitree G1 风格仿真的来源继续跟踪。
+- 学生与代表作:
+  - [Runyi Yu](https://ingrid789.github.io/IngridYu/) — [OmniContact](https://omnicontact.github.io/)
+  - [Xiaoyi Lin](https://github.com/XiaoyiLin-code) — [OmniContact](https://omnicontact.github.io/)
+
+### LAAS-CNRS hybrid locomotion PhD signal
+- 机构: CNRS / Laboratoire d'analyse et d'architecture des systèmes
+- 主页: https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
+- 实验室 / 部门: LAAS-CNRS
+- 关键主题: humanoid / wheeled-legged locomotion / RL / MPC / contact mode selection / safety constraints
+- 备注: 这个 PhD posting 描述了 hybrid dynamic locomotion architecture：RL 负责 contact mode、footstep 或 gait-pattern selection 等离散高层决策，online MPC 负责全身运动可行性、安全约束和动态一致性；验证目标提到 TIRREX/RENOIR Kangaroo 与 Unitree humanoids。
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+### CNRS / LAAS-CNRS
+- 类型: PhD
+- 地点: Toulouse, France
+- 来源: 官方网站
+- 截止时间: 2026-07-31
+- 主题: humanoid / wheeled-legged locomotion / reinforcement learning / MPC / contact planning / whole-body control
+- 状态: active
+- 备注: 官方岗位 `UPR8001-OLISTA-018` 写明 36 个月 PhD 合同，计划入职时间 2026-10-01；论文题目围绕 hybrid RL + MPC locomotion，用学习到的离散决策在线 shaping MPC，从而生成安全的动态运动。
+
+</details>
