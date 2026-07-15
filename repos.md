@@ -163,6 +163,15 @@
 - Deploy: sim
 - Summary: A collection of high-quality MuJoCo models curated by Google DeepMind.
 
+### mujoco_ros2_control
+- Link: https://github.com/ros-controls/mujoco_ros2_control
+- Category: control / simulator / sensor simulation / ROS 2 integration
+- Robot Type: general / quadruped / humanoid
+- Simulator: MuJoCo
+- Deploy: sim / ROS 2
+- Summary: Official ROS Controls integration that exposes MuJoCo robots as a `ros2_control` system interface, with MJCF/URDF model workflows, controller support, and extensible ROS 2 simulation plugins.
+- Notes: Particularly valuable for perception-enabled legged-robot simulation: its camera plugin automatically publishes RGB images, depth images, and `CameraInfo` for MJCF cameras, supports multiple RGB-D cameras and EGL-based headless GPU rendering, while the bundled ray-casting lidar extension supports configurable 2D/3D scans, horizontal/vertical resolution and field of view, range limits, and update rate. A legacy rangefinder-lidar plugin is also retained, but the project recommends the newer 3D lidar extension.
+
 ### MuJoCo-LiDAR
 - Link: https://github.com/discoverse-dev/MuJoCo-LiDAR
 - Category: simulator / sensor simulation / perception toolkit
@@ -293,6 +302,15 @@
 - Summary: Simulation-verification and real-robot deployment framework for reinforcement-learning policies across quadrupeds, wheeled-legged robots, and humanoids.
 - Notes: Supports ROS Noetic, ROS 2 Foxy/Humble, libtorch, onnxruntime, Linux, and partial macOS MuJoCo simulation; README lists Unitree A1/Go2/Go2W/B2/B2W/G1, Fourier GR1, zhiniao L4W4, Deeprobotics Lite3, Agibot D1, and DDTRobot Tita support.
 
+### LeggedSkillDeploy
+- Link: https://github.com/haozhang04/LeggedSkillDeploy
+- Category: RL / deployment / simulator / toolkit
+- Robot Type: quadruped / humanoid / wheeled-biped / wheeled-quadruped
+- Simulator: MuJoCo / Gazebo (ROS 2)
+- Deploy: sim / hardware
+- Summary: State-machine-based Python framework for deploying multiple reinforcement-learning and imitation-learning motion policies across legged robot embodiments.
+- Notes: Includes policies and configurations for Unitree Go1/Go2, Go2W, G1 (29 DoF), Duow, and M20; supports keyboard, gamepad, and phone-web control. The README reports hardware testing only on Go1 Pro and warns that real-robot deployment requires appropriate safety precautions and interface adaptation.
+
 ### legged_rl_lab
 - Link: https://github.com/zhw0422/legged_rl_lab
 - Category: RL / simulator / toolkit
@@ -346,6 +364,33 @@
 - Deploy: sim / ROS 2 integration
 - Summary: Unitree Go2 locomotion-control workspace for Isaac Lab PPO experiments, gait/contact analysis, terrain and domain randomization, disturbance testing, and ROS 2 navigation command generation.
 - Notes: Small transparent educational / experiment-log style workspace; useful for Go2 pretrained-policy probes, reward tracking, joint-limit analysis, and ROS 2 command integration.
+
+### parkour
+- Link: https://github.com/ZiwenZhuang/parkour
+- Category: RL / simulator / parkour / deployment
+- Robot Type: quadruped
+- Simulator: Isaac Gym
+- Deploy: sim / hardware
+- Summary: Official code for Robot Parkour Learning, a CoRL 2023 oral project for training quadruped parkour policies with legged_gym and RSL-RL, including A1 / Go1 / Go2 training and deployment materials.
+- Notes: Project page: https://robot-parkour.github.io/. README reports Go1 and Go2 deployment guides and lists the paper as CoRL 2023 Oral and Best Systems Paper Award Finalist.
+
+### Isaaclab_Parkour
+- Link: https://github.com/CAI23sbP/Isaaclab_Parkour
+- Category: RL / simulator / parkour / deployment
+- Robot Type: quadruped
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: sim / sim2sim / hardware planned
+- Summary: Isaac Lab-based Unitree Go2 parkour locomotion project derived from Extreme Parkour, with teacher/student RSL-RL training, play, evaluation, and demo tasks.
+- Notes: README references downloadable teacher/student policies, Isaac Lab-to-MuJoCo sim2sim work, future real-world deployment via go2_parkour_deploy, and required citation of Extreme Parkour and ORBIT.
+
+### go2_parkour_deploy
+- Link: https://github.com/CAI23sbP/go2_parkour_deploy
+- Category: deployment / sim2sim / simulator / parkour
+- Robot Type: quadruped
+- Simulator: MuJoCo / Isaac Lab policy source
+- Deploy: sim / hardware
+- Summary: Unitree Go2 deployment companion for IsaacLab_Parkour policies, supporting Isaac Lab-to-MuJoCo simulation deployment and real-world Go2 deployment.
+- Notes: Requires Unitree MuJoCo; README cites influence from Go2Py, HOVER, Eurekaverse, Spot RL Example, and gym-quadruped.
 
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main

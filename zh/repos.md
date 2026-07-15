@@ -163,6 +163,15 @@
 - Deploy: sim
 - Summary: Google DeepMind curated 高质量 MuJoCo 模型集合。
 
+### mujoco_ros2_control
+- Link: https://github.com/ros-controls/mujoco_ros2_control
+- Category: control / simulator / sensor simulation / ROS 2 integration
+- Robot Type: general / quadruped / humanoid
+- Simulator: MuJoCo
+- Deploy: sim / ROS 2
+- Summary: ROS Controls 官方维护的 MuJoCo 集成，将仿真机器人封装为 `ros2_control` 系统接口，并提供 MJCF/URDF 模型流程、控制器支持和可扩展的 ROS 2 仿真插件。
+- Notes: 尤其适合带感知系统的腿足机器人仿真：相机插件可为 MJCF 相机自动发布 RGB 图像、深度图像和 `CameraInfo`，支持多路 RGB-D 相机及基于 EGL 的无显示器 GPU 渲染；内置的光线投射 LiDAR 扩展支持可配置的 2D/3D 扫描、水平/垂直分辨率与视场、量程限制和更新频率。项目还保留了旧版 rangefinder LiDAR 插件，但官方推荐使用功能和性能更好的 3D LiDAR 扩展。
+
 ### MuJoCo-LiDAR
 - Link: https://github.com/discoverse-dev/MuJoCo-LiDAR
 - Category: simulator / sensor simulation / perception toolkit
@@ -293,6 +302,15 @@
 - 摘要: 面向强化学习策略的仿真验证与实机部署框架，覆盖四足、轮足和人形机器人。
 - 备注: 支持 ROS Noetic、ROS 2 Foxy/Humble、libtorch、onnxruntime、Linux 和部分 macOS MuJoCo 仿真；README 列出 Unitree A1/Go2/Go2W/B2/B2W/G1、傅利叶 GR1、智脑 L4W4、DeepRobotics Lite3、Agibot D1、DDTRobot Tita 等硬件支持。
 
+### LeggedSkillDeploy
+- 链接: https://github.com/haozhang04/LeggedSkillDeploy
+- 类别: RL / deployment / simulator / toolkit
+- 机器人类型: quadruped / humanoid / wheeled-biped / wheeled-quadruped
+- 仿真器: MuJoCo / Gazebo（ROS 2）
+- 部署: sim / hardware
+- 摘要: 基于状态机的 Python 多策略部署框架，可将强化学习与模仿学习运动策略部署到多种腿足机器人形态。
+- 备注: 包含 Unitree Go1/Go2、Go2W、G1（29 DoF）、Duow 和 M20 的策略及配置，支持键盘、手柄和手机网页控制。README 表明目前仅在 Go1 Pro 上完成实机测试，并提醒实机部署需要充分安全防护及接口适配。
+
 ### legged_rl_lab
 - 链接: https://github.com/zhw0422/legged_rl_lab
 - 类别: RL / simulator / toolkit
@@ -346,6 +364,33 @@
 - 部署: sim / ROS 2 integration
 - 摘要: 面向 Unitree Go2 的 locomotion-control 工作区，用于 Isaac Lab PPO 实验、步态/接触分析、地形与域随机化、扰动测试，以及 ROS 2 导航命令生成。
 - 备注: 小型但透明的教学 / 实验记录式工作区；可参考 Go2 pretrained-policy probe、reward tracking、joint-limit analysis 和 ROS 2 命令集成。
+
+### parkour
+- 链接: https://github.com/ZiwenZhuang/parkour
+- 类别: RL / simulator / parkour / deployment
+- 机器人类型: quadruped
+- 仿真器: Isaac Gym
+- 部署: sim / hardware
+- 摘要: Robot Parkour Learning 的官方代码，CoRL 2023 oral 项目，基于 legged_gym 与 RSL-RL 训练四足 parkour 策略，包含 A1 / Go1 / Go2 训练和部署材料。
+- 备注: 项目页：https://robot-parkour.github.io/。README 提供 Go1 和 Go2 部署指南，并标注论文为 CoRL 2023 Oral、Best Systems Paper Award Finalist。
+
+### Isaaclab_Parkour
+- 链接: https://github.com/CAI23sbP/Isaaclab_Parkour
+- 类别: RL / simulator / parkour / deployment
+- 机器人类型: quadruped
+- 仿真器: Isaac Lab / MuJoCo
+- 部署: sim / sim2sim / hardware planned
+- 摘要: 基于 Isaac Lab 的 Unitree Go2 parkour locomotion 项目，源自 Extreme Parkour，包含 teacher/student RSL-RL 训练、play、evaluation 和 demo 任务。
+- 备注: README 提供 teacher/student policy 下载说明，提到 Isaac Lab 到 MuJoCo 的 sim2sim、未来通过 go2_parkour_deploy 做实机部署，并要求引用 Extreme Parkour 与 ORBIT。
+
+### go2_parkour_deploy
+- 链接: https://github.com/CAI23sbP/go2_parkour_deploy
+- 类别: deployment / sim2sim / simulator / parkour
+- 机器人类型: quadruped
+- 仿真器: MuJoCo / Isaac Lab policy source
+- 部署: sim / hardware
+- 摘要: Isaaclab_Parkour 策略的 Unitree Go2 部署配套仓库，支持 Isaac Lab 到 MuJoCo 的仿真部署，以及 Go2 实机部署。
+- 备注: 依赖 Unitree MuJoCo；README 提到参考 Go2Py、HOVER、Eurekaverse、Spot RL Example 和 gym-quadruped。
 
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
