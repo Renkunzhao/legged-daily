@@ -1,0 +1,76 @@
+[English](../../drafts/legged-daily-2026-07-18.md) | **中文**
+# 腿足机器人日报 - 2026-07-18
+
+## 摘要
+- 周六没有新的 arXiv 机器人批次；今日论文选自本周已发布、但上一期日报尚未收录的两项高相关人形机器人工作。
+- Semantic-WBC 将实时音乐或语音路由到模仿学习得到的全身动作技能，并在 Unitree G1 真机上验证了整套编排流程。
+- Sapienza 的另一项工作把时序深度编码器集成进 Booster T1 强化学习策略，用于感知对手的人形足球运球，但目前仅报告仿真结果。
+- semantic-WBC 官方仓库给出了机器人端/PC 端分离部署和 MuJoCo 运行路径，不过演示专用资产尚未通过公开 Release 提供，仓库整体许可证也不够明确。
+- Sapienza Lab RoCoCo 是值得新增跟踪的人形机器人学习来源；IHMC 同时在招聘全职腿足机器人软件与自主系统工程师，覆盖人形自主、VLA 集成、导航和移动操作。
+
+<details>
+<summary><strong>新论文</strong></summary>
+
+### Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control
+- 链接: https://arxiv.org/abs/2607.14182
+- 来源: RoboCup Symposium 2026 / arXiv
+- 日期: 2026-07-15
+- 作者: J. M. A. Marcelo, M. Brienza, E. Bugli, L. Comito, D. Nardi, D. D. Bloisi, V. Suriani
+- 主题: 人形机器人 / 全身控制 / 强化学习 / 音频语义落地 / 技能编排 / sim-to-real
+- 摘要: 系统把连续音频分流为音乐或语音：音乐通过音频指纹和语义嵌入完成曲目识别与时间对齐，语音则映射到离散的模仿学习技能库，随后通过统一接口在强化学习控制管线中调度对应全身策略。
+- 备注: 论文被第 29 届 RoboCup International Symposium 接收，并在仿真和 Unitree G1 真机上验证。其主要贡献是基于现有多策略控制栈的语义技能选择与编排，而不是新的底层运动学习器。项目页: https://lab-rococo-sapienza.github.io/semantic-WBC/。
+
+### Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning
+- 链接: https://arxiv.org/abs/2607.12702
+- 来源: arXiv
+- 日期: 2026-07-14
+- 作者: Flavio Maiorana, Valerio Spagnoli, Eugenio Bugli, Flavio Volpi, Daniele Affinita, Vincenzo Suriani, Daniele Nardi, Luca Iocchi
+- 主题: 人形机器人 / 移动操作 / 机器人足球 / 强化学习 / 深度感知 / 特权学习
+- 摘要: 该方法通过任务专用投影层把时序深度编码器嵌入强化学习策略，使仿真中的 Booster T1 无需显式场景状态估计，即可直接根据深度观测向目标运球，并对障碍物或主动对手作出反应。
+- 备注: 论文报告常规目标运球成功率 100%、单个静态障碍场景 96%、面对主动抢球对手 46%。结果仅来自仿真；实验室关联的 `learning-to-dribble` 仓库目前只有 README 和许可证，没有实现代码。
+
+</details>
+
+<details>
+<summary><strong>新仓库</strong></summary>
+
+### semantic-WBC
+- 链接: https://github.com/Lab-RoCoCo-Sapienza/semantic-WBC
+- 类别: 控制 / 强化学习 / 工具链
+- 机器人类型: 人形机器人
+- 仿真器: MuJoCo
+- 部署: 仿真与真机
+- 摘要: 面向 Unitree G1 音频驱动全身技能的官方独立部署包，包含 Python 代码、G1 配置、ONNX 策略执行、机器人端与 PC 端之间的 TCP 指令管线、本地音频指纹、仿真脚本及真机安全说明。
+- 备注: 仓库在 2026-07-15 集中整理发布，构建于 RoboJuDo/BeyondMimic 组件之上。基础资产可从上游拉取，但 README 表明演示专用 ONNX 与音频扩展仍需等待 GitHub Release 或单独 URL。仓库没有声明整体 SPDX 许可证，复用前应逐项核查上游与内置第三方组件的许可。
+
+</details>
+
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### Lab RoCoCo / Sapienza University of Rome
+- 机构: Sapienza University of Rome
+- 主页: https://lab-rococo-sapienza.github.io/semantic-WBC/
+- GitHub: https://github.com/Lab-RoCoCo-Sapienza
+- 实验室 / 系: Department of Computer, Control, and Management Engineering
+- 关键主题: 人形机器人 / 机器人学习 / 全身控制 / 强化学习 / 移动操作 / 感知
+- 备注: 实验室当前公开成果包含两条相近的人形机器人学习路线：Unitree G1 真机上的音频条件全身技能编排，以及 Booster T1 的深度视觉足球运球。其官方 GitHub 组织还公开机器人学习和感知项目，适合作为后续代码与项目发布的跟踪源。
+- 学生与代表工作:
+  - [Michele Brienza](https://arxiv.org/abs/2607.14182) — [Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control](https://lab-rococo-sapienza.github.io/semantic-WBC/)
+  - [Flavio Maiorana](https://arxiv.org/abs/2607.12702) — [Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning](https://arxiv.org/abs/2607.12702)
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+### 拟新增 — IHMC Robotics Team：腿足机器人软件与自主系统工程师
+- 类型: Research Engineer
+- 地点: 美国佛罗里达州 Pensacola
+- 来源: 官方网站 — https://www.ihmc.us/2026-software-autonomy-engineer/
+- 截止时间: 未注明
+- 主题: 人形机器人 / 腿足机器人 / 自主系统 / 感知 / 导航 / 移动操作 / VLA / ROS 2 / 强化学习
+- 状态: active
+- 备注: 全职带薪职位，负责在 Alex 等人形和腿足平台上开发自主与半自主能力，工作覆盖语义场景理解、探索、规划、导航、移动操作、VLA 或多模态模型集成、语言交互、仿真和真机现场测试。申请需通过邮件提交简历、求职信、填写完成的问卷及三位推荐人信息；要求已具备或能够获得美国工作许可。
+
+</details>
