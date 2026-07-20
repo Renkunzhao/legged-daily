@@ -1,0 +1,107 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-07-20.md)
+# Legged Daily - 2026-07-20
+
+## Summary
+- Handroid introduces an open-source 27-DoF, desktop-scale robot whose same electromechanical body can be reconfigured as either a dexterous hand or a 12-DoF-legged humanoid, with manipulation, RL locomotion, gait generation, and long-horizon cross-embodiment demonstrations.
+- RAVEN combines an RL meta-policy, visibility-graph planning, collision-free MPC, and a learned locomotion controller; instead of replacing the planner, learning adapts obstacle inflation and graph geometry to handle delay, noise, and tracking uncertainty on a Booster T1 biped.
+- Two very new repositories are worth watching rather than treating as mature baselines: FastWMR is building a tested Isaac Lab implementation that combines fast off-policy humanoid learning with explicit world-state reconstruction, while g1_real_ws adapts ROS 2 Nav2 to Unitree G1 sensing, odometry, and locomotion constraints.
+- Georgia Tech's LIDAR group is newly highlighting Learn to Teach (L2T), a one-stage privileged-learning framework validated on Digit across more than 12 terrains; the paper itself predates this run, so it is tracked as a lab signal rather than a new paper.
+- ETH Zurich RSL's official page still lists rolling PhD, postdoc, research staff, and engineering openings. EPFL BioRob's humanoid-neuromechanics PhD/Postdoc entry in `jobs.md` should be corrected because the official openings page now marks the project CLOSED.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### Handroid: Bridging Dexterous Hand and Humanoid
+- Link: https://arxiv.org/abs/2607.16187
+- Source: arXiv
+- Date: 2026-07-17
+- Authors: Ruogu Li, Chenyang Ma, Sikai Li, Zhenyu Wei, Yunchao Yao, Haochen Shi, C. Karen Liu, Shuran Song, Mingyu Ding
+- Topics: humanoid / dexterous hand / reconfigurable robot / reinforcement learning / locomotion / manipulation
+- Summary: Handroid reuses one 27-DoF electromechanical platform as either a 20-DoF anthropomorphic hand or a desktop humanoid with 12-DoF lower limbs, providing shared control and learning interfaces for teleoperation, dexterous manipulation, RL locomotion, gait generation, and motion authoring.
+- Notes: The 0.33 m, 2.05 kg platform is validated on real-world manipulation, walking and whole-body motions, plus a long-horizon sequence that reconfigures embodiment, walks, docks to a Franka arm, and performs dexterous pick-and-place. The paper states that the platform is open source; the project page is https://handroid.org/.
+
+### RAVEN: Reinforcement-Adaptive Visibility-Graph Planning for Robust Humanoid Navigation with Collision-Free MPC
+- Link: https://arxiv.org/abs/2607.15701
+- Source: arXiv
+- Date: 2026-07-17
+- Authors: Ruochen Hou, Shiqi Wang, Beom Jun Kim, Hanzhang Fang, Mehak Singal, Dennis W. Hong
+- Topics: humanoid / navigation / reinforcement learning / visibility graph / model predictive control / collision avoidance
+- Summary: RAVEN uses an RL meta-policy to adapt obstacle inflation and the geometric construction of a visibility-graph planner, then applies collision-free MPC and a learned locomotion controller for interpretable long-horizon humanoid navigation under delay, observation noise, and tracking uncertainty.
+- Notes: Evaluated against manually tuned visibility-graph MPC and pure-RL navigation, with reported improvements in obstacle overshoot, narrow-passage robustness, and reliability under uncertainty; the paper shows deployment on a Booster T1 biped in a half-size RoboCup field. No official code repository was found during today's verification.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### fastwmr
+- Link: https://github.com/kevinpark135/fastwmr
+- Category: RL / control
+- Robot Type: humanoid
+- Simulator: Isaac Lab
+- Deploy: sim
+- Summary: An early independent implementation that combines FastSAC-style off-policy humanoid learning with WMR-style recurrent world-state estimation and reconstruction, including environment definitions, actor/critic/decoder modules, replay buffers, training scripts, and focused unit tests.
+- Notes: Created 2026-07-16 and actively updated through 2026-07-20. The repository has zero stars and no declared license at verification time; it is a promising implementation-in-progress, not yet a validated reproduction or hardware deployment.
+
+### g1_real_ws
+- Link: https://github.com/JeanMayoko18/g1_real_ws
+- Category: control / perception / toolkit
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: hardware
+- Summary: A ROS 2 workspace that adapts Nav2 to the Unitree G1 through 3D-LiDAR-to-2D scan processing, planar odometry adaptation and calibration, and command scaling and conditioning for the learned locomotion interface.
+- Notes: Created and last pushed on 2026-07-16, with G1 descriptions, maps, launch files, and ROS packages present. It is very new and has zero stars; the README documents the architecture, but independent real-robot reproduction was not verified today.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Mingyu Ding / Shuran Song / Handroid collaboration
+- Institution: University of North Carolina at Chapel Hill / Stanford University
+- Homepage: https://handroid.org/
+- Lab / Department: UNC-Chapel Hill and Stanford robotics author network
+- Key Topics: reconfigurable robotics / humanoid / dexterous manipulation / robot learning / locomotion
+- Notes: The collaboration has released Handroid as a compact shared hardware and learning platform spanning hand-scale dexterity and humanoid mobility. Its unified interfaces and cross-embodiment task make this a useful author network to track for morphology reuse and integrated locomotion-manipulation research.
+- Students and Representative Works:
+  - [Ruogu Li](https://skevinci.github.io/) — [Handroid](https://handroid.org/)
+  - [Zhenyu Wei](https://zhenyuwei2003.github.io/) — [Handroid](https://handroid.org/)
+
+### Dennis W. Hong / Robotics and Mechanisms Laboratory (RoMeLa)
+- Institution: University of California, Los Angeles
+- Homepage: https://www.romela.org/
+- Lab / Department: Robotics and Mechanisms Laboratory, Mechanical and Aerospace Engineering
+- Key Topics: humanoid / biped navigation / reinforcement learning / MPC / collision avoidance
+- Notes: RAVEN extends RoMeLa's humanoid navigation line with a hybrid architecture in which learning reshapes the global planner's geometry while constrained MPC retains explicit safety and dynamic limits, demonstrated on the Booster T1 platform.
+- Students and Representative Works:
+  - [Ruochen Hou](https://arxiv.org/abs/2607.15701) — [RAVEN](https://arxiv.org/abs/2607.15701)
+
+### Ye Zhao / Laboratory for Intelligent Decision and Autonomous Robots (LIDAR)
+- Institution: Georgia Institute of Technology
+- Homepage: https://lab-idar.gatech.edu/
+- Lab / Department: Institute for Robotics and Intelligent Machines / George W. Woodruff School of Mechanical Engineering
+- Key Topics: humanoid / biped locomotion / reinforcement learning / privileged learning / sim-to-real
+- Notes: The group is newly highlighting Learn to Teach (L2T), a one-stage framework that jointly trains teacher and student policies, reuses simulator samples through shared dynamics, and reports zero-shot deployment on Digit over more than 12 challenging terrains. This is a recent lab/news signal around an existing RA-L paper, not a newly published paper for today's paper count. Project: https://lidar-learn-to-teach.github.io/.
+- Students and Representative Works:
+  - [Feiyang Wu](https://arxiv.org/abs/2402.06783) — [Learn to Teach](https://lidar-learn-to-teach.github.io/)
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / Postdoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
+- Location: Zurich, Switzerland
+- Source: official website — https://rsl.ethz.ch/the-lab/open-positions.html
+- Deadline: rolling / unknown
+- Topics: legged robots / mobile manipulation / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
+- Status: active
+- Notes: Rechecked on 2026-07-20. The official page continues to advertise rolling PhD and postdoc applications plus research/software, robot-design, embedded-systems, and electronics engineering roles; several application forms are linked directly from the page.
+
+### Proposed Removal / Stale Item — EPFL BioRob humanoid neuromechanics PhD / Postdoc
+- Current Status: stale / closed
+- Reason: The official openings page now labels the Fall 2026 humanoid-neuromechanics project “CLOSED” in its summary and states that the positions are now closed. The older rolling-language lower on the page should not override that explicit status, so the active entry in `jobs.md` should be removed or marked closed after confirmation.
+- Source Checked: https://www.epfl.ch/labs/biorob/openings/
+
+</details>

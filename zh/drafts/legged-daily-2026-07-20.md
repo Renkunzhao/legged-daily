@@ -1,0 +1,107 @@
+[English](../../drafts/legged-daily-2026-07-20.md) | **中文**
+# 腿足机器人日报 - 2026-07-20
+
+## 摘要
+- Handroid 提出一款开源 27 自由度桌面级机器人，同一套机电本体可重构为灵巧手或具有 12 自由度腿部的微型人形，并完成操作、强化学习行走、步态生成和跨形态长时程任务验证。
+- RAVEN 结合强化学习元策略、可见图规划、无碰撞 MPC 和学习型运动控制器；学习模块不替代规划器，而是自适应调整障碍膨胀和图几何，以处理 Booster T1 双足机器人上的延迟、噪声与跟踪误差。
+- 今天有两个非常新的仓库值得观察，但不应视为成熟基线：FastWMR 正在构建带测试的 Isaac Lab 实现，把快速离策略人形学习与显式世界状态重建结合；g1_real_ws 则针对 Unitree G1 的感知、里程计和运动接口约束适配 ROS 2 Nav2。
+- Georgia Tech LIDAR 组近期重点介绍 Learn to Teach（L2T）：一种在 Digit 上、超过 12 类地形中验证的单阶段特权学习框架。论文早于本次日报，因此作为实验室信号而非新论文收录。
+- ETH Zurich RSL 官方页面仍列有滚动 PhD、Postdoc、研究人员和工程岗位。`jobs.md` 中 EPFL BioRob 人形神经力学 PhD/Postdoc 条目应修正，因为官方 openings 页面现已明确标为 CLOSED。
+
+<details>
+<summary><strong>新论文</strong></summary>
+
+### Handroid：连接灵巧手与人形机器人
+- 链接：https://arxiv.org/abs/2607.16187
+- 来源：arXiv
+- 日期：2026-07-17
+- 作者：Ruogu Li, Chenyang Ma, Sikai Li, Zhenyu Wei, Yunchao Yao, Haochen Shi, C. Karen Liu, Shuran Song, Mingyu Ding
+- 主题：人形机器人 / 灵巧手 / 可重构机器人 / 强化学习 / 运动控制 / 操作
+- 摘要：Handroid 将同一个 27 自由度机电平台复用为 20 自由度仿人灵巧手或具有 12 自由度下肢的桌面人形，并提供统一控制与学习接口，覆盖遥操作、灵巧操作、强化学习行走、步态生成和动作编排。
+- 备注：平台高 0.33 米、重 2.05 千克，已验证真实操作、行走和全身动作，以及“形态重构—行走—对接 Franka 机械臂—灵巧抓取放置”的长时程任务。论文称平台将开源；项目页：https://handroid.org/。
+
+### RAVEN：面向鲁棒人形导航、结合无碰撞 MPC 的强化学习自适应可见图规划
+- 链接：https://arxiv.org/abs/2607.15701
+- 来源：arXiv
+- 日期：2026-07-17
+- 作者：Ruochen Hou, Shiqi Wang, Beom Jun Kim, Hanzhang Fang, Mehak Singal, Dennis W. Hong
+- 主题：人形机器人 / 导航 / 强化学习 / 可见图 / 模型预测控制 / 避碰
+- 摘要：RAVEN 使用强化学习元策略自适应调整障碍膨胀与可见图规划器的几何构造，再由无碰撞 MPC 和学习型运动控制器执行，从而在延迟、观测噪声和跟踪不确定性下保留可解释的长时程人形导航。
+- 备注：论文与人工调参的可见图 MPC、纯强化学习导航进行比较，报告了更小的障碍附近过冲、更强的狭窄通道鲁棒性，以及噪声和延迟下更可靠的导航；文中展示了 Booster T1 双足机器人在半尺寸 RoboCup 场地上的部署。今天未找到官方代码仓库。
+
+</details>
+
+<details>
+<summary><strong>新仓库</strong></summary>
+
+### fastwmr
+- 链接：https://github.com/kevinpark135/fastwmr
+- 类别：强化学习 / 控制
+- 机器人类型：人形机器人
+- 仿真器：Isaac Lab
+- 部署：仿真
+- 摘要：一个早期独立实现，将 FastSAC 风格的离策略人形学习与 WMR 风格的循环世界状态估计和重建结合，已包含环境定义、actor/critic/decoder、回放缓冲区、训练脚本和针对性单元测试。
+- 备注：仓库创建于 2026-07-16，并持续更新至 2026-07-20。核验时为 0 stars 且未声明许可证；它是值得关注的开发中实现，尚不能视为已验证复现或硬件部署。
+
+### g1_real_ws
+- 链接：https://github.com/JeanMayoko18/g1_real_ws
+- 类别：控制 / 感知 / 工具链
+- 机器人类型：人形机器人
+- 仿真器：无
+- 部署：硬件
+- 摘要：一个面向 Unitree G1 的 ROS 2 工作区，通过三维激光雷达到二维扫描的处理、平面里程计适配与校准，以及针对学习型运动接口的速度缩放和指令调理，把 Nav2 适配到 G1。
+- 备注：仓库创建并最后推送于 2026-07-16，已包含 G1 描述、地图、launch 文件和 ROS 包。项目非常新且为 0 stars；README 对架构有较完整说明，但今天未验证独立真实机器人复现。
+
+</details>
+
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### Mingyu Ding / Shuran Song / Handroid 合作网络
+- 机构：University of North Carolina at Chapel Hill / Stanford University
+- 主页：https://handroid.org/
+- 实验室 / 院系：UNC-Chapel Hill 与 Stanford 机器人研究作者网络
+- 关键主题：可重构机器人 / 人形机器人 / 灵巧操作 / 机器人学习 / 运动控制
+- 备注：该合作团队发布 Handroid，形成一个同时覆盖手尺度灵巧性与人形移动能力的紧凑型共享硬件与学习平台。其统一接口和跨形态任务使这一作者网络值得用于追踪形态复用及运动—操作一体化研究。
+- 学生与代表工作：
+  - [Ruogu Li](https://skevinci.github.io/) — [Handroid](https://handroid.org/)
+  - [Zhenyu Wei](https://zhenyuwei2003.github.io/) — [Handroid](https://handroid.org/)
+
+### Dennis W. Hong / Robotics and Mechanisms Laboratory（RoMeLa）
+- 机构：University of California, Los Angeles
+- 主页：https://www.romela.org/
+- 实验室 / 院系：Robotics and Mechanisms Laboratory，Mechanical and Aerospace Engineering
+- 关键主题：人形机器人 / 双足导航 / 强化学习 / MPC / 避碰
+- 备注：RAVEN 延续 RoMeLa 的人形导航研究路线：让学习模块重塑全局规划器几何，同时通过约束 MPC 保留明确的安全和动力学限制，并在 Booster T1 平台上展示。
+- 学生与代表工作：
+  - [Ruochen Hou](https://arxiv.org/abs/2607.15701) — [RAVEN](https://arxiv.org/abs/2607.15701)
+
+### Ye Zhao / Laboratory for Intelligent Decision and Autonomous Robots（LIDAR）
+- 机构：Georgia Institute of Technology
+- 主页：https://lab-idar.gatech.edu/
+- 实验室 / 院系：Institute for Robotics and Intelligent Machines / George W. Woodruff School of Mechanical Engineering
+- 关键主题：人形机器人 / 双足运动 / 强化学习 / 特权学习 / 仿真到现实
+- 备注：该组近期重点介绍 Learn to Teach（L2T）：一个联合训练教师与学生策略的单阶段框架，通过共享动力学复用仿真样本，并报告在 Digit 上超过 12 类挑战地形的零样本部署。这是围绕既有 RA-L 论文的近期实验室/新闻信号，不计入今天的新论文。项目：https://lidar-learn-to-teach.github.io/。
+- 学生与代表工作：
+  - [Feiyang Wu](https://arxiv.org/abs/2402.06783) — [Learn to Teach](https://lidar-learn-to-teach.github.io/)
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+### ETH Zurich Robotic Systems Lab
+- 类型：PhD / Postdoc / 研究人员 / 软件工程师 / 机器人设计工程师 / 嵌入式系统工程师 / 电子工程师
+- 地点：瑞士苏黎世
+- 来源：官方页面 — https://rsl.ethz.ch/the-lab/open-positions.html
+- 截止时间：滚动 / 未注明
+- 主题：腿足机器人 / 移动操作 / 运动规划 / MPC / 强化学习 / 感知 / 导航 / 执行器 / 遥操作 / ROS / C++
+- 状态：有效
+- 备注：2026-07-20 复核。官方页面仍开放滚动 PhD、Postdoc 申请，以及研究/软件、机器人设计、嵌入式系统和电子工程岗位；页面直接提供多个申请表链接。
+
+### 拟删除 / 过期条目 — EPFL BioRob 人形神经力学 PhD / Postdoc
+- 当前状态：过期 / 已关闭
+- 原因：官方 openings 页面现已在摘要中将 2026 年秋季人形神经力学项目标为“CLOSED”，并明确写明岗位已关闭。页面下方遗留的滚动申请措辞不应覆盖这一明确状态，因此 `jobs.md` 中的 active 条目应在确认后删除或标为 closed。
+- 已核验来源：https://www.epfl.ch/labs/biorob/openings/
+
+</details>
