@@ -1,0 +1,94 @@
+[English](../../drafts/legged-daily-2026-07-22.md) | **中文**
+# 腿足机器人日报 - 2026-07-22
+
+## 摘要
+- Koopman DCM 将发散运动分量从简化倒立摆模型推广为学习得到的不稳定 Koopman 特征函数，仅使用一小时真实双足机器人数据，并展示了更好的行走参考跟踪与 MPC 可行性约束。
+- LANav 用结构化线性注意力状态更新替代 Transformer 自注意力，用于开放词汇目标导航；论文报告 HM3D-OVON 成功率 36.4%，并在 Unitree Go2 上完成 50 次真实试验、成功率 82%。
+- HOPE 现已提供较完整的 Agibot A3 人形乒乓球开放栈，覆盖 Isaac Lab 全身策略训练、ROS 2 规划、MuJoCo 评估、ONNX 导出和部署参考路径。
+- 另有两个四足仓库值得跟踪：`legged_mpc_amp` 为五类机器人封装基于 NMPC/WBC 的 AMP 数据生成流程；`go2_rl_robotlab` 则提供带 RoboGauge 评估的 Isaac Lab—MuJoCo—真实 Go2 运动控制链路。
+- Stéphane Caron 的新论文是其 2026 年加入 CNRS/Sorbonne ISIR 后的早期研究信号，连接模型化平衡坐标、数据驱动表示、开源双足机器人与 MPC。
+
+<details>
+<summary><strong>新论文</strong></summary>
+
+### Koopman DCM：作为腿足机器人平衡数据驱动表示的不稳定特征函数
+- 链接：https://arxiv.org/abs/2607.18760
+- 来源：arXiv
+- 日期：2026-07-21
+- 作者：Stéphane Caron
+- 主题：腿足机器人 / 双足平衡 / Koopman 算子 / 发散运动分量 / 模型预测控制
+- 摘要：论文将发散运动分量重新解释为不稳定 Koopman 特征函数，并直接从闭环测量—动作数据学习该表示，不再把它限制在线性倒立摆模型中。
+- 备注：训练使用一小时真实机器人数据；学习到的 DCM 在真实双足机器人上改善参考步态跟踪，并在仿真人形实验中作为 MPC 的硬状态可行性约束。论文称将在同行评审后开源配套代码，因此目前尚无代码。
+
+### 超越 Transformer：用于开放词汇目标导航的线性注意力策略
+- 链接：https://arxiv.org/abs/2607.18794
+- 来源：arXiv
+- 日期：2026-07-21
+- 作者：Jiahong Zhang, Yifan Lin, Yandong Zhang, Sijun Shen, Kexin Wang, Yuqi Pan, Hongjuan Pei, Wei Wang, Guoqi Li
+- 主题：四足机器人 / 开放词汇导航 / 线性注意力 / 机器人学习 / 仿真到现实
+- 摘要：LANav 把线性注意力策略骨干用作结构化递归状态更新，并提出加权状态扩展线性注意力，以在部分可观测环境中保留有用历史信息。
+- 备注：论文报告 HM3D-OVON 宏平均成功率 36.4%，比匹配的 Transformer 基线高 6.3 个百分点；迁移测试覆盖 HSSD，真实部署在 Unitree Go2 上进行 50 次试验，报告成功率 82%。
+
+</details>
+
+<details>
+<summary><strong>新仓库</strong></summary>
+
+### HOPE
+- 链接：https://github.com/hitchopen/HOPE
+- 类别：强化学习 / 全身控制 / 规划 / 挑战平台
+- 机器人类型：人形机器人
+- 仿真器：Isaac Lab / MuJoCo
+- 部署：仿真与 Agibot A3 参考部署路径
+- 摘要：一个采用 Apache-2.0 许可证的人形乒乓球开放平台，集成正反手统一全身策略训练、ROS 2 球路规划、带球物理的 MuJoCo 评估、ONNX 导出和 Agibot A3 部署运行器。
+- 备注：仓库于 2026-07-22 更新，核验时为 14 stars。A3 路径文档较完整，但生成资产、检查点和导出模型不随仓库提供；附带挥拍动作被明确标记为占位数据，严肃部署前必须替换。Unitree G1 仅出现在设计文档中，没有已交付代码路径。
+
+### legged_mpc_amp
+- 链接：https://github.com/Lxliam/legged_mpc_amp
+- 类别：控制 / 数据集工具 / 强化学习
+- 机器人类型：四足机器人
+- 仿真器：Gazebo；可导出 Isaac Lab 格式的 AMP 数据
+- 部署：仿真
+- 摘要：一个基于 ROS Noetic、NMPC 和全身控制的工作区，可自动完成键盘驱动步态 rollout、AMP 运动数据录制、足端轨迹可视化及 Isaac Lab `.npz` 数据转换。
+- 备注：仓库支持 Go1、Go2、A1、Aliengo 和 Lite3，于 2026-07-22 有推送，核验时为 41 stars；修改部分声明 BSD-3-Clause，并基于 `QiayuanLiao/legged_control`。目前没有版本化 release，也未核验硬件部署。
+
+### go2_rl_robotlab
+- 链接：https://github.com/wertyuilife2/go2_rl_robotlab
+- 类别：强化学习 / 运动控制 / 基准评估
+- 机器人类型：四足机器人 — Unitree Go2
+- 仿真器：Isaac Lab / MuJoCo
+- 部署：仿真、sim-to-sim 与有文档说明的真实机器人评估
+- 摘要：一个采用 Apache-2.0 许可证的 Go2 MoE-CTS Isaac Lab/RobotLab 实现，包含 MuJoCo sim-to-sim 部署、异步 RoboGauge 策略评估和真实楼梯行走演示。
+- 备注：仓库于 2026-07-21 有推送，核验时为 44 stars。其报告 RoboGauge 得分 0.6984，高于早期 Isaac Gym 实现的 0.6713，并链接 RSS 2026 论文；本次运行未独立复现实验结果或真实机器人演示。
+
+</details>
+
+<details>
+<summary><strong>实验室 / 教授信号</strong></summary>
+
+### Stéphane Caron / 智能系统与机器人研究所（ISIR）
+- 机构：CNRS / Sorbonne University
+- 主页：https://scaron.info/
+- 实验室 / 院系：Institute for Intelligent Systems and Robotics
+- 关键主题：感知运动 / 双足平衡 / Koopman 表示 / 模型预测控制 / 开源机器人
+- 备注：Caron 于 2026 年 4 月加入 ISIR，新发布的 Koopman DCM 是一条明确的新研究信号：其模型化运动控制路线开始结合从真实双足数据学习的表示，同时保留面向控制的坐标与 MPC 约束；其公开工作也继续围绕开源轮腿双足 Upkie 展开。
+- 学生与代表工作：
+  - [Stéphane Caron](https://scaron.info/) — [Koopman DCM](https://arxiv.org/abs/2607.18760)
+
+### Hitch Interactive / UC Berkeley ROAR Platform — HOPE
+- 机构：Hitch Interactive 与 University of California, Berkeley
+- 主页：https://github.com/hitchopen/HOPE
+- 实验室 / 院系：ROAR Platform 合作项目
+- 关键主题：人形乒乓球 / 全身强化学习 / 运动规划 / 仿真到现实 / 具身智能挑战
+- 备注：HOPE 仓库现已围绕 Agibot A3 公开较广的竞赛与研究栈，包括稳定的策略/规划接口，以及参考仿真和部署路径。它对关注基准驱动人形全身控制的团队很有参考价值，但未提供预训练权重和可直接用于正式部署的挥拍动作。
+- 学生与代表工作：
+  - [HOPE 贡献者](https://github.com/hitchopen/HOPE/graphs/contributors) — [HOPE 开放平台](https://github.com/hitchopen/HOPE)
+
+</details>
+
+<details>
+<summary><strong>招聘信号</strong></summary>
+
+自上一轮运行后未发现新的、可核验的招聘或机会信号。ETH Zurich RSL 官方页面上的滚动 PhD、Postdoc、研究人员和工程岗位仍然有效；EPFL BioRob 人形神经力学岗位关闭已在 2026-07-20 草稿中标记，因此本期均不作为新条目重复收录。
+
+</details>

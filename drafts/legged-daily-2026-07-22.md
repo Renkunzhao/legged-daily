@@ -1,0 +1,94 @@
+**English** | [中文](../zh/drafts/legged-daily-2026-07-22.md)
+# Legged Daily - 2026-07-22
+
+## Summary
+- Koopman DCM generalizes the divergent component of motion from reduced pendulum models to learned unstable Koopman eigenfunctions, using one hour of real-biped data and showing improved walking-reference tracking plus MPC viability constraints.
+- LANav replaces Transformer self-attention with structured linear-attention state updates for open-vocabulary object-goal navigation; it reports a 36.4% HM3D-OVON success rate and 82% success over 50 real Unitree Go2 trials.
+- HOPE now offers a substantial open stack for Agibot A3 humanoid table tennis, spanning Isaac Lab whole-body policy training, ROS 2 planning, MuJoCo evaluation, ONNX export, and a deployment reference path.
+- Two quadruped repositories are also worth tracking: `legged_mpc_amp` packages NMPC/WBC-based AMP data generation for five robot families, while `go2_rl_robotlab` provides an Isaac Lab-to-MuJoCo-to-real Go2 locomotion workflow with RoboGauge evaluation.
+- Stéphane Caron's new paper is an early research signal from his 2026 move to CNRS/Sorbonne's ISIR, connecting model-based balance coordinates, data-driven representations, open-source bipeds, and MPC.
+
+<details>
+<summary><strong>New Papers</strong></summary>
+
+### Koopman DCM: Unstable Eigenfunctions as Data-driven Representations for Legged Balancing
+- Link: https://arxiv.org/abs/2607.18760
+- Source: arXiv
+- Date: 2026-07-21
+- Authors: Stéphane Caron
+- Topics: legged robots / biped balancing / Koopman operators / divergent component of motion / model predictive control
+- Summary: The paper reinterprets the divergent component of motion as an unstable Koopman eigenfunction and learns that representation directly from closed-loop measurement-action data instead of restricting it to a linear inverted-pendulum model.
+- Notes: Training uses one hour of real-robot data. The learned DCM improves reference-pattern tracking on a real biped, and simulated humanoid experiments use it as a hard state-based viability constraint inside MPC. The manuscript says accompanying code will be released after peer review, so no code is available yet.
+
+### Beyond Transformers: Linear Attention Policy for Open-Vocabulary Object Goal Navigation
+- Link: https://arxiv.org/abs/2607.18794
+- Source: arXiv
+- Date: 2026-07-21
+- Authors: Jiahong Zhang, Yifan Lin, Yandong Zhang, Sijun Shen, Kexin Wang, Yuqi Pan, Hongjuan Pei, Wei Wang, Guoqi Li
+- Topics: quadruped robots / open-vocabulary navigation / linear attention / robot learning / sim-to-real
+- Summary: LANav uses linear-attention policy backbones as structured recurrent state updates and introduces weighted state-expansion linear attention to preserve useful history under partial observability.
+- Notes: The reported HM3D-OVON macro-average success rate is 36.4%, 6.3 percentage points above the matched Transformer baseline. Transfer tests cover HSSD, and the real-world evaluation reports 82% success over 50 trials on a Unitree Go2.
+
+</details>
+
+<details>
+<summary><strong>New Repos</strong></summary>
+
+### HOPE
+- Link: https://github.com/hitchopen/HOPE
+- Category: reinforcement learning / whole-body control / planning / challenge platform
+- Robot Type: humanoid robot
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: simulation and Agibot A3 reference deployment path
+- Summary: An Apache-2.0 open platform for humanoid table tennis that integrates unified forehand/backhand whole-body policy training, ROS 2 ball planning, MuJoCo evaluation with ball physics, ONNX export, and an Agibot A3 deployment runner.
+- Notes: The repository was updated on 2026-07-22 and had 14 stars at verification. Its A3 path is documented end to end, but generated assets, checkpoints, and exported models are not bundled; the included swing motions are explicitly placeholders that must be replaced before serious deployment. Unitree G1 appears only in design documents, not as a shipped code path.
+
+### legged_mpc_amp
+- Link: https://github.com/Lxliam/legged_mpc_amp
+- Category: control / dataset tooling / reinforcement learning
+- Robot Type: quadruped robots
+- Simulator: Gazebo; exports AMP data in Isaac Lab format
+- Deploy: simulation
+- Summary: A ROS Noetic workspace built around NMPC and whole-body control that automates keyboard-driven gait rollout, AMP motion-data recording, foot-trajectory visualization, and conversion to Isaac Lab `.npz` datasets.
+- Notes: The repository supports Go1, Go2, A1, Aliengo, and Lite3, and was pushed on 2026-07-22. It had 41 stars at verification and declares BSD-3-Clause terms for its modifications; it is based on `QiayuanLiao/legged_control`. There is no tagged release or verified hardware deployment.
+
+### go2_rl_robotlab
+- Link: https://github.com/wertyuilife2/go2_rl_robotlab
+- Category: reinforcement learning / locomotion / benchmarking
+- Robot Type: quadruped robot — Unitree Go2
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: simulation, sim-to-sim, and documented real-robot evaluation
+- Summary: An Apache-2.0 Isaac Lab/RobotLab implementation of MoE-CTS for Go2 locomotion, with MuJoCo sim-to-sim deployment, asynchronous RoboGauge policy evaluation, and real-stair-walking demonstrations.
+- Notes: The repository was pushed on 2026-07-21 and had 44 stars at verification. It reports a RoboGauge score of 0.6984 versus 0.6713 for its earlier Isaac Gym implementation and links an RSS 2026 paper; these results and real-robot demos were not independently reproduced in this run.
+
+</details>
+
+<details>
+<summary><strong>Lab / Professor Signals</strong></summary>
+
+### Stéphane Caron / Institute for Intelligent Systems and Robotics (ISIR)
+- Institution: CNRS / Sorbonne University
+- Homepage: https://scaron.info/
+- Lab / Department: Institute for Intelligent Systems and Robotics
+- Key Topics: perceptive locomotion / biped balancing / Koopman representations / model predictive control / open-source robots
+- Notes: Caron's newly posted Koopman DCM work is a concrete research signal after he joined ISIR in April 2026. It extends his model-based locomotion line toward representations learned from real-biped data while retaining a control-oriented coordinate and MPC constraints; his public work also continues around the open-source Upkie wheeled biped.
+- Students and Representative Work:
+  - [Stéphane Caron](https://scaron.info/) — [Koopman DCM](https://arxiv.org/abs/2607.18760)
+
+### Hitch Interactive / UC Berkeley ROAR Platform — HOPE
+- Institution: Hitch Interactive and University of California, Berkeley
+- Homepage: https://github.com/hitchopen/HOPE
+- Lab / Department: ROAR Platform collaboration
+- Key Topics: humanoid table tennis / whole-body reinforcement learning / motion planning / sim-to-real / embodied-AI challenges
+- Notes: The HOPE repository now exposes a broad competition and research stack around Agibot A3, including stable policy/planner interfaces and reference simulation/deployment paths. It is a useful signal for teams interested in benchmark-driven humanoid whole-body control, though pretrained weights and production-ready swing motions are not included.
+- Students and Representative Work:
+  - [HOPE contributors](https://github.com/hitchopen/HOPE/graphs/contributors) — [HOPE open platform](https://github.com/hitchopen/HOPE)
+
+</details>
+
+<details>
+<summary><strong>Job Signals</strong></summary>
+
+No new verified job or opportunity signal was found since the previous run. ETH Zurich RSL's rolling PhD, Postdoc, research staff, and engineering openings remain active on its official page, while the EPFL BioRob humanoid-neuromechanics closure was already flagged in the 2026-07-20 draft; neither is duplicated as a new item here.
+
+</details>
