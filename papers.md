@@ -141,6 +141,24 @@
 - Topics: locomotion / adaptation / legged robots
 - Summary: Rapid motor adaptation for legged robots.
 
+### Extreme Parkour with Legged Robots
+- Link: https://extreme-parkour.github.io/
+- Source: project page / arXiv
+- Date: 2023
+- Authors: Xuxin Cheng, Kexin Shi, Ananye Agarwal, Deepak Pathak
+- Topics: quadruped / parkour / vision-based locomotion / reinforcement learning / sim-to-real / depth camera
+- Summary: Trains a single end-to-end neural policy in simulation to perform dynamic quadruped parkour from front-facing depth images, demonstrating high jumps, long jumps, handstands, tilted-ramp traversal, and generalization to novel obstacle courses on a low-cost robot.
+- Notes: Cited by the Isaaclab_Parkour repository; useful anchor for vision-based agile locomotion and parkour-style legged RL.
+
+### Robot Parkour Learning
+- Link: https://robot-parkour.github.io/
+- Source: CoRL 2023 / project page
+- Date: 2023
+- Authors: Ziwen Zhuang, Zipeng Fu, Jianren Wang, Christopher G. Atkeson, Sören Schwertfeger, Chelsea Finn, Hang Zhao
+- Topics: quadruped / parkour / vision-based locomotion / reinforcement learning / distillation / sim-to-real / depth camera
+- Summary: Learns diverse quadruped parkour skills with reinforcement learning and distills them into a single egocentric-depth vision policy that autonomously selects skills for climbing obstacles, leaping gaps, crawling under barriers, squeezing through slits, and running in real-world environments.
+- Notes: CoRL 2023 Oral and Best Systems Paper Award Finalist; official code: https://github.com/ZiwenZhuang/parkour.
+
 ### Evaluation of an Actuated Spine in Agile Quadruped Locomotion
 - Link: https://arxiv.org/abs/2605.07988
 - Source: arXiv
@@ -456,5 +474,327 @@
 - Topics: humanoid / wheeled-legged robot / transformable robot / whole-body control / reinforcement learning / manipulation
 - Summary: Transformable high-DoF robot that switches between humanoid and wheel-legged modes with RL-based whole-body control for hybrid locomotion and manipulation.
 - Notes: Useful hardware-system reference for dual-mode humanoid mobility.
+
+</details>
+
+---
+
+<details>
+<summary><strong>July 2026 Daily Additions</strong></summary>
+
+### Athena-WBC: Capability-Aligned Policy Experts for Long-Tail Humanoid Whole-Body Control
+- Link: https://arxiv.org/abs/2607.04837
+- Source: arXiv
+- Date: 2026-07-06; v2 2026-07-07
+- Authors: Yuan Jiang, Ningyuan Zhang, Xicun Yang, Yuzhi Jiang, Jie Chen
+- Topics: humanoid, whole-body control, motion tracking, teacher-student distillation, policy experts, reinforcement learning
+- Summary: Athena-WBC targets long-tail failures in full-size humanoid motion-tracking controllers by routing hard motions to capability-aligned dynamic and balance experts, distilling privileged teachers into one deployable controller, then fine-tuning with RL.
+- Notes: High signal for humanoid motion-prior / whole-body-control tracking pipelines because it argues failures are not only data exposure problems, but also training-recipe / induced-capability mismatches.
+
+### Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation
+- Link: https://arxiv.org/abs/2607.06186
+- Source: arXiv
+- Date: 2026-07-07
+- Authors: Yan Pan, Yuanchuan Ren, Chipui Chan, Jingcheng Sun, Chengxu Zhou
+- Topics: quadruped, loco-manipulation, robot design, bimanual manipulation, VLM skill sequencing, Unitree Go2
+- Summary: The paper proposes adding a prismatic-slider / two-revolute-joint / gripper manipulator to each front calf of a Unitree Go2, enabling ground-level bimanual manipulation while all four feet remain planted and using a VLM to sequence predefined skills.
+- Notes: Current validation described in the abstract is simulation-only, but the morphology is a distinctive alternative to trunk-mounted arms or leg-as-manipulator schemes.
+
+### WristMimic: Full-Body Humanoid Control with Wrist-Guided Manipulation
+- Link: https://arxiv.org/abs/2607.06438
+- Source: arXiv; accepted to ECCV 2026
+- Date: 2026-07-07
+- Authors: Wongyun Yu, Youngwoon Kim, Minsu Cho
+- Topics: humanoid, full-body control, human-object interaction, retargeting, manipulation, contact-rich control
+- Summary: WristMimic retargets human object-interaction demonstrations by tracking contact-free body and wrist targets while letting fingers learn manipulation from object tracking and contact outcomes, enabling finger-agnostic transfer across hand embodiments.
+- Notes: Useful adjacent signal for humanoid whole-body manipulation and motion retargeting; less locomotion-specific than Athena-WBC, but strong for full-body interaction.
+
+### Human Motion Priors for Scalable Robot Learning Across Morphologies
+- Link: https://arxiv.org/abs/2606.30290
+- Source: arXiv
+- Date: 2026-06-29
+- Authors: Guillaume Sartoretti and coauthors
+- Topics: cross-morphology retargeting, robot learning, quadruped, hexapod, quadruped manipulator, privileged RL, behavior priors, teleoperation, text-conditioned motion
+- Summary: X-Morph converts human motion into deployable locomotion and loco-manipulation policies for non-humanoid legged robots by retargeting human motions into robot references, tracking them with privileged RL, and distilling causal student policies.
+- Notes: Selected because it directly addresses the scarce-motion-data problem for non-humanoid legged robots and complements ABot-C0's quadruped motion-corpus direction.
+
+### Semi-Modular Wheel-Legged Quadruped With Agile Bimanual Capability
+- Link: https://arxiv.org/abs/2606.30243
+- Source: arXiv
+- Date: 2026-06-29; v2 2026-07-07
+- Authors: Luca Rossini, Arturo Laurenzi, Francesco Ruscelli, Yifang Zhang, Jingcheng Jiang, Giovanbattista Gravina, Lorenzo Baccelliere, Corrado Burchielli, Stefano Cordasco, Luca Muratore, Nikos Tsagarakis
+- Topics: wheel-legged quadruped, loco-manipulation, bimanual manipulation, robot design, whole-body control, reinforcement learning
+- Summary: KYON is a semi-modular wheel-legged quadruped with reconfigurable lower legs and a bimanual upper body, combining base-mounted actuation, transmission mechanisms, whole-body control, and RL policies for dynamic locomotion and manipulation experiments.
+- Notes: v2 appeared on 2026-07-07; high-signal as a hardware morphology update rather than a pure learning method.
+
+### Immersive Social Interaction with VR and LLM-Assisted Humanoids
+- Link: https://arxiv.org/abs/2607.07430
+- Source: arXiv
+- Date: 2026-07-08
+- Authors: Niraj Pudasaini, Geeta Chandra Raju Bethala, Pranav Doma, Anthony Tzes, Yi Fang
+- Topics: humanoid / teleoperation / VR / LLM-assisted control / locomotion commands / data collection
+- Summary: Describes an Apple Vision Pro based teleoperation system for Unitree H1 that combines voice-controlled locomotion, VR manipulation retargeting, dexterous-hand control, and bidirectional social interaction.
+- Notes: Reported novice-user evaluations include 80% object-manipulation success and 70% social cube-passing success; the multimodal logs are positioned as future imitation-learning data.
+
+### Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report
+- Link: https://arxiv.org/abs/2607.07370
+- Source: arXiv
+- Date: 2026-07-07
+- Authors: Xufeng Zhao, Fuzhi Yang, Jianhui Chen, Li Gao, Zhang Meng, Jie Gao, Yao Zheng, Congyang Zhao, Tianxiong Lv, Menglin Yang, Minqi Gu, Yaru Zhao, Wenyu Liu, Honglin Han, Shihui Su, Zixiao Tang, Liu Liu, Mu Xu, Yang Cai, Wenbin Tang
+- Topics: quadruped / motion tracking / locomotion / scene interaction / foundation policy / data scaling / deployment
+- Summary: Presents ABot-C0, a quadruped behavior-foundation system built around a multi-source motion-data pipeline, flow-matching generalist motion policy, privileged-to-perceptive locomotion, and unified real-world deployment stack.
+- Notes: The abstract reports 16,074 physically feasible motion clips and a project page planned but not yet released; track for future code/data release.
+
+### ContactMimic: Humanoid Object Interaction via Contact Control
+- Link: https://arxiv.org/abs/2607.08742
+- Source: arXiv / project page
+- Date: 2026-07-09
+- Authors: Xinyao Li, Xialin He, Runpei Dong, Saurabh Gupta
+- Topics: humanoid / loco-manipulation / contact control / motion tracking / sim-to-real
+- Summary: Adds explicit part-level binary contact commands to humanoid keypoint tracking so policies can produce or suppress physical contact during object interaction, with simulation tests over 10 motions and real-world validation over 5 motions.
+- Notes: Project page: https://lixinyao11.github.io/contactmimic-page/. Adjacent to legged locomotion but useful for humanoid full-body control and real-world Unitree G1 contact-conditioned interaction.
+
+### Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains
+- Link: https://arxiv.org/abs/2607.07830
+- Source: arXiv
+- Date: 2026-07-08
+- Authors: Xuanyu Chen, Mohan Liu, Dengchen Mei, Zhihao Gu, Haitian Zhang, Kaimin Mao, Haiyue Zhu, Shijun Yan, Lin Wang
+- Topics: humanoid / locomotion / slope traversal / reinforcement learning / sim-to-real / proprioception
+- Summary: Introduces HumoSlope, a two-stage physics-guided humanoid locomotion framework with a slope-adaptive ZMP regularizer and biomechanical gait adapter; reports blind proprioceptive outdoor traversal of grass slopes up to 62.7% / 32.1 degrees.
+- Notes: High relevance for robust humanoid terrain adaptation because it targets persistent gravitational bias on steep continuous slopes rather than flat or discrete obstacle settings.
+
+### ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation
+- Link: https://arxiv.org/abs/2607.08741
+- Source: arXiv / SIGGRAPH 2026 / project page
+- Date: 2026-07-09
+- Authors: Kaifeng Zhao, Mathis Petrovich, Haotian Zhang, Tingwu Wang, Siyu Tang, Davis Rempe
+- Topics: humanoid / human motion generation / interactive locomotion control / diffusion / text-conditioned control
+- Summary: Introduces a streaming autoregressive diffusion framework for real-time, controllable 3D human motion generation with online text prompts, kinematic constraints, path following, and interactive locomotion control.
+- Notes: Project page and planned code/model release: https://research.nvidia.com/labs/sil/projects/ardy/. Adjacent signal rather than a robot-control paper, but relevant to humanoid motion-data generation and interactive policy conditioning.
+
+### GIRAF: Towards Generalizable Human Interactions with Articulated Objects
+- Link: https://arxiv.org/abs/2607.07880
+- Source: arXiv / CVPR 2026 HuMoGen Workshop
+- Date: 2026-07-08
+- Authors: Xiaohan Zhang, Sebastian Starke, Alexander Winkler, Federica Bogo, Samir Aroudj, Yuting Ye
+- Topics: embodied AI / locomotion-to-manipulation transitions / full-body motion generation / articulated objects / contact
+- Summary: Proposes a text-conditioned diffusion model for full-body human interaction with articulated objects, emphasizing coordinated approach locomotion, hand-object contact, object articulation, and generalization to unseen object configurations.
+- Notes: Not a legged-robot deployment result, but useful for tracking data/model directions for humanoid loco-manipulation and contact-rich full-body behavior synthesis.
+
+### HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum
+- Link: https://arxiv.org/abs/2607.02332
+- Source: arXiv / project page
+- Date: 2026-07-02
+- Authors: Chenxin Liu, Qingzhou Lu, Guangxiao Yang, Xuanyang Shi, Chenghan Yang, Yanjiang Guo, Jianyu Chen
+- Topics: humanoid / whole-body teleoperation / motion tracking / payload-aware locomotion / reinforcement learning
+- Summary: Presents HEFT, a full-size humanoid teleoperation framework that trains deployable policies on noisy VR references while using reconstructed motion as privileged guidance, plus a windowed payload curriculum for motion-dependent heavy-load robustness; reports deployment on the 175 cm, 65 kg L7 humanoid with motions including turns, forward/backward locomotion, squats, and two-hand payloads up to 24 kg.
+- Notes: Project page: https://heft.axell.top/. The arXiv HTML lists affiliations as Tsinghua University, RobotEra, and Shanghai Qizhi Institute.
+
+### CLAP: Direct VLM-to-VLA Adaptation via Language-Action Grounding
+- Link: https://arxiv.org/abs/2607.08974
+- Source: arXiv / project page
+- Date: 2026-07-09
+- Authors: Yuri Ishitoya, Jeremy Siburian, Masashi Hamaya, Kuniaki Saito, Cristian C. Beltran-Hernandez, Mai Nishimura
+- Topics: vision-language-action models / robot learning / language-action grounding / compact VLA
+- Summary: Introduces CLAP, a Causal Language-Action Prediction method that prepends numeric action sequences with natural-language action descriptions so pretrained VLMs can be adapted into VLAs with minimal architectural changes; reports 90.8% on LIBERO with single-epoch fine-tuning and plans open-weight 0.8B, 2B, and 4B releases.
+- Notes: This is manipulation/VLA-focused rather than legged-specific; track as an adjacent compact-VLA signal for future humanoid loco-manipulation pipelines.
+
+### Differential Analysis of Multispectral Images for Terrain Identification
+- Link: https://arxiv.org/abs/2607.09319
+- Source: arXiv
+- Date: 2026-07-10
+- Authors: Omar Kashmar, Hemendra Arya, Fulvio Mastrogiovanni
+- Topics: terrain perception / multispectral sensing / autonomous navigation / edge deployment
+- Summary: Proposes DRIFT, a lightweight multispectral terrain-identification framework combining raw spectral bands, illumination-tolerant band-ratio features, and differential fusion; evaluates on oil-on-soil UAV multispectral data and a controlled water-on-grass study, reporting stronger robustness than RGB-style baselines under lighting and material ambiguity.
+- Notes: Not a legged-robot paper by itself, but terrain understanding under illumination/material shifts is relevant to outdoor quadruped and humanoid navigation stacks.
+
+### Robust bipedal locomotion on flowable slopes via foot-driven terrain manipulation
+- Link: https://arxiv.org/abs/2607.11855
+- Source: arXiv
+- Date: 2026-07-13
+- Authors: Deniz Kerimoglu, Junnosuke Kamohara, Jiyeon Maeng, Ziwon Yoon, Seth Hutchinson, Ye Zhao, Daniel I. Goldman
+- Topics: bipedal locomotion / granular terrain / terradynamics / foot morphology / terrain manipulation
+- Summary: Studies bipedal locomotion on granular slopes using a small robophysical biped with cleated feet, showing that intermediate cleat spacing can shape substrate stresses and improve locomotion while overly sparse or dense cleats degrade performance.
+- Notes: High relevance for legged robots operating on deformable outdoor terrain; the key signal is that foot design and terrain response control can become active locomotion mechanisms rather than only robustness problems.
+
+### SKooP: Symmetric Koopman Predictions for Faster and More Generalizable Legged Robot Locomotion with Reinforcement Learning
+- Link: https://arxiv.org/abs/2607.11624
+- Source: arXiv
+- Date: 2026-07-13
+- Authors: Evelyn D'Elia, Weishu Zhan, Giulio Turrisi, Giulio Romualdi, Giuseppe L'Erario, Raffaello Camoriano, Wei Pan, Daniele Pucci
+- Topics: legged locomotion / reinforcement learning / symmetry / Koopman models / sample efficiency / sim-to-real transfer
+- Summary: Introduces SKooP, which learns a Koopman dynamics model alongside the locomotion policy, uses Koopman predictions as privileged critic observations, and adds group symmetries to actor, critic, encoder, and decoder networks for more equivariant legged RL.
+- Notes: Strong candidate for the long-term paper list if follow-up artifacts or benchmark details are useful; also connects to iit-DLSLab-style work on sample-efficient and transferable locomotion learning.
+
+### TAC-LOCO: Unified Whole-Body Control for Quadrupedal TACtile-Informed LOCO-Manipulation
+- Link: https://arxiv.org/abs/2607.10132
+- Source: arXiv
+- Date: 2026-07-11
+- Authors: Muqun Hu, Yuhao Zhou, Kabir Ray Malik, Chi Lin, Won Suk Lee, Yu She, Yan Gu
+- Topics: quadruped / loco-manipulation / tactile sensing / whole-body control / reinforcement learning / sim-to-real
+- Summary: Proposes TAC-LOCO, a tactile-augmented unified RL controller that fuses tactile-array latent features with proprioception to control a Unitree Go2, arm, and gripper during dynamic loco-manipulation under changing external interactions.
+- Notes: Reports zero-shot hardware deployment on Unitree Go2 with WidowX 250 and tactile gripper, including reduced grasp force and improved object stability under load changes and release events.
+
+### GaitSpan: Growing Humanoid Locomotion from Walking to Running
+- Link: https://arxiv.org/abs/2607.12114
+- Source: arXiv
+- Date: 2026-07-13
+- Authors: Kwan-Yee Lin, Zilin Wang, Janelle J. Liu, Stella X. Yu
+- Topics: humanoid locomotion / reinforcement learning / gait transition / sim-to-real
+- Summary: GaitSpan expands a pretrained walking policy into continuous-speed walking, jogging, and running-like locomotion by reusing frozen walking structure, combining learned internal rhythms, shaping dynamic strides, and adding residual corrections; the authors report cross-morphology transfer and zero-shot deployment on unseen simulated and real terrains.
+- Notes: Project page: https://gaitspan2026.github.io/. Its code button pointed to https://github.com/LeCAR-Lab/GaitSpan/ during review, but that repository was not publicly accessible at the check time.
+
+### Agile perceptive multi-skill locomotion for quadrupedal robots in the wild
+- Link: https://arxiv.org/abs/2607.13579
+- Source: Science Robotics / arXiv
+- Date: 2026-07-15
+- Authors: Jun-Gill Kang, Jaehyun Park, Tae-Gyu Song, Joon-Ha Kim, Seungwoo Hong, Hae-Won Park
+- Topics: quadruped / perceptive locomotion / reinforcement learning / gait transition / sim-to-real
+- Summary: APT-RL pretrains Transformer-based latent locomotion skills on 180,000 trajectory-optimization samples, adapts them with reinforcement learning, and distills perception into a single onboard policy that autonomously selects and transitions between gaits across stairs, hurdles, stepping stones, gaps, forest debris, and other uneven terrain.
+- Notes: Published in Science Robotics on 2026-07-15. The project reports 4.25 m/s over a 60 cm step, a 6 m/s instantaneous peak during a stair drop-down, and completed 1.1 km urban and 0.34 km forest routes using only onboard sensing and computation. Project page: https://skillquadsr.github.io/. No public code link was visible during review.
+
+### EgoHTR: Egocentric 4D Demonstrations of Human Terrain Traversal
+- Link: https://arxiv.org/abs/2607.13472
+- Source: arXiv
+- Date: 2026-07-15
+- Authors: Alex Brandes, Haig Conti Georges Sajelian, Manthan Patel, Dominik Hollidt, Chenhao Li, Matthias Heyrman, Oliver Hausdoerfer, Manuel Kaufmann, Xi Wang, Jonas Frey, Angela P. Schoellig, Christian Holz, Marc Pollefeys, Marco Hutter
+- Topics: humanoid / terrain traversal / human motion dataset / 4D reconstruction / imitation learning
+- Summary: EgoHTR introduces a scene-aligned egocentric reconstruction pipeline and dataset with 55 human terrain-traversal sequences and more than 150,000 frames, connecting contextual human motion capture to perceptive locomotion policies and reconstructed-reference deployment on Unitree G1 hardware.
+- Notes: Project page: https://egohtr.github.io/. The paper says the reconstruction pipeline is open source and designed for community extensions, but the public project-site repository checked today exposed website assets rather than a separately documented code or dataset release; release readiness should be rechecked.
+
+### Learning Agile Navigation in Crowded Environments for Quadruped Robots
+- Link: https://arxiv.org/abs/2607.15036
+- Source: arXiv
+- Date: 2026-07-16
+- Authors: Shuyu Wu, Zeyu Liu, Tianbao Zhang, Fanxing Li, Fangyu Sun, Mingkang Xiong, Wei Xi, Wenxian Yu, Danping Zou
+- Topics: quadruped / crowded navigation / reinforcement learning / Velocity Obstacles / LiDAR / sim-to-real
+- Summary: VOP-Nav uses multi-frame local LiDAR to predict a Velocity-Obstacle-derived safe velocity region, feeding that prediction to an end-to-end navigation policy at inference time and using it as a training reward, without explicit human detection, tracking, or global mapping.
+- Notes: Evaluated in Isaac Gym and deployed on a Unitree Go2 in indoor and outdoor dynamic crowds. No official code repository was found during today's verification.
+
+### Safe Execution of RL Policies Via Acceleration-Based CBF-QP Constraint Enforcement for Real-World Robotic Deployments
+- Link: https://arxiv.org/abs/2607.14488
+- Source: IROS 2026 / arXiv
+- Date: 2026-07-16
+- Authors: Bastien Muraccioli, Alice Cariou, Pierre-Alexandre Leziart, Mathieu Celerier, Arnaud Demont, Gentiane Venture, Mehdi Benallegue
+- Topics: humanoid / safe reinforcement learning / control barrier function / quadratic programming / runtime safety / whole-body control
+- Summary: Acc-CBF-QP filters an existing RL policy at acceleration level without modifying training, enforcing joint-position, velocity, torque, and collision constraints while regulating deviation from the original policy through torque- or forward-dynamics-based QP tasks.
+- Notes: Accepted to IROS 2026 and validated in simulation and hardware on a 19-DoF Unitree H1 and 7-DoF Kinova Gen3. The project reports reducing H1 hardware violations from 10.04 to 0.80 per second, a 92% reduction. Project page: https://safe-rl-qp.github.io/.
+
+### Scaling Behavior Foundation Model for Humanoid Robots
+- Link: https://arxiv.org/abs/2607.15163
+- Source: arXiv
+- Date: 2026-07-16
+- Authors: Weishuai Zeng, Kangning Yin, Xiaojie Niu, Shunlin Lu, Weixiang Zhong, Jiahe Chen, Feiyu Jia, Xiao Chen, Zirui Wang, Furui Xu, Ming Zhou, Kailin Li, Weinan Zhang, He Wang, Li Yi, Dahua Lin, Jiangmiao Pang, Jingbo Wang
+- Topics: humanoid / behavior foundation model / motion tracking / reinforcement learning / Transformer / scaling
+- Summary: ScaleBFM coordinates global-frame whole-body motion tracking, balanced scaling of on-policy rollout width and depth, heterogeneous reference-motion diversity, and a scalable Humanoid Transformer to improve reusable humanoid behavior learning and generalization in simulation and on hardware.
+- Notes: The project aggregates more than 102 million human-motion frames at 50 FPS and reports test-set MPKPE reductions of over 10% in local mode and 82% in global mode relative to existing humanoid controllers. Project page: https://scalebfm.github.io/. The official repository currently contains a staged-release notice and expects most retargeting, training, and deployment code by 2026-07-26, so it is not counted as a mature repository today: https://github.com/zengweishuai/ScaleBFM.
+
+### Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control
+- Link: https://arxiv.org/abs/2607.14182
+- Source: RoboCup Symposium 2026 / arXiv
+- Date: 2026-07-15
+- Authors: J. M. A. Marcelo, M. Brienza, E. Bugli, L. Comito, D. Nardi, D. D. Bloisi, V. Suriani
+- Topics: humanoid / whole-body control / reinforcement learning / audio grounding / skill orchestration / sim-to-real
+- Summary: The system classifies continuous audio into music or speech, aligns music through fingerprinting and semantic embeddings or grounds speech into a discrete imitation-learned skill library, then schedules the selected whole-body policy through a shared reinforcement-learning control pipeline.
+- Notes: Accepted at the 29th RoboCup International Symposium and validated in simulation and on a physical Unitree G1. The contribution is mainly semantic skill selection and orchestration over an existing multi-policy control stack rather than a new low-level locomotion learner. Project page: https://lab-rococo-sapienza.github.io/semantic-WBC/.
+
+### Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning
+- Link: https://arxiv.org/abs/2607.12702
+- Source: arXiv
+- Date: 2026-07-14
+- Authors: Flavio Maiorana, Valerio Spagnoli, Eugenio Bugli, Flavio Volpi, Daniele Affinita, Vincenzo Suriani, Daniele Nardi, Luca Iocchi
+- Topics: humanoid / loco-manipulation / soccer / reinforcement learning / depth perception / privileged learning
+- Summary: A temporal depth encoder is embedded into a reinforcement-learning policy through a task-specific projection layer, allowing a simulated Booster T1 humanoid to dribble toward targets and react to obstacles or an active opponent directly from depth observations without explicit scene-state estimation.
+- Notes: The paper reports 100% success in nominal target-driven dribbling, 96% with one static obstacle, and 46% against an active ball-attacker. Results are simulation-only, and the lab's associated `learning-to-dribble` repository currently contains only a README and license rather than implementation code.
+
+### Design and Control of the “QuadBoat”: A Quadruped Surface Vehicle for Drowning Rescue
+- Link: https://arxiv.org/abs/2607.13633
+- Source: arXiv
+- Date: 2026-07-15
+- Authors: Lianxin Zhang, Yihan Huang, Huihuan Qian
+- Topics: quadruped morphology / unmanned surface vehicle / rescue robotics / model predictive control / visual tracking
+- Summary: Presents an actively posture-adjustable quadruped-configured surface vehicle that combines inverse kinematics with cascaded MPC-PID control for agile water-surface motion, visual target tracking, and object retrieval.
+- Notes: This is adjacent to conventional legged locomotion—the quadruped structure is used as a reconfigurable multi-hull watercraft—but it is a useful morphology-and-control signal for rescue robotics.
+
+### PAKE: Learning Whole-Body Loco-Manipulation with Partial Kinematic Embeddings
+- Link: https://arxiv.org/abs/2607.11041
+- Source: arXiv
+- Date: 2026-07-13
+- Authors: Zhengmao He, Moonkyu Jung, Hyeongjun Kim, Jiseong Lee, Hui Zhang, Jemin Hwangbo, Jie Song
+- Topics: quadruped / loco-manipulation / whole-body control / reinforcement learning / normalizing flows / sim-to-real
+- Summary: Introduces a hierarchical framework in which a Kinematic Normalizing Flow encodes redundant torso-and-arm inverse-kinematic solutions, a high-level policy selects partial references in that latent space, and a low-level policy converts them into dynamically feasible full-body commands.
+- Notes: Evaluated on a quadruped with a six-DoF arm; the paper reports 24 hardware episodes across eight tasks, including cart pulling, sweeping, charger insertion, and hanger placement, with 4.5 cm end-effector position error and 0.14 rad orientation error.
+
+### Stop to Decide: Latency-Aware Proprioceptive Navigation Primitives for Mapping-Free Quadruped Inspection
+- Link: https://arxiv.org/abs/2607.11204
+- Source: arXiv
+- Date: 2026-07-13
+- Authors: Hanting Suo, Haonan Yan, Liang Wang, Aiguo Song
+- Topics: quadruped / inspection / proprioceptive navigation / latency-aware control / stair traversal / mapping-free autonomy
+- Summary: Develops a fully onboard, mapping-free and learning-free Unitree Go2 inspection stack whose climb-settle decision primitive remains reliable when shared Jetson Orin compute reduces the navigation loop to about 15 Hz.
+- Notes: On the tested short-top stair platform, the settle-based protocol reduced pooled overshoot from 22/45 to 1/45 trials and the complete system finished the inspection course in 18/20 trials; results are limited to one course geometry, platform, and operator.
+
+### Handroid: Bridging Dexterous Hand and Humanoid
+- Link: https://arxiv.org/abs/2607.16187
+- Source: arXiv
+- Date: 2026-07-17
+- Authors: Ruogu Li, Chenyang Ma, Sikai Li, Zhenyu Wei, Yunchao Yao, Haochen Shi, C. Karen Liu, Shuran Song, Mingyu Ding
+- Topics: humanoid / dexterous hand / reconfigurable robot / reinforcement learning / locomotion / manipulation
+- Summary: Handroid reuses one 27-DoF electromechanical platform as either a 20-DoF anthropomorphic hand or a desktop humanoid with 12-DoF lower limbs, providing shared control and learning interfaces for teleoperation, dexterous manipulation, RL locomotion, gait generation, and motion authoring.
+- Notes: The 0.33 m, 2.05 kg platform is validated on real-world manipulation, walking and whole-body motions, plus a long-horizon sequence that reconfigures embodiment, walks, docks to a Franka arm, and performs dexterous pick-and-place. The paper states that the platform is open source; the project page is https://handroid.org/.
+
+### RAVEN: Reinforcement-Adaptive Visibility-Graph Planning for Robust Humanoid Navigation with Collision-Free MPC
+- Link: https://arxiv.org/abs/2607.15701
+- Source: arXiv
+- Date: 2026-07-17
+- Authors: Ruochen Hou, Shiqi Wang, Beom Jun Kim, Hanzhang Fang, Mehak Singal, Dennis W. Hong
+- Topics: humanoid / navigation / reinforcement learning / visibility graph / model predictive control / collision avoidance
+- Summary: RAVEN uses an RL meta-policy to adapt obstacle inflation and the geometric construction of a visibility-graph planner, then applies collision-free MPC and a learned locomotion controller for interpretable long-horizon humanoid navigation under delay, observation noise, and tracking uncertainty.
+- Notes: Evaluated against manually tuned visibility-graph MPC and pure-RL navigation, with reported improvements in obstacle overshoot, narrow-passage robustness, and reliability under uncertainty; the paper shows deployment on a Booster T1 biped in a half-size RoboCup field. No official code repository was found during today's verification.
+
+### Beyond Transformers: Linear Attention Policy for Open-Vocabulary Object Goal Navigation
+- Link: https://arxiv.org/abs/2607.18794
+- Source: arXiv
+- Date: 2026-07-21
+- Authors: Jiahong Zhang, Yifan Lin, Yandong Zhang, Sijun Shen, Kexin Wang, Yuqi Pan, Hongjuan Pei, Wei Wang, Guoqi Li
+- Topics: quadruped robots / open-vocabulary navigation / linear attention / robot learning / sim-to-real
+- Summary: LANav uses linear-attention policy backbones as structured recurrent state updates and introduces weighted state-expansion linear attention to preserve useful history under partial observability.
+- Notes: The reported HM3D-OVON macro-average success rate is 36.4%, 6.3 percentage points above the matched Transformer baseline. Transfer tests cover HSSD, and the real-world evaluation reports 82% success over 50 trials on a Unitree Go2.
+
+### Koopman DCM: Unstable Eigenfunctions as Data-driven Representations for Legged Balancing
+- Link: https://arxiv.org/abs/2607.18760
+- Source: arXiv
+- Date: 2026-07-21
+- Authors: Stéphane Caron
+- Topics: legged robots / biped balancing / Koopman operators / divergent component of motion / model predictive control
+- Summary: The paper reinterprets the divergent component of motion as an unstable Koopman eigenfunction and learns that representation directly from closed-loop measurement-action data instead of restricting it to a linear inverted-pendulum model.
+- Notes: Training uses one hour of real-robot data. The learned DCM improves reference-pattern tracking on a real biped, and simulated humanoid experiments use it as a hard state-based viability constraint inside MPC. The manuscript says accompanying code will be released after peer review, so no code is available yet.
+
+### Extreme-RGMT: Continual Learning of Highly Dynamic Skills for Robust Generalist Humanoid Control
+- Link: https://arxiv.org/abs/2607.20110
+- Source: arXiv
+- Date: 2026-07-22
+- Authors: Yubiao Ma, Han Yu, Kai Guo, Changtai Lv, Zhengquan Mao, Boyang Xing, Xuemei Ren, Dongdong Zheng
+- Topics: humanoid / whole-body motion tracking / continual learning / highly dynamic skills / teleoperation
+- Summary: A two-stage framework that starts from a generalist motion-tracking policy, then acquires difficult dynamic skills while constraining policy drift on already-mastered motions.
+- Notes: Difficulty-aware sampling and advantage-prioritized trajectory resampling target sparse critical segments; the paper and project page show Unitree G1 rollouts including aerial cartwheels, backflips, kip-ups, and online tracking from inertial motion capture. No training code was verified in this run.
+
+### PGTT: Phase-Guided Terrain Traversal for Perceptive Legged Locomotion
+- Link: https://arxiv.org/abs/2510.18348
+- Source: arXiv / IROS 2026
+- Date: 2026-07-22
+- Authors: Alexandros Ntagkas, Chairi Kiourt, Konstantinos Chatzilygeroudis
+- Topics: quadruped / perceptive locomotion / reinforcement learning / terrain adaptation / sim-to-real
+- Summary: A perceptive deep-RL locomotion method that encodes per-leg phase through spline-based reward shaping while retaining direct joint-space actions, reducing dependence on morphology-specific oscillator or IK action priors.
+- Notes: This is a v2 update to a 2025 preprint, now marked accepted at IROS 2026. The paper reports stronger disturbance and obstacle success than evaluated baselines, real Unitree Go2 validation with a LiDAR heightmap pipeline, and preliminary ANYmal-C transfer with the same hyperparameters.
+
+### What Matters in Humanoid General Motion Tracking? An Empirical Study
+- Link: https://arxiv.org/abs/2607.19903
+- Source: arXiv
+- Date: 2026-07-22
+- Authors: Fabio Amadio, Enrico Mingo Hoffman
+- Topics: humanoid / whole-body motion tracking / imitation learning / sim-to-real / Unitree G1
+- Summary: A controlled empirical study of motion-command representation, observation history, action representation, actuation profile, hand-force randomization, and training approach in general humanoid motion tracking, implemented in the open-source YAHMP framework.
+- Notes: The authors evaluate retargeted motions against a TWIST2 baseline trained on the same set and deploy policies zero-shot on a real Unitree G1, demonstrating diverse tracking, perturbation recovery, and forceful interaction.
 
 </details>

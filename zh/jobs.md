@@ -8,15 +8,6 @@
 <details>
 <summary><strong>学术机会</strong></summary>
 
-### EPFL Biorobotics Laboratory / Auke Ijspeert
-- Type: PhD / Postdoc
-- Location: Lausanne, Switzerland
-- Source: official website
-- Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
-- Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
-- Status: active
-- Notes: 官方 openings 页面仍列出 1 个 Postdoc 和 1 个 PhD 位置，研究方向是用人形机器人研究并利用人类运动神经力学，包含数值神经机械仿真、bio-inspired controllers 和 reinforcement learning；申请会持续评估直到招满，页面写明 2026 年 9 月是理想开始时间。
-
 ### ETH Zurich Robotic Systems Lab
 - Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
 - Location: Zurich, Switzerland
@@ -137,5 +128,66 @@
 - Amazon Robotics / FAR / Personal Robotics
   - Status: watching
   - Notes: 继续检查 controls、locomotion、embodied-AI 和 deployment 相关岗位。
+
+</details>
+
+---
+
+<details>
+<summary><strong>其他机会</strong></summary>
+
+### RAI Institute
+- 类型: Research Scientist
+- 地点: Cambridge, MA / Zurich, Switzerland
+- 来源: 官方 careers 页面
+- 截止时间: rolling / unknown
+- 主题: robotics / AI / machine learning / machine perception / robot systems
+- 状态: active
+- 备注: Careers 页面列出 Research Scientist 与 Research Scientist (Zurich Location) 岗位；属于广义机器人研究信号，并非明确腿足限定。
+
+### Robot Athletic Intelligence Lab / Chalmers University of Technology
+- 类型: PhD / Postdoc / Master's thesis
+- 地点: Gothenburg, Sweden
+- 来源: 官方实验室主页
+- 截止时间: unknown
+- 主题: 欠驱动机器人、腿足机器、人形机器人、最优控制、强化学习、开放可复现科学
+- 状态: watching
+- 备注: 实验室主页表示欢迎博士、博士后和硕士论文学生；今天没有验证到具体申请截止时间或独立招聘页面，因此作为 watchlist 信号，而不是已确认资助职位。
+
+### 1X
+- Type: Simulation Engineer
+- Location: San Carlos, California
+- Source: official careers page
+- Deadline: unknown
+- Topics: humanoid / simulation / robotics systems / validation
+- Status: active / watching
+- Notes: 1X 官方 careers 页面在 Hardware Engineering 下列出 San Carlos 的 “Simulation Engineer”。抓取到的岗位详情页只暴露标题，因此腿足控制相关性尚未验证；但作为人形机器人行业仿真基础设施信号值得跟踪。
+
+### LAAS-CNRS Gepetto Team — 人形机器人安全强化学习博士职位
+- 类型: PhD
+- 地点: 法国图卢兹，部分研究将在日本筑波 CNRS-AIST JRL 进行
+- 来源: 官方网站 — https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
+- 截止时间: 2026-07-31 23:59
+- 主题: 人形机器人 / 腿足运动 / 强化学习 / MPC / 全身控制 / 安全控制
+- 状态: active
+- 备注: 2026-07-17 复查有效。该全职博士项目为期 36 个月，计划于 2026-10-01 入职，页面列出的月薪为税前 2,300 欧元。课题由 Olivier Stasse 与 Mehdi Benallegue 指导，将学习得到的离散接触、落脚点、步态或行为决策与在线 MPC 结合，并计划在 PAL Robotics Kangaroo 和/或 Unitree H1/R1 平台上验证。
+
+### IHMC Robotics Team：腿足机器人软件与自主系统工程师
+- 类型: Research Engineer
+- 地点: 美国佛罗里达州 Pensacola
+- 来源: 官方网站 — https://www.ihmc.us/2026-software-autonomy-engineer/
+- 截止时间: 未注明
+- 主题: 人形机器人 / 腿足机器人 / 自主系统 / 感知 / 导航 / 移动操作 / VLA / ROS 2 / 强化学习
+- 状态: active
+- 备注: 全职带薪职位，负责在 Alex 等人形和腿足平台上开发自主与半自主能力，工作覆盖语义场景理解、探索、规划、导航、移动操作、VLA 或多模态模型集成、语言交互、仿真和真机现场测试。申请需通过邮件提交简历、求职信、填写完成的问卷及三位推荐人信息；要求已具备或能够获得美国工作许可。
+
+### Menlo Research / Cyclotron 运动控制团队
+- 类型：机器人工程师 / 机器人研究员（运动控制）
+- 地点：新加坡 / 混合办公；职位元数据同时将新加坡和越南列为可申请地区
+- 来源：官方招聘页面
+- 截止时间：未知
+- 主题：人形 / 双足运动 / 强化学习 / 最优控制 / 仿真 / 仿真到现实 / 全身控制
+- 状态：招聘中
+- 备注：该岗位负责开发 Asimov 的行走、跌倒恢复、爬楼梯和负载运动控制器与学习策略，包括在 Menlo 自研 Uranus 仿真器中训练、部署到硬件、分析遥测、接入自主系统栈，以及开放 Cyclotron 工具。官方职位：https://jobs.ashbyhq.com/menlo/b900cda7-1d4e-44c2-810d-3e5322ea1102
 
 </details>

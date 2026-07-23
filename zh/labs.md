@@ -201,8 +201,11 @@
   - Homepage: https://people.iiis.tsinghua.edu.cn/~jychen/
   - Lab: https://group.iiis.tsinghua.edu.cn/~isrlab/
   - Google Scholar: https://scholar.google.com/citations?user=rc9jIf0AAAAJ&hl=zh-CN&oi=ao
-  - Key Topics: 3D perception / humanoid robot learning / human-robot interaction
-  - Notes: 感知和人形学习交叉方向的良好 source-network anchor。
+  - Key Topics: 3D perception / humanoid robot learning / human-robot interaction / whole-body teleoperation / payload-aware locomotion / motion tracking / sim-to-real
+  - Notes: 感知和人形学习交叉方向的良好 source-network anchor。与 RobotEra、上海期智研究院合作的 HEFT 又补充了一个全尺寸人形机器人重载遥操作与 sim-to-real motion tracking 的强信号。
+
+  - Students and Representative Works:
+    - [Chenxin Liu](https://heft.axell.top/) — [HEFT](https://heft.axell.top/) / [motion_tracking](https://github.com/Axellwppr/motion_tracking)
 
   </details>
 
@@ -339,5 +342,172 @@
 - arXiv: https://arxiv.org/abs/2606.04718
 - Key Topics: humanoid / locomotion / gait adaptation / mixture of experts / multi-terrain RL / Unitree G1
 - Notes: CoRe-MoE 提供了一个围绕步行-跑步切换和 terrain-aware expert specialization 的多机构信号；arXiv 摘要报告了 Unitree G1 零样本部署。通讯作者为 Renjing Xu 和 Haohui Huang。
+
+</details>
+
+---
+
+<details>
+<summary><strong>其他实验室与合作网络信号</strong></summary>
+
+### Robot Athletic Intelligence Lab / Shivesh Kumar
+- 机构: Chalmers University of Technology
+- 主页: https://chalmers-rail.github.io/
+- 实验室 / 院系: Robot Athletic Intelligence Lab; Department of Mechanical Engineering
+- 关键主题: 欠驱动机器人、腿足机器人、人形机器人、多体动力学、最优控制、强化学习、生成式 AI、硬件-算法协同设计、腿足 MPC
+- 备注: 官方主页称 RAIL 由 Shivesh Kumar 领导，研究面向欠驱动机器人、腿足机器和人形机器人的 physical and athletic intelligence。主页还列出 SSF Future Research Leader 资助、WASP 博士项目资助、7 台机器人，并在开放职位区明确欢迎博士、博士后和硕士论文学生。
+
+### Saurabh Gupta / UIUC Robotics and Embodied AI
+- Institution: University of Illinois Urbana-Champaign
+- Homepage: https://saurabhg.web.illinois.edu/
+- arXiv: https://arxiv.org/abs/2607.08742
+- Lab / Department: Robotics and Embodied AI research group / UIUC Computer Science
+- Key Topics: humanoid / loco-manipulation / embodied AI / contact-rich interaction / robot learning
+- Notes: ContactMimic 给出了该作者网络在人形接触控制方向的强信号；后续应跟踪 contact-conditioned humanoid motion tracking 相关项目页和代码发布。
+- Students and Representative Works:
+  - [Xinyao Li](https://lixinyao11.github.io/contactmimic-page/) — [ContactMimic: Humanoid Object Interaction via Contact Control](https://arxiv.org/abs/2607.08742)
+
+### NVIDIA Spatial Intelligence Lab / human-motion generation line
+- Institution: NVIDIA Research
+- Homepage: https://research.nvidia.com/labs/sil/projects/ardy/
+- Lab / Department: Spatial Intelligence Lab
+- Key Topics: humanoid / human motion generation / diffusion / interactive control / motion priors
+- Notes: ARDY 计划发布代码/模型，值得持续观察：它可能成为人形机器人 motion prior、交互式约束和上游动作数据生成工具。
+
+### OmniContact collaboration network
+- 机构: Noitom Robotics; The Hong Kong University of Science and Technology; Wuhan University; The University of Hong Kong
+- 主页: https://omnicontact.github.io/
+- GitHub: https://github.com/Ingrid789/OmniContact_sim2sim
+- 实验室 / 部门: project page / repository author affiliations
+- 关键主题: humanoid / loco-manipulation / contact flow / long-horizon skill chaining / MuJoCo
+- 备注: 仓库列出 Runyi Yu、Xiaoyi Lin、Ji Ma、Yinhuai Wang、Koukou Luo、Jiahao Ji、Huayi Wang、Wenjia Wang、Runhan Zhang、Ping Tan、Ting Wu、Ruoli Dai、Qifeng Chen、Lei Han。这个网络值得作为 contact-rich 人形技能链和 Unitree G1 风格仿真的来源继续跟踪。
+- 学生与代表作:
+  - [Runyi Yu](https://ingrid789.github.io/IngridYu/) — [OmniContact](https://omnicontact.github.io/)
+  - [Xiaoyi Lin](https://github.com/XiaoyiLin-code) — [OmniContact](https://omnicontact.github.io/)
+
+### Dynamic Legged Systems Lab / IIT
+- 机构: Istituto Italiano di Tecnologia
+- 主页: https://github.com/iit-DLSLab/fault-locomotion-isaaclab
+- GitHub: https://github.com/iit-DLSLab
+- 实验室 / 部门: Dynamic Legged Systems Lab
+- 关键主题: quadruped / locomotion / fault tolerance / reinforcement learning / Isaac Lab / MuJoCo / ROS2 deployment
+- 备注: 新的 fault-locomotion-isaaclab 仓库是围绕 motor-failure robustness、sim-to-sim 和 sim-to-real quadruped locomotion 的具体来源信号，并关联 arXiv 工作 “Mixture-of-Experts RL for Fault-Tolerant Legged Locomotion”。
+
+### Georgia Tech / bipedal granular locomotion collaboration signal
+- 机构: Georgia Institute of Technology and collaborators
+- 主页: https://arxiv.org/abs/2607.11855
+- 实验室 / 部门: paper source / collaboration network
+- 关键主题: bipedal locomotion / granular media / terradynamics / foot-terrain interaction
+- 备注: Deniz Kerimoglu 等人的 flowable-slope biped 论文，是围绕 Daniel I. Goldman、Ye Zhao 及合作者在可变形基质上腿足运动研究的有用 source-network 信号。
+
+### RoboParty Lab
+- 主页：https://github.com/Roboparty
+- GitHub：https://github.com/Roboparty
+- 实验室 / 院系：RoboParty Lab
+- 关键主题：人形机器人 / 动作重定向 / 模仿学习 / 无监督强化学习 / 部署 / 遥操作
+- 备注：该实验室发布 UFO，同时在 https://github.com/Roboparty/Party_OS 公布 Party OS 路线图，将动作数据生成、人体到人形机器人的动作重定向、MimicLite 模仿学习、UFO 无监督学习，以及未来的交互与 VLA 层串联起来，是值得持续关注的新开源人形控制基础设施来源。
+
+### Mehdi Benallegue / CNRS-AIST Joint Robotics Laboratory
+- 机构: CNRS / 日本 AIST
+- 主页: https://jrl-umi3218.github.io/
+- GitHub: https://github.com/safe-rl-qp
+- 实验室 / 系: CNRS-AIST JRL，IRL3218
+- 关键主题: 人形机器人 / 安全强化学习 / 全身控制 / CBF-QP / 任务与运动规划
+- 备注: IROS 2026 Acc-CBF-QP 此次发布围绕 mc_rtc 形成了完整的开源安全过滤器生态，并在 Unitree H1 和 Kinova Gen3 上完成硬件验证。同一研究方向也直接支撑了 LAAS/JRL 新发布的博士课题：将高层 RL 决策与在线 MPC 结合。
+- 学生与代表工作:
+  - [Alice Cariou](https://safe-rl-qp.github.io/) — [Safe Execution of RL Policies Via Acceleration-Based CBF-QP Constraint Enforcement](https://safe-rl-qp.github.io/)
+
+### Lab RoCoCo / Sapienza University of Rome
+- 机构: Sapienza University of Rome
+- 主页: https://lab-rococo-sapienza.github.io/semantic-WBC/
+- GitHub: https://github.com/Lab-RoCoCo-Sapienza
+- 实验室 / 系: Department of Computer, Control, and Management Engineering
+- 关键主题: 人形机器人 / 机器人学习 / 全身控制 / 强化学习 / 移动操作 / 感知
+- 备注: 实验室当前公开成果包含两条相近的人形机器人学习路线：Unitree G1 真机上的音频条件全身技能编排，以及 Booster T1 的深度视觉足球运球。其官方 GitHub 组织还公开机器人学习和感知项目，适合作为后续代码与项目发布的跟踪源。
+- 学生与代表工作:
+  - [Michele Brienza](https://arxiv.org/abs/2607.14182) — [Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control](https://lab-rococo-sapienza.github.io/semantic-WBC/)
+  - [Flavio Maiorana](https://arxiv.org/abs/2607.12702) — [Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning](https://arxiv.org/abs/2607.12702)
+
+### Hae-Won Park / Dynamic Robot Control and Design Lab
+- 机构: KAIST
+- 主页: https://skillquadsr.github.io/
+- Google Scholar: https://scholar.google.com/citations?user=q7v_ewQAAAAJ&hl=en
+- 实验室 / 系: 机械工程系
+- 关键主题: 四足机器人 / 动态运动 / 感知控制 / 强化学习 / 机器人设计
+- 备注: APT-RL 为该团队在自研 KAIST HOUND 平台上的高速、多技能、地形条件运动增加了很强的系统信号，覆盖机载感知、抗振传感器集成以及公里级户外实验。
+- 学生与代表工作:
+  - [Jun-Gill Kang](https://jgkang1210.github.io) — [Agile perceptive multi-skill locomotion for quadrupedal robots in the wild](https://skillquadsr.github.io/)
+
+### PAKE 合作网络
+- 机构：香港科技大学（广州）/ KAIST / ETH Zurich / 香港科技大学
+- 主页：https://arxiv.org/abs/2607.11041
+- 实验室 / 院系：跨机构论文合作网络
+- 关键主题：四足 / 移动操作 / 全身控制 / 强化学习 / 仿真到现实
+- 备注：Zhengmao He、Moonkyu Jung、Jemin Hwangbo、Jie Song 等合作者构成了学习式全身控制和四足移动操作方向的高相关来源网络；PAKE 包含多样化真实硬件任务验证。
+
+### Menlo Research / Asimov
+- 机构：Menlo Research
+- 主页：https://www.menlo.ai/
+- GitHub：https://github.com/MenloResearch
+- 实验室 / 院系：应用研发 / Asimov / Cyclotron 运动控制团队
+- 关键主题：开源人形 / 双足运动 / 强化学习 / 仿真 / 仿真到现实 / 自主系统
+- 备注：Menlo 正在发布 Asimov 1 人形机器人的硬件与文档，并针对真实双足运动进行专项招聘；公开仓库目前已提供硬件和 MuJoCo 资产，运动策略仍标为即将推出。
+
+### Mingyu Ding / Shuran Song / Handroid 合作网络
+- 机构：University of North Carolina at Chapel Hill / Stanford University
+- 主页：https://handroid.org/
+- 实验室 / 院系：UNC-Chapel Hill 与 Stanford 机器人研究作者网络
+- 关键主题：可重构机器人 / 人形机器人 / 灵巧操作 / 机器人学习 / 运动控制
+- 备注：该合作团队发布 Handroid，形成一个同时覆盖手尺度灵巧性与人形移动能力的紧凑型共享硬件与学习平台。其统一接口和跨形态任务使这一作者网络值得用于追踪形态复用及运动—操作一体化研究。
+- 学生与代表工作：
+  - [Ruogu Li](https://skevinci.github.io/) — [Handroid](https://handroid.org/)
+  - [Zhenyu Wei](https://zhenyuwei2003.github.io/) — [Handroid](https://handroid.org/)
+
+### Dennis W. Hong / Robotics and Mechanisms Laboratory（RoMeLa）
+- 机构：University of California, Los Angeles
+- 主页：https://www.romela.org/
+- 实验室 / 院系：Robotics and Mechanisms Laboratory，Mechanical and Aerospace Engineering
+- 关键主题：人形机器人 / 双足导航 / 强化学习 / MPC / 避碰
+- 备注：RAVEN 延续 RoMeLa 的人形导航研究路线：让学习模块重塑全局规划器几何，同时通过约束 MPC 保留明确的安全和动力学限制，并在 Booster T1 平台上展示。
+- 学生与代表工作：
+  - [Ruochen Hou](https://arxiv.org/abs/2607.15701) — [RAVEN](https://arxiv.org/abs/2607.15701)
+
+### Ye Zhao / Laboratory for Intelligent Decision and Autonomous Robots（LIDAR）
+- 机构：Georgia Institute of Technology
+- 主页：https://lab-idar.gatech.edu/
+- 实验室 / 院系：Institute for Robotics and Intelligent Machines / George W. Woodruff School of Mechanical Engineering
+- 关键主题：人形机器人 / 双足运动 / 强化学习 / 特权学习 / 仿真到现实
+- 备注：该组近期重点介绍 Learn to Teach（L2T）：一个联合训练教师与学生策略的单阶段框架，通过共享动力学复用仿真样本，并报告在 Digit 上超过 12 类挑战地形的零样本部署。这是围绕既有 RA-L 论文的近期实验室/新闻信号，不计入今天的新论文。项目：https://lidar-learn-to-teach.github.io/。
+- 学生与代表工作：
+  - [Feiyang Wu](https://arxiv.org/abs/2402.06783) — [Learn to Teach](https://lidar-learn-to-teach.github.io/)
+
+### Stéphane Caron / 智能系统与机器人研究所（ISIR）
+- 机构：CNRS / Sorbonne University
+- 主页：https://scaron.info/
+- 实验室 / 院系：Institute for Intelligent Systems and Robotics
+- 关键主题：感知运动 / 双足平衡 / Koopman 表示 / 模型预测控制 / 开源机器人
+- 备注：Caron 于 2026 年 4 月加入 ISIR，新发布的 Koopman DCM 是一条明确的新研究信号：其模型化运动控制路线开始结合从真实双足数据学习的表示，同时保留面向控制的坐标与 MPC 约束；其公开工作也继续围绕开源轮腿双足 Upkie 展开。
+- 学生与代表工作：
+  - [Stéphane Caron](https://scaron.info/) — [Koopman DCM](https://arxiv.org/abs/2607.18760)
+
+### Hitch Interactive / UC Berkeley ROAR Platform — HOPE
+- 机构：Hitch Interactive 与 University of California, Berkeley
+- 主页：https://github.com/hitchopen/HOPE
+- 实验室 / 院系：ROAR Platform 合作项目
+- 关键主题：人形乒乓球 / 全身强化学习 / 运动规划 / 仿真到现实 / 具身智能挑战
+- 备注：HOPE 仓库现已围绕 Agibot A3 公开较广的竞赛与研究栈，包括稳定的策略/规划接口，以及参考仿真和部署路径。它对关注基准驱动人形全身控制的团队很有参考价值，但未提供预训练权重和可直接用于正式部署的挥拍动作。
+- 学生与代表工作：
+  - [HOPE 贡献者](https://github.com/hitchopen/HOPE/graphs/contributors) — [HOPE 开放平台](https://github.com/hitchopen/HOPE)
+
+### 郑冬冬 / Humanoid Robotics (Shanghai) — Extreme-RGMT 合作网络
+- 机构：北京理工大学 / Humanoid Robotics (Shanghai) Co., Ltd.
+- 主页：https://zeonsunlightyu.github.io/Extreme-RGMT.github.io/
+- arXiv：https://arxiv.org/abs/2607.20110
+- 实验室 / 院系：北京理工大学自动化学院；Humanoid Robotics (Shanghai) / OpenLoong 团队
+- 关键主题：人形机器人 / 全身控制 / 动作跟踪 / 持续学习 / 遥操作
+- 备注：Extreme-RGMT 是一条连接北京理工大学、Humanoid Robotics (Shanghai) 与山东大学的新合作信号，尤其适合跟踪通用学习控制、稀有高动态技能、在线惯性动捕输入和 Unitree G1 实体实验的结合。
+- 学生与代表工作：
+  - [马宇彪](https://arxiv.org/search/cs?searchtype=author&query=Ma,+Y) — [Extreme-RGMT](https://arxiv.org/abs/2607.20110)
+  - [俞涵](https://zeonsunlightyu.github.io/Extreme-RGMT.github.io/) — [Extreme-RGMT](https://arxiv.org/abs/2607.20110)
 
 </details>

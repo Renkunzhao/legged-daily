@@ -8,15 +8,6 @@
 <details>
 <summary><strong>Academic Opportunities</strong></summary>
 
-### EPFL Biorobotics Laboratory / Auke Ijspeert
-- Type: PhD / Postdoc
-- Location: Lausanne, Switzerland
-- Source: official website
-- Deadline: rolling until filled; Fall 2026 opening; EPFL doctoral program deadlines are typically April 15 and December 15
-- Topics: humanoid / human locomotion neuromechanics / bio-inspired locomotion control / reinforcement learning
-- Status: active
-- Notes: Official openings page still lists one Postdoc and one PhD position for investigating and leveraging human locomotion neuromechanics using humanoid robots, numerical neuromechanical simulation, bio-inspired controllers, and reinforcement learning; applications are considered continuously until filled, with September 2026 described as a good starting date.
-
 ### ETH Zurich Robotic Systems Lab
 - Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
 - Location: Zurich, Switzerland
@@ -137,5 +128,66 @@
 - Amazon Robotics / FAR / Personal Robotics
   - Status: watching
   - Notes: Continue checking for controls, locomotion, embodied-AI, and deployment roles.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Additional Opportunities</strong></summary>
+
+### RAI Institute
+- Type: Research Scientist
+- Location: Cambridge, MA / Zurich, Switzerland
+- Source: official careers page
+- Deadline: rolling / unknown
+- Topics: robotics / AI / machine learning / machine perception / robot systems
+- Status: active
+- Notes: Careers page lists Research Scientist and Research Scientist (Zurich Location) roles; broad robotics research signal, not explicitly legged-only.
+
+### Robot Athletic Intelligence Lab / Chalmers University of Technology
+- Type: PhD / Postdoc / Master's thesis
+- Location: Gothenburg, Sweden
+- Source: official lab homepage
+- Deadline: unknown
+- Topics: underactuated robotics, legged machines, humanoids, optimal control, reinforcement learning, open reproducible science
+- Status: watching
+- Notes: The lab homepage says it welcomes motivated PhD students, postdoctoral researchers, and master's thesis students; no specific application deadline or job-ad page was verified today, so keep as a watchlist signal rather than a confirmed funded opening.
+
+### 1X
+- Type: Simulation Engineer
+- Location: San Carlos, California
+- Source: official careers page
+- Deadline: unknown
+- Topics: humanoid / simulation / robotics systems / validation
+- Status: active / watching
+- Notes: 1X's official careers page lists a "Simulation Engineer" role under Hardware Engineering in San Carlos. The fetched job detail page exposed only the title, so treat the exact legged-control fit as unverified; still a useful humanoid-industry simulation-infrastructure signal.
+
+### LAAS-CNRS Gepetto Team — PhD in Humanoid Robotics: Safe Reinforcement Learning
+- Type: PhD
+- Location: Toulouse, France, with part of the project at CNRS-AIST JRL in Tsukuba, Japan
+- Source: official website — https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
+- Deadline: 2026-07-31 23:59
+- Topics: humanoid / legged locomotion / reinforcement learning / MPC / whole-body control / safe control
+- Status: active
+- Notes: Rechecked on 2026-07-17. This is a 36-month, full-time PhD starting 2026-10-01 with listed remuneration of EUR 2,300 gross per month. The project combines learned discrete contact, footstep, gait, or behavior decisions with online MPC and plans hardware validation on PAL Robotics Kangaroo and/or Unitree H1/R1 platforms under Olivier Stasse and Mehdi Benallegue.
+
+### IHMC Robotics Team: Legged Robotics Software and Autonomy Engineer
+- Type: Research Engineer
+- Location: Pensacola, Florida, United States
+- Source: official website — https://www.ihmc.us/2026-software-autonomy-engineer/
+- Deadline: unknown
+- Topics: humanoid / legged robotics / autonomy / perception / navigation / loco-manipulation / VLA / ROS 2 / reinforcement learning
+- Status: active
+- Notes: Full-time paid role developing autonomous and semi-autonomous capabilities for humanoid and legged platforms such as Alex. Responsibilities span semantic scene understanding, exploration, planning, navigation, loco-manipulation, VLA or multimodal integration, language interaction, simulation, and hardware field testing. Applications are submitted by email with a resume, cover letter, completed questionnaire, and three references; US work authorization or eligibility to obtain it is required.
+
+### Menlo Research / Cyclotron locomotion team
+- Type: Robotics Engineer / Robotics Researcher, Locomotion
+- Location: Singapore / hybrid; posting metadata also lists Singapore and Vietnam as eligible locations
+- Source: official careers posting
+- Deadline: unknown
+- Topics: humanoid / bipedal locomotion / reinforcement learning / optimal control / simulation / sim-to-real / whole-body control
+- Status: active
+- Notes: The role develops controllers and learned policies for Asimov to walk, recover, climb stairs, and carry loads; responsibilities include training in Menlo's Uranus simulator, hardware deployment, telemetry analysis, autonomy-stack integration, and open-source Cyclotron tooling. Official posting: https://jobs.ashbyhq.com/menlo/b900cda7-1d4e-44c2-810d-3e5322ea1102
 
 </details>

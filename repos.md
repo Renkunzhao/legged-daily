@@ -302,6 +302,15 @@
 - Summary: Simulation-verification and real-robot deployment framework for reinforcement-learning policies across quadrupeds, wheeled-legged robots, and humanoids.
 - Notes: Supports ROS Noetic, ROS 2 Foxy/Humble, libtorch, onnxruntime, Linux, and partial macOS MuJoCo simulation; README lists Unitree A1/Go2/Go2W/B2/B2W/G1, Fourier GR1, zhiniao L4W4, Deeprobotics Lite3, Agibot D1, and DDTRobot Tita support.
 
+### LeggedSkillDeploy
+- Link: https://github.com/haozhang04/LeggedSkillDeploy
+- Category: RL / deployment / simulator / toolkit
+- Robot Type: quadruped / humanoid / wheeled-biped / wheeled-quadruped
+- Simulator: MuJoCo / Gazebo (ROS 2)
+- Deploy: sim / hardware
+- Summary: State-machine-based Python framework for deploying multiple reinforcement-learning and imitation-learning motion policies across legged robot embodiments.
+- Notes: Includes policies and configurations for Unitree Go1/Go2, Go2W, G1 (29 DoF), Duow, and M20; supports keyboard, gamepad, and phone-web control. The README reports hardware testing only on Go1 Pro and warns that real-robot deployment requires appropriate safety precautions and interface adaptation.
+
 ### legged_rl_lab
 - Link: https://github.com/zhw0422/legged_rl_lab
 - Category: RL / simulator / toolkit
@@ -355,6 +364,51 @@
 - Deploy: sim / ROS 2 integration
 - Summary: Unitree Go2 locomotion-control workspace for Isaac Lab PPO experiments, gait/contact analysis, terrain and domain randomization, disturbance testing, and ROS 2 navigation command generation.
 - Notes: Small transparent educational / experiment-log style workspace; useful for Go2 pretrained-policy probes, reward tracking, joint-limit analysis, and ROS 2 command integration.
+
+### BeamDojo
+- Link: https://why618188.github.io/beamdojo/
+- Category: RL / perceptive locomotion / sparse footholds / deployment
+- Robot Type: humanoid
+- Simulator: simulation training (implementation not publicly specified)
+- Deploy: sim / hardware
+- Summary: Two-stage reinforcement-learning framework for agile Unitree G1 locomotion on sparse footholds, combining a polygon-foot foothold reward, double critics, and a LiDAR-based elevation map for real-world deployment.
+- Notes: RSS 2025 project page and paper rather than a public code repository; reports stepping-stone and balance-beam traversal, zero-shot terrain transfer, and an 80% sim-to-real success rate.
+
+### extreme-parkour
+- Link: https://github.com/chengxuxin/extreme-parkour
+- Category: RL / simulator / parkour / deployment
+- Robot Type: quadruped
+- Simulator: Isaac Gym
+- Deploy: sim / hardware
+- Summary: Official ICRA 2024 implementation of Extreme Parkour, training an end-to-end depth-camera policy for dynamic quadruped obstacle traversal with a base-policy and vision-policy distillation pipeline.
+- Notes: Built on legged_gym and RSL-RL; the README documents training, playback, JIT export, and browser visualization, and reports roughly 15-20 hours of training on an RTX 3090.
+
+### parkour
+- Link: https://github.com/ZiwenZhuang/parkour
+- Category: RL / simulator / parkour / deployment
+- Robot Type: quadruped
+- Simulator: Isaac Gym
+- Deploy: sim / hardware
+- Summary: Official code for Robot Parkour Learning, a CoRL 2023 oral project for training quadruped parkour policies with legged_gym and RSL-RL, including A1 / Go1 / Go2 training and deployment materials.
+- Notes: Project page: https://robot-parkour.github.io/. README reports Go1 and Go2 deployment guides and lists the paper as CoRL 2023 Oral and Best Systems Paper Award Finalist.
+
+### Isaaclab_Parkour
+- Link: https://github.com/CAI23sbP/Isaaclab_Parkour
+- Category: RL / simulator / parkour / deployment
+- Robot Type: quadruped
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: sim / sim2sim / hardware planned
+- Summary: Isaac Lab-based Unitree Go2 parkour locomotion project derived from Extreme Parkour, with teacher/student RSL-RL training, play, evaluation, and demo tasks.
+- Notes: README references downloadable teacher/student policies, Isaac Lab-to-MuJoCo sim2sim work, future real-world deployment via go2_parkour_deploy, and required citation of Extreme Parkour and ORBIT.
+
+### go2_parkour_deploy
+- Link: https://github.com/CAI23sbP/go2_parkour_deploy
+- Category: deployment / sim2sim / simulator / parkour
+- Robot Type: quadruped
+- Simulator: MuJoCo / Isaac Lab policy source
+- Deploy: sim / hardware
+- Summary: Unitree Go2 deployment companion for IsaacLab_Parkour policies, supporting Isaac Lab-to-MuJoCo simulation deployment and real-world Go2 deployment.
+- Notes: Requires Unitree MuJoCo; README cites influence from Go2Py, HOVER, Eurekaverse, Spot RL Example, and gym-quadruped.
 
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
@@ -498,15 +552,6 @@
 - Summary: Framework for training humanoid whole-body loco-manipulation from egocentric human demonstrations plus limited robot data.
 - Notes: Uses view alignment and action alignment before deploying VLA policies on Unitree G1 hardware.
 
-### SIMPLE
-- Link: https://github.com/physical-superintelligence-lab/SIMPLE
-- Category: simulator / benchmark / loco-manipulation
-- Robot Type: humanoid
-- Simulator: IsaacSim / MuJoCo
-- Deploy: sim
-- Summary: Simulation-based policy learning and evaluation environment for humanoid whole-body loco-manipulation.
-- Notes: Includes Unitree G1 support, large Objaverse/HSSD assets, and 50+ humanoid whole-body loco-manipulation tasks.
-
 ### GRAIL
 - Link: https://github.com/NVlabs/GRAIL
 - Category: dataset / synthetic data / retargeting / loco-manipulation toolkit
@@ -558,5 +603,264 @@
 - Deploy: data
 - Summary: Curated list of Unitree humanoid papers and projects covering G1, H1, and H1-2 work from 2025-2026.
 - Notes: Best treated as a source-discovery watchlist rather than a research implementation repository.
+
+</details>
+
+---
+
+<details>
+<summary><strong>July 2026 Daily Additions</strong></summary>
+
+### BotRunner64/Teleopit
+- Link: https://github.com/BotRunner64/Teleopit
+- Category: retargeting / teleoperation / dataset / toolkit
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: both
+- Summary: Lightweight whole-body teleoperation framework for Unitree G1, supporting BVH and Pico 4 VR retargeting, sim2sim, sim2real, training data recording, and ONNX policy playback.
+- Notes: Recent README updates mention Pico realtime control, LinkerHand sim2real control, manual HDF5 recording, and consolidated sim/sim2real buffering.
+
+### NJU-RLC/quadrupedal-agility
+- Link: https://github.com/NJU-RLC/quadrupedal-agility
+- Category: RL / deployment / retargeting / dataset
+- Robot Type: quadruped
+- Simulator: Isaac Gym
+- Deploy: both
+- Summary: Official implementation of "Learning Diverse Natural Behaviors for Enhancing the Agility of Quadrupedal Robots," with BBC/TSC/EASI training pipelines and Go2 deployment assets.
+- Notes: Repository cites arXiv:2505.09979 and includes planned/released motion-capture, training, deployment, and retargeting components.
+
+### ansh1113/humanoid-motion-planning
+- Link: https://github.com/ansh1113/humanoid-motion-planning
+- Category: motion planning / control / MPC / RL / simulation
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: A Unitree G1 MuJoCo motion-planning demo stack combining ZMP preview control, A* footstep planning, MPC balance, Jacobian IK manipulation, push recovery, and a pre-trained RL walking policy.
+- Notes: README reports a 2.01 m walking demo at about 0.4 m/s, 4/4 push recovery directions, and 49% MPC energy savings versus PD; no hardware deployment claim, so treat as a simulation / educational watchlist repo.
+
+### matteogoddi/labrob_mujoco_environment
+- Link: https://github.com/matteogoddi/labrob_mujoco_environment
+- Category: MPC / WBC / state estimation / simulator
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim / hardware-oriented setup notes
+- Summary: A Unitree G1 locomotion control environment built around an offline footstep planner, EKF state estimation, IS-MPC for CoM trajectory generation, and whole-body control for reference tracking and constraints.
+- Notes: README frames the goal as closed-loop experiments on Unitree G1 and includes Unitree SDK / network setup notes; the fetched GitHub page does not establish a polished hardware result, so keep it as a technical watchlist candidate.
+
+### iit-DLSLab/mpx
+- Link: https://github.com/iit-DLSLab/mpx
+- Category: MPC / trajectory optimization / JAX / MJX
+- Robot Type: humanoid / quadruped / general legged
+- Simulator: MJX / MuJoCo
+- Deploy: sim / research infrastructure
+- Summary: MPX implements legged-robot MPC and trajectory optimization in JAX, with GPU-parallel scans, differentiable solvers, batched learning-pipeline compatibility, and MJX examples for Talos, H1, Aliengo, and Go2.
+- Notes: Useful as solver infrastructure rather than a robot-specific release; README highlights quadruped trot, humanoid jump, and quadruped barrel-roll examples.
+
+### lbnmahs/quadrrl
+- Link: https://github.com/lbnmahs/quadrrl
+- Category: RL / benchmark / simulator / toolkit
+- Robot Type: quadruped / wheeled-quadruped
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim
+- Summary: Quadrrl is a training and benchmarking library for legged and wheeled-legged quadruped locomotion, with flat and rough terrain RL tasks across ANYmal C/D, Spot, Unitree Go2/B2, Go2W/B2W, Deeprobotics, and Zsibot models.
+- Notes: README lists RSL-RL, RL Games, SKRL, and HARL support; no hardware deployment claim was verified, so treat it as simulation / benchmarking infrastructure.
+
+### BrandoUlissi/isaaclab-go2-locomotion
+- Link: https://github.com/BrandoUlissi/isaaclab-go2-locomotion
+- Category: RL / control / training baseline
+- Robot Type: quadruped
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim
+- Summary: Unitree Go2 reinforcement-learning locomotion baseline in NVIDIA Isaac Lab, with PPO training, deterministic replay scripts, TensorBoard plotting, and documented push-recovery extension.
+- Notes: Latest verified release `v0.2.0-pushrecovery` was published on 2026-06-03 and adds mixed impulsive/sustained disturbance curricula; the release reports 87.5% recovery under 120 N peak impulse loads in simulation.
+
+### CMUYUY/legged-gym-in-isaac-lab
+- Link: https://github.com/CMUYUY/legged-gym-in-isaac-lab
+- Category: RL / simulator migration / toolkit
+- Robot Type: quadruped
+- Simulator: Isaac Lab
+- Deploy: sim
+- Summary: Migrates the classic `legged_gym` ANYmal-C rough-terrain reinforcement-learning setup from Isaac Gym style APIs to NVIDIA Isaac Lab, including DirectRLEnv, USD assets, observations/actions/rewards, and RSL-RL training glue.
+- Notes: Not a fresh 2026-07 update, but useful as a reference for teams porting older Isaac Gym legged-locomotion code to Isaac Lab.
+
+### IsaacLab-Tutorial
+- Link: https://github.com/Lab-of-AI-and-Robotics/IsaacLab-Tutorial/
+- Category: RL / simulator / tutorial / toolkit
+- Robot Type: quadruped / humanoid
+- Simulator: Isaac Lab
+- Deploy: sim / sim-to-real tutorial material
+- Summary: Ten-chapter Isaac Lab tutorial for developing reinforcement-learning environments for legged robots, starting from Unitree Go2 quadruped baselines and extending toward Unitree H1 humanoid locomotion.
+- Notes: Created by Jihoon Moon from the Lab of AI and Robotics at Sungkyunkwan University; chapters cover project scaffolding, assets, kinematics, custom actions, reward shaping, curriculum, ActuatorNet sim-to-real bridging, and humanoid frontiers.
+
+### Axellwppr/motion_tracking
+- Link: https://github.com/Axellwppr/motion_tracking
+- Category: RL / retargeting / dataset / deployment
+- Robot Type: humanoid
+- Simulator: MuJoCo / mjlab
+- Deploy: both
+- Summary: Official implementation for HEFT, with training, evaluation, export, and deployment-facing assets for humanoid whole-body motion tracking; branches cover HEFT training, G1 compliance work, and sim2real runtime/checkpoints.
+- Notes: README mentions PMG support, WPC support, public training datasets or samples, ONNX/PT export, and sim2real branch assets. Full HEFT datasets and some WPC payload labels appear planned for later release.
+
+### johnzhang3/mujoco_mpc_deploy
+- Link: https://github.com/johnzhang3/mujoco_mpc_deploy
+- Category: MPC / control / deployment
+- Robot Type: quadruped / humanoid-adjacent
+- Simulator: MuJoCo / MuJoCo MPC
+- Deploy: hardware
+- Summary: Hardware interface repository for deploying MuJoCo MPC on Unitree robots, paired with the ICRA 2026 paper "Whole-Body Model-Predictive Control of Legged Robots with MuJoCo" and the official MuJoCo MPC / Menagerie stacks.
+- Notes: README says the repo is still work in progress and points users to separate Go1/Go2 branches of MuJoCo MPC; useful as a practical bridge from model-based whole-body MPC to Unitree hardware.
+
+### mjlab-homierl
+- Link: https://github.com/Nagi-ovo/mjlab-homierl
+- Category: RL / locomotion / deployment / toolkit
+- Robot Type: humanoid
+- Simulator: MuJoCo / mjlab
+- Deploy: both
+- Summary: External mjlab task package reproducing the lower-body locomotion RL portion of HOMIE on Unitree G1 and H1, including custom tasks/assets, HIM-PPO training, ONNX export metadata, pretrained checkpoints, sim playback, and a DDS-based real-robot deployment script for G1.
+- Notes: The repository is explicit about deviations from OpenHomie, domain-randomization choices, deployment-grade PD gains, G1/H1 variants, hand/payload attachments, and HOMIE+ torso-pitch extensions; treat as a practical implementation signal, not an official HOMIE release unless confirmed.
+
+### OmniContact_sim2sim
+- Link: https://github.com/Ingrid789/OmniContact_sim2sim
+- Category: control / loco-manipulation / policy deployment / simulator
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim / sim2real-style execution path
+- Summary: Official implementation for OmniContact, a contact-flow framework for chaining humanoid loco-manipulation meta-skills such as carry, push, slide, relocate, kick, and multi-skill sequences; the repository provides scripted CFgen/NPZ motion tracking and joystick hot-switch execution paths for Unitree G1-style MuJoCo scenes.
+- Notes: Paper: https://arxiv.org/abs/2606.26201. The README links Noitom Robotics, HKUST, Wuhan University, and HKU affiliations and an OmniContact dataset on Hugging Face.
+
+### convex-mpc-biped
+- Link: https://github.com/ispaik06/convex-mpc-biped
+- Category: MPC / control / simulator
+- Robot Type: humanoid / biped
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: C++17 MuJoCo implementation of convex MPC over a single-rigid-body model for humanoid/biped locomotion, using contact-wrench optimization, Raibert-style swing-foot planning, and OSQP/Eigen-based infrastructure.
+- Notes: Recent, small repository; track as an educational or prototype-grade convex-MPC implementation unless hardware validation or broader robot support appears.
+
+### fault-locomotion-isaaclab
+- Link: https://github.com/iit-DLSLab/fault-locomotion-isaaclab
+- Category: RL / locomotion / simulator / deployment
+- Robot Type: quadruped
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: both
+- Summary: Isaac Lab DirectEnv for quadrupedal locomotion under motor failures, supporting Aliengo and Go2 flat/rough blind and rough-vision environments, sim-to-sim in MuJoCo, and ROS2 sim-to-real deployment paths.
+- Notes: README links concurrent state estimation, rapid motor adaptation, and Mixture-of-Experts RL for fault-tolerant locomotion; practical follow-up source for robust quadruped locomotion under degraded actuation.
+
+### DribbleMaster
+- Link: https://github.com/Zhuoheng0910/DribbleMaster
+- Category: RL / locomotion / sim-to-sim
+- Robot Type: humanoid
+- Simulator: Isaac Gym / MuJoCo
+- Deploy: sim
+- Summary: Newly published training and evaluation code for the ICRA 2026 paper “Dribble Master,” providing an Isaac Gym humanoid dribbling task, PPO training, policy playback, and MuJoCo sim-to-sim validation.
+- Notes: The repository was created on 2026-07-14 and is MIT-licensed. It corresponds to the earlier arXiv paper 2505.12679 rather than a new paper from this week.
+
+### UFO
+- Link: https://github.com/Roboparty/UFO
+- Category: RL / motion learning / deployment toolkit
+- Robot Type: humanoid
+- Simulator: MJLab / MuJoCo
+- Deploy: both
+- Summary: An unsupervised reinforcement-learning framework for humanoid control with FB and TeCH training, robot-aware motion-data import, tracking/goal/reward inference, and ONNX export; Unitree G1 is the best-tested path and real-robot deployment and teleoperation live on a separate deploy branch.
+- Notes: The repository was created on 2026-07-13 and had 43 GitHub stars when checked. New robot bring-up is explicitly experimental, requires already-retargeted robot motion data, and does not provide automatic motion retargeting or cross-morphology checkpoint reuse.
+
+### safe-rl-qp-mc-rtc-superbuild
+- Link: https://github.com/safe-rl-qp/safe-rl-qp-mc-rtc-superbuild
+- Category: control / RL / toolkit
+- Robot Type: humanoid / general
+- Simulator: MuJoCo / mc_rtc
+- Deploy: both
+- Summary: A CMake superbuild that installs the Acc-CBF-QP framework and dependencies and provides a ready-to-run Unitree H1 walking-policy example for MuJoCo, with a path toward hardware execution and custom RL-QP controllers.
+- Notes: Created on 2026-06-28 and updated on 2026-07-17; documented for Ubuntu 24.04. It links the archived paper implementation and experiment logs at https://github.com/safe-rl-qp/mc-safe-rl-qp, plus a controller template and community examples. This is the recommended starting point for reproducing the open-source IROS 2026 system.
+
+### semantic-WBC
+- Link: https://github.com/Lab-RoCoCo-Sapienza/semantic-WBC
+- Category: control / RL / toolkit
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: both
+- Summary: An official standalone deployment bundle for audio-driven Unitree G1 whole-body skills, with Python code, G1 configurations, ONNX policy execution, a split robot/PC TCP command pipeline, local audio fingerprinting, simulation scripts, and hardware safety guidance.
+- Notes: The repository was substantially prepared for release on 2026-07-15 and is built on RoboJuDo/BeyondMimic components. Base assets can be pulled from upstream, but the README says demo-specific ONNX and audio extras still await a GitHub release or separate URL. No repository-level SPDX license is declared; users should inspect upstream and bundled third-party licenses before reuse.
+
+### asimov-1
+- Link: https://github.com/asimovinc/asimov-1
+- Category: hardware / simulator / control platform
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: both
+- Summary: Open-source files for building and simulating Asimov 1, a 1.2 m, 35 kg humanoid with 25 actuated DoFs, including mechanical CAD, electrical CAD, a MuJoCo model, wiring, schematics, PCB files, and onboard software.
+- Notes: Hardware is licensed under CERN-OHL-S-2.0; the repository marks the locomotion policy and Asimov API as forthcoming, so this is a substantial open platform signal rather than a complete locomotion stack today.
+
+### G1_RL_FootstepTracking
+- Link: https://github.com/CYH-SWU/G1_RL_FootstepTracking
+- Category: RL / locomotion / simulator
+- Robot Type: humanoid
+- Simulator: MuJoCo
+- Deploy: sim
+- Summary: PPO-based omnidirectional footstep-tracking environment for the Unitree G1, using proprioception and commanded footstep positions/yaws to generate 12 leg-joint position increments for forward, backward, lateral, turning, curved, and standing behaviors.
+- Notes: Includes curriculum terrain up to 5 cm steps, symmetry augmentation, tests, CI, and training/evaluation scripts; it is a new small simulation-only repository with no documented hardware deployment.
+
+### fastwmr
+- Link: https://github.com/kevinpark135/fastwmr
+- Category: RL / control
+- Robot Type: humanoid
+- Simulator: Isaac Lab
+- Deploy: sim
+- Summary: An early independent implementation that combines FastSAC-style off-policy humanoid learning with WMR-style recurrent world-state estimation and reconstruction, including environment definitions, actor/critic/decoder modules, replay buffers, training scripts, and focused unit tests.
+- Notes: Created 2026-07-16 and actively updated through 2026-07-20. The repository has zero stars and no declared license at verification time; it is a promising implementation-in-progress, not yet a validated reproduction or hardware deployment.
+
+### g1_real_ws
+- Link: https://github.com/JeanMayoko18/g1_real_ws
+- Category: control / perception / toolkit
+- Robot Type: humanoid
+- Simulator: none
+- Deploy: hardware
+- Summary: A ROS 2 workspace that adapts Nav2 to the Unitree G1 through 3D-LiDAR-to-2D scan processing, planar odometry adaptation and calibration, and command scaling and conditioning for the learned locomotion interface.
+- Notes: Created and last pushed on 2026-07-16, with G1 descriptions, maps, launch files, and ROS packages present. It is very new and has zero stars; the README documents the architecture, but independent real-robot reproduction was not verified today.
+
+### go2_rl_robotlab
+- Link: https://github.com/wertyuilife2/go2_rl_robotlab
+- Category: reinforcement learning / locomotion / benchmarking
+- Robot Type: quadruped robot — Unitree Go2
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: simulation, sim-to-sim, and documented real-robot evaluation
+- Summary: An Apache-2.0 Isaac Lab/RobotLab implementation of MoE-CTS for Go2 locomotion, with MuJoCo sim-to-sim deployment, asynchronous RoboGauge policy evaluation, and real-stair-walking demonstrations.
+- Notes: The repository was pushed on 2026-07-21 and had 44 stars at verification. It reports a RoboGauge score of 0.6984 versus 0.6713 for its earlier Isaac Gym implementation and links an RSS 2026 paper; these results and real-robot demos were not independently reproduced in this run.
+
+### HOPE
+- Link: https://github.com/hitchopen/HOPE
+- Category: reinforcement learning / whole-body control / planning / challenge platform
+- Robot Type: humanoid robot
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: simulation and Agibot A3 reference deployment path
+- Summary: An Apache-2.0 open platform for humanoid table tennis that integrates unified forehand/backhand whole-body policy training, ROS 2 ball planning, MuJoCo evaluation with ball physics, ONNX export, and an Agibot A3 deployment runner.
+- Notes: The repository was updated on 2026-07-22 and had 14 stars at verification. Its A3 path is documented end to end, but generated assets, checkpoints, and exported models are not bundled; the included swing motions are explicitly placeholders that must be replaced before serious deployment. Unitree G1 appears only in design documents, not as a shipped code path.
+
+### legged_mpc_amp
+- Link: https://github.com/Lxliam/legged_mpc_amp
+- Category: control / dataset tooling / reinforcement learning
+- Robot Type: quadruped robots
+- Simulator: Gazebo; exports AMP data in Isaac Lab format
+- Deploy: simulation
+- Summary: A ROS Noetic workspace built around NMPC and whole-body control that automates keyboard-driven gait rollout, AMP motion-data recording, foot-trajectory visualization, and conversion to Isaac Lab `.npz` datasets.
+- Notes: The repository supports Go1, Go2, A1, Aliengo, and Lite3, and was pushed on 2026-07-22. It had 41 stars at verification and declares BSD-3-Clause terms for its modifications; it is based on `QiayuanLiao/legged_control`. There is no tagged release or verified hardware deployment.
+
+### phase_guided_terrain_traversal
+- Link: https://github.com/NtagkasAlex/phase_guided_terrain_traversal
+- Category: RL / control / perception / terrain generation
+- Robot Type: quadruped — Unitree Go2 / ANYmal
+- Simulator: MuJoCo MJX
+- Deploy: simulation and Unitree Go2 hardware
+- Summary: The official PGTT implementation, covering procedural terrain generation, JAX/MJX training, multi-run evaluation, saved policies, a LiDAR elevation-mapping perception stack, and Unitree SDK hardware deployment.
+- Notes: Shared robot-agnostic modules support Go2 and ANYmal configurations; the documented hardware path uses Unitree L1 LiDAR, Point-LIO, elevation mapping, and `unitree_sdk2py`. The repository had 66 stars at verification and no explicit license was visible in GitHub metadata.
+
+### YAHMP
+- Link: https://github.com/fabio-amadio/yahmp
+- Category: RL / motion tracking / evaluation / toolkit
+- Robot Type: humanoid — Unitree G1
+- Simulator: MuJoCo / MJLab
+- Deploy: simulation and documented hardware deployment
+- Summary: An Apache-2.0 modular framework for training, evaluating, exporting, and deploying Unitree G1 general motion-tracking policies, with retargeted AMASS/OMOMO support and a supplied ONNX policy path.
+- Notes: The repository includes nominal, future-reference, and teacher-student variants plus conversion, evaluation, ONNX export, and deployment utilities. It had 13 stars at verification; the paper reports zero-shot real-G1 deployment, but this run did not reproduce training or hardware results.
 
 </details>

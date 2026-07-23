@@ -302,6 +302,15 @@
 - 摘要: 面向强化学习策略的仿真验证与实机部署框架，覆盖四足、轮足和人形机器人。
 - 备注: 支持 ROS Noetic、ROS 2 Foxy/Humble、libtorch、onnxruntime、Linux 和部分 macOS MuJoCo 仿真；README 列出 Unitree A1/Go2/Go2W/B2/B2W/G1、傅利叶 GR1、智脑 L4W4、DeepRobotics Lite3、Agibot D1、DDTRobot Tita 等硬件支持。
 
+### LeggedSkillDeploy
+- 链接: https://github.com/haozhang04/LeggedSkillDeploy
+- 类别: RL / deployment / simulator / toolkit
+- 机器人类型: quadruped / humanoid / wheeled-biped / wheeled-quadruped
+- 仿真器: MuJoCo / Gazebo（ROS 2）
+- 部署: sim / hardware
+- 摘要: 基于状态机的 Python 多策略部署框架，可将强化学习与模仿学习运动策略部署到多种腿足机器人形态。
+- 备注: 包含 Unitree Go1/Go2、Go2W、G1（29 DoF）、Duow 和 M20 的策略及配置，支持键盘、手柄和手机网页控制。README 表明目前仅在 Go1 Pro 上完成实机测试，并提醒实机部署需要充分安全防护及接口适配。
+
 ### legged_rl_lab
 - 链接: https://github.com/zhw0422/legged_rl_lab
 - 类别: RL / simulator / toolkit
@@ -355,6 +364,51 @@
 - 部署: sim / ROS 2 integration
 - 摘要: 面向 Unitree Go2 的 locomotion-control 工作区，用于 Isaac Lab PPO 实验、步态/接触分析、地形与域随机化、扰动测试，以及 ROS 2 导航命令生成。
 - 备注: 小型但透明的教学 / 实验记录式工作区；可参考 Go2 pretrained-policy probe、reward tracking、joint-limit analysis 和 ROS 2 命令集成。
+
+### BeamDojo
+- 链接: https://why618188.github.io/beamdojo/
+- 类别: RL / perceptive locomotion / sparse footholds / deployment
+- 机器人类型: humanoid
+- 仿真器: 仿真训练（公开材料未注明具体实现）
+- 部署: sim / hardware
+- 摘要: 面向 Unitree G1 稀疏落脚点敏捷运动的两阶段强化学习框架，结合多边形足底落脚奖励、双 critic，以及用于实机部署的 LiDAR elevation map。
+- 备注: 当前链接为 RSS 2025 项目页与论文，并非公开代码仓库；报告了踏石、平衡木、零样本地形迁移及 80% sim-to-real 成功率。
+
+### extreme-parkour
+- 链接: https://github.com/chengxuxin/extreme-parkour
+- 类别: RL / simulator / parkour / deployment
+- 机器人类型: quadruped
+- 仿真器: Isaac Gym
+- 部署: sim / hardware
+- 摘要: Extreme Parkour 的 ICRA 2024 官方实现，通过基础策略与视觉策略蒸馏流程，训练基于深度相机的端到端四足动态越障策略。
+- 备注: 基于 legged_gym 与 RSL-RL；README 提供训练、回放、JIT 导出和浏览器可视化说明，并报告使用 RTX 3090 约需 15–20 小时完成训练。
+
+### parkour
+- 链接: https://github.com/ZiwenZhuang/parkour
+- 类别: RL / simulator / parkour / deployment
+- 机器人类型: quadruped
+- 仿真器: Isaac Gym
+- 部署: sim / hardware
+- 摘要: Robot Parkour Learning 的官方代码，CoRL 2023 oral 项目，基于 legged_gym 与 RSL-RL 训练四足 parkour 策略，包含 A1 / Go1 / Go2 训练和部署材料。
+- 备注: 项目页：https://robot-parkour.github.io/。README 提供 Go1 和 Go2 部署指南，并标注论文为 CoRL 2023 Oral、Best Systems Paper Award Finalist。
+
+### Isaaclab_Parkour
+- 链接: https://github.com/CAI23sbP/Isaaclab_Parkour
+- 类别: RL / simulator / parkour / deployment
+- 机器人类型: quadruped
+- 仿真器: Isaac Lab / MuJoCo
+- 部署: sim / sim2sim / hardware planned
+- 摘要: 基于 Isaac Lab 的 Unitree Go2 parkour locomotion 项目，源自 Extreme Parkour，包含 teacher/student RSL-RL 训练、play、evaluation 和 demo 任务。
+- 备注: README 提供 teacher/student policy 下载说明，提到 Isaac Lab 到 MuJoCo 的 sim2sim、未来通过 go2_parkour_deploy 做实机部署，并要求引用 Extreme Parkour 与 ORBIT。
+
+### go2_parkour_deploy
+- 链接: https://github.com/CAI23sbP/go2_parkour_deploy
+- 类别: deployment / sim2sim / simulator / parkour
+- 机器人类型: quadruped
+- 仿真器: MuJoCo / Isaac Lab policy source
+- 部署: sim / hardware
+- 摘要: Isaaclab_Parkour 策略的 Unitree Go2 部署配套仓库，支持 Isaac Lab 到 MuJoCo 的仿真部署，以及 Go2 实机部署。
+- 备注: 依赖 Unitree MuJoCo；README 提到参考 Go2Py、HOVER、Eurekaverse、Spot RL Example 和 gym-quadruped。
 
 ### Stage-Wise CMORL
 - Link: https://github.com/rllab-snu/Stage-Wise-CMORL/tree/main
@@ -498,15 +552,6 @@
 - Summary: 用 egocentric human demonstrations 加少量 robot data 训练 humanoid whole-body loco-manipulation 的框架。
 - Notes: 使用 view alignment 和 action alignment 后，将 VLA policy 部署到 Unitree G1 硬件。
 
-### SIMPLE
-- Link: https://github.com/physical-superintelligence-lab/SIMPLE
-- Category: simulator / benchmark / loco-manipulation
-- Robot Type: humanoid
-- Simulator: IsaacSim / MuJoCo
-- Deploy: sim
-- Summary: 面向 humanoid whole-body loco-manipulation 的 simulation-based policy learning and evaluation 环境。
-- Notes: 包含 Unitree G1 支持、大规模 Objaverse/HSSD assets，以及 50+ humanoid whole-body loco-manipulation tasks。
-
 ### GRAIL
 - Link: https://github.com/NVlabs/GRAIL
 - Category: dataset / synthetic data / retargeting / loco-manipulation toolkit
@@ -558,5 +603,264 @@
 - Deploy: data
 - Summary: Unitree 人形论文和项目整理列表，覆盖 2025-2026 年 G1、H1、H1-2 相关工作。
 - Notes: 更适合作为来源发现 watchlist，而不是研究实现仓库。
+
+</details>
+
+---
+
+<details>
+<summary><strong>2026 年 7 月日报新增仓库</strong></summary>
+
+### BotRunner64/Teleopit
+- 链接: https://github.com/BotRunner64/Teleopit
+- 类别: 重定向 / 遥操作 / 数据集 / 工具库
+- 机器人类型: 人形
+- 仿真器: MuJoCo
+- 部署: 仿真与硬件
+- 摘要: 面向 Unitree G1 的轻量全身遥操作框架，支持 BVH 与 Pico 4 VR 重定向、sim2sim、sim2real、训练数据记录和 ONNX 策略回放。
+- 备注: 近期 README 更新提到 Pico 实时控制、LinkerHand sim2real 控制、手动 HDF5 记录，以及 sim / sim2real reference buffering 的统一。
+
+### NJU-RLC/quadrupedal-agility
+- 链接: https://github.com/NJU-RLC/quadrupedal-agility
+- 类别: 强化学习 / 部署 / 重定向 / 数据集
+- 机器人类型: 四足
+- 仿真器: Isaac Gym
+- 部署: 仿真与硬件
+- 摘要: “Learning Diverse Natural Behaviors for Enhancing the Agility of Quadrupedal Robots”的官方实现，包含 BBC/TSC/EASI 训练流水线与 Go2 部署资产。
+- 备注: 仓库引用 arXiv:2505.09979，并包含动捕、训练、部署和运动重定向相关组件。
+
+### ansh1113/humanoid-motion-planning
+- 链接: https://github.com/ansh1113/humanoid-motion-planning
+- 类别: 运动规划 / 控制 / MPC / RL / 仿真
+- 机器人类型: 人形
+- 仿真器: MuJoCo
+- 部署: 仿真
+- 摘要: 面向 Unitree G1 的 MuJoCo 运动规划 demo 栈，组合了 ZMP preview control、A* 落脚规划、MPC 平衡、Jacobian IK 操作、抗推恢复和预训练 RL 行走策略。
+- 备注: README 报告 2.01 m 行走、约 0.4 m/s、4/4 方向抗推恢复、MPC 相对 PD 节能 49%；未看到硬件部署声明，建议作为仿真 / 教学型 watchlist 仓库。
+
+### matteogoddi/labrob_mujoco_environment
+- 链接: https://github.com/matteogoddi/labrob_mujoco_environment
+- 类别: MPC / WBC / 状态估计 / 仿真器
+- 机器人类型: 人形
+- 仿真器: MuJoCo
+- 部署: 仿真 / 硬件导向配置说明
+- 摘要: Unitree G1 locomotion 控制环境，包含离线落脚规划、EKF 状态估计、用于 CoM 轨迹生成的 IS-MPC，以及用于参考跟踪和约束满足的 whole-body controller。
+- 备注: README 把目标描述为在 Unitree G1 上做闭环实验，并包含 Unitree SDK / 网络配置说明；抓取到的 GitHub 页面尚不能证明成熟硬件结果，适合作为技术 watchlist 候选。
+
+### iit-DLSLab/mpx
+- 链接: https://github.com/iit-DLSLab/mpx
+- 类别: MPC / trajectory optimization / JAX / MJX
+- 机器人类型: 人形 / 四足 / 通用腿足
+- 仿真器: MJX / MuJoCo
+- 部署: 仿真 / 研究基础设施
+- 摘要: MPX 用 JAX 实现腿足机器人 MPC 与轨迹优化，包含 GPU 并行扫描、可微求解器、可接入批量学习 pipeline 的接口，以及 Talos、H1、Aliengo 和 Go2 的 MJX 示例。
+- 备注: 更适合作为求解器基础设施，而不是某个具体机器人的完整发布；README 展示了四足 trot、人形跳跃和四足 barrel roll 示例。
+
+### lbnmahs/quadrrl
+- 链接: https://github.com/lbnmahs/quadrrl
+- 类别: RL / benchmark / simulator / toolkit
+- 机器人类型: 四足 / 轮腿四足
+- 仿真器: Isaac Lab / Isaac Sim
+- 部署: 仿真
+- 摘要: Quadrrl 是一个面向腿足和轮腿四足运动的训练与 benchmarking 库，提供平地和复杂地形 RL 任务，覆盖 ANYmal C/D、Spot、Unitree Go2/B2、Go2W/B2W、Deeprobotics 和 Zsibot 等模型。
+- 备注: README 列出 RSL-RL、RL Games、SKRL 和 HARL 支持；今天未验证硬件部署声明，因此应视为仿真 / benchmark 基础设施。
+
+### BrandoUlissi/isaaclab-go2-locomotion
+- Link: https://github.com/BrandoUlissi/isaaclab-go2-locomotion
+- Category: RL / control / training baseline
+- Robot Type: quadruped
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim
+- Summary: NVIDIA Isaac Lab 中的 Unitree Go2 强化学习行走基线，包含 PPO 训练、确定性回放脚本、TensorBoard 绘图和 push-recovery 扩展文档。
+- Notes: 已验证的最新 release `v0.2.0-pushrecovery` 发布于 2026-06-03，加入混合脉冲/持续扰动课程；release 报告在仿真中对 120 N 峰值脉冲负载达到 87.5% 恢复率。
+
+### CMUYUY/legged-gym-in-isaac-lab
+- Link: https://github.com/CMUYUY/legged-gym-in-isaac-lab
+- Category: RL / simulator migration / toolkit
+- Robot Type: quadruped
+- Simulator: Isaac Lab
+- Deploy: sim
+- Summary: 将经典 `legged_gym` 的 ANYmal-C 崎岖地形强化学习设置从 Isaac Gym 风格 API 迁移到 NVIDIA Isaac Lab，包括 DirectRLEnv、USD 资产、观测/动作/奖励和 RSL-RL 训练衔接。
+- Notes: 不是 2026-07 的新更新，但对把旧 Isaac Gym 腿足行走代码迁移到 Isaac Lab 的团队有参考价值。
+
+### IsaacLab-Tutorial
+- Link: https://github.com/Lab-of-AI-and-Robotics/IsaacLab-Tutorial/
+- Category: RL / simulator / tutorial / toolkit
+- Robot Type: quadruped / humanoid
+- Simulator: Isaac Lab
+- Deploy: sim / sim-to-real tutorial material
+- Summary: 十章 Isaac Lab 教程，用于开发腿足机器人强化学习环境；从 Unitree Go2 四足 baseline 起步，并扩展到 Unitree H1 人形 locomotion。
+- Notes: 作者为 Sungkyunkwan University 的 Lab of AI and Robotics 成员 Jihoon Moon；章节覆盖项目脚手架、资产、运动学、自定义 action、reward shaping、curriculum、ActuatorNet sim-to-real bridging 和 humanoid frontiers。
+
+### Axellwppr/motion_tracking
+- Link: https://github.com/Axellwppr/motion_tracking
+- Category: RL / retargeting / dataset / deployment
+- Robot Type: humanoid
+- Simulator: MuJoCo / mjlab
+- Deploy: both
+- Summary: HEFT 官方实现，包含人形机器人全身 motion tracking 的训练、评估、导出和部署相关资产；分支覆盖 HEFT 训练、G1 compliance 工作，以及 sim2real runtime/checkpoints。
+- Notes: README 提到 PMG、WPC、公开训练数据或样例、ONNX/PT 导出和 sim2real 分支资产；完整 HEFT 数据集和部分 WPC payload labels 似乎仍计划后续发布。
+
+### johnzhang3/mujoco_mpc_deploy
+- Link: https://github.com/johnzhang3/mujoco_mpc_deploy
+- Category: MPC / control / deployment
+- Robot Type: quadruped / humanoid-adjacent
+- Simulator: MuJoCo / MuJoCo MPC
+- Deploy: hardware
+- Summary: 面向 Unitree 机器人部署 MuJoCo MPC 的硬件接口仓库，对应 ICRA 2026 论文 “Whole-Body Model-Predictive Control of Legged Robots with MuJoCo”，并与官方 MuJoCo MPC / Menagerie 栈配合使用。
+- Notes: README 明确说仓库仍在 work in progress，并指向 Go1/Go2 分支的 MuJoCo MPC；作为从模型式 whole-body MPC 到 Unitree 硬件的实践桥梁值得跟踪。
+
+### mjlab-homierl
+- 链接: https://github.com/Nagi-ovo/mjlab-homierl
+- 类别: RL / locomotion / deployment / toolkit
+- 机器人类型: humanoid
+- 仿真器: MuJoCo / mjlab
+- 部署: both
+- 摘要: 一个外部 mjlab task package，用于复现 HOMIE 在 Unitree G1 和 H1 上的下肢 locomotion RL 部分；包含自定义任务/资产、HIM-PPO 训练、ONNX export metadata、预训练 checkpoint、仿真播放，以及 G1 上基于 DDS 的真机部署脚本。
+- 备注: 仓库详细说明了与 OpenHomie 的差异、domain randomization 选择、deployment-grade PD gains、G1/H1 变体、手部/负载附件和 HOMIE+ torso-pitch 扩展；先作为实用实现信号跟踪，不直接视作官方 HOMIE 发布，除非后续确认。
+
+### OmniContact_sim2sim
+- 链接: https://github.com/Ingrid789/OmniContact_sim2sim
+- 类别: control / loco-manipulation / policy deployment / simulator
+- 机器人类型: humanoid
+- 仿真器: MuJoCo
+- 部署: sim / sim2real-style execution path
+- 摘要: OmniContact 官方实现；OmniContact 是用于人形移动操作的 contact-flow 框架，支持 carry、push、slide、relocate、kick 以及多技能链式组合；仓库提供 CFgen/NPZ motion tracking 的脚本执行路径，以及面向 Unitree G1 风格 MuJoCo 场景的手柄热切换执行路径。
+- 备注: 论文：https://arxiv.org/abs/2606.26201。README 关联 Noitom Robotics、HKUST、Wuhan University、HKU，并链接了 Hugging Face 上的 OmniContact 数据集。
+
+### convex-mpc-biped
+- 链接: https://github.com/ispaik06/convex-mpc-biped
+- 类别: MPC / control / simulator
+- 机器人类型: humanoid / biped
+- 仿真器: MuJoCo
+- 部署: sim
+- 摘要: C++17 / MuJoCo 实现的 convex MPC biped/humanoid locomotion 原型，基于 single-rigid-body model，包含 contact-wrench optimization、Raibert-style swing-foot planning，以及 OSQP/Eigen 基础设施。
+- 备注: 近期小仓库；在出现硬件验证或更广机器人支持前，先按教育/原型级 convex-MPC 实现跟踪。
+
+### fault-locomotion-isaaclab
+- 链接: https://github.com/iit-DLSLab/fault-locomotion-isaaclab
+- 类别: RL / locomotion / simulator / deployment
+- 机器人类型: quadruped
+- 仿真器: Isaac Lab / MuJoCo
+- 部署: both
+- 摘要: 面向 motor failures 的 quadrupedal locomotion Isaac Lab DirectEnv，支持 Aliengo 和 Go2 的 flat/rough blind、rough-vision 环境，提供 MuJoCo sim-to-sim 和 ROS2 sim-to-real 部署路径。
+- 备注: README 关联 concurrent state estimation、rapid motor adaptation 和 Mixture-of-Experts RL for Fault-Tolerant Legged Locomotion；是跟踪执行器退化/失效下四足鲁棒 locomotion 的实用来源。
+
+### DribbleMaster
+- 链接：https://github.com/Zhuoheng0910/DribbleMaster
+- 类别：强化学习 / 运动控制 / 仿真到仿真
+- 机器人类型：人形机器人
+- 仿真器：Isaac Gym / MuJoCo
+- 部署：仿真
+- 摘要：新公开的 ICRA 2026 论文“Dribble Master”训练与评估代码，包含 Isaac Gym 人形带球任务、PPO 训练、策略回放和 MuJoCo 仿真到仿真验证。
+- 备注：仓库创建于 2026-07-14，采用 MIT 许可证；它对应较早发布的 arXiv:2505.12679，并非本周的新论文。
+
+### UFO
+- 链接：https://github.com/Roboparty/UFO
+- 类别：强化学习 / 动作学习 / 部署工具链
+- 机器人类型：人形机器人
+- 仿真器：MJLab / MuJoCo
+- 部署：仿真与实机
+- 摘要：一个人形机器人无监督强化学习框架，支持 FB 与 TeCH 训练、机器人感知的动作数据导入、跟踪/目标/奖励推理和 ONNX 导出；Unitree G1 是目前测试最充分的路径，实机部署与遥操作位于独立的 deploy 分支。
+- 备注：仓库创建于 2026-07-13，检查时有 43 个 GitHub star。文档明确说明新机器人适配仍属实验功能，需要预先完成重定向的机器人动作数据，且不支持自动动作重定向或跨形态直接复用检查点。
+
+### safe-rl-qp-mc-rtc-superbuild
+- 链接: https://github.com/safe-rl-qp/safe-rl-qp-mc-rtc-superbuild
+- 类别: 控制 / 强化学习 / 工具链
+- 机器人类型: 人形机器人 / 通用
+- 仿真器: MuJoCo / mc_rtc
+- 部署: 仿真与真机
+- 摘要: 该 CMake superbuild 可安装 Acc-CBF-QP 框架及其依赖，并提供可直接在 MuJoCo 中运行的 Unitree H1 行走策略示例，同时给出真机执行与自定义 RL-QP 控制器的扩展路径。
+- 备注: 仓库创建于 2026-06-28，2026-07-17 有更新，文档面向 Ubuntu 24.04。它链接论文归档实现及实验日志 https://github.com/safe-rl-qp/mc-safe-rl-qp，并提供控制器模板和社区示例，是复现该 IROS 2026 开源系统的推荐入口。
+
+### semantic-WBC
+- 链接: https://github.com/Lab-RoCoCo-Sapienza/semantic-WBC
+- 类别: 控制 / 强化学习 / 工具链
+- 机器人类型: 人形机器人
+- 仿真器: MuJoCo
+- 部署: 仿真与真机
+- 摘要: 面向 Unitree G1 音频驱动全身技能的官方独立部署包，包含 Python 代码、G1 配置、ONNX 策略执行、机器人端与 PC 端之间的 TCP 指令管线、本地音频指纹、仿真脚本及真机安全说明。
+- 备注: 仓库在 2026-07-15 集中整理发布，构建于 RoboJuDo/BeyondMimic 组件之上。基础资产可从上游拉取，但 README 表明演示专用 ONNX 与音频扩展仍需等待 GitHub Release 或单独 URL。仓库没有声明整体 SPDX 许可证，复用前应逐项核查上游与内置第三方组件的许可。
+
+### asimov-1
+- 链接：https://github.com/asimovinc/asimov-1
+- 类别：硬件 / 仿真器 / 控制平台
+- 机器人类型：人形
+- 仿真器：MuJoCo
+- 部署：仿真与硬件
+- 摘要：Asimov 1 的开源构建与仿真文件；该机器人高 1.2 m、重 35 kg、具有 25 个主动自由度，仓库包含机械 CAD、电气 CAD、MuJoCo 模型、线束、原理图、PCB 文件和机载软件。
+- 备注：硬件采用 CERN-OHL-S-2.0 许可证；仓库仍将运动策略和 Asimov API 标为“即将推出”，因此目前更适合作为重要开放平台信号，而不是完整可用的运动控制栈。
+
+### G1_RL_FootstepTracking
+- 链接：https://github.com/CYH-SWU/G1_RL_FootstepTracking
+- 类别：强化学习 / 运动控制 / 仿真器
+- 机器人类型：人形
+- 仿真器：MuJoCo
+- 部署：仿真
+- 摘要：面向 Unitree G1 的 PPO 全向足步跟踪环境，利用本体状态和指定足步位置/偏航角，输出 12 个腿部关节位置增量，覆盖前进、后退、侧移、转向、曲线行走和站立。
+- 备注：包含最高 5 cm 台阶的课程学习、对称增强、测试、CI 及训练/评估脚本；这是一个新建的小型纯仿真仓库，暂未记录硬件部署。
+
+### fastwmr
+- 链接：https://github.com/kevinpark135/fastwmr
+- 类别：强化学习 / 控制
+- 机器人类型：人形机器人
+- 仿真器：Isaac Lab
+- 部署：仿真
+- 摘要：一个早期独立实现，将 FastSAC 风格的离策略人形学习与 WMR 风格的循环世界状态估计和重建结合，已包含环境定义、actor/critic/decoder、回放缓冲区、训练脚本和针对性单元测试。
+- 备注：仓库创建于 2026-07-16，并持续更新至 2026-07-20。核验时为 0 stars 且未声明许可证；它是值得关注的开发中实现，尚不能视为已验证复现或硬件部署。
+
+### g1_real_ws
+- 链接：https://github.com/JeanMayoko18/g1_real_ws
+- 类别：控制 / 感知 / 工具链
+- 机器人类型：人形机器人
+- 仿真器：无
+- 部署：硬件
+- 摘要：一个面向 Unitree G1 的 ROS 2 工作区，通过三维激光雷达到二维扫描的处理、平面里程计适配与校准，以及针对学习型运动接口的速度缩放和指令调理，把 Nav2 适配到 G1。
+- 备注：仓库创建并最后推送于 2026-07-16，已包含 G1 描述、地图、launch 文件和 ROS 包。项目非常新且为 0 stars；README 对架构有较完整说明，但今天未验证独立真实机器人复现。
+
+### go2_rl_robotlab
+- 链接：https://github.com/wertyuilife2/go2_rl_robotlab
+- 类别：强化学习 / 运动控制 / 基准评估
+- 机器人类型：四足机器人 — Unitree Go2
+- 仿真器：Isaac Lab / MuJoCo
+- 部署：仿真、sim-to-sim 与有文档说明的真实机器人评估
+- 摘要：一个采用 Apache-2.0 许可证的 Go2 MoE-CTS Isaac Lab/RobotLab 实现，包含 MuJoCo sim-to-sim 部署、异步 RoboGauge 策略评估和真实楼梯行走演示。
+- 备注：仓库于 2026-07-21 有推送，核验时为 44 stars。其报告 RoboGauge 得分 0.6984，高于早期 Isaac Gym 实现的 0.6713，并链接 RSS 2026 论文；本次运行未独立复现实验结果或真实机器人演示。
+
+### HOPE
+- 链接：https://github.com/hitchopen/HOPE
+- 类别：强化学习 / 全身控制 / 规划 / 挑战平台
+- 机器人类型：人形机器人
+- 仿真器：Isaac Lab / MuJoCo
+- 部署：仿真与 Agibot A3 参考部署路径
+- 摘要：一个采用 Apache-2.0 许可证的人形乒乓球开放平台，集成正反手统一全身策略训练、ROS 2 球路规划、带球物理的 MuJoCo 评估、ONNX 导出和 Agibot A3 部署运行器。
+- 备注：仓库于 2026-07-22 更新，核验时为 14 stars。A3 路径文档较完整，但生成资产、检查点和导出模型不随仓库提供；附带挥拍动作被明确标记为占位数据，严肃部署前必须替换。Unitree G1 仅出现在设计文档中，没有已交付代码路径。
+
+### legged_mpc_amp
+- 链接：https://github.com/Lxliam/legged_mpc_amp
+- 类别：控制 / 数据集工具 / 强化学习
+- 机器人类型：四足机器人
+- 仿真器：Gazebo；可导出 Isaac Lab 格式的 AMP 数据
+- 部署：仿真
+- 摘要：一个基于 ROS Noetic、NMPC 和全身控制的工作区，可自动完成键盘驱动步态 rollout、AMP 运动数据录制、足端轨迹可视化及 Isaac Lab `.npz` 数据转换。
+- 备注：仓库支持 Go1、Go2、A1、Aliengo 和 Lite3，于 2026-07-22 有推送，核验时为 41 stars；修改部分声明 BSD-3-Clause，并基于 `QiayuanLiao/legged_control`。目前没有版本化 release，也未核验硬件部署。
+
+### phase_guided_terrain_traversal
+- 链接：https://github.com/NtagkasAlex/phase_guided_terrain_traversal
+- 类别：强化学习 / 控制 / 感知 / 地形生成
+- 机器人类型：四足机器人 — Unitree Go2 / ANYmal
+- 仿真器：MuJoCo MJX
+- 部署：仿真与 Unitree Go2 实机
+- 摘要：PGTT 官方实现，覆盖程序化地形生成、JAX/MJX 训练、多轮评估、策略检查点、LiDAR 高程映射感知栈和基于 Unitree SDK 的硬件部署。
+- 备注：共享的机器人无关模块支持 Go2 与 ANYmal 配置；实机文档路径使用 Unitree L1 LiDAR、Point-LIO、高程映射和 `unitree_sdk2py`。核验时为 66 stars，GitHub 元数据中未显示明确许可证。
+
+### YAHMP
+- 链接：https://github.com/fabio-amadio/yahmp
+- 类别：强化学习 / 动作跟踪 / 评估 / 工具包
+- 机器人类型：人形机器人 — Unitree G1
+- 仿真器：MuJoCo / MJLab
+- 部署：仿真与有文档的实机部署
+- 摘要：一个采用 Apache-2.0 许可证的模块化框架，用于训练、评估、导出和部署 Unitree G1 通用动作跟踪策略，支持重定向 AMASS/OMOMO 数据及配套 ONNX 策略运行路径。
+- 备注：仓库包含基础版、未来参考编码版和教师—学生版，以及数据转换、评估、ONNX 导出和部署工具；核验时为 13 stars。论文报告零样本真实 G1 部署，但本次未复现训练或实机结果。
 
 </details>
