@@ -863,4 +863,13 @@
 - 摘要：一个采用 Apache-2.0 许可证的模块化框架，用于训练、评估、导出和部署 Unitree G1 通用动作跟踪策略，支持重定向 AMASS/OMOMO 数据及配套 ONNX 策略运行路径。
 - 备注：仓库包含基础版、未来参考编码版和教师—学生版，以及数据转换、评估、ONNX 导出和部署工具；核验时为 13 stars。论文报告零样本真实 G1 部署，但本次未复现训练或实机结果。
 
+### Humanoid-Terrain-Bench
+- 链接：https://github.com/shiki-ta/Humanoid-Terrain-Bench
+- 类别：强化学习 / 基准评测 / 地形生成 / 数据集工具
+- 机器人类型：人形机器人 — Unitree G1 / H1-2、Fourier GR1-T2 / GRX-N1
+- 仿真器：Isaac Gym / Legged Gym
+- 部署：仿真
+- 摘要：面向人形机器人运动的地形基准与训练包，提供 9 类挑战地形、可组合地形布局、策略训练与定量评估，以及可将在线 rollout 保存为数据集的采集模块。
+- 备注：该仓库用于 ICCV 2025 Multi-Terrain Humanoid Locomotion Challenge，并关联论文“One Policy but Many Worlds”（arXiv:2505.18780）。核验时为 80 stars；GitHub 未显示标准 SPDX 许可证，且文档注明竞赛专用模型导出和评估路径不能直接使用。
+
 </details>

@@ -863,4 +863,13 @@
 - Summary: An Apache-2.0 modular framework for training, evaluating, exporting, and deploying Unitree G1 general motion-tracking policies, with retargeted AMASS/OMOMO support and a supplied ONNX policy path.
 - Notes: The repository includes nominal, future-reference, and teacher-student variants plus conversion, evaluation, ONNX export, and deployment utilities. It had 13 stars at verification; the paper reports zero-shot real-G1 deployment, but this run did not reproduce training or hardware results.
 
+### Humanoid-Terrain-Bench
+- Link: https://github.com/shiki-ta/Humanoid-Terrain-Bench
+- Category: RL / benchmark / terrain generation / dataset tooling
+- Robot Type: humanoid — Unitree G1 / H1-2, Fourier GR1-T2 / GRX-N1
+- Simulator: Isaac Gym / Legged Gym
+- Deploy: simulation
+- Summary: Terrain benchmark and training package for humanoid locomotion, providing nine challenging terrain types, composable terrain layouts, policy training and quantitative evaluation, and online rollout collection in dataset format.
+- Notes: Released for the ICCV 2025 Multi-Terrain Humanoid Locomotion Challenge and associated with “One Policy but Many Worlds” (arXiv:2505.18780). The repository had 80 stars at verification; GitHub reports no standard SPDX license, and competition-specific model export/evaluation paths are documented as not directly usable.
+
 </details>
