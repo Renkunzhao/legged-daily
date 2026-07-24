@@ -872,4 +872,148 @@
 - Summary: Terrain benchmark and training package for humanoid locomotion, providing nine challenging terrain types, composable terrain layouts, policy training and quantitative evaluation, and online rollout collection in dataset format.
 - Notes: Released for the ICCV 2025 Multi-Terrain Humanoid Locomotion Challenge and associated with “One Policy but Many Worlds” (arXiv:2505.18780). The repository had 80 stars at verification; GitHub reports no standard SPDX license, and competition-specific model export/evaluation paths are documented as not directly usable.
 
+### robot_lab
+- Link: https://github.com/fan-ziqi/robot_lab
+- Category: RL / locomotion / training framework
+- Robot Type: quadruped / wheeled-legged / humanoid
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation; hardware deployment via rl_sar
+- Summary: A multi-robot reinforcement-learning extension for Isaac Lab with velocity-control and experimental skill environments across a broad collection of quadrupeds, wheeled-legged robots, and humanoids.
+- Notes: Apache-2.0; supports Docker and distributed training. Gazebo and real-robot execution are handled by the separate `rl_sar` repository.
+
+### unitree_sim_isaaclab
+- Link: https://github.com/unitreerobotics/unitree_sim_isaaclab
+- Category: simulator / teleoperation / dataset tooling
+- Robot Type: humanoid — Unitree G1 / H1-2 with gripper or dexterous hands
+- Simulator: Isaac Lab / Isaac Sim 4.5, 5.0, and 5.1
+- Deploy: simulation with real-robot-compatible DDS interfaces
+- Summary: Unitree's official Isaac Lab simulation package for humanoid manipulation, supporting teleoperation-oriented data collection, playback, augmentation, and model validation for pick-place, stacking, and mobile whole-body tasks.
+- Notes: Uses the same DDS topics as Unitree hardware and integrates with `xr_teleoperate`; the supplied policy weights are explicitly intended only for simulation testing.
+
+### LeggedLab
+- Link: https://github.com/Hellod035/LeggedLab
+- Category: RL / locomotion / training framework
+- Robot Type: legged robots — validated on Unitree G1 / H1
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation and hardware via LeggedLabDeploy
+- Summary: A compact Direct Isaac Lab workflow for legged-robot reinforcement learning that emphasizes transparent environment logic, low refactoring cost, and isolation from the core Isaac Lab repository.
+- Notes: Supports RSL-RL multi-GPU and multi-node training; the README reports real-robot validation on G1 and H1 and links a separate deployment repository.
+
+### TienKung-Lab
+- Link: https://github.com/Open-X-Humanoid/TienKung-Lab
+- Category: RL / locomotion / motion imitation
+- Robot Type: humanoid — TienKung
+- Simulator: Isaac Lab / Isaac Sim / MuJoCo
+- Deploy: simulation, sim-to-sim, and hardware
+- Summary: A locomotion-learning framework for the full-size TienKung humanoid that combines AMP-style imitation rewards, periodic gait rewards, motion retargeting, ray-casting sensors, and walking and running policies.
+- Notes: Built for Isaac Sim 4.5 and Isaac Lab 2.1, includes exported policies and MuJoCo validation, and links the separate `Deploy_Tienkung` repository for real-robot execution.
+
+### Isaac Lab
+- Link: https://github.com/isaac-sim/IsaacLab
+- Category: robot learning framework / RL / imitation learning
+- Robot Type: general — manipulators / quadrupeds / humanoids
+- Simulator: NVIDIA Isaac Sim
+- Deploy: simulation and framework-level sim-to-real workflows
+- Summary: NVIDIA's GPU-accelerated open-source framework for reinforcement learning, imitation learning, motion planning, sensor simulation, and scalable robotics experimentation, with dozens of environments and multiple learning backends.
+- Notes: The main framework uses BSD-3-Clause licensing and is foundational infrastructure rather than a robot-specific hardware deployment package.
+
+### IsaacLab-Arena
+- Link: https://github.com/isaac-sim/IsaacLab-Arena
+- Category: benchmark / policy evaluation / environment composition
+- Robot Type: general / multi-embodiment
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation
+- Summary: A composable Isaac Lab extension that assembles scenes, robot embodiments, and tasks from reusable primitives for scalable policy evaluation, imitation-learning data generation, and sequential long-horizon tasks.
+- Notes: Apache-2.0; the v0.2.x release is explicitly early-stage, with unstable APIs, incomplete features, and no production-use recommendation.
+
+### rl_training
+- Link: https://github.com/DeepRoboticsLab/rl_training
+- Category: RL / locomotion / training framework
+- Robot Type: quadruped / wheeled-legged — DeepRobotics Lite3 / M20
+- Simulator: Isaac Lab 2.3.2 / Isaac Sim 5.1 / RSL-RL
+- Deploy: simulation; ONNX export with external deployment repositories
+- Summary: Deep Robotics' Isaac Lab reinforcement-learning training library for Lite3 and M20 rough-terrain locomotion, with playback, distributed multi-GPU and multi-node training, and direct checkpoint-to-ONNX export.
+- Notes: BSD-3-Clause; MuJoCo and real-robot deployment are delegated to corresponding repositories under the DeepRoboticsLab organization.
+
+### isaacLab.manipulation
+- Link: https://github.com/NathanWu7/isaacLab.manipulation
+- Category: RL / manipulation / research template
+- Robot Type: manipulators / dexterous hands — Kinova / Franka / UR10 / Allegro Hand
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation
+- Summary: An independently installable Isaac Lab research template for robot manipulation, with configurable reaching and dexterous cube-reorientation tasks and RSL-RL training workflows.
+- Notes: MIT; derived from the older Orbit extension structure and documents several manual dependency and compatibility steps.
+
+### Isaac-RL-Two-wheel-Legged-Bot
+- Link: https://github.com/jaykorea/Isaac-RL-Two-wheel-Legged-Bot
+- Category: RL / wheeled-legged locomotion / sim-to-real
+- Robot Type: two-wheel-legged robot — Flamingo
+- Simulator: Isaac Lab / Isaac Sim / MuJoCo
+- Deploy: simulation, sim-to-sim, and hardware
+- Summary: A velocity-tracking reinforcement-learning stack for the Flamingo two-wheel-legged robot, including PPO and off-policy runners, observation stacking, constraint-aware training, ONNX export, and zero-shot transfer demonstrations.
+- Notes: MIT; the MuJoCo ONNX workflow is maintained on a separate branch and is described as still being migrated.
+
+### WheeledLab
+- Link: https://github.com/UWRobotLearning/WheeledLab
+- Category: RL / mobile robotics / sim-to-real framework
+- Robot Type: wheeled mobile robots — HOUND / MuSHR
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation and hardware via RealLab
+- Summary: Open-source Isaac Lab environments, assets, and reinforcement-learning workflows for wheeled mobile robotics, including drifting, elevation traversal, and vision-based policy training.
+- Notes: BSD-3-Clause; hardware integration is provided through the companion `UWRobotLearning/RealLab` repository, with HOUND and MuSHR support and F1TENTH listed as planned.
+
+### kinova_isaaclab_sim2real
+- Link: https://github.com/louislelay/kinova_isaaclab_sim2real
+- Category: RL / manipulation / sim-to-real
+- Robot Type: manipulator — Kinova Gen3
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation and ROS 2 hardware
+- Summary: An end-to-end Kinova Gen3 reaching toolkit covering Isaac Lab reinforcement-learning training, policy playback, pretrained models, and ROS 2 deployment to fake or real hardware without requiring Isaac Lab at runtime.
+- Notes: MIT; supports RSL-RL and RL-Games and provides a documented `ros2_kortex` deployment path.
+
+### Go2Arm_Lab
+- Link: https://github.com/zzzJie-Robot/Go2Arm_Lab
+- Category: RL / legged manipulation / training framework
+- Robot Type: quadruped manipulator — Unitree Go2 with WidowX 250s arm
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation; external sim-to-sim and hardware paths
+- Summary: An RSL-RL training framework for a Go2Arm mobile-manipulation platform, with Isaac Lab environments, policy training and playback, and links to external Gazebo and successor deployment projects.
+- Notes: The repository is in maintenance mode and recommends `LeggedManip_Lab` for a newer MuJoCo and real-robot pipeline; its README shows Apache-2.0, but no root license file was identified during verification.
+
+### basic-locomotion-isaaclab
+- Link: https://github.com/iit-DLSLab/basic-locomotion-isaaclab
+- Category: RL / simulator / locomotion / deployment
+- Robot Type: quadruped — Aliengo / Go2 / B2 / HyQReal2
+- Simulator: Isaac Lab / Isaac Sim / MuJoCo
+- Deploy: simulation, sim-to-sim, and hardware
+- Summary: An Isaac Lab quadruped-locomotion framework with RSL-RL training, state estimation, adaptation, symmetry and AMP support, plus MuJoCo sim-to-sim and ROS 2 sim-to-real tools.
+- Notes: BSD-3-Clause; tested with Isaac Lab 2.3.2, RSL-RL 3.3.0, and MuJoCo 3.7.0. The hardware path depends on `muse` and `unitree-ros2-dls`, while DAgger and depth-to-heightmap features are marked complete but untested.
+
+### amp-rsl-rl
+- Link: https://github.com/gbionics/amp-rsl-rl
+- Category: RL / imitation learning / toolkit
+- Robot Type: humanoid
+- Simulator: simulator-agnostic
+- Deploy: training library
+- Summary: An RSL-RL PPO extension adding adversarial motion priors, motion-capture dataset loading, discriminator-based imitation rewards, symmetry augmentation, and AMP runners for humanoid skill learning.
+- Notes: BSD-3-Clause and distributed through PyPI; the package is marked Beta and does not include robot environments or a simulator, requiring integration with a compatible RSL-RL task stack and formatted `.npy` motion data.
+
+### isaac-go2-ros2
+- Link: https://github.com/Zhefan-Xu/isaac-go2-ros2
+- Category: simulator / ROS 2 / navigation
+- Robot Type: quadruped — Unitree Go2
+- Simulator: Isaac Sim / Isaac Lab
+- Deploy: simulation with ROS 2 interfaces
+- Summary: A Unitree Go2 simulation and ROS 2 interface exposing velocity control, cameras, semantic images, LiDAR, odometry, and pose across configurable warehouse and obstacle environments.
+- Notes: The default branch targets Isaac Sim 4.5, Isaac Lab 2.1, ROS 2 Humble, and Ubuntu 22.04, with separate 4.2 and Docker branches. Multi-Go2 simulation is supported, but no license or real-hardware deployment workflow was identified.
+
+### MimicKit_IsaacLab
+- Link: https://github.com/NathanWu7/MimicKit_IsaacLab
+- Category: RL / imitation learning / motion tracking / simulator
+- Robot Type: humanoid — SMPL humanoid / 29-DoF Unitree G1
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: simulation
+- Summary: An Isaac Lab adaptation of MimicKit providing DeepMimic, AMP, and ASE motion-imitation environments for an SMPL humanoid and the 29-DoF Unitree G1.
+- Notes: BSD-3-Clause; package version 1.0.0 is marked Beta and requires external motion data. The README states that substantial portions were developed with AI assistance, and no sim-to-sim or hardware deployment is provided.
+
 </details>

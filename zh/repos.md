@@ -872,4 +872,148 @@
 - 摘要：面向人形机器人运动的地形基准与训练包，提供 9 类挑战地形、可组合地形布局、策略训练与定量评估，以及可将在线 rollout 保存为数据集的采集模块。
 - 备注：该仓库用于 ICCV 2025 Multi-Terrain Humanoid Locomotion Challenge，并关联论文“One Policy but Many Worlds”（arXiv:2505.18780）。核验时为 80 stars；GitHub 未显示标准 SPDX 许可证，且文档注明竞赛专用模型导出和评估路径不能直接使用。
 
+### robot_lab
+- 链接：https://github.com/fan-ziqi/robot_lab
+- 类别：强化学习 / 运动控制 / 训练框架
+- 机器人类型：四足 / 轮足 / 人形机器人
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真；真机部署通过 rl_sar
+- 摘要：一个面向 Isaac Lab 的多机器人强化学习扩展库，为大量四足、轮足和人形机器人提供速度控制及实验性技能训练环境。
+- 备注：采用 Apache-2.0，支持 Docker 和分布式训练；Gazebo 与真实机器人运行由独立的 `rl_sar` 仓库负责。
+
+### unitree_sim_isaaclab
+- 链接：https://github.com/unitreerobotics/unitree_sim_isaaclab
+- 类别：仿真器 / 遥操作 / 数据集工具
+- 机器人类型：人形机器人 — Unitree G1 / H1-2，支持夹爪或灵巧手
+- 仿真器：Isaac Lab / Isaac Sim 4.5、5.0 与 5.1
+- 部署：仿真，并提供与真机兼容的 DDS 接口
+- 摘要：宇树官方 Isaac Lab 人形机器人仿真包，支持面向遥操作的数据采集、回放、增强及模型验证，覆盖抓取、堆叠和移动全身操作任务。
+- 备注：使用与宇树真机相同的 DDS topic，并可与 `xr_teleoperate` 集成；附带策略权重被明确限定为仅用于仿真测试。
+
+### LeggedLab
+- 链接：https://github.com/Hellod035/LeggedLab
+- 类别：强化学习 / 运动控制 / 训练框架
+- 机器人类型：腿足机器人 — 已在 Unitree G1 / H1 上验证
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真及通过 LeggedLabDeploy 的真机部署
+- 摘要：一个精简的 Direct Isaac Lab 腿足机器人强化学习流程，强调环境逻辑透明、重构成本低，并与 Isaac Lab 核心仓库隔离。
+- 备注：支持 RSL-RL 多 GPU 和多节点训练；README 报告已在 G1、H1 真机验证，并链接独立部署仓库。
+
+### TienKung-Lab
+- 链接：https://github.com/Open-X-Humanoid/TienKung-Lab
+- 类别：强化学习 / 运动控制 / 动作模仿
+- 机器人类型：人形机器人 — 天工
+- 仿真器：Isaac Lab / Isaac Sim / MuJoCo
+- 部署：仿真、sim-to-sim 与真机
+- 摘要：面向全尺寸天工人形机器人的运动学习框架，结合 AMP 风格模仿奖励、周期步态奖励、运动重定向、射线传感器及走路和跑步策略。
+- 备注：基于 Isaac Sim 4.5 与 Isaac Lab 2.1，包含导出策略和 MuJoCo 验证，并链接用于真实机器人执行的独立 `Deploy_Tienkung` 仓库。
+
+### Isaac Lab
+- 链接：https://github.com/isaac-sim/IsaacLab
+- 类别：机器人学习框架 / 强化学习 / 模仿学习
+- 机器人类型：通用 — 机械臂 / 四足 / 人形机器人
+- 仿真器：NVIDIA Isaac Sim
+- 部署：仿真及框架级 sim-to-real 工作流
+- 摘要：NVIDIA 官方 GPU 加速开源机器人学习框架，统一强化学习、模仿学习、运动规划、传感器仿真和可扩展机器人实验，提供数十个环境及多种学习后端。
+- 备注：主框架采用 BSD-3-Clause；它是基础设施框架，而不是面向特定机器人的统一硬件部署包。
+
+### IsaacLab-Arena
+- 链接：https://github.com/isaac-sim/IsaacLab-Arena
+- 类别：基准评测 / 策略评估 / 环境组合
+- 机器人类型：通用 / 多机器人形态
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真
+- 摘要：一个可组合的 Isaac Lab 扩展，通过可复用组件组合场景、机器人形态与任务，用于大规模策略评估、模仿学习数据生成及顺序式长时程任务。
+- 备注：采用 Apache-2.0；v0.2.x 被明确标记为早期版本，API 不稳定、功能尚不完整，官方不建议用于生产。
+
+### rl_training
+- 链接：https://github.com/DeepRoboticsLab/rl_training
+- 类别：强化学习 / 运动控制 / 训练框架
+- 机器人类型：四足 / 轮足机器人 — DeepRobotics Lite3 / M20
+- 仿真器：Isaac Lab 2.3.2 / Isaac Sim 5.1 / RSL-RL
+- 部署：仿真；支持 ONNX 导出，部署使用外部仓库
+- 摘要：云深处面向 Lite3 和 M20 崎岖地形运动的 Isaac Lab 强化学习训练库，包含回放、分布式多 GPU/多节点训练和检查点直接导出 ONNX 的工具。
+- 备注：采用 BSD-3-Clause；MuJoCo 和真实机器人部署由 DeepRoboticsLab 组织下的对应独立仓库负责。
+
+### isaacLab.manipulation
+- 链接：https://github.com/NathanWu7/isaacLab.manipulation
+- 类别：强化学习 / 机器人操作 / 研究模板
+- 机器人类型：机械臂 / 灵巧手 — Kinova / Franka / UR10 / Allegro Hand
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真
+- 摘要：一个可独立安装的 Isaac Lab 机器人操作研究模板，提供可配置的机械臂 reaching、灵巧手方块重定向任务和 RSL-RL 训练流程。
+- 备注：采用 MIT；源自较早的 Orbit 扩展结构，文档中包含若干需要手工处理的依赖与兼容性步骤。
+
+### Isaac-RL-Two-wheel-Legged-Bot
+- 链接：https://github.com/jaykorea/Isaac-RL-Two-wheel-Legged-Bot
+- 类别：强化学习 / 轮足运动 / sim-to-real
+- 机器人类型：双轮腿机器人 — Flamingo
+- 仿真器：Isaac Lab / Isaac Sim / MuJoCo
+- 部署：仿真、sim-to-sim 与真机
+- 摘要：面向 Flamingo 双轮腿机器人的速度跟踪强化学习栈，包含 PPO、离策略 runner、观测堆叠、约束感知训练、ONNX 导出和零样本迁移演示。
+- 备注：采用 MIT；MuJoCo ONNX 流程位于独立分支，README 表明该流程仍在迁移更新中。
+
+### WheeledLab
+- 链接：https://github.com/UWRobotLearning/WheeledLab
+- 类别：强化学习 / 移动机器人 / sim-to-real 框架
+- 机器人类型：轮式移动机器人 — HOUND / MuSHR
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真及通过 RealLab 的真机部署
+- 摘要：面向开源轮式移动机器人的 Isaac Lab 环境、资产和强化学习流程，覆盖漂移、起伏地形穿越及视觉策略训练。
+- 备注：采用 BSD-3-Clause；硬件集成由配套的 `UWRobotLearning/RealLab` 仓库提供，当前支持 HOUND 和 MuSHR，F1TENTH 被列为计划项。
+
+### kinova_isaaclab_sim2real
+- 链接：https://github.com/louislelay/kinova_isaaclab_sim2real
+- 类别：强化学习 / 机器人操作 / sim-to-real
+- 机器人类型：机械臂 — Kinova Gen3
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真与 ROS 2 真机
+- 摘要：面向 Kinova Gen3 reaching 的端到端工具包，覆盖 Isaac Lab 强化学习训练、策略回放、预训练模型，以及无需在运行时安装 Isaac Lab 的 ROS 2 仿真硬件或真机部署。
+- 备注：采用 MIT；支持 RSL-RL 和 RL-Games，并提供基于 `ros2_kortex` 的部署流程。
+
+### Go2Arm_Lab
+- 链接：https://github.com/zzzJie-Robot/Go2Arm_Lab
+- 类别：强化学习 / 腿足操作 / 训练框架
+- 机器人类型：四足移动操作机器人 — Unitree Go2 搭载 WidowX 250s 机械臂
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真；外部 sim-to-sim 与真机路径
+- 摘要：面向 Go2Arm 移动操作平台的 RSL-RL 训练框架，包含 Isaac Lab 环境、策略训练与回放，并链接外部 Gazebo 和后继部署项目。
+- 备注：仓库已进入维护模式，并建议新用户使用 `LeggedManip_Lab` 获取更新的 MuJoCo 与真机管线；README 显示 Apache-2.0，但核验时未找到根目录许可证文件。
+
+### basic-locomotion-isaaclab
+- 链接：https://github.com/iit-DLSLab/basic-locomotion-isaaclab
+- 类别：强化学习 / 仿真器 / 运动控制 / 部署
+- 机器人类型：四足机器人 — Aliengo / Go2 / B2 / HyQReal2
+- 仿真器：Isaac Lab / Isaac Sim / MuJoCo
+- 部署：仿真、sim-to-sim 与真机
+- 摘要：一个 Isaac Lab 四足运动框架，包含 RSL-RL 训练、状态估计、适应、对称性和 AMP 支持，以及 MuJoCo sim-to-sim 与 ROS 2 sim-to-real 工具。
+- 备注：采用 BSD-3-Clause；已测试 Isaac Lab 2.3.2、RSL-RL 3.3.0 和 MuJoCo 3.7.0。实机链路依赖 `muse` 与 `unitree-ros2-dls`，DAgger 和 depth-to-heightmap 功能被标记为已完成但未测试。
+
+### amp-rsl-rl
+- 链接：https://github.com/gbionics/amp-rsl-rl
+- 类别：强化学习 / 模仿学习 / 工具包
+- 机器人类型：人形机器人
+- 仿真器：与仿真器解耦
+- 部署：训练库
+- 摘要：RSL-RL PPO 的扩展，加入对抗运动先验、动作捕捉数据加载、基于判别器的模仿奖励、对称增强和 AMP runner，用于人形机器人技能学习。
+- 备注：采用 BSD-3-Clause 并通过 PyPI 分发；软件包被标记为 Beta，不包含机器人环境或仿真器，需要集成到兼容的 RSL-RL 任务栈并使用规定格式的 `.npy` 动作数据。
+
+### isaac-go2-ros2
+- 链接：https://github.com/Zhefan-Xu/isaac-go2-ros2
+- 类别：仿真器 / ROS 2 / 导航
+- 机器人类型：四足机器人 — Unitree Go2
+- 仿真器：Isaac Sim / Isaac Lab
+- 部署：带 ROS 2 接口的仿真
+- 摘要：一个 Unitree Go2 仿真与 ROS 2 接口项目，在可配置的仓库和障碍环境中提供速度控制、相机、语义图像、LiDAR、里程计和位姿数据。
+- 备注：默认分支目标环境为 Isaac Sim 4.5、Isaac Lab 2.1、ROS 2 Humble 和 Ubuntu 22.04，并提供独立的 4.2 与 Docker 分支；支持多 Go2 仿真，但未发现许可证或真机部署流程。
+
+### MimicKit_IsaacLab
+- 链接：https://github.com/NathanWu7/MimicKit_IsaacLab
+- 类别：强化学习 / 模仿学习 / 动作跟踪 / 仿真器
+- 机器人类型：人形机器人 — SMPL 人体 / 29 自由度 Unitree G1
+- 仿真器：Isaac Lab / Isaac Sim
+- 部署：仿真
+- 摘要：MimicKit 的 Isaac Lab 适配版，为 SMPL 人体和 29 自由度 Unitree G1 提供 DeepMimic、AMP 与 ASE 动作模仿环境。
+- 备注：采用 BSD-3-Clause；软件包版本 1.0.0 被标记为 Beta，并依赖外部动作数据。README 表明大量代码由 AI 辅助开发，且不提供 sim-to-sim 或真机部署。
+
 </details>
