@@ -293,6 +293,15 @@
 - Deploy: sim / hardware
 - Summary: 使用 IsaacSim 的 Unitree 机器人真实部署 RL pipeline。
 
+### Sharpa-RL-Lab
+- Link: https://github.com/sharpa-robotics/sharpa-rl-lab
+- Category: RL / 灵巧操作 / sim-to-real / 部署
+- Robot Type: 灵巧手
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim / hardware
+- Summary: SharpaWave 官方强化学习示例，面向手内物体旋转，提供训练、可视化、策略蒸馏和实机部署的逐步流程。
+- Notes: 文档覆盖已测试的 Isaac Lab 2.2/2.3 环境、抓取缓存生成、ProprioAdapt 蒸馏、主机触觉或板载触觉部署，以及可配置的自定义旋转任务。
+
 ### rl_sar
 - 链接: https://github.com/fan-ziqi/rl_sar
 - 类别: RL / deployment / simulator / toolkit

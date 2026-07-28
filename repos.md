@@ -293,6 +293,15 @@
 - Deploy: sim / hardware
 - Summary: Real-world RL deployment pipeline for Unitree robots using IsaacSim.
 
+### Sharpa-RL-Lab
+- Link: https://github.com/sharpa-robotics/sharpa-rl-lab
+- Category: RL / dexterous manipulation / sim-to-real / deployment
+- Robot Type: dexterous hand
+- Simulator: Isaac Lab / Isaac Sim
+- Deploy: sim / hardware
+- Summary: Official SharpaWave reinforcement-learning example for in-hand object rotation, with step-by-step training, visualization, policy distillation, and real-hardware deployment.
+- Notes: Documents tested Isaac Lab 2.2/2.3 environments, grasp-cache generation, ProprioAdapt distillation, tactile deployment through host-computer or onboard sensing, and configurable custom rotation tasks.
+
 ### rl_sar
 - Link: https://github.com/fan-ziqi/rl_sar
 - Category: RL / deployment / simulator / toolkit
