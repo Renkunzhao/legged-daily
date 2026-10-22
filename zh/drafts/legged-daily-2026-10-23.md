@@ -5,7 +5,7 @@
 - PRISM 已正式发表于 ICML 2026，并于 2026-10-21 新上线 arXiv；它把深度损坏拆分为“测量失效”和“有效值不准确”两类，真实机器人下游实验报告平均成功率 92.1%。
 - A2I-Calib++ 通过主动激励腿足机器人，同时标定全身多 IMU 的时间偏移、外参和偏置，并专门增强对测量噪声的鲁棒性。
 - RangeNav 用重建、语义分割和 BEV 预测联合预训练一个仅约 18.3 万参数的 LiDAR range-image 编码器；论文已投稿 ICRA 2027，目前仍在审稿。
-- Amazon FAR 已完整放出 RPL 感知式人形运动训练栈，包括地形专家 RL、多深度蒸馏、随仓库提供的 teacher，以及 MuJoCo sim2sim。
+- Amazon FAR 已放出 RPL 感知式人形运动研究代码，包括地形专家 RL、多深度蒸馏、随仓库提供的 teacher，以及 MuJoCo sim2sim。
 - IIT DLSLab 已有的四足运动框架在 2026-10-22 出现明确提交：“start to adding better d435 model noise”；这是正在开发中的更新，不能视为完整 D435 噪声模型已经完成。
 - ETH Zurich RobotX 正在招募 2027 年博士及博士后 Fellowship（均截止 2026-11-27），明确涵盖腿足运动和人形机器人；RSL 长期岗位仍在招聘，而 LAAS-CNRS 安全强化学习 PhD 官方招聘已经失效。
 
@@ -51,7 +51,7 @@
 - Simulator: Isaac Gym / MuJoCo
 - Deploy: sim
 - Summary: RPL 官方研究代码，覆盖分地形专家 RL、多深度 Student 蒸馏、随仓库提供的 Teacher、ONNX 导出和 MuJoCo sim2sim。
-- Notes: 首次公开提交为 2026-10-16，README 更新到 2026-10-20。基于 Holosoma，仓库包含 PPO-MA / DAgger-MA、深度渲染、地形专家以及可直接用于 sim2sim 的 Student。README 将对应论文标注为 CoRL 2026。许可证为 Apache-2.0。
+- Notes: 首次公开提交为 2026-10-16，README 更新到 2026-10-20。基于 Holosoma，仓库包含 PPO-MA / DAgger-MA、深度渲染、地形专家以及可直接用于 sim2sim 的 Student。README 将对应论文标注为 CoRL 2026。这是研究代码发布：训练目前采用 Isaac Gym，因为 Isaac Sim 的外力扰动尚未支持；并入 Holosoma 主线是独立工作。许可证为 Apache-2.0。
 
 ### iit-DLSLab/basic-locomotion-isaaclab
 - Link: https://github.com/iit-DLSLab/basic-locomotion-isaaclab
@@ -60,7 +60,7 @@
 - Simulator: Isaac Lab / MuJoCo
 - Deploy: both
 - Summary: DLSLab 已有的四足运动栈，支持 Aliengo、Go2、B2、A2、HyQReal2，覆盖 RL 训练、状态估计、动力学适应、MuJoCo sim2sim 和 ROS 2 真机部署。
-- Notes: 对 repos.md 已有条目的更新：2026-10-22 的提交 92687729 标题为“start to adding better d435 model noise”，因此它成为一个值得继续跟踪的 RealSense 真实深度损坏建模信号。README 同时把 DAgger depth-to-action 蒸馏、Depth-to-Heightmap 和 Lidar-to-Heightmap 标为“已做但尚未测试”的 WIP；目前不能把新的 D435 模型当作已完成方案。
+- Notes: 对 repos.md 已有条目的更新：2026-10-22 的提交 [92687729](https://github.com/iit-DLSLab/basic-locomotion-isaaclab/commit/92687729f3b85ca4c88f87d075f64c1ff99a0777) 标题为“start to adding better d435 model noise”，因此它成为一个值得继续跟踪的 RealSense 真实深度损坏建模信号。README 同时把 DAgger depth-to-action 蒸馏、Depth-to-Heightmap 和 Lidar-to-Heightmap 标为“已做但尚未测试”的 WIP；目前不能把新的 D435 模型当作已完成方案。
 
 </details>
 

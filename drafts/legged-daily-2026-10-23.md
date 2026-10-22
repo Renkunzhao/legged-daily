@@ -51,7 +51,7 @@
 - Simulator: Isaac Gym / MuJoCo
 - Deploy: sim
 - Summary: Official research release for RPL, covering per-terrain expert RL training, multi-depth student distillation, shipped teachers, ONNX export, and MuJoCo sim2sim.
-- Notes: Initial public commit was 2026-10-16, with README updates through 2026-10-20. Built on Holosoma; the repository includes PPO-MA / DAgger-MA infrastructure, depth rendering, terrain experts, and a shipped student for sim2sim. The README labels the related paper as CoRL 2026. Apache-2.0.
+- Notes: Initial public commit was 2026-10-16, with README updates through 2026-10-20. Built on Holosoma; the repository includes PPO-MA / DAgger-MA infrastructure, depth rendering, terrain experts, and a shipped student for sim2sim. The README labels the related paper as CoRL 2026. This is a research release: training currently uses Isaac Gym because Isaac Sim force perturbations are not supported; integration into Holosoma mainline is a separate effort. Apache-2.0.
 
 ### iit-DLSLab/basic-locomotion-isaaclab
 - Link: https://github.com/iit-DLSLab/basic-locomotion-isaaclab
@@ -60,7 +60,7 @@
 - Simulator: Isaac Lab / MuJoCo
 - Deploy: both
 - Summary: Existing DLSLab quadruped locomotion stack for Aliengo, Go2, B2, A2, and HyQReal2, with RL training, state estimation, domain adaptation, MuJoCo sim2sim, and ROS 2 hardware deployment.
-- Notes: Update to the existing repos.md entry: commit 92687729 on 2026-10-22 is titled "start to adding better d435 model noise," making the repository a useful live signal for realistic RealSense depth corruption. The README also lists DAgger depth-to-action distillation and depth-/LiDAR-to-heightmap modules as work in progress, done but not tested; do not treat the new D435 model as complete yet.
+- Notes: Update to the existing repos.md entry: commit [92687729](https://github.com/iit-DLSLab/basic-locomotion-isaaclab/commit/92687729f3b85ca4c88f87d075f64c1ff99a0777) on 2026-10-22 is titled "start to adding better d435 model noise," making the repository a useful live signal for realistic RealSense depth corruption. The README also lists DAgger depth-to-action distillation and depth-/LiDAR-to-heightmap modules as work in progress, done but not tested; do not treat the new D435 model as complete yet.
 
 </details>
 
