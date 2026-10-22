@@ -991,12 +991,12 @@
 
 ### basic-locomotion-isaaclab
 - 链接：https://github.com/iit-DLSLab/basic-locomotion-isaaclab
-- 类别：强化学习 / 仿真器 / 运动控制 / 部署
-- 机器人类型：四足机器人 — Aliengo / Go2 / B2 / HyQReal2
-- 仿真器：Isaac Lab / Isaac Sim / MuJoCo
-- 部署：仿真、sim-to-sim 与真机
-- 摘要：一个 Isaac Lab 四足运动框架，包含 RSL-RL 训练、状态估计、适应、对称性和 AMP 支持，以及 MuJoCo sim-to-sim 与 ROS 2 sim-to-real 工具。
-- 备注：采用 BSD-3-Clause；已测试 Isaac Lab 2.3.2、RSL-RL 3.3.0 和 MuJoCo 3.7.0。实机链路依赖 `muse` 与 `unitree-ros2-dls`，DAgger 和 depth-to-heightmap 功能被标记为已完成但未测试。
+- 类别：强化学习 / 控制 / 仿真到真机 / 工具包
+- 机器人类型：四足机器人 — Aliengo / Go2 / B2 / A2 / HyQReal2
+- 仿真器：Isaac Lab / MuJoCo
+- 部署：仿真 / sim-to-sim / ROS 2 真机
+- 摘要：四足机器人强化学习运动框架，支持状态估计、自适应、形态对称性、AMP、MuJoCo sim-to-sim 和 ROS 2 真机部署，并持续开发深度感知功能。
+- 备注：BSD-3-Clause；当前 README 徽章显示 Isaac Lab v3.0.0、RSL-RL v5.4.2 与 MuJoCo v3.13.0。真机链路使用 `muse`、`unitree-ros2-dls`。2026-10-22 的提交 [92687729](https://github.com/iit-DLSLab/basic-locomotion-isaaclab/commit/92687729f3b85ca4c88f87d075f64c1ff99a0777) 开始改进 D435 深度噪声建模，仍处于开发中，不能视为已完成的验证模型。DAgger 深度到动作和 Depth/LiDAR-to-Heightmap 功能仍标注已做但未经测试。
 
 ### amp-rsl-rl
 - 链接：https://github.com/gbionics/amp-rsl-rl
@@ -1024,5 +1024,19 @@
 - 部署：仿真
 - 摘要：MimicKit 的 Isaac Lab 适配版，为 SMPL 人体和 29 自由度 Unitree G1 提供 DeepMimic、AMP 与 ASE 动作模仿环境。
 - 备注：采用 BSD-3-Clause；软件包版本 1.0.0 被标记为 Beta，并依赖外部动作数据。README 表明大量代码由 AI 辅助开发，且不提供 sim-to-sim 或真机部署。
+
+</details>
+
+<details>
+<summary><strong>2026 年 10 月日报新增仓库</strong></summary>
+
+### amazon-far/RPL
+- 链接：https://github.com/amazon-far/RPL
+- 类别：RL / 控制 / 感知式运动 / 蒸馏
+- 机器人类型：人形
+- 仿真器：Isaac Gym / MuJoCo
+- 部署：sim
+- 摘要：RPL 官方研究代码，覆盖分地形专家 RL、多深度 Student 蒸馏、随仓库提供的 Teacher、ONNX 导出和 MuJoCo sim2sim。
+- 备注：首次公开提交为 2026-10-16，README 更新到 2026-10-20。基于 Holosoma，仓库包含 PPO-MA / DAgger-MA、深度渲染、地形专家以及可直接用于 sim2sim 的 Student。README 将对应论文标注为 CoRL 2026。许可证为 Apache-2.0。
 
 </details>

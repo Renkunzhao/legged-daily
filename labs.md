@@ -106,9 +106,10 @@
 
   - Institution: ETH Zurich
   - Lab: https://rsl.ethz.ch/
+  - GitHub: https://github.com/leggedrobotics
   - People: https://rsl.ethz.ch/the-lab/people.html
   - Key Topics: quadruped / humanoid / locomotion / perception / state estimation / robot learning
-  - Notes: Strong recurring source for legged robotics. Current high-signal outputs include the GrandTour dataset and recent whole-body humanoid locomotion work.
+  - Notes: Long-running source for legged locomotion, the GrandTour dataset, perception, and humanoid control. RangeNav (arXiv:2610.29845, 2026-10-21), authored by a team including Marco Hutter and Cesar Cadena, adds a task-aligned LiDAR range-image pretraining and zero-shot navigation signal; monitor future perception and navigation releases.
 
   </details>
 

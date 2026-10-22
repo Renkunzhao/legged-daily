@@ -8,14 +8,32 @@
 <details>
 <summary><strong>Academic Opportunities</strong></summary>
 
+### ETH Zurich RobotX — PhD Fellowship 2027
+- Type: PhD
+- Location: Zurich, Switzerland
+- Source: official ETH Zurich careers page — https://jobs.ethz.ch/job/view/JOPG_ethz_zBtPwWHnM0fumyTFso
+- Deadline: 2026-11-27
+- Topics: legged locomotion / humanoid / whole-body control / RL / perception / robot learning / manipulation
+- Status: active
+- Notes: Funded 2027-entry doctoral fellowship across ETH RobotX labs: applicants may nominate up to three professors, with research areas explicitly including robotic locomotion and manipulation, humanoid whole-body control, and safe robotics. Applicants need a relevant Master's degree completed by August 2027; apply through the official online portal, not by email. This is distinct from the RSL's ongoing general hiring.
+
+### ETH Zurich RobotX — Postdoctoral Fellowship
+- Type: Postdoc
+- Location: Zurich, Switzerland
+- Source: official ETH Zurich careers page — https://jobs.ethz.ch/job/view/JOPG_ethz_58u057ys6BxuEciK5P
+- Deadline: 2026-11-27
+- Topics: legged locomotion / humanoid / whole-body control / RL / perception / manipulation / motion planning
+- Status: active
+- Notes: Separate from the RobotX PhD Fellowship: applicants choose up to three professors for a 2027-start research position, requiring a relevant doctoral degree completed by August 2027. The official posting describes a one-year postdoc contract, typically extended; applications go through the online portal rather than email.
+
 ### ETH Zurich Robotic Systems Lab
 - Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
 - Location: Zurich, Switzerland
-- Source: official website
+- Source: official website — https://rsl.ethz.ch/the-lab/open-positions.html
 - Deadline: rolling / unknown
 - Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
 - Status: active
-- Notes: Official RSL page continues to list rolling PhD, postdoc, research staff/software engineer, robot design, embedded-systems, and electronic-engineer openings connected to legged robots, mobile manipulators, field robotics, control, learning, planning, and deployment.
+- Notes: Revalidated 2026-10-23: the official RSL page lists rolling PhD, postdoc, research-staff/software, robot-design, embedded, and electronic-engineer opportunities relevant to legged systems; these are separate from the RobotX 2027 fellowships.
 
 ### HIER Lab / NC State University
 - Type: PhD / Postdoc
@@ -162,15 +180,6 @@
 - Topics: humanoid / simulation / robotics systems / validation
 - Status: active / watching
 - Notes: 1X's official careers page lists a "Simulation Engineer" role under Hardware Engineering in San Carlos. The fetched job detail page exposed only the title, so treat the exact legged-control fit as unverified; still a useful humanoid-industry simulation-infrastructure signal.
-
-### LAAS-CNRS Gepetto Team — PhD in Humanoid Robotics: Safe Reinforcement Learning
-- Type: PhD
-- Location: Toulouse, France, with part of the project at CNRS-AIST JRL in Tsukuba, Japan
-- Source: official website — https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
-- Deadline: 2026-07-31 23:59
-- Topics: humanoid / legged locomotion / reinforcement learning / MPC / whole-body control / safe control
-- Status: active
-- Notes: Rechecked on 2026-07-17. This is a 36-month, full-time PhD starting 2026-10-01 with listed remuneration of EUR 2,300 gross per month. The project combines learned discrete contact, footstep, gait, or behavior decisions with online MPC and plans hardware validation on PAL Robotics Kangaroo and/or Unitree H1/R1 platforms under Olivier Stasse and Mehdi Benallegue.
 
 ### IHMC Robotics Team: Legged Robotics Software and Autonomy Engineer
 - Type: Research Engineer

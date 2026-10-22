@@ -797,3 +797,35 @@
 - 备注：作者在同一重定向动作集上与 TWIST2 基线比较，并将策略零样本部署到真实 Unitree G1，展示多样动作跟踪、受扰恢复和用力交互。
 
 </details>
+
+<details>
+<summary><strong>2026 年 10 月日报新增论文</strong></summary>
+
+### PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration
+- 链接：https://proceedings.mlr.press/v306/liang26n.html
+- 来源：ICML 2026
+- 日期：2026-07（ICML 正式发表）；2026-10-21（arXiv 上线）
+- 作者：Xiujian Liang, Jiacheng Liu, Mingyang Sun, Qichen He, Anda Cheng, Cewu Lu, Jianhua Sun
+- 主题：深度感知 / 传感器噪声 / 仿真到真机 / 感知 / 机器人学习
+- 摘要：将真实深度损坏拆分为“测量失效”和“测量不准确”，再结合物理驱动噪声生成与语义-几何先验，使仿真深度数据更接近真实传感器。
+- 备注：已于 2026 年 7 月正式发表于第 43 届 ICML 论文集（PMLR 306）；上述 2026-10-21 是后续 arXiv 版本上线日期（2610.29432），并非会议出版日期。论文报告真实机器人下游任务平均成功率 92.1%。对 D435i 的无效区域和边缘损坏尤其有参考价值，因为它把“缺测”和“有值但错误”明确分开建模。
+
+### A2I-Calib++: A Kinematics-Driven Anti-noise Active Calibration Framework for Whole-Body Multi-IMU Systems on Legged Robots
+- 链接：https://arxiv.org/abs/2610.29438
+- 来源：arXiv
+- 日期：2026-10-21
+- 作者：Fangyu Jiang, Chaoran Xiong, Kehui Ma, Zhen Sun, Zeyu Zhang, Ling Pei
+- 主题：腿足机器人 / 多 IMU 标定 / 主动激励 / 本体感知 / 状态估计
+- 摘要：结合运动学驱动的主动激励、抗噪轨迹设计与接触约束虚拟 IMU 融合，同时估计时间偏移、IMU 外参与惯性偏置。
+- 备注：仿真和真实四足机器人实验均报告了更高的标定精度、噪声鲁棒性和本体里程计表现。本次核验未发现 A2I-Calib++ 的正式会议或期刊信息；其前作 A2I-Calib 已被 IROS 2025 接收。
+
+### RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation
+- 链接：https://arxiv.org/abs/2610.29845
+- 来源：arXiv
+- 日期：2026-10-21
+- 作者：Samuel Foo Enze, Manthan Patel, Fan Yang, Linus Kramer, Pascal Roth, Marco Hutter, Cesar Cadena
+- 主题：腿足机器人 / LiDAR / 导航 / 表征学习 / 仿真到真机
+- 摘要：通过重建、语义分割和 BEV 预测预训练轻量 LiDAR range-image 编码器，之后冻结编码器用于下游导航策略学习。
+- 备注：编码器约 18.3 万参数；与仅重建预训练相比，语义+BEV 监督在训练程序化场景上提升 32.03 个百分点，在 OOD 真实感场景上提升 23.73 个百分点。真机零样本演示使用 Unitree B2-W。论文明确写明已投稿 ICRA 2027、正在审稿；作者承诺开源代码和模型，但本次运行尚未找到正式代码发布。
+
+</details>

@@ -991,12 +991,12 @@
 
 ### basic-locomotion-isaaclab
 - Link: https://github.com/iit-DLSLab/basic-locomotion-isaaclab
-- Category: RL / simulator / locomotion / deployment
-- Robot Type: quadruped — Aliengo / Go2 / B2 / HyQReal2
-- Simulator: Isaac Lab / Isaac Sim / MuJoCo
-- Deploy: simulation, sim-to-sim, and hardware
-- Summary: An Isaac Lab quadruped-locomotion framework with RSL-RL training, state estimation, adaptation, symmetry and AMP support, plus MuJoCo sim-to-sim and ROS 2 sim-to-real tools.
-- Notes: BSD-3-Clause; tested with Isaac Lab 2.3.2, RSL-RL 3.3.0, and MuJoCo 3.7.0. The hardware path depends on `muse` and `unitree-ros2-dls`, while DAgger and depth-to-heightmap features are marked complete but untested.
+- Category: RL / control / sim-to-real / toolkit
+- Robot Type: quadruped — Aliengo / Go2 / B2 / A2 / HyQReal2
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: simulation / sim-to-sim / ROS 2 hardware
+- Summary: A quadruped RL locomotion framework supporting state estimation, adaptation, morphological symmetries, AMP, MuJoCo sim-to-sim, and ROS 2 sim-to-real, with ongoing depth-perception extensions.
+- Notes: BSD-3-Clause; current README badges show Isaac Lab v3.0.0, RSL-RL v5.4.2 and MuJoCo v3.13.0. Hardware uses `muse` and `unitree-ros2-dls`. Commit [92687729](https://github.com/iit-DLSLab/basic-locomotion-isaaclab/commit/92687729f3b85ca4c88f87d075f64c1ff99a0777) on 2026-10-22 started improving D435 depth noise; this is work in progress, not a finished validated model. DAgger depth-to-action and depth/LiDAR-to-heightmap are listed as done but untested.
 
 ### amp-rsl-rl
 - Link: https://github.com/gbionics/amp-rsl-rl
@@ -1024,5 +1024,19 @@
 - Deploy: simulation
 - Summary: An Isaac Lab adaptation of MimicKit providing DeepMimic, AMP, and ASE motion-imitation environments for an SMPL humanoid and the 29-DoF Unitree G1.
 - Notes: BSD-3-Clause; package version 1.0.0 is marked Beta and requires external motion data. The README states that substantial portions were developed with AI assistance, and no sim-to-sim or hardware deployment is provided.
+
+</details>
+
+<details>
+<summary><strong>October 2026 Daily Additions</strong></summary>
+
+### amazon-far/RPL
+- Link: https://github.com/amazon-far/RPL
+- Category: RL / control / perceptive locomotion / distillation
+- Robot Type: humanoid
+- Simulator: Isaac Gym / MuJoCo
+- Deploy: sim
+- Summary: Official research release for RPL, covering per-terrain expert RL training, multi-depth student distillation, shipped teachers, ONNX export, and MuJoCo sim2sim.
+- Notes: Initial public commit was 2026-10-16, with README updates through 2026-10-20. Built on Holosoma; the repository includes PPO-MA / DAgger-MA infrastructure, depth rendering, terrain experts, and a shipped student for sim2sim. The README labels the related paper as CoRL 2026. Apache-2.0.
 
 </details>

@@ -8,14 +8,32 @@
 <details>
 <summary><strong>学术机会</strong></summary>
 
+### ETH Zurich RobotX — PhD Fellowship 2027
+- 类型：PhD
+- 地点：瑞士苏黎世
+- 来源：ETH Zurich 官方招聘页 — https://jobs.ethz.ch/job/view/JOPG_ethz_zBtPwWHnM0fumyTFso
+- 截止时间：2026-11-27
+- 主题：腿足运动 / 人形机器人 / 全身控制 / 强化学习 / 感知 / 机器人学习 / 操作
+- 状态：active
+- 备注：ETH RobotX 面向 2027 年入学的资助博士岗位，一次申请可以填写最多三位意向教授；研究方向明确包括腿足运动与操作、人形全身控制和安全机器人等。要求在 2027 年 8 月前取得相关硕士学位，只接受官方在线系统申请。这与 RSL 长期公开招聘是两个不同的渠道。
+
+### ETH Zurich RobotX — Postdoctoral Fellowship（博士后）
+- 类型：Postdoc
+- 地点：瑞士苏黎世
+- 来源：ETH Zurich 官方招聘页 — https://jobs.ethz.ch/job/view/JOPG_ethz_58u057ys6BxuEciK5P
+- 截止时间：2026-11-27
+- 主题：腿足运动 / 人形机器人 / 全身控制 / 强化学习 / 感知 / 操作 / 运动规划
+- 状态：active
+- 备注：与 RobotX 博士 Fellowship 分开招聘。申请人可选最多三位意向教授；博士学位须在 2027 年 8 月前取得，预计 2027 年入职。官方岗位说明初始聘期一年、通常可延长，只接受官方在线系统申请，不接受邮件申请。
+
 ### ETH Zurich Robotic Systems Lab
 - Type: PhD / PostDoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
 - Location: Zurich, Switzerland
-- Source: official website
+- Source: official website — https://rsl.ethz.ch/the-lab/open-positions.html
 - Deadline: rolling / unknown
 - Topics: legged robots / mobile manipulators / field robots / motion planning / MPC / reinforcement learning / perception / navigation / actuation / teleoperation / ROS / C++
 - Status: active
-- Notes: ETH RSL 官方页面仍列出滚动 PhD、postdoc、research staff / software engineer、robot design、embedded systems 和 electronic engineer 机会，方向覆盖腿足机器人、移动操作、field robotics、控制、学习、规划与部署。
+- Notes: 2026-10-23 复核 RSL 官方岗位页面，仍有博士、博士后、Research Staff/Software、机器人设计、嵌入式与电子工程岗位类别，涉及腿足运动、感知、规划及机器人系统；独立于 RobotX 2027 Fellowship。
 
 ### HIER Lab / NC State University
 - Type: PhD / Postdoc
@@ -162,15 +180,6 @@
 - Topics: humanoid / simulation / robotics systems / validation
 - Status: active / watching
 - Notes: 1X 官方 careers 页面在 Hardware Engineering 下列出 San Carlos 的 “Simulation Engineer”。抓取到的岗位详情页只暴露标题，因此腿足控制相关性尚未验证；但作为人形机器人行业仿真基础设施信号值得跟踪。
-
-### LAAS-CNRS Gepetto Team — 人形机器人安全强化学习博士职位
-- 类型: PhD
-- 地点: 法国图卢兹，部分研究将在日本筑波 CNRS-AIST JRL 进行
-- 来源: 官方网站 — https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
-- 截止时间: 2026-07-31 23:59
-- 主题: 人形机器人 / 腿足运动 / 强化学习 / MPC / 全身控制 / 安全控制
-- 状态: active
-- 备注: 2026-07-17 复查有效。该全职博士项目为期 36 个月，计划于 2026-10-01 入职，页面列出的月薪为税前 2,300 欧元。课题由 Olivier Stasse 与 Mehdi Benallegue 指导，将学习得到的离散接触、落脚点、步态或行为决策与在线 MPC 结合，并计划在 PAL Robotics Kangaroo 和/或 Unitree H1/R1 平台上验证。
 
 ### IHMC Robotics Team：腿足机器人软件与自主系统工程师
 - 类型: Research Engineer

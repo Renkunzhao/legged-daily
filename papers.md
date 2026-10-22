@@ -798,3 +798,35 @@
 - Notes: The authors evaluate retargeted motions against a TWIST2 baseline trained on the same set and deploy policies zero-shot on a real Unitree G1, demonstrating diverse tracking, perturbation recovery, and forceful interaction.
 
 </details>
+
+<details>
+<summary><strong>October 2026 Daily Additions</strong></summary>
+
+### PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration
+- Link: https://proceedings.mlr.press/v306/liang26n.html
+- Source: ICML 2026
+- Date: 2026-07 (ICML publication); 2026-10-21 (arXiv posting)
+- Authors: Xiujian Liang, Jiacheng Liu, Mingyang Sun, Qichen He, Anda Cheng, Cewu Lu, Jianhua Sun
+- Topics: depth sensing / sensor noise / sim-to-real / perception / robot learning
+- Summary: Separates realistic depth corruption into sensing invalidation and measurement inaccuracy, then combines physics-grounded noise generation with semantic-geometric priors so simulated depth better matches real sensors.
+- Notes: Formally published at ICML in July 2026 (PMLR 306, 2026); the 2026-10-21 date above refers to the subsequent arXiv posting (arXiv:2610.29432), not the conference publication date. The paper reports 92.1% average success across downstream real-robot experiments. Particularly relevant to depth-camera invalid regions and boundary corruption because it models missing measurements separately from inaccurate valid measurements.
+
+### A2I-Calib++: A Kinematics-Driven Anti-noise Active Calibration Framework for Whole-Body Multi-IMU Systems on Legged Robots
+- Link: https://arxiv.org/abs/2610.29438
+- Source: arXiv
+- Date: 2026-10-21
+- Authors: Fangyu Jiang, Chaoran Xiong, Kehui Ma, Zhen Sun, Zeyu Zhang, Ling Pei
+- Topics: legged robotics / multi-IMU calibration / active excitation / proprioception / state estimation
+- Summary: Jointly estimates temporal offsets, IMU extrinsics, and inertial biases by combining kinematics-driven active excitation, noise-aware trajectory design, and contact-constrained virtual-IMU fusion.
+- Notes: Simulation and real-quadruped experiments report improved calibration accuracy, noise robustness, and proprioceptive odometry. No formal venue is publicly confirmed for A2I-Calib++ in this run; the predecessor A2I-Calib was accepted to IROS 2025.
+
+### RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation
+- Link: https://arxiv.org/abs/2610.29845
+- Source: arXiv
+- Date: 2026-10-21
+- Authors: Samuel Foo Enze, Manthan Patel, Fan Yang, Linus Kramer, Pascal Roth, Marco Hutter, Cesar Cadena
+- Topics: legged robots / LiDAR / navigation / representation learning / sim-to-real
+- Summary: Pretrains a lightweight LiDAR range-image encoder using reconstruction, semantic segmentation, and BEV prediction, then freezes it for downstream navigation-policy learning.
+- Notes: The encoder has about 183K parameters; semantic-plus-BEV supervision improves success by 32.03 percentage points on training procedural scenes and 23.73 points on out-of-distribution realistic scenes versus reconstruction-only pretraining. Zero-shot hardware demonstrations use a Unitree B2-W. The paper states it is submitted to ICRA 2027 and under review; code and models are promised but were not found released in this run.
+
+</details>
