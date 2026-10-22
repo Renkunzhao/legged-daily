@@ -5,7 +5,8 @@
 - SuperMimic trains a humanoid motion tracker through one differentiable world model; it reports surpassing a 7-day, 128-GPU baseline in 3 GPU-hours and transfers to a Unitree G1.
 - "Watch Your Step" predicts upcoming footholds and samples the elevation map only around them, reaching a given terrain difficulty in about a third of the training iterations and transferring zero-shot to a Unitree G1.
 - An ETH RSL team trains a single end-to-end quadruped jumping policy for lunar gravity, with a hardware vertical jump under gravity offloading.
-- No new repository, lab/professor signal, or job opening was verified today (GitHub search was unavailable in this session and no project/code links were found for the papers above).
+- HoloMotion v2.0 (2026-10-12) adds one sparse-to-whole-body G1 policy with a public checkpoint; RoboParty's RP1 open-source humanoid platform launched 2026-10-15 with hardware, firmware, and training repositories.
+- No new lab/professor signal or job opening was verified today; no code links were found for the three papers above.
 
 <details>
 <summary><strong>New Papers</strong></summary>
@@ -42,7 +43,31 @@
 <details>
 <summary><strong>New Repos</strong></summary>
 
-No newly verified repository in this run.
+### HorizonRobotics/HoloMotion
+- Link: https://github.com/HorizonRobotics/HoloMotion
+- Category: control / motion tracking / retargeting / teleoperation
+- Robot Type: humanoid / Unitree G1
+- Simulator: MuJoCo (sim2sim replay)
+- Deploy: both
+- Summary: Apache-2.0 foundation-model stack for humanoid whole-body control, covering retargeting (HoloRetarget), motion-tracking policy training, ONNX policy bundles, and real-robot G1 deployment.
+- Notes: The 2026-10-12 v2.0 update provides one policy for sparse-to-whole-body control with initial 1-point and 5-point real-robot teleoperation, and the v2.0.0 checkpoint is on Hugging Face; the README marks v2.0 as a preview with real-robot gait and tracking quality still being refined. The README schedules the HoloMotion-2 technical report and v2.1 for late October 2026. Related: HoloMotion-1 Technical Report in papers.md.
+
+### Roboparty/RP1
+- Link: https://github.com/Roboparty/RP1
+- Category: toolkit / hardware platform
+- Robot Type: humanoid
+- Deploy: hardware
+- Summary: Overview repository for RoboParty's fully open-source humanoid platform, linking mechanical, electronics, firmware, robot-description, deployment, and training sub-repositories (24/28/30/42-DoF variants).
+- Notes: The overview repo is GPL-3.0 and each sub-repository carries its own license (a third-party summary lists CERN-OHL-W-2.0 for hardware). Training lives in `roboparty_train` (locomotion, motion imitation, behavior foundation models); the README's demo section is "Coming soon". The public launch date of 2026-10-15 comes from a third-party GitHub issue, not the README. Related: Roboparty/UFO in repos.md.
+
+### iit-DLSLab/morphosymm-rsl-rl
+- Link: https://github.com/iit-DLSLab/morphosymm-rsl-rl
+- Category: RL / toolkit
+- Robot Type: general / legged
+- Simulator: Isaac Lab
+- Deploy: sim
+- Summary: BSD-3-Clause extension of RSL-RL PPO that uses morphological symmetries for legged locomotion, through symmetry data augmentation and explicit equivariant networks built on `symmetric_learning`.
+- Notes: The README badges show Isaac Lab v3.0.0 and rsl-rl v5.4.2; mjlab appears only as a repository topic. The GitHub topic page showed a 2026-10-09 update, which could not be confirmed on the repository page. Related papers: Morphological Symmetries in Robotics (IJRR 2025) and Leveraging Symmetry in RL-based Legged Locomotion Control (IROS 2024).
 
 </details>
 
