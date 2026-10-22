@@ -2,8 +2,8 @@
 # Legged Daily - 2026-10-23
 
 ## Summary
-- PRISM, formally published at ICML 2026 and newly indexed on arXiv on 2026-10-21, separates depth corruption into sensing invalidation and measurement inaccuracy; its real-robot experiments report 92.1% average downstream success.
-- A2I-Calib++ actively excites legged robots to calibrate whole-body multi-IMU temporal offsets, extrinsics, and biases while improving robustness to measurement noise.
+- User-requested supplementary references: LOAD combines explicit inertial estimation and implicit dynamics features for narrow-beam traversal; SuperMimic uses a differentiable world model for humanoid tracking (CoRL 2026 Oral); FIBER learns unified latent-space loco-manipulation planning.
+- PRISM models depth invalidation separately from measurement inaccuracy (ICML 2026); A2I-Calib++ targets noise-robust whole-body multi-IMU calibration.
 - RangeNav pretrains a compact 183K-parameter LiDAR range-image encoder with reconstruction, semantic, and BEV objectives; the paper is submitted to ICRA 2027 and remains under review.
 - Amazon FAR has released the RPL training stack for perceptive humanoid locomotion, including expert RL, multi-depth distillation, shipped teachers, and MuJoCo sim2sim.
 - IIT DLSLab's existing quadruped locomotion framework received a 2026-10-22 commit explicitly starting a more realistic D435 noise model; this is an in-progress update rather than a finished sensor model.
@@ -11,6 +11,33 @@
 
 <details>
 <summary><strong>New Papers</strong></summary>
+
+### LOAD: Locomotion with Online Awareness of Dynamics for Precision Footholds
+- Link: https://arxiv.org/abs/2610.17930
+- Source: arXiv
+- Date: 2026-10-13
+- Authors: Kunzhao Ren, Zhishuo Zhu, Xiaobin Xiong
+- Topics: explicit inertial estimation / implicit dynamics adaptation / narrow-beam traversal / perceptive locomotion
+- Summary: Combines explicit torso inertial estimates and implicit dynamics history features with height-map-teacher to depth-student distillation for precision locomotion under unknown payloads.
+- Notes: arXiv preprint; no accepted venue is stated on the public arXiv page. Hardware results include a unilateral 6 kg payload on a 10 cm beam, a unilateral 9 kg payload on a 15 cm beam, and an evenly distributed 11 kg payload on a 15 cm beam. Added by user request as a supplementary reference, rather than a new release on this date.
+
+### SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model
+- Link: https://arxiv.org/abs/2610.28480
+- Source: arXiv
+- Date: 2026-10-20
+- Authors: Qiayuan Liao, Yiyang Shao, Junfeng Long, Kevin Zakka, Roberto Horowitz, Pieter Abbeel, Koushil Sreenath
+- Topics: humanoid / differentiable world model / model-based learning / motion tracking / sim-to-real
+- Summary: Fits one differentiable world model from rigid-body simulator transitions and trains a general motion-tracking policy through analytic gradients over short imagined rollouts; transfers to a physical Unitree G1.
+- Notes: Accepted at CoRL 2026 (Oral), as stated on arXiv; proceedings publication was not verified. The paper reports surpassing its SONIC baseline return in 3 hours on one GPU, with 25 failures among 129,514 benchmark motions; these are paper-reported benchmark results. Project: https://supermimic.github.io/. Already included in the 2026-10-22 draft; retained here as a user-requested supplementary reference.
+
+### FIBER: Action-Aligned Latent Planning for Versatile Humanoid Loco-Manipulation
+- Link: https://arxiv.org/abs/2610.24675
+- Source: arXiv
+- Date: 2026-10-17
+- Authors: Yutang Lin, Guanya Shi, C. Karen Liu
+- Topics: humanoid / loco-manipulation / behavioral foundation model / latent planning / offline learning
+- Summary: Projects task-specific experts into the executable latent space of a frozen behavioral foundation model by matching local control responses, then trains one offline perceptive flow planner for box pickup, door opening, and grasping.
+- Notes: arXiv preprint; v2 was posted on 2026-10-20, with no accepted venue stated on arXiv. Reports 42.0% mean simulation success versus 11.6% for projected latent replay and 3.5% for kinematic planning, plus real Unitree G1 demonstrations. Project: https://fiberaa.github.io/; its code link is marked coming soon. Added by user request as a supplementary reference.
 
 ### PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration
 - Link: https://proceedings.mlr.press/v306/liang26n.html

@@ -2,8 +2,8 @@
 # Legged Daily - 2026-10-23
 
 ## 摘要
-- PRISM 已正式发表于 ICML 2026，并于 2026-10-21 新上线 arXiv；它把深度损坏拆分为“测量失效”和“有效值不准确”两类，真实机器人下游实验报告平均成功率 92.1%。
-- A2I-Calib++ 通过主动激励腿足机器人，同时标定全身多 IMU 的时间偏移、外参和偏置，并专门增强对测量噪声的鲁棒性。
+- 按用户要求补充：LOAD 将显式惯参估计与隐式动力学特征用于窄桥通过；SuperMimic 用可微世界模型训练人形动作跟踪（CoRL 2026 Oral）；FIBER 学习统一潜空间移动操作规划。
+- PRISM 将深度缺测与测量不准分开建模（ICML 2026）；A2I-Calib++ 关注全身多 IMU 的抗噪主动标定。
 - RangeNav 用重建、语义分割和 BEV 预测联合预训练一个仅约 18.3 万参数的 LiDAR range-image 编码器；论文已投稿 ICRA 2027，目前仍在审稿。
 - Amazon FAR 已放出 RPL 感知式人形运动研究代码，包括地形专家 RL、多深度蒸馏、随仓库提供的 teacher，以及 MuJoCo sim2sim。
 - IIT DLSLab 已有的四足运动框架在 2026-10-22 出现明确提交：“start to adding better d435 model noise”；这是正在开发中的更新，不能视为完整 D435 噪声模型已经完成。
@@ -11,6 +11,33 @@
 
 <details>
 <summary><strong>新论文</strong></summary>
+
+### LOAD: Locomotion with Online Awareness of Dynamics for Precision Footholds
+- Link: https://arxiv.org/abs/2610.17930
+- Source: arXiv
+- Date: 2026-10-13
+- Authors: Kunzhao Ren, Zhishuo Zhu, Xiaobin Xiong
+- Topics: 显式惯性参数估计 / 隐式动力学适应 / 窄桥通过 / 感知运动
+- Summary: 结合显式躯干惯性参数估计与隐式动力学历史特征，并将高程图教师蒸馏为深度图学生，实现未知负载下的精准落足与窄桥通过。
+- Notes: arXiv 预印本；公开 arXiv 页面未注明已接收的会议或期刊。真机实验包括单侧 6 kg 负载通过 10 cm 桥、单侧 9 kg 负载通过 15 cm 桥，以及均匀分布 11 kg 负载通过 15 cm 桥。按用户要求补充收录，并非今日新发布。
+
+### SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model
+- Link: https://arxiv.org/abs/2610.28480
+- Source: arXiv
+- Date: 2026-10-20
+- Authors: Qiayuan Liao, Yiyang Shao, Junfeng Long, Kevin Zakka, Roberto Horowitz, Pieter Abbeel, Koushil Sreenath
+- Topics: 人形机器人 / 可微世界模型 / 基于模型的学习 / 动作跟踪 / 仿真到真机
+- Summary: 利用刚体仿真器的状态转移训练统一可微世界模型，再通过短时想象轨迹的解析梯度训练通用动作跟踪策略，并迁移到真实 Unitree G1。
+- Notes: arXiv 明确注明已被 CoRL 2026 接收为 Oral；尚未核实正式论文集出版。论文报告单 GPU 训练 3 小时超过 SONIC 基线回报，在 129,514 段测试动作中失败 25 段；这些数字为论文报告的特定基准结果。项目：https://supermimic.github.io/。已出现在 2026-10-22 草稿中，本次按用户要求补充保留。
+
+### FIBER: Action-Aligned Latent Planning for Versatile Humanoid Loco-Manipulation
+- Link: https://arxiv.org/abs/2610.24675
+- Source: arXiv
+- Date: 2026-10-17
+- Authors: Yutang Lin, Guanya Shi, C. Karen Liu
+- Topics: 人形机器人 / 移动操作 / 行为基础模型 / 潜空间规划 / 离线学习
+- Summary: 通过匹配局部控制响应，将任务专家投影到冻结行为基础模型的可执行潜空间，再离线训练统一的感知流匹配规划器，执行搬箱、开门和抓取。
+- Notes: arXiv 预印本；v2 更新于 2026-10-20，arXiv 未注明已接收的会议或期刊。论文报告仿真平均成功率 42.0%，投影潜轨迹回放与运动学规划基线分别为 11.6% 和 3.5%，并展示真实 Unitree G1 实验。项目：https://fiberaa.github.io/；代码链接仍标注 coming soon。本次按用户要求补充收录。
 
 ### PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration
 - Link: https://proceedings.mlr.press/v306/liang26n.html
