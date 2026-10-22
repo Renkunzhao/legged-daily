@@ -7,7 +7,7 @@
 - RangeNav pretrains a compact 183K-parameter LiDAR range-image encoder with reconstruction, semantic, and BEV objectives; the paper is submitted to ICRA 2027 and remains under review.
 - Amazon FAR has released the RPL training stack for perceptive humanoid locomotion, including expert RL, multi-depth distillation, shipped teachers, and MuJoCo sim2sim.
 - IIT DLSLab's existing quadruped locomotion framework received a 2026-10-22 commit explicitly starting a more realistic D435 noise model; this is an in-progress update rather than a finished sensor model.
-- ETH Zurich RobotX is recruiting for its 2027 PhD Fellowship (deadline 2026-11-27), explicitly covering legged locomotion and humanoids; RSL's rolling opportunities remain listed, while the LAAS-CNRS safe-RL PhD offer has expired.
+- ETH Zurich RobotX is recruiting for its 2027 PhD and Postdoctoral Fellowships (both due 2026-11-27), explicitly covering legged locomotion and humanoids; RSL's rolling opportunities remain listed, while the LAAS-CNRS safe-RL PhD offer has expired.
 
 <details>
 <summary><strong>New Papers</strong></summary>
@@ -88,6 +88,15 @@
 - Topics: legged locomotion / humanoid / whole-body control / RL / perception / robot learning / manipulation
 - Status: active
 - Notes: Funded 2027-entry doctoral fellowship across ETH RobotX labs: applicants may nominate up to three professors, with research areas explicitly including robotic locomotion and manipulation, humanoid whole-body control, and safe robotics. Applicants need a relevant Master's degree completed by August 2027; apply through the official online portal, not by email. This is distinct from the RSL's ongoing general hiring.
+
+### ETH Zurich RobotX — Postdoctoral Fellowship
+- Type: Postdoc
+- Location: Zurich, Switzerland
+- Source: official ETH Zurich careers page — https://jobs.ethz.ch/job/view/JOPG_ethz_58u057ys6BxuEciK5P
+- Deadline: 2026-11-27
+- Topics: legged locomotion / humanoid / whole-body control / RL / perception / manipulation / motion planning
+- Status: active
+- Notes: Separate from the RobotX PhD Fellowship: applicants choose up to three professors for a 2027-start research position, requiring a relevant doctoral degree completed by August 2027. The official posting describes a one-year postdoc contract, typically extended; applications go through the online portal rather than email.
 
 ### ETH Zurich Robotic Systems Lab
 - Type: PhD / Postdoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer

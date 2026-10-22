@@ -7,7 +7,7 @@
 - RangeNav 用重建、语义分割和 BEV 预测联合预训练一个仅约 18.3 万参数的 LiDAR range-image 编码器；论文已投稿 ICRA 2027，目前仍在审稿。
 - Amazon FAR 已完整放出 RPL 感知式人形运动训练栈，包括地形专家 RL、多深度蒸馏、随仓库提供的 teacher，以及 MuJoCo sim2sim。
 - IIT DLSLab 已有的四足运动框架在 2026-10-22 出现明确提交：“start to adding better d435 model noise”；这是正在开发中的更新，不能视为完整 D435 噪声模型已经完成。
-- ETH Zurich RobotX 正在招募 2027 年博士 Fellowship（截止 2026-11-27），明确涵盖腿足运动和人形机器人；RSL 长期岗位仍在招聘，而 LAAS-CNRS 安全强化学习 PhD 官方招聘已经失效。
+- ETH Zurich RobotX 正在招募 2027 年博士及博士后 Fellowship（均截止 2026-11-27），明确涵盖腿足运动和人形机器人；RSL 长期岗位仍在招聘，而 LAAS-CNRS 安全强化学习 PhD 官方招聘已经失效。
 
 <details>
 <summary><strong>新论文</strong></summary>
@@ -88,6 +88,15 @@
 - Topics: 腿足运动 / 人形机器人 / 全身控制 / 强化学习 / 感知 / 机器人学习 / 操作
 - Status: active
 - Notes: ETH RobotX 面向 2027 年入学的资助博士岗位，一次申请可以填写最多三位意向教授；研究方向明确包括腿足运动与操作、人形全身控制和安全机器人等。要求在 2027 年 8 月前取得相关硕士学位，只接受官方在线系统申请。这与 RSL 长期公开招聘是两个不同的渠道。
+
+### ETH Zurich RobotX — Postdoctoral Fellowship（博士后）
+- Type: Postdoc
+- Location: 瑞士苏黎世
+- Source: ETH Zurich 官方招聘页 — https://jobs.ethz.ch/job/view/JOPG_ethz_58u057ys6BxuEciK5P
+- Deadline: 2026-11-27
+- Topics: 腿足运动 / 人形机器人 / 全身控制 / 强化学习 / 感知 / 操作 / 运动规划
+- Status: active
+- Notes: 与 RobotX 博士 Fellowship 分开招聘。申请人可选最多三位意向教授；博士学位须在 2027 年 8 月前取得，预计 2027 年入职。官方岗位说明初始聘期一年、通常可延长，只接受官方在线系统申请，不接受邮件申请。
 
 ### ETH Zurich Robotic Systems Lab
 - Type: PhD / Postdoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
