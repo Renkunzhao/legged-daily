@@ -2,86 +2,96 @@
 # Legged Daily - 2026-10-23
 
 ## 摘要
-- HuMiT(清华叉院 / 港中文)只跟踪根高度、根速度和四个稀疏关键点位姿组成的紧凑参考,实现 G1 全身遥操作,头显输入到策略输出约 20 ms;训练代码已公开。
-- RISE(Stella X. Yu 组)在推理时用任务代价引导摔倒后的人形机器人如何起身,基于学习到的恢复动作词表和视觉扩散规划器,并在 Unitree G1 上进行了真机演示。
-- SP-HLM 以五个任务关键身体位姿作为 VLA、实时动作生成器和通用动作跟踪器之间的接口,用于人形移动操作。
-- 新仓库:`btx0424/active-adaptation`,是 FACET、HDMI、GentleHumanoid、Gallant 背后的 RL 框架,支持 Isaac Sim、MuJoCo、mjlab 后端。
-- HoloMotion README 新增 2026-10-22 条目:H-bot 竞赛开放(Track 2 拳击基线单卡约 21 分钟训练);v2.1 与 HoloMotion-2 技术报告仍计划于 10 月底发布。
-- 未核实到新招聘;EPFL BioRob 人形神经力学 PhD/博后岗位官方页面已标注 CLOSED。
+- PRISM 已正式发表于 ICML 2026，并于 2026-10-21 新上线 arXiv；它把深度损坏拆分为“测量失效”和“有效值不准确”两类，真实机器人下游实验报告平均成功率 92.1%。
+- A2I-Calib++ 通过主动激励腿足机器人，同时标定全身多 IMU 的时间偏移、外参和偏置，并专门增强对测量噪声的鲁棒性。
+- RangeNav 用重建、语义分割和 BEV 预测联合预训练一个仅约 18.3 万参数的 LiDAR range-image 编码器；论文已投稿 ICRA 2027，目前仍在审稿。
+- Amazon FAR 已完整放出 RPL 感知式人形运动训练栈，包括地形专家 RL、多深度蒸馏、随仓库提供的 teacher，以及 MuJoCo sim2sim。
+- IIT DLSLab 已有的四足运动框架在 2026-10-22 出现明确提交：“start to adding better d435 model noise”；这是正在开发中的更新，不能视为完整 D435 噪声模型已经完成。
+- ETH Zurich RSL 官方招聘页仍列出长期开放岗位；LAAS-CNRS 的安全强化学习人形 PhD 已应从 jobs.md 移除，因为 CNRS 官方页现在明确显示该岗位不再可用。
 
 <details>
 <summary><strong>新论文</strong></summary>
 
-### HuMiT: Low-Latency Whole-Body Humanoid Teleoperation via Compact Reference Tracking
-- Link: https://arxiv.org/abs/2610.29903
-- Source: arXiv
+### PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration
+- Link: https://proceedings.mlr.press/v306/liang26n.html
+- Source: ICML 2026
 - Date: 2026-10-21
-- Authors: Liu Cao, Botian Xu, Ruoqu Chen, Jiajun Liu, Mingzhi Pei, Zihao Wang, Zhongyu Li, Mengdi Xu
-- Topics: 人形 / 全身遥操作 / 动作跟踪 / 低延迟 / 仿真到真机
-- Summary: 统一的跟踪策略只需每帧紧凑参考(根高度、根速度、四个稀疏关键点的 SE(3) 位姿),即可达到使用更丰富参考信息的方法的水平,实现低延迟人形全身遥操作。
-- Notes: 报告头显输入到策略输出约 20 ms,光流测得的中位延迟 65 ms;Unitree G1 真机演示包括反应式接物和协调操作。项目页:https://xiaohu-art.github.io/Track/;代码:https://github.com/xiaohu-art/Track。相关工作:ExtremControl(arXiv 2602.11321)低延迟遥操作。
+- Authors: Xiujian Liang, Jiacheng Liu, Mingyang Sun, Qichen He, Anda Cheng, Cewu Lu, Jianhua Sun
+- Topics: 深度感知 / 传感器噪声 / 仿真到真机 / 感知 / 机器人学习
+- Summary: 将真实深度损坏拆分为“测量失效”和“测量不准确”，再结合物理驱动噪声生成与语义-几何先验，使仿真深度数据更接近真实传感器。
+- Notes: 已正式发表于第 43 届 ICML 论文集（PMLR 306, 2026）；arXiv 版本于 2026-10-21 上线，编号 2610.29432。论文报告真实机器人下游任务平均成功率 92.1%。对 D435i 的无效区域和边缘损坏尤其有参考价值，因为它把“缺测”和“有值但错误”明确分开建模。
 
-### Test-Time Motion Steering for Perceptive Humanoid Fall Recovery
-- Link: https://arxiv.org/abs/2610.30061
+### A2I-Calib++: A Kinematics-Driven Anti-noise Active Calibration Framework for Whole-Body Multi-IMU Systems on Legged Robots
+- Link: https://arxiv.org/abs/2610.29438
 - Source: arXiv
 - Date: 2026-10-21
-- Authors: Osher Azulay, Cheng-Lin Hsieh, Stella X. Yu
-- Topics: 人形 / 摔倒恢复 / 扩散规划 / 感知控制 / 测试时引导
-- Summary: RISE 学习一个把意图动作与电机动作关联起来的恢复动作词表,再用视觉扩散规划器预测未来身体状态,并用任务代价(朝向、起身速度或路径)引导预测,从而无需重新训练即可控制机器人的起身方式。
-- Notes: 仿真展示了多样的恢复方式、地形适应和测试时引导;真机演示在 Unitree G1 上完成。项目页:https://osheraz.github.io/RISE/(代码标注“即将发布”)。
+- Authors: Fangyu Jiang, Chaoran Xiong, Kehui Ma, Zhen Sun, Zeyu Zhang, Ling Pei
+- Topics: 腿足机器人 / 多 IMU 标定 / 主动激励 / 本体感知 / 状态估计
+- Summary: 结合运动学驱动的主动激励、抗噪轨迹设计与接触约束虚拟 IMU 融合，同时估计时间偏移、IMU 外参与惯性偏置。
+- Notes: 仿真和真实四足机器人实验均报告了更高的标定精度、噪声鲁棒性和本体里程计表现。本次核验未发现 A2I-Calib++ 的正式会议或期刊信息；其前作 A2I-Calib 已被 IROS 2025 接收。
 
-### SP-HLM: Sparse-Pose-Driven Motion Generation and Whole-Body Control for Humanoid Loco-Manipulation
-- Link: https://arxiv.org/abs/2610.30044
+### RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation
+- Link: https://arxiv.org/abs/2610.29845
 - Source: arXiv
 - Date: 2026-10-21
-- Authors: Zhaohui Yang, Quanbao Lin, Chengqi Shi, Zhenglang Weng, Jicheng Lin, Boyu Chen, Tengjie Zhu, Guanzhu Ren, Jiahao Xu, Yang Feng, Xiaokang Yang, Yao Mu
-- Topics: 人形 / 移动操作 / VLA / 动作生成 / 动作跟踪
-- Summary: 以五个任务关键身体位姿加学习到的潜在动作先验作为高层策略与全身控制之间的接口:SP-VLA 根据观测和语言预测稀疏位姿,SP-MGM 实时重建全身动作,SP-GMT 负责跟踪。
-- Notes: 摘要称在动作跟踪和移动操作上均有提升,但未给出具体数字。项目页:https://sp-hlm.github.io/(本次运行无法抓取,代码是否公开未核实)。
+- Authors: Samuel Foo Enze, Manthan Patel, Fan Yang, Linus Kramer, Pascal Roth, Marco Hutter, Cesar Cadena
+- Topics: 腿足机器人 / LiDAR / 导航 / 表征学习 / 仿真到真机
+- Summary: 通过重建、语义分割和 BEV 预测预训练轻量 LiDAR range-image 编码器，之后冻结编码器用于下游导航策略学习。
+- Notes: 编码器约 18.3 万参数；与仅重建预训练相比，语义+BEV 监督在训练程序化场景上提升 32.03 个百分点，在 OOD 真实感场景上提升 23.73 个百分点。真机零样本演示使用 Unitree B2-W。论文明确写明已投稿 ICRA 2027、正在审稿；作者承诺开源代码和模型，但本次运行尚未找到正式代码发布。
 
 </details>
 
 <details>
 <summary><strong>新仓库</strong></summary>
 
-### btx0424/active-adaptation
-- Link: https://github.com/btx0424/active-adaptation
-- Category: RL / 工具包
-- Robot Type: 通用 / 四足 / 人形
-- Simulator: Isaac Lab / Isaac Sim(5.1.0+)、MuJoCo、mjlab
-- Deploy: sim
-- Summary: 面向足式运动与移动操作的 RL 框架,提供自动形状处理、单文件 RL 实现、对称性增强、MuJoCo sim2sim 以及项目脚手架 CLI。
-- Notes: README 列出 Unitree Go2、G1、A2、B2,并注明 FACET、HDMI、GentleHumanoid、Gallant 基于此框架;HuMiT 的 Track 仓库依赖它。约 163 星;未见许可证或发布标签。
-
-### xiaohu-art/Track
-- Link: https://github.com/xiaohu-art/Track
-- Category: 动作跟踪 / RL
+### amazon-far/RPL
+- Link: https://github.com/amazon-far/RPL
+- Category: RL / 控制 / 感知式运动 / 蒸馏
 - Robot Type: 人形
-- Simulator: Isaac Lab(Isaac Sim 5.1.0)
+- Simulator: Isaac Gym / MuJoCo
 - Deploy: sim
-- Summary: HuMiT 项目页链接的代码,用于训练和评估 PPO 参考动作跟踪策略,可选导出 ONNX;基于 active-adaptation。
-- Notes: README 内容很少,未见许可证或已发布权重,也未看到真机部署代码。相关论文:HuMiT(arXiv 2610.29903)。
+- Summary: RPL 官方研究代码，覆盖分地形专家 RL、多深度 Student 蒸馏、随仓库提供的 Teacher、ONNX 导出和 MuJoCo sim2sim。
+- Notes: 首次公开提交为 2026-10-16，README 更新到 2026-10-20。基于 Holosoma，仓库包含 PPO-MA / DAgger-MA、深度渲染、地形专家以及可直接用于 sim2sim 的 Student。README 将对应论文标注为 CoRL 2026。许可证为 Apache-2.0。
+
+### iit-DLSLab/basic-locomotion-isaaclab
+- Link: https://github.com/iit-DLSLab/basic-locomotion-isaaclab
+- Category: RL / 控制 / 仿真到真机 / 工具包
+- Robot Type: 四足
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: both
+- Summary: DLSLab 已有的四足运动栈，支持 Aliengo、Go2、B2、A2、HyQReal2，覆盖 RL 训练、状态估计、动力学适应、MuJoCo sim2sim 和 ROS 2 真机部署。
+- Notes: 对 repos.md 已有条目的更新：2026-10-22 的提交 92687729 标题为“start to adding better d435 model noise”，因此它成为一个值得继续跟踪的 RealSense 真实深度损坏建模信号。README 同时把 DAgger depth-to-action 蒸馏、Depth-to-Heightmap 和 Lidar-to-Heightmap 标为“已做但尚未测试”的 WIP；目前不能把新的 D435 模型当作已完成方案。
 
 </details>
 
 <details>
 <summary><strong>实验室 / 教授信号</strong></summary>
 
-### Zhongyu Li — The Chinese University of Hong Kong
-- Institution: 香港中文大学
-- Homepage: https://zyliatzju.github.io/
-- X: https://x.com/ZhongyuLi4
-- Key Topics: 人形 / 全身遥操作 / 动作跟踪 / RL / 控制
-- Notes: 对 labs.md 已有条目的更新:与 Mengdi Xu(清华叉院)、Botian Xu(港中文)合作发表 HuMiT(arXiv 2610.29903),训练代码已开源,基于 Botian Xu 的 active-adaptation 框架。Botian Xu 在组内的身份未核实,因此不建议添加学生条目。
+### Robotic Systems Lab — ETH Zurich
+- Institution: ETH Zurich
+- Homepage: https://rsl.ethz.ch/
+- GitHub: https://github.com/leggedrobotics
+- Lab / Department: Robotic Systems Lab
+- Key Topics: 腿足运动 / 感知 / 导航 / 强化学习 / MPC / 野外机器人
+- Notes: RangeNav（arXiv:2610.29845）是来自 Marco Hutter、Cesar Cadena 等作者的新 LiDAR 导航信号。RSL 官方招聘页仍列出长期开放的 PhD、博后、Research Staff/Software、Robot Design、Embedded Systems 和 Electronics 等岗位；这是对已有跟踪源的更新，不是新增实验室条目。
 
 </details>
 
 <details>
 <summary><strong>招聘信号</strong></summary>
 
-### 无新核实岗位
-- Source: 官方来源核查
-- Status: watching
-- Notes: EPFL BioRob 关于人形机器人与人类运动神经力学的博后 + PhD 岗位在官方页面已标注 CLOSED,不建议加入 jobs.md。此前提出的 LAAS-CNRS 安全强化学习 PhD 移除建议(截止 2026-07-31,已过期)仍待确认。
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / Postdoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
+- Location: Zurich, Switzerland
+- Source: 官方网站
+- Deadline: rolling / unknown
+- Topics: 腿足机器人 / 运动控制 / MPC / 强化学习 / 感知 / 导航 / 机器人系统
+- Status: active
+- Notes: 今日重新核验，RSL 官方岗位页仍列出上述类别，因此 jobs.md 中现有条目应继续保持 active；这不是一个新发现的岗位。
+
+### Proposed Removal / Stale Item
+- Current Status: expired / no longer actionable
+- Reason: LAAS-CNRS Gepetto Team 的安全强化学习人形机器人 PhD 截止日期为 2026-07-31，CNRS 官方页面现在明确显示该岗位“不再可用”。
+- Source Checked: https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
 
 </details>

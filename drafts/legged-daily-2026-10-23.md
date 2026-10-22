@@ -2,86 +2,96 @@
 # Legged Daily - 2026-10-23
 
 ## Summary
-- HuMiT (Tsinghua IIIS / CUHK) tracks a compact reference of root height, root velocity, and four sparse keypoint poses for whole-body G1 teleoperation, reporting about 20 ms from headset input to policy output; training code is public.
-- RISE (Stella X. Yu group) lets task costs steer how a fallen humanoid stands up at inference time, through a learned recovery vocabulary and a visual diffusion planner, with real-world demonstrations on a Unitree G1.
-- SP-HLM uses five task-critical body poses as the interface between a VLA, a real-time motion generator, and a general motion tracker for humanoid loco-manipulation.
-- New repo: `btx0424/active-adaptation`, the RL framework behind FACET, HDMI, GentleHumanoid, and Gallant, with Isaac Sim, MuJoCo, and mjlab backends.
-- HoloMotion's README added a 2026-10-22 entry for the H-bot Competition (Track 2 boxing baseline in about 21 minutes on one GPU); v2.1 and the HoloMotion-2 report are still scheduled for late October.
-- No new job opening was verified; the EPFL BioRob humanoid neuromechanics PhD/postdoc call is marked CLOSED.
+- PRISM, formally published at ICML 2026 and newly indexed on arXiv on 2026-10-21, separates depth corruption into sensing invalidation and measurement inaccuracy; its real-robot experiments report 92.1% average downstream success.
+- A2I-Calib++ actively excites legged robots to calibrate whole-body multi-IMU temporal offsets, extrinsics, and biases while improving robustness to measurement noise.
+- RangeNav pretrains a compact 183K-parameter LiDAR range-image encoder with reconstruction, semantic, and BEV objectives; the paper is submitted to ICRA 2027 and remains under review.
+- Amazon FAR has released the RPL training stack for perceptive humanoid locomotion, including expert RL, multi-depth distillation, shipped teachers, and MuJoCo sim2sim.
+- IIT DLSLab's existing quadruped locomotion framework received a 2026-10-22 commit explicitly starting a more realistic D435 noise model; this is an in-progress update rather than a finished sensor model.
+- ETH Zurich RSL's official openings page still lists rolling opportunities; the LAAS-CNRS safe-RL humanoid PhD entry is now stale because the official CNRS page says the offer is no longer available.
 
 <details>
 <summary><strong>New Papers</strong></summary>
 
-### HuMiT: Low-Latency Whole-Body Humanoid Teleoperation via Compact Reference Tracking
-- Link: https://arxiv.org/abs/2610.29903
-- Source: arXiv
+### PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration
+- Link: https://proceedings.mlr.press/v306/liang26n.html
+- Source: ICML 2026
 - Date: 2026-10-21
-- Authors: Liu Cao, Botian Xu, Ruoqu Chen, Jiajun Liu, Mingzhi Pei, Zihao Wang, Zhongyu Li, Mengdi Xu
-- Topics: humanoid / whole-body teleoperation / motion tracking / low latency / sim-to-real
-- Summary: A unified tracking policy that needs only a compact per-frame reference (root height, root velocity, and SE(3) poses of four sparse keypoints) and matches methods that use richer reference data, enabling low-latency whole-body humanoid teleoperation.
-- Notes: Reports about 20 ms from headset input to policy output and a 65 ms median optical-flow latency; real-world demos on a Unitree G1 include reactive catching and coordinated manipulation. Project page: https://xiaohu-art.github.io/Track/; code: https://github.com/xiaohu-art/Track. Related: ExtremControl (arXiv 2602.11321) on low-latency teleoperation.
+- Authors: Xiujian Liang, Jiacheng Liu, Mingyang Sun, Qichen He, Anda Cheng, Cewu Lu, Jianhua Sun
+- Topics: depth sensing / sensor noise / sim-to-real / perception / robot learning
+- Summary: Separates realistic depth corruption into sensing invalidation and measurement inaccuracy, then combines physics-grounded noise generation with semantic-geometric priors so simulated depth better matches real sensors.
+- Notes: Formally published in Proceedings of the 43rd International Conference on Machine Learning (PMLR 306, 2026); the arXiv version appeared on 2026-10-21 as arXiv:2610.29432. The paper reports 92.1% average success across downstream real-robot experiments. Particularly relevant to depth-camera invalid regions and boundary corruption because it models missing measurements separately from inaccurate valid measurements.
 
-### Test-Time Motion Steering for Perceptive Humanoid Fall Recovery
-- Link: https://arxiv.org/abs/2610.30061
+### A2I-Calib++: A Kinematics-Driven Anti-noise Active Calibration Framework for Whole-Body Multi-IMU Systems on Legged Robots
+- Link: https://arxiv.org/abs/2610.29438
 - Source: arXiv
 - Date: 2026-10-21
-- Authors: Osher Azulay, Cheng-Lin Hsieh, Stella X. Yu
-- Topics: humanoid / fall recovery / diffusion planning / perceptive control / test-time steering
-- Summary: RISE learns a recovery vocabulary that links intended movements to motor actions, then uses a visual diffusion planner whose predicted future body states are guided by task costs (heading, rise speed, or path) to steer how the robot stands up without retraining.
-- Notes: Simulation shows diverse recoveries, terrain adaptation, and test-time steering; real-world demonstrations are on a Unitree G1. Project page: https://osheraz.github.io/RISE/ (code marked "coming soon").
+- Authors: Fangyu Jiang, Chaoran Xiong, Kehui Ma, Zhen Sun, Zeyu Zhang, Ling Pei
+- Topics: legged robotics / multi-IMU calibration / active excitation / proprioception / state estimation
+- Summary: Jointly estimates temporal offsets, IMU extrinsics, and inertial biases by combining kinematics-driven active excitation, noise-aware trajectory design, and contact-constrained virtual-IMU fusion.
+- Notes: Simulation and real-quadruped experiments report improved calibration accuracy, noise robustness, and proprioceptive odometry. No formal venue is publicly confirmed for A2I-Calib++ in this run; the predecessor A2I-Calib was accepted to IROS 2025.
 
-### SP-HLM: Sparse-Pose-Driven Motion Generation and Whole-Body Control for Humanoid Loco-Manipulation
-- Link: https://arxiv.org/abs/2610.30044
+### RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation
+- Link: https://arxiv.org/abs/2610.29845
 - Source: arXiv
 - Date: 2026-10-21
-- Authors: Zhaohui Yang, Quanbao Lin, Chengqi Shi, Zhenglang Weng, Jicheng Lin, Boyu Chen, Tengjie Zhu, Guanzhu Ren, Jiahao Xu, Yang Feng, Xiaokang Yang, Yao Mu
-- Topics: humanoid / loco-manipulation / VLA / motion generation / motion tracking
-- Summary: Uses five task-critical body poses plus a learned latent motion prior as the interface between high-level policy and whole-body control: SP-VLA predicts sparse poses from observations and language, SP-MGM reconstructs full-body motion in real time, and SP-GMT tracks it.
-- Notes: The abstract reports improvements in motion tracking and loco-manipulation but gives no headline numbers. Project page: https://sp-hlm.github.io/ (could not be fetched in this run, so code availability is unverified).
+- Authors: Samuel Foo Enze, Manthan Patel, Fan Yang, Linus Kramer, Pascal Roth, Marco Hutter, Cesar Cadena
+- Topics: legged robots / LiDAR / navigation / representation learning / sim-to-real
+- Summary: Pretrains a lightweight LiDAR range-image encoder using reconstruction, semantic segmentation, and BEV prediction, then freezes it for downstream navigation-policy learning.
+- Notes: The encoder has about 183K parameters; semantic-plus-BEV supervision improves success by 32.03 percentage points on training procedural scenes and 23.73 points on out-of-distribution realistic scenes versus reconstruction-only pretraining. Zero-shot hardware demonstrations use a Unitree B2-W. The paper states it is submitted to ICRA 2027 and under review; code and models are promised but were not found released in this run.
 
 </details>
 
 <details>
 <summary><strong>New Repos</strong></summary>
 
-### btx0424/active-adaptation
-- Link: https://github.com/btx0424/active-adaptation
-- Category: RL / toolkit
-- Robot Type: general / quadruped / humanoid
-- Simulator: Isaac Lab / Isaac Sim (5.1.0+), MuJoCo, mjlab
-- Deploy: sim
-- Summary: RL framework for legged locomotion and loco-manipulation with automatic shape handling, single-file RL implementations, symmetry augmentation, MuJoCo sim2sim, and a project-scaffolding CLI.
-- Notes: The README lists Unitree Go2, G1, A2, and B2 and cites FACET, HDMI, GentleHumanoid, and Gallant as built on it; HuMiT's Track repo depends on it. About 163 stars; no license or release tags were visible.
-
-### xiaohu-art/Track
-- Link: https://github.com/xiaohu-art/Track
-- Category: motion tracking / RL
+### amazon-far/RPL
+- Link: https://github.com/amazon-far/RPL
+- Category: RL / control / perceptive locomotion / distillation
 - Robot Type: humanoid
-- Simulator: Isaac Lab (Isaac Sim 5.1.0)
+- Simulator: Isaac Gym / MuJoCo
 - Deploy: sim
-- Summary: Code linked from the HuMiT project page for training and evaluating PPO reference-motion tracking policies, with optional ONNX export; built on active-adaptation.
-- Notes: Minimal README, no visible license or released checkpoints; real-robot deployment code was not seen. Related paper: HuMiT (arXiv 2610.29903).
+- Summary: Official research release for RPL, covering per-terrain expert RL training, multi-depth student distillation, shipped teachers, ONNX export, and MuJoCo sim2sim.
+- Notes: Initial public commit was 2026-10-16, with README updates through 2026-10-20. Built on Holosoma; the repository includes PPO-MA / DAgger-MA infrastructure, depth rendering, terrain experts, and a shipped student for sim2sim. The README labels the related paper as CoRL 2026. Apache-2.0.
+
+### iit-DLSLab/basic-locomotion-isaaclab
+- Link: https://github.com/iit-DLSLab/basic-locomotion-isaaclab
+- Category: RL / control / sim-to-real / toolkit
+- Robot Type: quadruped
+- Simulator: Isaac Lab / MuJoCo
+- Deploy: both
+- Summary: Existing DLSLab quadruped locomotion stack for Aliengo, Go2, B2, A2, and HyQReal2, with RL training, state estimation, domain adaptation, MuJoCo sim2sim, and ROS 2 hardware deployment.
+- Notes: Update to the existing repos.md entry: commit 92687729 on 2026-10-22 is titled "start to adding better d435 model noise," making the repository a useful live signal for realistic RealSense depth corruption. The README also lists DAgger depth-to-action distillation and depth-/LiDAR-to-heightmap modules as work in progress, done but not tested; do not treat the new D435 model as complete yet.
 
 </details>
 
 <details>
 <summary><strong>Lab / Professor Signals</strong></summary>
 
-### Zhongyu Li — The Chinese University of Hong Kong
-- Institution: The Chinese University of Hong Kong
-- Homepage: https://zyliatzju.github.io/
-- X: https://x.com/ZhongyuLi4
-- Key Topics: humanoid / whole-body teleoperation / motion tracking / RL / control
-- Notes: Update to the existing labs.md entry: co-author of HuMiT (arXiv 2610.29903) with Mengdi Xu (Tsinghua IIIS) and Botian Xu (CUHK), with open training code built on Botian Xu's active-adaptation framework. Botian Xu's role in the group was not verified, so no student line is proposed.
+### Robotic Systems Lab — ETH Zurich
+- Institution: ETH Zurich
+- Homepage: https://rsl.ethz.ch/
+- GitHub: https://github.com/leggedrobotics
+- Lab / Department: Robotic Systems Lab
+- Key Topics: legged locomotion / perception / navigation / reinforcement learning / MPC / field robotics
+- Notes: RangeNav (arXiv:2610.29845) is a new LiDAR-navigation signal from authors including Marco Hutter and Cesar Cadena. The lab's official openings page continues to list rolling PhD, postdoc, research-staff/software, robot-design, embedded-systems, and electronics opportunities; this is an update to an existing tracked source rather than a new lab entry.
 
 </details>
 
 <details>
 <summary><strong>Job Signals</strong></summary>
 
-### No newly verified opening
-- Source: official-source review
-- Status: watching
-- Notes: The EPFL BioRob postdoc + PhD call on human-locomotion neuromechanics with humanoid robots is marked CLOSED on the official openings page and is not proposed for jobs.md. The previously proposed LAAS-CNRS safe-RL PhD removal (deadline 2026-07-31, expired) remains pending confirmation.
+### ETH Zurich Robotic Systems Lab
+- Type: PhD / Postdoc / Research Staff / Software Engineer / Robot Design Engineer / Embedded Systems Engineer / Electronic Engineer
+- Location: Zurich, Switzerland
+- Source: official website
+- Deadline: rolling / unknown
+- Topics: legged robots / locomotion / MPC / reinforcement learning / perception / navigation / robotics systems
+- Status: active
+- Notes: Revalidated today: the official RSL openings page still lists these role categories. This confirms the existing jobs.md entry remains active; it is not a newly discovered opening.
+
+### Proposed Removal / Stale Item
+- Current Status: expired / no longer actionable
+- Reason: The LAAS-CNRS Gepetto Team safe-reinforcement-learning PhD had a 2026-07-31 deadline, and the official CNRS page now states that the requested offer is no longer available.
+- Source Checked: https://emploi.cnrs.fr/Offres/Doctorant/UPR8001-OLISTA-018/Default.aspx?lang=EN
 
 </details>
