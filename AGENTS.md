@@ -70,6 +70,12 @@ Unless the user explicitly broadens the scope, include adjacent robotics, embodi
 
 See **Search Strategy** in `README.md` and follow the source order defined there.
 
+### GitHub API First
+
+- For GitHub repository discovery and searches, use the GitHub API first, through an available connector or direct API client. This applies to finding new repositories, searching repository contents, and checking repository activity; do not use web search as the initial GitHub discovery method.
+- Use web search for the affected GitHub lookup only after an actual API attempt fails (for example, an API error, rate limit, or unavailable API capability). Briefly report the API failure and fallback in the review message. An empty successful result is not an API failure; refine the API query before concluding that no matching repository was found.
+- This rule does not replace the source order in `README.md` or restrict searches for papers, venue pages, lab websites, or job postings outside GitHub.
+
 ## Daily Log Rules
 
 Create or update daily logs under:
@@ -183,10 +189,11 @@ For scheduled daily runs, the default behavior is:
 
 1. Write the full daily draft to `drafts/legged-daily-YYYY-MM-DD.md` **and** its Chinese mirror at `zh/drafts/legged-daily-YYYY-MM-DD.md`.
 2. Do not generate separate master-list drafts during the scheduled run; use the daily draft as the review source for later master-list insertion.
-3. Check `git status` and relevant draft diffs.
-4. Commit and push **draft / preview files only** so the user can review the draft on GitHub. Use commit message `Draft legged daily YYYY-MM-DD`. If the push fails, report clearly in the Telegram message that the draft is local only and GitHub preview is incomplete.
-5. Do not move draft content into `legged-daily/`, update formal files, or push formal-file changes until the user explicitly confirms.
-6. After user confirmation, publish the daily log and insert approved daily entries into the corresponding master lists.
+3. Check `git status` and relevant draft diffs. Record any pre-existing uncommitted draft changes before generating the current draft, then check again after generation. Include both `drafts/` and `zh/drafts/`, and distinguish the current run's changes from earlier work. When writes are made through an API, compare against the current remote branch as well; a stale local checkout must not be mistaken for uncommitted work.
+4. If earlier uncommitted drafts exist, summarize their substantive contents and proposed changes by date and bilingual pair, provide preview paths or links, and explicitly ask whether to commit and push them. Leave those earlier drafts untouched until the user approves, unless the existing request already explicitly authorizes their submission. Do not silently include them in the current commit. Already committed drafts awaiting formal publication are not uncommitted drafts; publication continues to require the separate confirmation below.
+5. Commit and push the current run's **draft / preview files only** so the user can review the draft on GitHub. Use commit message `Draft legged daily YYYY-MM-DD`. If the push fails, report clearly in the Telegram message that the draft is local only and GitHub preview is incomplete.
+6. Do not move draft content into `legged-daily/`, update formal files, or push formal-file changes until the user explicitly confirms.
+7. After user confirmation, publish the daily log and insert approved daily entries into the corresponding master lists.
 
 ## Telegram Daily Message Contract
 
