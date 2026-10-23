@@ -79,6 +79,15 @@
 <details>
 <summary><strong>Physics-based Character Animation</strong></summary>
 
+### Neural probabilistic motor primitives for humanoid control
+- Link: https://arxiv.org/abs/1811.11711
+- Source: ICLR 2019
+- Date: 2018-11-28
+- Authors: Josh Merel, Leonard Hasenclever, Alexandre Galashov, Arun Ahuja, Vu Pham, Greg Wayne, Yee Whye Teh, Nicolas Heess
+- Topics: physics-based humanoid control / motor primitives / latent skill space / policy distillation
+- Summary: Compresses thousands of expert policies offline into one inverse model with a latent-variable bottleneck, giving a motor-primitive space that supports one-shot imitation of unseen whole-body trajectories and reuse for downstream tasks.
+- Notes: DeepMind; known as NPMP. Introduces linear feedback policy cloning for experience-efficient offline distillation. Early reference for distilling many trackers into one latent controller.
+
 ### SuperTrack: Motion Tracking for Physically Simulated Characters using Supervised Learning
 - Link: https://doi.org/10.1145/3478513.3480527
 - Source: ACM TOG (SIGGRAPH Asia 2021)
@@ -112,6 +121,15 @@
 - Topics: physics-based character animation / VQ-VAE / model-based RL / universal tracking
 - Summary: Combines a VQ-VAE with model-based RL to learn discrete motion embeddings from tens of hours of unstructured motion data, supporting universal tracking, interactive control, text-to-motion generation, and LLM integration.
 - Notes: Peking University (Libin Liu group). DOI: https://doi.org/10.1145/3658137. Project: https://moconvq.github.io/.
+
+### Universal Humanoid Motion Representations for Physics-Based Control
+- Link: https://arxiv.org/abs/2310.04582
+- Source: ICLR 2024 (Spotlight)
+- Date: 2023-10-06
+- Authors: Zhengyi Luo, Jinkun Cao, Josh Merel, Alexander Winkler, Jing Huang, Kris Kitani, Weipeng Xu
+- Topics: physics-based humanoid control / universal motion representation / variational bottleneck / hierarchical RL
+- Summary: Learns a motion imitator for a large unstructured motion dataset, distills it into an encoder-decoder latent space with a variational information bottleneck and a proprioception-conditioned prior, and reuses the space for hierarchical RL on generative tasks and VR-controller tracking.
+- Notes: Known as PULSE. Project: https://zhengyiluo.github.io/PULSE/.
 
 ### Scalable Humanoid Whole-Body Control via Differentiable Neural Network Dynamics
 - Link: https://openreview.net/forum?id=FPgKt7bA8w

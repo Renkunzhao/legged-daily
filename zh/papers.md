@@ -79,6 +79,15 @@
 <details>
 <summary><strong>物理角色动画</strong></summary>
 
+### Neural probabilistic motor primitives for humanoid control
+- 链接： https://arxiv.org/abs/1811.11711
+- 来源： ICLR 2019
+- 日期： 2018-11-28
+- 作者： Josh Merel, Leonard Hasenclever, Alexandre Galashov, Arun Ahuja, Vu Pham, Greg Wayne, Yee Whye Teh, Nicolas Heess
+- 主题： 物理人形控制 / 运动基元 / 技能潜空间 / 策略蒸馏
+- 摘要： 把上千个专家策略离线压缩进一个带潜变量瓶颈的逆模型，得到运动基元空间，可一次性模仿未见过的全身轨迹，并复用于下游任务。
+- 备注： DeepMind，常称 NPMP。提出线性反馈策略克隆，用于经验高效的离线蒸馏。是“把大量跟踪器蒸馏成一个潜变量控制器”这一思路的早期代表。
+
 ### SuperTrack: Motion Tracking for Physically Simulated Characters using Supervised Learning
 - 链接： https://doi.org/10.1145/3478513.3480527
 - 来源： ACM TOG（SIGGRAPH Asia 2021）
@@ -112,6 +121,15 @@
 - 主题： 物理角色动画 / VQ-VAE / 基于模型的强化学习 / 通用跟踪
 - 摘要： 结合 VQ-VAE 与基于模型的强化学习，从几十小时无结构动作数据中学习离散动作表示，支持通用跟踪、交互控制、文本生成动作和接入大语言模型。
 - 备注： 北京大学（刘利斌组）。DOI：https://doi.org/10.1145/3658137。项目：https://moconvq.github.io/。
+
+### Universal Humanoid Motion Representations for Physics-Based Control
+- 链接： https://arxiv.org/abs/2310.04582
+- 来源： ICLR 2024（Spotlight）
+- 日期： 2023-10-06
+- 作者： Zhengyi Luo, Jinkun Cao, Josh Merel, Alexander Winkler, Jing Huang, Kris Kitani, Weipeng Xu
+- 主题： 物理人形控制 / 通用动作表示 / 变分信息瓶颈 / 分层强化学习
+- 摘要： 先学一个能模仿大规模无结构动作数据的模仿器，再用带变分信息瓶颈的编码器-解码器和以本体感知为条件的先验把它蒸馏成潜空间，并用于生成式任务的分层强化学习和 VR 手柄动作跟踪。
+- 备注： 常称 PULSE。项目：https://zhengyiluo.github.io/PULSE/。
 
 ### Scalable Humanoid Whole-Body Control via Differentiable Neural Network Dynamics
 - 链接： https://openreview.net/forum?id=FPgKt7bA8w

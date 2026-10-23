@@ -28,7 +28,7 @@ This repository is intended to support **research discovery, orientation, and lo
 
 Discovery layers through these source categories:
 
-1. **Priority venues** — arXiv, IROS, ICRA, RA-L, RSS, IJRR, Science Robotics, T-RO, CoRL, CVPR, NeurIPS, AAAI; graphics / animation: ACM TOG (SIGGRAPH, SIGGRAPH Asia), SCA, Eurographics.
+1. **Priority venues** — arXiv, IROS, ICRA, RA-L, RSS, IJRR, Science Robotics, T-RO, CoRL, CVPR, ICCV, ECCV, NeurIPS, ICLR, AAAI; graphics / animation: ACM TOG (SIGGRAPH, SIGGRAPH Asia), SCA, Eurographics.
 2. **Tracked labs and researchers** — channels (homepage, GitHub, X, Google Scholar, YouTube, Bilibili, etc.) recorded in [labs.md](labs.md).
 3. **Aggregator sources** — non-lab, non-venue feeds (arXiv category RSS, curator accounts, industry media, community channels) maintained in [source-watchlist.md](source-watchlist.md).
 4. **Adjacent high-signal sources** when clearly relevant to legged robotics.
