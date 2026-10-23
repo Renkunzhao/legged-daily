@@ -1048,4 +1048,13 @@
 - Summary: Unofficial from-paper reproduction of SuperMimic on Isaac Lab 3 kit-less with the Newton MuJoCo-Warp solver: a learned differentiable world model plus short-horizon BPTT policy training for Unitree G1 tracking of 40 LAFAN1 clips.
 - Notes: Created 2026-10-21 by Chong Zhang (ETH Zurich, per README); MIT. README reports evaluation return 0.829 with 0/40 failed clips after 1.47 h on one RTX PRO 6000, against the paper's 0.82 in 1.2 h on an H100. The author states it was "speed-vibecoded in 1 hour" with an AI assistant and is unreviewed, and that no official SuperMimic code is released. Related independent reproductions found via GitHub API: [Motphys/Uni-SuperMimic](https://github.com/Motphys/Uni-SuperMimic) (UniLab 1.5.0 with mjwarp / MuJoCo / Motrix backends, README reports 0.827 and 0/40 failures at 12k iterations; Apache-2.0) and [CuboiLeo/SuperMimic-Reproduced](https://github.com/CuboiLeo/SuperMimic-Reproduced) (mjlab, includes a BONES-SEED 129.9k-clip pipeline and multi-GPU training; README notes its best LAFAN1 numbers use extra anchor-relative observations not in the paper; MIT). All README numbers are self-reported and not independently verified.
 
+### jsw7460/SimForge
+- Link: https://github.com/jsw7460/SimForge
+- Category: RL / simulation framework / sim-to-real
+- Robot Type: quadruped / humanoid
+- Simulator: Genesis / Newton / MuJoCo
+- Deploy: sim / hardware demonstrations
+- Summary: JAX-based legged-robot RL framework with a unified policy interface across Genesis, Newton, and MuJoCo, supporting robots such as Go2, G1, and Booster.
+- Notes: Provides cross-simulator training and evaluation configurations and hardware demonstrations. The 2026-10-23 update improves consistent contact-group ordering across backends; this is an existing project, not a new release today. README comparisons primarily serve implementation checks, not independent benchmark rankings.
+
 </details>
