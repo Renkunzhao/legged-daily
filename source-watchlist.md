@@ -16,6 +16,7 @@ This file is a **single-language exception** under the **Bilingual Repository Po
 
 - `cs.RO` — Robotics — https://arxiv.org/list/cs.RO/new
 - `cs.LG` — Machine Learning — filter for locomotion / RL / embodied / sim-to-real
+- `cs.GR` — Graphics — https://arxiv.org/list/cs.GR/new — filter for physics-based character control, motion tracking / imitation, motion retargeting, and learned dynamics or world models for character control
 
 ## Curator Accounts
 
@@ -24,6 +25,7 @@ This file is a **single-language exception** under the **Bilingual Repository Po
 ## Curated Paper Lists
 
 - Awesome Humanoid Robot Learning — https://github.com/YanjieZe/awesome-humanoid-robot-learning — humanoid robot learning paper list; filter for real-robot results, open-source code, locomotion, whole-body control, loco-manipulation, parkour, sim-to-real, and contact-rich humanoid work.
+- Ke-Sen Huang's graphics paper lists — https://kesen.realtimerendering.com/ — per-conference paper lists for SIGGRAPH, SIGGRAPH Asia (published in ACM TOG), and SCA; filter for physics-based character animation, motion imitation / tracking, retargeting, and learned-dynamics controllers that transfer to legged or humanoid robots.
 
 ## Industry Media
 
