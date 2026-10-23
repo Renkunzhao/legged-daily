@@ -109,7 +109,7 @@
   - GitHub: https://github.com/leggedrobotics
   - People: https://rsl.ethz.ch/the-lab/people.html
   - Key Topics: quadruped / humanoid / locomotion / perception / state estimation / robot learning
-  - Notes: Long-running source for legged locomotion, the GrandTour dataset, perception, and humanoid control. RangeNav (arXiv:2610.29845, 2026-10-21), authored by a team including Marco Hutter and Cesar Cadena, adds a task-aligned LiDAR range-image pretraining and zero-shot navigation signal; monitor future perception and navigation releases. User-supplied ACP project link: https://leggedrobotics.github.io/ACP/; project details, corresponding paper/code, and publication status are not yet verified. Track as an unverified research lead.
+  - Notes: Long-running source for legged locomotion, the GrandTour dataset, perception, and humanoid control. RangeNav (arXiv:2610.29845, 2026-10-21), authored by a team including Marco Hutter and Cesar Cadena, adds a task-aligned LiDAR range-image pretraining and zero-shot navigation signal; monitor future perception and navigation releases. ACP, “Humanoid Mobility via Attention-based Contacts” (2026-10-22, arXiv:2610.31608): a self-supervised attention-based contact planner predicts future body-environment contacts, and a contact-conditioned tracker realizes whole-body motion. Motion data serve only as training priors; deployment requires no reference trajectories. Project: https://leggedrobotics.github.io/ACP/. arXiv preprint (under review); code release unverified.
 
   </details>
 
