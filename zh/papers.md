@@ -88,6 +88,15 @@
 - 摘要： 把上千个专家策略离线压缩进一个带潜变量瓶颈的逆模型，得到运动基元空间，可一次性模仿未见过的全身轨迹，并复用于下游任务。
 - 备注： DeepMind，常称 NPMP。提出线性反馈策略克隆，用于经验高效的离线蒸馏。是“把大量跟踪器蒸馏成一个潜变量控制器”这一思路的早期代表。
 
+### Residual Force Control for Agile Human Behavior Imitation and Extended Motion Synthesis
+- 链接： https://arxiv.org/abs/2006.07364
+- 来源： NeurIPS 2020
+- 日期： 2020-06-12
+- 作者： Ye Yuan, Kris Kitani
+- 主题： 物理角色动画 / 动作模仿 / 残余力 / 动力学失配
+- 摘要： 在人形策略的动作空间中加入外部残余力，补偿仿真人形与真实人体动作之间的动力学失配，实现芭蕾等敏捷动作模仿，并用运动学策略与 RFC 策略配合生成长时程动作。
+- 备注： 代码：https://github.com/Khrylx/RFC。项目：https://www.ye-yuan.com/rfc。参考动作所需的残余力大小可以自然地衡量其物理不可行程度，可作为考虑动力学的 retarget 的评测指标。
+
 ### SuperTrack: Motion Tracking for Physically Simulated Characters using Supervised Learning
 - 链接： https://doi.org/10.1145/3478513.3480527
 - 来源： ACM TOG（SIGGRAPH Asia 2021）
@@ -138,6 +147,38 @@
 - 主题： 人形机器人 / 可微神经动力学 / 世界模型 / 动作跟踪
 - 摘要： 学习神经动力学模型，结合监督学习与强化学习训练人形控制器；论文报告样本效率更高、跟踪误差更低，并可扩展到上万条动作片段。
 - 备注： SuperMimic 的相关工作中称其为 SuperDyno，并把它归入仿真角色控制方法。
+
+</details>
+
+<details>
+<summary><strong>人体动作重建与先验</strong></summary>
+
+### Trajectory Optimization for Physics-Based Reconstruction of 3d Human Pose from Monocular Video
+- 链接： https://arxiv.org/abs/2205.12292
+- 来源： CVPR 2022
+- 日期： 2022-05-24
+- 作者： Erik Gärtner, Mykhaylo Andriluka, Hongyi Xu, Cristian Sminchisescu
+- 主题： 人体动作重建 / 单目视频 / 物理引擎 / 轨迹优化
+- 摘要： 从非受控视频中估计地面位置和人体尺寸，再用完整物理引擎做轨迹优化，恢复物理上合理的动作，支持自接触以及身体与场景的接触。
+- 备注： 在 Human3.6M 上与已有物理方法相当，无需重训即可用于 AIST 舞蹈动作和网络视频。与下面的 DiffPhy 是同组姊妹工作。
+
+### Differentiable Dynamics for Articulated 3d Human Motion Reconstruction
+- 链接： https://arxiv.org/abs/2205.12256
+- 来源： CVPR 2022
+- 日期： 2022-05-24
+- 作者： Erik Gärtner, Mykhaylo Andriluka, Erwin Coumans, Cristian Sminchisescu
+- 主题： 人体动作重建 / 可微物理 / 单目视频 / 全身接触
+- 摘要： 结合带解剖学关节限位的物理人体模型、可微物理仿真器和鲁棒优化，并与图像损失端到端连接，从单目视频中用梯度优化重建物理上合理的动作。
+- 备注： 常称 DiffPhy。未找到论文本身的代码；共同作者 Erwin Coumans 维护开源的 Tiny Differentiable Simulator（https://github.com/erwincoumans/tiny-differentiable-simulator）。
+
+### World Motion Models: Flexible Sequence Modeling of SE(3) Trajectories
+- 链接： https://arxiv.org/abs/2610.01742
+- 来源： NeurIPS 2026（Spotlight）
+- 日期： 2026-10-01
+- 作者： Jiahui Lei, Qianqian Wang, Trevor Darrell, Angjoo Kanazawa
+- 主题： 生成式运动先验 / SE(3) 轨迹 / flow matching / 跨形态 retarget
+- 摘要： 把人体、物体、相机以及机器人状态和动作统一表示为稀疏刚体 SE(3) 轨迹，用逐 token 噪声的 flow matching 建模联合分布，使预测、补全、MPC、逆运动学、跨形态 retarget 和策略学习都变成同一网络上的不同掩码。
+- 备注： 项目：https://jiahuilei.com/projects/wmm/。从数据学习联合分布，不显式施加物理约束；摘要未说明其 retarget 结果是否满足机器人动力学。
 
 </details>
 

@@ -88,6 +88,15 @@
 - Summary: Compresses thousands of expert policies offline into one inverse model with a latent-variable bottleneck, giving a motor-primitive space that supports one-shot imitation of unseen whole-body trajectories and reuse for downstream tasks.
 - Notes: DeepMind; known as NPMP. Introduces linear feedback policy cloning for experience-efficient offline distillation. Early reference for distilling many trackers into one latent controller.
 
+### Residual Force Control for Agile Human Behavior Imitation and Extended Motion Synthesis
+- Link: https://arxiv.org/abs/2006.07364
+- Source: NeurIPS 2020
+- Date: 2020-06-12
+- Authors: Ye Yuan, Kris Kitani
+- Topics: physics-based character animation / motion imitation / residual forces / dynamics mismatch
+- Summary: Adds external residual forces to the humanoid policy's action space to compensate for the dynamics mismatch between the simulated humanoid and real human motion, enabling agile imitation such as ballet and long-horizon motion synthesis with a dual kinematic / RFC policy.
+- Notes: Code: https://github.com/Khrylx/RFC. Project: https://www.ye-yuan.com/rfc. The residual force a reference needs is a natural measure of its physical infeasibility, which makes it a candidate metric for dynamics-aware retargeting.
+
 ### SuperTrack: Motion Tracking for Physically Simulated Characters using Supervised Learning
 - Link: https://doi.org/10.1145/3478513.3480527
 - Source: ACM TOG (SIGGRAPH Asia 2021)
@@ -138,6 +147,38 @@
 - Topics: humanoid / differentiable neural dynamics / world model / motion tracking
 - Summary: Learns a neural dynamics model and combines supervised learning with RL for humanoid controller training, reporting higher sample efficiency and lower tracking error while scaling to tens of thousands of motion clips.
 - Notes: Referred to as SuperDyno in SuperMimic's related work, which groups it with simulated-character control methods.
+
+</details>
+
+<details>
+<summary><strong>Human Motion Reconstruction and Priors</strong></summary>
+
+### Trajectory Optimization for Physics-Based Reconstruction of 3d Human Pose from Monocular Video
+- Link: https://arxiv.org/abs/2205.12292
+- Source: CVPR 2022
+- Date: 2022-05-24
+- Authors: Erik Gärtner, Mykhaylo Andriluka, Hongyi Xu, Cristian Sminchisescu
+- Topics: human motion reconstruction / monocular video / physics engine / trajectory optimization
+- Summary: Estimates the ground plane and body dimensions from an uncontrolled video, then recovers physically plausible motion by trajectory optimization with a full physics engine, supporting self-contact and body-scene contact.
+- Notes: Competitive with physics-based methods on Human3.6M and applies without retraining to AIST dance motions and internet videos. Companion to DiffPhy below.
+
+### Differentiable Dynamics for Articulated 3d Human Motion Reconstruction
+- Link: https://arxiv.org/abs/2205.12256
+- Source: CVPR 2022
+- Date: 2022-05-24
+- Authors: Erik Gärtner, Mykhaylo Andriluka, Erwin Coumans, Cristian Sminchisescu
+- Topics: human motion reconstruction / differentiable physics / monocular video / full-body contact
+- Summary: Combines a physically plausible body model with anatomical joint limits, a differentiable physics simulator, and robust optimization, connecting end-to-end to image losses for gradient-based physics optimization of motion from monocular video.
+- Notes: Known as DiffPhy. The paper's own code was not found; co-author Erwin Coumans maintains the open-source Tiny Differentiable Simulator (https://github.com/erwincoumans/tiny-differentiable-simulator).
+
+### World Motion Models: Flexible Sequence Modeling of SE(3) Trajectories
+- Link: https://arxiv.org/abs/2610.01742
+- Source: NeurIPS 2026 (Spotlight)
+- Date: 2026-10-01
+- Authors: Jiahui Lei, Qianqian Wang, Trevor Darrell, Angjoo Kanazawa
+- Topics: generative motion prior / SE(3) trajectories / flow matching / cross-embodiment retargeting
+- Summary: Represents humans, objects, cameras, and robot states and actions as sparse rigid SE(3) trajectories and models their joint distribution with per-token-noise flow matching, so prediction, infilling, MPC, IK, cross-embodiment retargeting, and policy learning become different masks over one network.
+- Notes: Project: https://jiahuilei.com/projects/wmm/. Learns joint distributions from data rather than enforcing physics; the abstract does not state whether its retargeting output respects robot dynamics.
 
 </details>
 
