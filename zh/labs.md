@@ -109,7 +109,7 @@
   - GitHub: https://github.com/leggedrobotics
   - People: https://rsl.ethz.ch/the-lab/people.html
   - Key Topics: quadruped / humanoid / locomotion / perception / state estimation / robot learning
-  - Notes: 腿足运动、GrandTour 数据集、感知和人形控制方向的长期跟踪来源。Marco Hutter、Cesar Cadena 等作者合作的 RangeNav（arXiv:2610.29845，2026-10-21）展示任务导向的 LiDAR Range-Image 预训练与零样本导航，值得继续关注感知和导航方向的后续成果。
+  - Notes: 腿足运动、GrandTour 数据集、感知和人形控制方向的长期跟踪来源。Marco Hutter、Cesar Cadena 等作者合作的 RangeNav（arXiv:2610.29845，2026-10-21）展示任务导向的 LiDAR Range-Image 预训练与零样本导航，值得继续关注感知和导航方向的后续成果。 用户补充 ACP 项目链接：https://leggedrobotics.github.io/ACP/；项目页内容及对应论文/代码、发表状态尚未核实，暂列为待核实研究线索。
 
   </details>
 
