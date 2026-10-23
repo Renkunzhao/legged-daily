@@ -962,4 +962,13 @@
 - Summary: Projects task-specific experts into the executable latent space of a frozen behavioral foundation model by matching local control responses, then trains one offline perceptive flow planner for box pickup, door opening, and grasping.
 - Notes: arXiv preprint; v2 was posted on 2026-10-20, with no accepted venue stated on arXiv. Reports 42.0% mean simulation success versus 11.6% for projected latent replay and 3.5% for kinematic planning, plus real Unitree G1 demonstrations. Project: https://fiberaa.github.io/; its code link is marked coming soon. Added by user request as a supplementary reference.
 
+### Humanoid Mobility via Attention-based Contacts
+- Link: https://arxiv.org/abs/2610.31608
+- Source: arXiv
+- Date: 2026-10-22
+- Authors: Junzhe He, Kehan Wen, Chong Zhang, Clemens Schwarke, Zewei Zhang, Kaixian Qu, Siyuan Hu, Matthias Müller, Vladlen Koltun, Marco Hutter
+- Topics: humanoid / contact planning / whole-body locomotion / reinforcement learning / motion priors
+- Summary: ACP trains a self-supervised attention-based planner for future body-environment contacts and a contact-conditioned whole-body tracker, using motion data only as a training prior and fine-tuning with RL for novel terrains.
+- Notes: arXiv preprint, marked under review; deployment uses onboard observations without reference-motion inputs. Project: https://leggedrobotics.github.io/ACP/; code release not verified.
+
 </details>
