@@ -23,12 +23,28 @@
 
 ### Repo Name
 - Link: ...
-- Category: control / RL / MPC / simulator / retargeting / dataset / toolkit / viewer
+- Category: control / RL / MPC / simulator / retargeting / dataset tooling / toolkit / viewer
 - Robot Type: humanoid / quadruped / general
 - Simulator: MuJoCo / Isaac / Raisim / PyBullet / other / none
 - Deploy: sim / hardware / both / browser / data
 - Summary: concise long-term description
 - Notes: optional context, strengths, limitations, or related tools
+
+</details>
+
+<details>
+<summary><strong>New Datasets</strong></summary>
+
+### Dataset Name
+- Link: ...
+- Category: robot motion / human mocap / video / video-derived motion / optimization-generated / field logs / physical parameters / benchmark
+- Subject: humanoid / quadruped / human / trampoline / general (name the robot or model when known)
+- Content: scale and key subsets relevant to legged robotics
+- Format: npz / csv / c3d / bvh / SMPL / video / hdf5 / pkl / pdf / other
+- Access: open / gated / registration / on request
+- License: ...
+- Summary: concise long-term description
+- Notes: optional caveats, quality issues, or related papers and repos
 
 </details>
 

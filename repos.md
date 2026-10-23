@@ -184,23 +184,7 @@
 </details>
 
 <details>
-<summary><strong>Datasets and Models</strong></summary>
-
-### KungFuAthleteBot
-- Link: https://github.com/NPCLEI/KungFuAthleteBot.git
-- Category: dataset
-- Robot Type: humanoid
-- Simulator: none
-- Deploy: data
-- Summary: Athlete martial arts training videos processed using GVHMR.
-
-### BONES-SEED
-- Link: https://huggingface.co/datasets/bones-studio/seed
-- Category: dataset
-- Robot Type: humanoid
-- Simulator: none
-- Deploy: data
-- Summary: Large-scale annotated human motion dataset with SOMA and Unitree G1 formats.
+<summary><strong>Body Models and Dataset Tooling</strong></summary>
 
 ### SOMA-X
 - Link: https://github.com/NVlabs/SOMA-X.git

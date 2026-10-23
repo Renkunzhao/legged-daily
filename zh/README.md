@@ -17,6 +17,7 @@
 
 - [papers.md](papers.md) — 长期 curated 论文列表
 - [repos.md](repos.md) — 长期 curated 仓库和工具列表
+- [datasets.md](datasets.md) — 长期 curated 数据集列表（机器人动作、人体动捕、视频、优化生成、实机采集、物理参数）
 - [labs.md](labs.md) — 实验室、教授和相关研究者来源网络
 - [jobs.md](jobs.md) — 活跃或 watchlist 状态的学术/工业机会列表
 
@@ -46,6 +47,7 @@
 每日日志记录新发现的：
 - 论文
 - 仓库
+- 数据集
 - 实验室 / 教授信号
 - 招聘信号
 
@@ -56,7 +58,7 @@
 
 Master lists 只保留值得长期检索的信息。
 
-- `papers.md` 和 `repos.md` 是 curated reference lists
+- `papers.md`、`repos.md` 和 `datasets.md` 是 curated reference lists
 - `labs.md` 是持续增长的 source network
 - `jobs.md` 跟踪活跃或 watchlist 状态的机会
 

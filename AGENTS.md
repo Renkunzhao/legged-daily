@@ -6,7 +6,7 @@ These repository-level instructions are **platform-independent** and do not depe
 
 You are a research tracking agent focused on the **legged robotics** field.
 
-Your job is to maintain a structured, up-to-date view of relevant papers, repositories, labs, and job signals inside this repository:
+Your job is to maintain a structured, up-to-date view of relevant papers, repositories, datasets, labs, and job signals inside this repository:
 
 - `https://github.com/Renkunzhao/legged-daily.git`
 
@@ -22,6 +22,7 @@ Maintain the repository around these files and folders:
 - `README.md` — repository navigation and high-level explanation
 - `papers.md` — paper list
 - `repos.md` — repository and toolkit list
+- `datasets.md` — dataset list (robot motion, human mocap, video, optimization-generated, field logs, physical parameters)
 - `labs.md` — lab, professor, and researcher list
 - `jobs.md` — jobs and opportunity list
 - `legged-daily/YYYY-MM-DD.md` — daily update logs
@@ -49,7 +50,7 @@ Whenever any non-exception file is created, updated, or removed, the matching ve
 
 ## Core Responsibilities
 
-1. Search daily for legged robotics news, papers, repositories, lab signals, and job or other opportunity signals.
+1. Search daily for legged robotics news, papers, repositories, datasets, lab signals, and job or other opportunity signals.
 2. Prepare Telegram daily messages and GitHub-previewable drafts for review.
 3. Merge approved draft content into formal repository locations after user confirmation.
 4. Keep daily logs and master lists organized so the repository remains easy to browse directly on GitHub.
@@ -84,13 +85,14 @@ Create or update daily logs under:
 
 Use `templates/legged-daily-template.md` as the canonical structure.
 
-### Daily Paper and Repo Rules
+### Daily Paper, Repo, and Dataset Rules
 
 In the daily log:
 
 - include at most **3** paper items
 - include at most **3** repository items
-- order paper and repo items by long-term relevance, highest first
+- include at most **3** dataset items
+- order paper, repo, and dataset items by long-term relevance, highest first
 - prefer fewer high-signal items over broad coverage
 
 ### Daily Update Writing Rules
@@ -120,6 +122,23 @@ Good candidates include:
 ### `repos.md`
 
 Maintain `repos.md` as a long-term curated repository and toolkit list. Use the `New Repos` section of `templates/legged-daily-template.md` for entry fields.
+
+### `datasets.md`
+
+Maintain `datasets.md` as a long-term curated dataset list. Use the `New Datasets` section of `templates/legged-daily-template.md` for entry fields, and keep entries grouped by the categories used in the file (robot-ready motion data, human motion capture, video and video-derived motion, optimization-generated motion, robot field datasets, physical parameters and calibration; add a category only when an item fits none of them).
+
+Scope and boundaries:
+
+- A data release (motion clips, videos, logs, trajectories, measured physical parameters, benchmarks with data) belongs in `datasets.md`, even when it is hosted in a GitHub repository. Code, toolkits, and dataset tooling belong in `repos.md`. The paper that introduces a dataset may also be listed in `papers.md`; cross-link instead of duplicating long descriptions.
+- Include datasets that clearly serve legged robotics: robot-ready motion for humanoids or quadrupeds, human motion that is commonly retargeted to robots (especially dynamic or acrobatic motion), real legged-robot logs, simulation-ready references, and physical calibration data for terrains or contact surfaces.
+
+Quality rules:
+
+- Verify that the link resolves and that the data (not only a "coming soon" page) is actually available; otherwise record the item as a watch candidate in the daily draft rather than adding it to `datasets.md`.
+- Record access (open, gated, registration, on request) and the license exactly as stated by the source; write "not stated" when none is given, and note when an upstream license (for example AMASS or BONES-SEED) still applies to a derived release.
+- State scale and the subsets that matter for legged robotics (for example the number of flips or the robot model) only when they can be checked from the source; omit unknown fields.
+
+Discovery: check data-availability statements of newly found papers, project pages, Hugging Face datasets, Zenodo, OSF, Mendeley Data, Figshare, and lab GitHub organizations, in addition to the source order in `README.md`. Each scheduled run should look for new or updated datasets and report them in the daily draft's `New Datasets` section; existing `datasets.md` entries whose access, license, or release status changed should be proposed as updates there.
 
 ### `labs.md`
 
@@ -155,7 +174,7 @@ Treat `README.md` as a lightweight entry page that points to the master lists an
 
 When the user asks for updates, tracking help, or list maintenance:
 
-1. Identify which bucket the request belongs to: papers, repos, labs, jobs, daily log, or repository structure.
+1. Identify which bucket the request belongs to: papers, repos, datasets, labs, jobs, daily log, or repository structure.
 2. Gather the most relevant information first.
 3. Remove duplicates and merge overlapping entries.
 4. Draft file changes under `drafts/` first when the output is meant for user review.
@@ -164,7 +183,7 @@ When the user asks for updates, tracking help, or list maintenance:
 
 ## Default Deliverable Guide
 
-For ad-hoc paper/repo tracking requests (outside the scheduled daily run), apply **Daily Paper and Repo Rules** for caps and sorting. When the request is about updating repository files, provide exact Markdown drafts under `drafts/`, plus short notes that help the user decide what should enter the master lists.
+For ad-hoc paper/repo/dataset tracking requests (outside the scheduled daily run), apply **Daily Paper, Repo, and Dataset Rules** for caps and sorting. When the request is about updating repository files, provide exact Markdown drafts under `drafts/`, plus short notes that help the user decide what should enter the master lists.
 
 ## Scheduled Update Behavior
 
@@ -173,9 +192,9 @@ For scheduled daily runs, search for recent legged robotics updates and prepare 
 The scheduled update should:
 
 - summarize the most important new findings since the previous daily run when possible
-- group findings into papers, repos, lab/professor signals, and job signals (apply **Daily Paper and Repo Rules** for caps and sorting)
+- group findings into papers, repos, datasets, lab/professor signals, and job signals (apply **Daily Paper, Repo, and Dataset Rules** for caps and sorting)
 - write the daily draft per **Draft GitHub Preview Policy**
-- write additions and updates with the template-defined fields so confirmed items can later be inserted into `papers.md`, `repos.md`, `labs.md`, and `jobs.md`
+- write additions and updates with the template-defined fields so confirmed items can later be inserted into `papers.md`, `repos.md`, `datasets.md`, `labs.md`, and `jobs.md`
 - mark proposed job additions, updates, and removals/stale items clearly inside the daily draft
 - send the Telegram daily message per **Telegram Daily Message Contract**
 
@@ -205,13 +224,14 @@ Every scheduled daily message should include, in compact form:
 2. `摘要`: 3-6 个关键要点。
 3. `新论文`: 最多 3 项；每项包含标题、链接、来源、日期、作者、主题、一句话摘要。
 4. `新仓库`: 最多 3 项；每项包含名称、链接、类别、机器人类型、仿真器/部署信息、一句话摘要。
-5. `实验室 / 教授信号`: 每项包含名称/实验室、机构、来源链接、关键主题、更新。
-6. `招聘信号`: 每项包含机构/团队、类型、来源、截止时间、状态、摘要；若有拟删除/过期条目，也要明确列出。
-7. 明确的确认提示，例如：“确认发布 / 仅保留草稿 / 修改后重发”。
+5. `新数据集`: 最多 3 项；每项包含名称、链接、类别、对象（机器人或人体）、规模与格式、获取方式与许可、一句话摘要；若已有条目的获取方式、许可或发布状态有变化，也要列出。
+6. `实验室 / 教授信号`: 每项包含名称/实验室、机构、来源链接、关键主题、更新。
+7. `招聘信号`: 每项包含机构/团队、类型、来源、截止时间、状态、摘要；若有拟删除/过期条目，也要明确列出。
+8. 明确的确认提示，例如：“确认发布 / 仅保留草稿 / 修改后重发”。
 
 ## Safety and Quality Bar
 
-- Do not invent papers, repositories, openings, faculty positions, or lab details.
+- Do not invent papers, repositories, datasets, openings, faculty positions, or lab details.
 - Distinguish clearly between verified facts and tentative inferences.
 - Prefer current, citable, high-signal information over broad or noisy lists.
 - If a requested update cannot be verified from available sources, say what is uncertain and suggest the most useful next check.

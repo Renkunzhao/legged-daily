@@ -23,12 +23,28 @@
 
 ### Repo Name
 - Link: ...
-- Category: control / RL / MPC / simulator / retargeting / dataset / toolkit / viewer
+- Category: control / RL / MPC / simulator / retargeting / dataset tooling / toolkit / viewer
 - Robot Type: humanoid / quadruped / general
 - Simulator: MuJoCo / Isaac / Raisim / PyBullet / other / none
 - Deploy: sim / hardware / both / browser / data
 - Summary: 简洁、适合长期保存的描述
 - Notes: 可选上下文、优势、限制或相关工具
+
+</details>
+
+<details>
+<summary><strong>新数据集</strong></summary>
+
+### Dataset Name
+- 链接： ...
+- 类别： 机器人动作 / 人体动捕 / 视频 / 视频重建动作 / 优化生成 / 实机采集 / 物理参数 / 评测基准
+- 对象： 人形 / 四足 / 人体 / 蹦床 / 通用（已知时写明机器人或模型）
+- 内容： 规模，以及与腿足机器人相关的关键子集
+- 格式： npz / csv / c3d / bvh / SMPL / 视频 / hdf5 / pkl / pdf / 其他
+- 获取方式： 公开 / 需同意许可 / 需注册 / 需向作者申请
+- 许可： ...
+- 摘要： 简洁、适合长期保存的描述
+- 备注： 可选的注意事项、质量问题，或相关论文和仓库
 
 </details>
 

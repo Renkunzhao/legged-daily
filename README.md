@@ -17,6 +17,7 @@ This repository is intended to support **research discovery, orientation, and lo
 
 - [papers.md](papers.md) — long-term curated paper list
 - [repos.md](repos.md) — long-term curated repository and toolkit list
+- [datasets.md](datasets.md) — long-term curated dataset list (robot motion, human mocap, video, optimization-generated, field logs, physical parameters)
 - [labs.md](labs.md) — source network for labs, professors, and related researchers
 - [jobs.md](jobs.md) — dynamic list of active or watchlisted academic and industry opportunities
 
@@ -44,6 +45,7 @@ This repo is maintained by an agent. [templates/legged-daily-template.md](templa
 Daily logs capture newly discovered:
 - papers
 - repositories
+- datasets
 - lab / professor signals
 - job signals
 
@@ -53,7 +55,7 @@ Each daily file is stored under:
 ### Master lists
 Master lists keep only the information worth preserving for long-term retrieval.
 
-- `papers.md` and `repos.md` are curated reference lists
+- `papers.md`, `repos.md`, and `datasets.md` are curated reference lists
 - `labs.md` is a growing source network
 - `jobs.md` tracks active or watchlisted opportunities
 
