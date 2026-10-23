@@ -1039,4 +1039,13 @@
 - Summary: Official research release for RPL, covering per-terrain expert RL training, multi-depth student distillation, shipped teachers, ONNX export, and MuJoCo sim2sim.
 - Notes: Initial public commit was 2026-10-16, with README updates through 2026-10-20. Built on Holosoma; the repository includes PPO-MA / DAgger-MA infrastructure, depth rendering, terrain experts, and a shipped student for sim2sim. The README labels the related paper as CoRL 2026. Apache-2.0.
 
+### zita-ch/supermimic_vibed
+- Link: https://github.com/zita-ch/supermimic_vibed
+- Category: RL / model-based learning / motion tracking / world model
+- Robot Type: humanoid
+- Simulator: Isaac Lab / MuJoCo-Warp
+- Deploy: sim
+- Summary: Unofficial from-paper reproduction of SuperMimic on Isaac Lab 3 kit-less with the Newton MuJoCo-Warp solver: a learned differentiable world model plus short-horizon BPTT policy training for Unitree G1 tracking of 40 LAFAN1 clips.
+- Notes: Created 2026-10-21 by Chong Zhang (ETH Zurich, per README); MIT. README reports evaluation return 0.829 with 0/40 failed clips after 1.47 h on one RTX PRO 6000, against the paper's 0.82 in 1.2 h on an H100. The author states it was "speed-vibecoded in 1 hour" with an AI assistant and is unreviewed, and that no official SuperMimic code is released. Related independent reproductions found via GitHub API: [Motphys/Uni-SuperMimic](https://github.com/Motphys/Uni-SuperMimic) (UniLab 1.5.0 with mjwarp / MuJoCo / Motrix backends, README reports 0.827 and 0/40 failures at 12k iterations; Apache-2.0) and [CuboiLeo/SuperMimic-Reproduced](https://github.com/CuboiLeo/SuperMimic-Reproduced) (mjlab, includes a BONES-SEED 129.9k-clip pipeline and multi-GPU training; README notes its best LAFAN1 numbers use extra anchor-relative observations not in the paper; MIT). All README numbers are self-reported and not independently verified.
+
 </details>
