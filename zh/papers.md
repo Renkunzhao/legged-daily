@@ -961,4 +961,13 @@
 - 摘要： 通过匹配局部控制响应，将任务专家投影到冻结行为基础模型的可执行潜空间，再离线训练统一的感知流匹配规划器，执行搬箱、开门和抓取。
 - 备注： arXiv 预印本；v2 更新于 2026-10-20，arXiv 未注明已接收的会议或期刊。论文报告仿真平均成功率 42.0%，投影潜轨迹回放与运动学规划基线分别为 11.6% 和 3.5%，并展示真实 Unitree G1 实验。项目：https://fiberaa.github.io/；代码链接仍标注 coming soon。本次按用户要求补充收录。
 
+### Humanoid Mobility via Attention-based Contacts
+- 链接：https://arxiv.org/abs/2610.31608
+- 来源：arXiv
+- 日期：2026-10-22
+- 作者：Junzhe He, Kehan Wen, Chong Zhang, Clemens Schwarke, Zewei Zhang, Kaixian Qu, Siyuan Hu, Matthias Müller, Vladlen Koltun, Marco Hutter
+- 主题：人形机器人 / 接触规划 / 全身运动 / 强化学习 / 动作先验
+- 摘要：ACP 利用自监督注意力接触规划器预测未来身体与环境接触，再通过接触条件化跟踪器协调全身运动，以动作数据作为训练先验，并通过后续强化学习微调适应训练数据未覆盖的环境。
+- 备注：arXiv 预印本，标注 under review；部署时仅使用机载观测，无需参考动作输入。项目：https://leggedrobotics.github.io/ACP/；代码发布状态尚未确认。
+
 </details>
