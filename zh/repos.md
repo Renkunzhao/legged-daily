@@ -1039,4 +1039,13 @@
 - 摘要：RPL 官方研究代码，覆盖分地形专家 RL、多深度 Student 蒸馏、随仓库提供的 Teacher、ONNX 导出和 MuJoCo sim2sim。
 - 备注：首次公开提交为 2026-10-16，README 更新到 2026-10-20。基于 Holosoma，仓库包含 PPO-MA / DAgger-MA、深度渲染、地形专家以及可直接用于 sim2sim 的 Student。README 将对应论文标注为 CoRL 2026。许可证为 Apache-2.0。
 
+### zita-ch/supermimic_vibed
+- 链接： https://github.com/zita-ch/supermimic_vibed
+- 类别： RL / 基于模型的学习 / 动作跟踪 / 世界模型
+- 机器人类型： 人形
+- 仿真器： Isaac Lab / MuJoCo-Warp
+- 部署： sim
+- 摘要： 依据论文从零实现的 SuperMimic 非官方复现，基于 Isaac Lab 3 kit-less 与 Newton MuJoCo-Warp 求解器：学习可微世界模型，再用短视野 BPTT 训练策略，让 Unitree G1 跟踪 40 条 LAFAN1 动作。
+- 备注： 2026-10-21 创建，README 署名 Chong Zhang（ETH Zurich）；MIT 许可。README 报告在单张 RTX PRO 6000 上训练 1.47 小时后评测回报 0.829、40 条 clip 0 失败，对照论文中 H100 上 1.2 小时达到 0.82。作者明确说明该仓库是借助 AI 编程助手“1 小时速写”的未审查代码，并说明 SuperMimic 官方代码尚未发布。通过 GitHub API 找到的其他独立复现：[Motphys/Uni-SuperMimic](https://github.com/Motphys/Uni-SuperMimic)（基于 UniLab 1.5.0，支持 mjwarp / MuJoCo / Motrix 后端，README 报告 12k 迭代时回报 0.827、40 条 0 失败；Apache-2.0）和 [CuboiLeo/SuperMimic-Reproduced](https://github.com/CuboiLeo/SuperMimic-Reproduced)（基于 mjlab，包含 BONES-SEED 12.99 万条 clip 的数据管线和多卡训练；README 说明其最佳 LAFAN1 结果额外加入了论文中没有的锚点相对观测；MIT）。以上数字均为 README 自报，未独立验证。
+
 </details>
