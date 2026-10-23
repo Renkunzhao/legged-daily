@@ -828,4 +828,31 @@
 - 摘要：通过重建、语义分割和 BEV 预测预训练轻量 LiDAR range-image 编码器，之后冻结编码器用于下游导航策略学习。
 - 备注：编码器约 18.3 万参数；与仅重建预训练相比，语义+BEV 监督在训练程序化场景上提升 32.03 个百分点，在 OOD 真实感场景上提升 23.73 个百分点。真机零样本演示使用 Unitree B2-W。论文明确写明已投稿 ICRA 2027、正在审稿；作者承诺开源代码和模型，但本次运行尚未找到正式代码发布。
 
+### LOAD: Locomotion with Online Awareness of Dynamics for Precision Footholds
+- 链接： https://arxiv.org/abs/2610.17930
+- 来源： arXiv
+- 日期： 2026-10-13
+- 作者： Kunzhao Ren, Zhishuo Zhu, Xiaobin Xiong
+- 主题： 显式惯性参数估计 / 隐式动力学适应 / 窄桥通过 / 感知运动
+- 摘要： 结合显式躯干惯性参数估计与隐式动力学历史特征，并将高程图教师蒸馏为深度图学生，实现未知负载下的精准落足与窄桥通过。
+- 备注： arXiv 预印本；公开 arXiv 页面未注明已接收的会议或期刊。真机实验包括单侧 6 kg 负载通过 10 cm 桥、单侧 9 kg 负载通过 15 cm 桥，以及均匀分布 11 kg 负载通过 15 cm 桥。按用户要求补充收录，并非今日新发布。
+
+### SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model
+- 链接： https://arxiv.org/abs/2610.28480
+- 来源： arXiv
+- 日期： 2026-10-20
+- 作者： Qiayuan Liao, Yiyang Shao, Junfeng Long, Kevin Zakka, Roberto Horowitz, Pieter Abbeel, Koushil Sreenath
+- 主题： 人形机器人 / 可微世界模型 / 基于模型的学习 / 动作跟踪 / 仿真到真机
+- 摘要： 利用刚体仿真器的状态转移训练统一可微世界模型，再通过短时想象轨迹的解析梯度训练通用动作跟踪策略，并迁移到真实 Unitree G1。
+- 备注： arXiv 明确注明已被 CoRL 2026 接收为 Oral；尚未核实正式论文集出版。论文报告单 GPU 训练 3 小时超过 SONIC 基线回报，在 129,514 段测试动作中失败 25 段；这些数字为论文报告的特定基准结果。项目：https://supermimic.github.io/。已出现在 2026-10-22 草稿中，本次按用户要求补充保留。
+
+### FIBER: Action-Aligned Latent Planning for Versatile Humanoid Loco-Manipulation
+- 链接： https://arxiv.org/abs/2610.24675
+- 来源： arXiv
+- 日期： 2026-10-17
+- 作者： Yutang Lin, Guanya Shi, C. Karen Liu
+- 主题： 人形机器人 / 移动操作 / 行为基础模型 / 潜空间规划 / 离线学习
+- 摘要： 通过匹配局部控制响应，将任务专家投影到冻结行为基础模型的可执行潜空间，再离线训练统一的感知流匹配规划器，执行搬箱、开门和抓取。
+- 备注： arXiv 预印本；v2 更新于 2026-10-20，arXiv 未注明已接收的会议或期刊。论文报告仿真平均成功率 42.0%，投影潜轨迹回放与运动学规划基线分别为 11.6% 和 3.5%，并展示真实 Unitree G1 实验。项目：https://fiberaa.github.io/；代码链接仍标注 coming soon。本次按用户要求补充收录。
+
 </details>
