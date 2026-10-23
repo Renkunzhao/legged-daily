@@ -187,12 +187,12 @@
 
 ### Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking
 - Link: https://arxiv.org/abs/2604.17335
-- Source: arXiv
+- Source: IEEE Robotics and Automation Letters (RA-L), 2026, 11(9), 10194–10201
 - Date: 2026-04-19
 - Authors: Zewei Zhang, Kehan Wen, Michael Xu, Junzhe He, Chenhao Li, Takahiro Miki, Clemens Schwarke, Chong Zhang, Xue Bin Peng, Marco Hutter
 - Topics: humanoid / locomotion / whole-body control / robot learning / perception / sim-to-real
 - Summary: Terrain-aware whole-body humanoid locomotion framework that combines diffusion-based motion generation with RL motion tracking and demonstrates hardware traversal on Unitree G1.
-- Notes: Strong ETH / RSL signal and a good anchor for current whole-body humanoid locomotion work.
+- Notes: Published in IEEE RA-L 2026, DOI https://doi.org/10.1109/LRA.2026.3710365; project https://wholebodylocomotion.github.io/.
 
 ### SoftMimic: Learning Compliant Whole-body Control from Examples
 - Link: https://arxiv.org/abs/2510.17792
@@ -970,5 +970,23 @@
 - Topics: humanoid / contact planning / whole-body locomotion / reinforcement learning / motion priors
 - Summary: ACP trains a self-supervised attention-based planner for future body-environment contacts and a contact-conditioned whole-body tracker, using motion data only as a training prior and fine-tuning with RL for novel terrains.
 - Notes: arXiv preprint, marked under review; deployment uses onboard observations without reference-motion inputs. Project: https://leggedrobotics.github.io/ACP/; code release not verified.
+
+### Attention-Based Map Encoding for Learning Generalized Legged Locomotion
+- Link: https://doi.org/10.1126/scirobotics.adv3604
+- Source: Science Robotics 2025, 10(105), eadv3604
+- Date: 2025-08-27
+- Authors: Junzhe He, Chong Zhang, Fabian Jenelten, Ruben Grandia, Moritz Bächer, Marco Hutter
+- Topics: quadruped / humanoid / attention map encoding / perceptive locomotion / precise footholds
+- Summary: Jointly trains a proprioception-conditioned attention map encoder and an RL controller to attend to future steppable regions; validated on real 12-DoF quadruped and 23-DoF humanoid robots.
+- Notes: Formally published in Science Robotics; DOI 10.1126/scirobotics.adv3604; preprint https://arxiv.org/abs/2506.09588. User-provided Science access: https://www.science.org/stoken/author-tokens/ST-2851/full.
+
+### AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding
+- Link: https://arxiv.org/abs/2601.08485
+- Source: IEEE Transactions on Robotics (T-RO) 2026 (listed by an author's publication page; final journal metadata not checked)
+- Date: 2026-01-13
+- Authors: Chong Zhang, Victor Klemm, Fan Yang, Marco Hutter
+- Topics: quadruped / biped / attention map encoding / uncertainty-aware mapping / RL / sim-to-real
+- Summary: AME-2 jointly learns local/global terrain features and attention encoding with an RL controller, plus uncertainty-aware depth-to-elevation mapping for robust traversal under occlusion and noise.
+- Notes: Separate work from the 2025 Science Robotics AME paper. Author publication list labels T-RO 2026, while an older ETH record still calls it a working paper. Initial arXiv submission: 2026-01-13.
 
 </details>
