@@ -77,6 +77,53 @@
 </details>
 
 <details>
+<summary><strong>Physics-based Character Animation</strong></summary>
+
+### SuperTrack: Motion Tracking for Physically Simulated Characters using Supervised Learning
+- Link: https://doi.org/10.1145/3478513.3480527
+- Source: ACM TOG (SIGGRAPH Asia 2021)
+- Authors: Levi Fussell, Kevin Bergamin, Daniel Holden
+- Topics: physics-based character animation / learned world model / differentiable dynamics / motion tracking
+- Summary: Trains a world model that approximates part of the simulator's transition function, then optimizes the tracking policy by back-propagating the tracking error through it, replacing PPO with supervised learning.
+- Notes: Ubisoft La Forge. Reports higher control quality in shorter training time than PPO, with lower sensitivity to dataset size and distribution. Direct predecessor of SuperMimic's learned-dynamics training. PDF: https://www.theorangeduck.com/media/uploads/other_stuff/SuperTrack.pdf.
+
+### Physics-based Character Controllers Using Conditional VAEs
+- Link: https://doi.org/10.1145/3528223.3530067
+- Source: ACM TOG (SIGGRAPH 2022)
+- Authors: Jungdam Won, Deepak Gopinath, Jessica Hodgins
+- Topics: physics-based character animation / conditional VAE / learned dynamics / downstream tasks
+- Summary: Learns conditional-VAE controllers that reproduce behaviors from motion-capture datasets and reuses them as motor skills for downstream tasks.
+- Notes: Meta. Often called PhysicsVAE; SuperMimic's comparison table describes its training as behavior cloning plus a one-step next-state consistency term through a frozen learned dynamics model.
+
+### ControlVAE: Model-Based Learning of Generative Controllers for Physics-Based Characters
+- Link: https://arxiv.org/abs/2210.06063
+- Source: ACM TOG (SIGGRAPH Asia 2022)
+- Date: 2022-10-12
+- Authors: Heyuan Yao, Zhenhua Song, Baoquan Chen, Libin Liu
+- Topics: physics-based character animation / model-based learning / learnable world model / skill latent space
+- Summary: Learns a skill latent space and a skill-conditioned generative control policy from unorganized motion data, using a learnable world model to supervise both directly and to train downstream tasks efficiently.
+- Notes: Peking University (Libin Liu group). DOI: https://doi.org/10.1145/3550454.3555434.
+
+### MoConVQ: Unified Physics-Based Motion Control via Scalable Discrete Representations
+- Link: https://arxiv.org/abs/2310.10198
+- Source: ACM TOG (SIGGRAPH 2024)
+- Date: 2023-10-16
+- Authors: Heyuan Yao, Zhenhua Song, Yuyang Zhou, Tenglong Ao, Baoquan Chen, Libin Liu
+- Topics: physics-based character animation / VQ-VAE / model-based RL / universal tracking
+- Summary: Combines a VQ-VAE with model-based RL to learn discrete motion embeddings from tens of hours of unstructured motion data, supporting universal tracking, interactive control, text-to-motion generation, and LLM integration.
+- Notes: Peking University (Libin Liu group). DOI: https://doi.org/10.1145/3658137. Project: https://moconvq.github.io/.
+
+### Scalable Humanoid Whole-Body Control via Differentiable Neural Network Dynamics
+- Link: https://openreview.net/forum?id=FPgKt7bA8w
+- Source: ICLR 2025 Workshop on World Models
+- Authors: Yu Lei, Zhengyi Luo, Tairan He, Jinkun Cao, Guanya Shi, Kris Kitani
+- Topics: humanoid / differentiable neural dynamics / world model / motion tracking
+- Summary: Learns a neural dynamics model and combines supervised learning with RL for humanoid controller training, reporting higher sample efficiency and lower tracking error while scaling to tens of thousands of motion clips.
+- Notes: Referred to as SuperDyno in SuperMimic's related work, which groups it with simulated-character control methods.
+
+</details>
+
+<details>
 <summary><strong>Humanoid Locomotion</strong></summary>
 
 ### Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking

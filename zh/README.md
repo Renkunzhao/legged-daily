@@ -28,7 +28,7 @@
 
 发现来源按以下层级展开：
 
-1. **优先会议/期刊** — arXiv, IROS, ICRA, RA-L, RSS, IJRR, Science Robotics, T-RO, CoRL, CVPR, NeurIPS, AAAI。
+1. **优先会议/期刊** — arXiv, IROS, ICRA, RA-L, RSS, IJRR, Science Robotics, T-RO, CoRL, CVPR, NeurIPS, AAAI；图形学/动画：ACM TOG（SIGGRAPH、SIGGRAPH Asia）、SCA、Eurographics。
 2. **已跟踪实验室和研究者** — 记录在 [labs.md](labs.md) 中的主页、GitHub、X、Google Scholar、YouTube、Bilibili 等渠道。
 3. **聚合来源** — 非实验室、非会议期刊的信息流，例如 arXiv category RSS、curator accounts、industry media、community channels，维护在 [source-watchlist.md](../source-watchlist.md)。
 4. **相邻高信号来源** — 仅在与腿足机器人明确相关时纳入。

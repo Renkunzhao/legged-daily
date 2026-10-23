@@ -77,6 +77,53 @@
 </details>
 
 <details>
+<summary><strong>物理角色动画</strong></summary>
+
+### SuperTrack: Motion Tracking for Physically Simulated Characters using Supervised Learning
+- 链接： https://doi.org/10.1145/3478513.3480527
+- 来源： ACM TOG（SIGGRAPH Asia 2021）
+- 作者： Levi Fussell, Kevin Bergamin, Daniel Holden
+- 主题： 物理角色动画 / 学习的世界模型 / 可微动力学 / 动作跟踪
+- 摘要： 训练一个近似仿真器部分状态转移的世界模型，再把跟踪误差穿过它反向传播来优化跟踪策略，用监督学习取代 PPO。
+- 备注： Ubisoft La Forge。论文报告相比 PPO 用更短训练时间取得更高的控制质量，且对数据集规模和分布更不敏感。是 SuperMimic 学习动力学训练方式的直接前作。PDF：https://www.theorangeduck.com/media/uploads/other_stuff/SuperTrack.pdf。
+
+### Physics-based Character Controllers Using Conditional VAEs
+- 链接： https://doi.org/10.1145/3528223.3530067
+- 来源： ACM TOG（SIGGRAPH 2022）
+- 作者： Jungdam Won, Deepak Gopinath, Jessica Hodgins
+- 主题： 物理角色动画 / 条件 VAE / 学习的动力学 / 下游任务
+- 摘要： 学习条件 VAE 控制器，复现动捕数据集中的行为，并把它们作为运动技能复用于下游任务。
+- 备注： Meta。常被称为 PhysicsVAE；SuperMimic 的对比表将其训练方式描述为行为克隆，加上一个穿过冻结学习动力学模型的单步状态一致性项。
+
+### ControlVAE: Model-Based Learning of Generative Controllers for Physics-Based Characters
+- 链接： https://arxiv.org/abs/2210.06063
+- 来源： ACM TOG（SIGGRAPH Asia 2022）
+- 日期： 2022-10-12
+- 作者： Heyuan Yao, Zhenhua Song, Baoquan Chen, Libin Liu
+- 主题： 物理角色动画 / 基于模型的学习 / 可学习世界模型 / 技能潜空间
+- 摘要： 从无组织的动作数据中学习技能潜空间和技能条件化的生成式控制策略，用可学习的世界模型直接监督两者，并高效训练下游任务。
+- 备注： 北京大学（刘利斌组）。DOI：https://doi.org/10.1145/3550454.3555434。
+
+### MoConVQ: Unified Physics-Based Motion Control via Scalable Discrete Representations
+- 链接： https://arxiv.org/abs/2310.10198
+- 来源： ACM TOG（SIGGRAPH 2024）
+- 日期： 2023-10-16
+- 作者： Heyuan Yao, Zhenhua Song, Yuyang Zhou, Tenglong Ao, Baoquan Chen, Libin Liu
+- 主题： 物理角色动画 / VQ-VAE / 基于模型的强化学习 / 通用跟踪
+- 摘要： 结合 VQ-VAE 与基于模型的强化学习，从几十小时无结构动作数据中学习离散动作表示，支持通用跟踪、交互控制、文本生成动作和接入大语言模型。
+- 备注： 北京大学（刘利斌组）。DOI：https://doi.org/10.1145/3658137。项目：https://moconvq.github.io/。
+
+### Scalable Humanoid Whole-Body Control via Differentiable Neural Network Dynamics
+- 链接： https://openreview.net/forum?id=FPgKt7bA8w
+- 来源： ICLR 2025 世界模型 Workshop
+- 作者： Yu Lei, Zhengyi Luo, Tairan He, Jinkun Cao, Guanya Shi, Kris Kitani
+- 主题： 人形机器人 / 可微神经动力学 / 世界模型 / 动作跟踪
+- 摘要： 学习神经动力学模型，结合监督学习与强化学习训练人形控制器；论文报告样本效率更高、跟踪误差更低，并可扩展到上万条动作片段。
+- 备注： SuperMimic 的相关工作中称其为 SuperDyno，并把它归入仿真角色控制方法。
+
+</details>
+
+<details>
 <summary><strong>人形机器人运动</strong></summary>
 
 ### Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking
