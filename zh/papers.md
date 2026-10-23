@@ -187,12 +187,12 @@
 
 ### Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking
 - Link: https://arxiv.org/abs/2604.17335
-- Source: arXiv
+- Source: IEEE Robotics and Automation Letters (RA-L), 2026, 11(9), 10194–10201
 - Date: 2026-04-19
 - Authors: Zewei Zhang, Kehan Wen, Michael Xu, Junzhe He, Chenhao Li, Takahiro Miki, Clemens Schwarke, Chong Zhang, Xue Bin Peng, Marco Hutter
 - Topics: humanoid / locomotion / whole-body control / robot learning / perception / sim-to-real
 - Summary: 面向 Unitree G1 的 terrain-aware 全身人形运动框架，结合 diffusion-based motion generation 与 RL motion tracking，并展示硬件越障结果。
-- Notes: ETH / RSL 强信号，也是当前 whole-body humanoid locomotion 的重要参考。
+- Notes: 已发表于 IEEE RA-L 2026，DOI：https://doi.org/10.1109/LRA.2026.3710365；项目：https://wholebodylocomotion.github.io/。
 
 ### SoftMimic: Learning Compliant Whole-body Control from Examples
 - Link: https://arxiv.org/abs/2510.17792
@@ -969,5 +969,23 @@
 - 主题：人形机器人 / 接触规划 / 全身运动 / 强化学习 / 动作先验
 - 摘要：ACP 利用自监督注意力接触规划器预测未来身体与环境接触，再通过接触条件化跟踪器协调全身运动，以动作数据作为训练先验，并通过后续强化学习微调适应训练数据未覆盖的环境。
 - 备注：arXiv 预印本，标注 under review；部署时仅使用机载观测，无需参考动作输入。项目：https://leggedrobotics.github.io/ACP/；代码发布状态尚未确认。
+
+### Attention-Based Map Encoding for Learning Generalized Legged Locomotion
+- 链接：https://doi.org/10.1126/scirobotics.adv3604
+- 来源：Science Robotics 2025，10(105)，eadv3604
+- 日期：2025-08-27
+- 作者：Junzhe He, Chong Zhang, Fabian Jenelten, Ruben Grandia, Moritz Bächer, Marco Hutter
+- 主题：四足 / 人形 / 注意力地形编码 / 感知运动 / 精准落足
+- 摘要：将本体感知条件化的地形图注意力编码器与 RL 控制器联合训练，关注未来可落足区域；已在 12 自由度四足及 23 自由度人形机器人上开展真机验证。
+- 备注：正式发表于 Science Robotics；DOI 10.1126/scirobotics.adv3604；预印本：https://arxiv.org/abs/2506.09588。用户提供的 Science 访问链接：https://www.science.org/stoken/author-tokens/ST-2851/full 。
+
+### AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding
+- 链接：https://arxiv.org/abs/2601.08485
+- 来源：IEEE Transactions on Robotics (T-RO) 2026（作者公开论文列表标注；期刊元数据待补）
+- 日期：2026-01-13
+- 作者：Chong Zhang, Victor Klemm, Fan Yang, Marco Hutter
+- 主题：四足 / 双足 / 注意力地图编码 / 不确定性感知建图 / 强化学习 / 仿真到真机
+- 摘要：AME-2 联合局部与全局地形特征、注意力编码和面向遮挡与噪声的学习式深度建图，使用统一 RL 框架实现敏捷、可泛化的真实机器人越障。
+- 备注：与 Science Robotics 2025 的 AME 是不同论文；作者个人论文列表标注 T-RO 2026，ETH 早期条目仍为 working paper。原始 arXiv 日期为 2026-01-13。
 
 </details>
