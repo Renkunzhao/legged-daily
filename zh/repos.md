@@ -1048,4 +1048,13 @@
 - 摘要： 依据论文从零实现的 SuperMimic 非官方复现，基于 Isaac Lab 3 kit-less 与 Newton MuJoCo-Warp 求解器：学习可微世界模型，再用短视野 BPTT 训练策略，让 Unitree G1 跟踪 40 条 LAFAN1 动作。
 - 备注： 2026-10-21 创建，README 署名 Chong Zhang（ETH Zurich）；MIT 许可。README 报告在单张 RTX PRO 6000 上训练 1.47 小时后评测回报 0.829、40 条 clip 0 失败，对照论文中 H100 上 1.2 小时达到 0.82。作者明确说明该仓库是借助 AI 编程助手“1 小时速写”的未审查代码，并说明 SuperMimic 官方代码尚未发布。通过 GitHub API 找到的其他独立复现：[Motphys/Uni-SuperMimic](https://github.com/Motphys/Uni-SuperMimic)（基于 UniLab 1.5.0，支持 mjwarp / MuJoCo / Motrix 后端，README 报告 12k 迭代时回报 0.827、40 条 0 失败；Apache-2.0）和 [CuboiLeo/SuperMimic-Reproduced](https://github.com/CuboiLeo/SuperMimic-Reproduced)（基于 mjlab，包含 BONES-SEED 12.99 万条 clip 的数据管线和多卡训练；README 说明其最佳 LAFAN1 结果额外加入了论文中没有的锚点相对观测；MIT）。以上数字均为 README 自报，未独立验证。
 
+### jsw7460/SimForge
+- Link: https://github.com/jsw7460/SimForge
+- Category: RL / 仿真框架 / sim-to-real
+- Robot Type: 四足 / 人形
+- Simulator: Genesis / Newton / MuJoCo
+- Deploy: sim / hardware demonstrations
+- Summary: 基于 JAX 的腿足机器人强化学习框架，在 Genesis、Newton 与 MuJoCo 之间复用策略接口，覆盖 Go2、G1、Booster 等机器人。
+- Notes: 仓库提供跨仿真器训练和评测配置及真机演示。2026-10-23 的更新关注接触组顺序在不同后端的一致性；并非今日首次发布，README 性能对比不应视为独立验证的性能排名。
+
 </details>
