@@ -2,15 +2,24 @@
 # Legged Daily - 2026-10-26
 
 ## 摘要
-- RPL（CoRL 2026；arXiv 于 2026-10-04 更新）通过地形专家训练与多深度相机 Transformer 蒸馏实现双向感知运动；Amazon FAR 官方研究代码近期已公开，原官方仓库已收录在 repos.md。
-- Humanoid SRL（2026-10-19，arXiv）为人形机器人增加辅助机械臂，结合轨迹优化、目标条件强化学习及接触丰富的实机移动操作。
-- ProTrav（2026-10-22，arXiv）将空间相关的地形高程不确定性传播到可通行性分布，用于风险敏感 MPPI；尚未核实其使用腿足机器人验证。
-- GitHub API 检索发现两个非官方 SuperMimic 复现工程，以及新的 G1 MuJoCo 全身 MPC/TSID 控制实现，均不应视为已经部署实机。
+- 刷新（下午运行）：ViT-H（arXiv，2026-10-23；北大 / BIGAI）用扩散模型直接从单目视频生成人形参考动作，并以跟踪结果做 DPO 后训练；报告了 G1 实时视频遥操作。
+- RPL（CoRL 2026；arXiv 于 2026-10-04 更新）通过地形专家训练与多深度相机 Transformer 蒸馏实现双向感知运动；Amazon FAR 官方代码已收录在 repos.md。
+- 刷新：CoCarry（arXiv，2026-10-23；SII / 同济 / TUM）围绕共享物体接触结构，把双人协同搬运重定向到两台人形机器人；原始双人动捕已在 Hugging Face 公开（未注明许可）。
+- 刷新：TeleAI 发布 NEXUS 感知全身遥操作官方代码及 G1 ONNX 模型；南大 SuperMimic 复现补齐 G1 完整 sim-to-real 部署并有约 46 秒实机舞蹈。另列一个 MuJoCo G1 全身 MPC/TSID 实现（仅仿真）。
 - Hugging Face 核验到三份既有公开资源：HIW-500 的 G1 居家实机记录、NVIDIA GRAIL 的物理验证交互动作，以及 MOSAIC 的 G1 重定向动作。
 - 丹麦奥胡斯大学 A3 Lab 的 Physical AI 博士岗位 2026-11-01 截止；偏通用机器人基础模型，并非专门的腿足运动岗位。
 
 <details>
 <summary><strong>新论文</strong></summary>
+
+### ViT-H: Generative Video-To-Humanoid Control with Motion Tracking Feedback
+- Link: https://arxiv.org/abs/2610.32966
+- Source: arXiv 预印本；未注明正式接收会议或期刊
+- Date: 2026-10-23
+- Authors: Zimo He, Tianyi Bian, Zizhong Yang, Hongjie Li, Nan Jiang, Jieming Cui, Baoxiong Jia, Yizhou Wang, Siyuan Huang, Yixin Zhu
+- Topics: 人形机器人 / 视频到动作 / 扩散模型 / 动作跟踪 / DPO / 遥操作
+- Summary: 以扩散模型直接从单目视频生成人形参考动作，替代“重建—重定向—跟踪”流水线，并利用动作跟踪结果做直接偏好优化后训练；自回归变体支持实时视频遥操作。
+- Notes: 在 Unitree G1 上评估；作者报告遥操作延迟低于 400 ms（项目页：平均约 250 ms，RealSense D455 RGB 输入），并随模型和数据规模提升。项目：https://awfuact.github.io/vit-h/ 。项目页链接的代码仓库（github.com/mileret/ViT-H-release）在 2026-10-26 返回 404，代码是否开放尚未确认。
 
 ### RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains
 - Link: https://arxiv.org/abs/2602.03002
@@ -21,37 +30,37 @@
 - Summary: 先训练具有特权高程图输入的地形专家，再蒸馏到多相机深度 Transformer，并利用与速度指令相关的深度特征缩放及随机侧向遮挡增强楼梯、坡面和踏石上的双向运动能力。
 - Notes: 官网 https://rpl-humanoid.github.io/ 展示实机复杂地形和 2 kg 负载实验，报告深度渲染约 5 倍加速。官方代码 https://github.com/amazon-far/RPL 已在 repos.md 收录；本次是因近期公开代码而补录的历史论文，不是 10 月 26 日新发表。
 
-### Humanoid SRL: Augmenting Humanoids with Supernumerary Limbs for Coordinated Loco-Manipulation
-- Link: https://arxiv.org/abs/2610.25628
-- Source: arXiv 预印本；尚未确认会议或期刊正式接收
-- Date: 2026-10-19
-- Authors: Fukang Liu, Feiyang Wu, Paul Barsa, Jaehwi Jang, Akshat Jain, Zhigen Zhao, Yipu Chen, Zhaoyuan Gu, Nikhil Vemuri, Anshul Chandaliya, Kaijie Zhu, Sean Lublinsky, Matthew Zhu, Tony G. Chen, Ye Zhao
-- Topics: 人形机器人 / 形态增强 / 多接触移动操作 / 轨迹优化 / 强化学习
-- Summary: 为人形机器人安装额外机械臂，通过模型驱动轨迹优化生成动态可行动作，训练目标条件化 RL 全身控制器，从而协调原有双臂和第三只机械臂执行接触丰富的任务。
-- Notes: 作者报告了零样本仿真到实机迁移及部分任务的视觉引导扩散策略演示；实验视频：https://humanoid-srl.github.io/ 。正式发表状态与完整训练代码开放情况仍待核实。
-
-### ProTrav: Probabilistic Traversability with Elevation Uncertainty Propagation for Risk-aware Off-road Navigation
-- Link: https://arxiv.org/abs/2610.30839
-- Source: arXiv 预印本；尚未确认正式会议或期刊接收
-- Date: 2026-10-22
-- Authors: Chuanlin Zuo, Miloš Prágr, Arun Kumar Singh, Mohammad Loni, Reza Ghabcheloo
-- Topics: 地形感知 / 概率高程图 / 不确定性传播 / 可通行性 / MPPI
-- Summary: 利用稀疏变分高斯过程建立概率高程场，通过函数空间采样保留相邻地形的空间相关性，将可通行性均值与风险传递给 MPPI 规划器。
-- Notes: 作者报告仿真导航成功率超过 90%，所对比基线不足 40%，并进行了真实野外机器人测试。这属于与腿足感知相关的邻近工作；论文摘要未证明测试平台为腿足机器人。
+### CoCarry: Contact-Support-Structured Retargeting for Dual-Humanoid Cooperative Carrying
+- Link: https://arxiv.org/abs/2610.32460
+- Source: arXiv 预印本；未注明正式接收会议或期刊
+- Date: 2026-10-23
+- Authors: Ziyu Lin, Shihang Du, Tianhang Wang, Xiaodong Liu, Runze Zhang, Zongyou Yu, Haodong Zhang, Alois Knoll, Guang Chen
+- Topics: 人形机器人 / 多机器人 / 动作重定向 / 人-物交互 / 协同搬运 / 数据集
+- Summary: 提出双人协同搬运动捕数据集，以及围绕同一物体轨迹联合优化两台人形机器人的重定向方法：物体局部手部锚点保持四手抓握关系，上身交互结构与下身支撑结构保持物体相对几何与协调支撑。
+- Notes: 作者报告在两台智元 A3 上接触保持率 0.9995，穿透时长较 GMR / OmniRetarget 分别减少 67% / 71%；在 CORE4D + G1 上接触保持率 0.9906；并有两台 A3 实机协同搬运实验。论文描述 220 段 / 21 种方案，原始双人动捕已公开于 https://huggingface.co/datasets/sii-pi-lab/CoCarry （227 段 / 23 类，BVH 约 120 Hz + 1080p 视频，公开获取，未注明许可，不含重定向后的机器人轨迹）；许可明确后可作为数据集条目提议。与 STR（2026-10-25 草稿）为同一团队。
 
 </details>
 
 <details>
 <summary><strong>新仓库</strong></summary>
 
-### OMEGA-i/SuperMimicKit
-- Link: https://github.com/OMEGA-i/SuperMimicKit
-- Category: 强化学习 / 动作跟踪 / 可微仿真 / 动作重定向 / 工具框架
-- Robot Type: 人形机器人 — Unitree G1 / Unitree H2 / Agibot A3
-- Simulator: MuJoCo Warp；浏览器 ONNX Runtime Web / WebGPU 和 MuJoCo WASM
-- Deploy: 仿真 / 浏览器
-- Summary: 独立复现 SuperMimic 思路，提供 world model 与策略导出、UMR/SOMA 动作重定向、实验性 ONNX 权重预览和浏览器运行演示。
-- Notes: 2026-10-24 发布预览权重；README 中 G1、H2 各自 val37 验证仍有大量失败（31/37 与 30/37）。并非原作者官方代码，也未验证实机部署；动作数据不随代码发布。
+### Gamma-Robot/NEXUS
+- Link: https://github.com/Gamma-Robot/NEXUS
+- Category: 控制 / 强化学习 / 遥操作 / 动作数据工具
+- Robot Type: 人形（Unitree G1）
+- Simulator: mjlab 1.5.2（MuJoCo Warp）
+- Deploy: 仿真（sim-to-sim 与 sim-to-real 部署代码标注为尚未发布）
+- Summary: NEXUS（arXiv:2609.39000）官方代码：地形感知动作适配（接触检测、骨盆调整、关键帧 IK）、特权 PPO 教师、基于深度图的感知学生策略，实现地形自适应全身遥操作；附预训练 G1 ONNX 策略。
+- Notes: 来自 TeleAI（中国电信人工智能研究院）/ 上海交大等；通讯作者为张伟楠、白辰甲。许可：CC BY-NC 4.0（LICENSE 文件）。包含平地/地形配对示例动作。项目：https://nexus-humanoid.github.io/ 。
+
+### NJU-R-L-Group-Embodied-Lab/SuperMimic-Repro-Sim2Real
+- Link: https://github.com/NJU-R-L-Group-Embodied-Lab/SuperMimic-Repro-Sim2Real
+- Category: 控制 / 世界模型 / 动作跟踪 / 部署
+- Robot Type: 人形（Unitree G1）
+- Simulator: mjlab
+- Deploy: 仿真 + 实机（ONNX + Unitree SDK 真机部署）
+- Summary: 基于 CuboiLeo/SuperMimic-Reproduced 的非官方 SuperMimic 复现，增加 BONES-SEED 规模训练、自定义舞蹈动作、视频提取动作工具和完整 G1 部署代码；预训练模型和实机视频在 GitHub Releases。
+- Notes: README 报告：LAFAN1 严格按论文设置得分 0.56（论文 0.82），BONES-SEED（约 13 万段）得分 0.93、46 段失败；G1 实机完整跳完约 46 秒舞蹈，最大倾角偏差 16.3°。MIT 许可；数据集不随仓库分发。与 SuperMimic 原作者无关。
 
 ### tanmay2002/unitree-g1-whole-body-control
 - Link: https://github.com/tanmay2002/unitree-g1-whole-body-control
@@ -61,15 +70,6 @@
 - Deploy: 仿真
 - Summary: 建立从 Herdt/LIPM 在线 MPC 质心与落足规划到 2 ms TSID 逆动力学 QP 控制的闭环框架，支持步行期间同步执行手臂操作任务。
 - Notes: 波恩大学学生研究工程；作者报告仿真中以 0.2 m/s 完成 12 步、特定测试中 QP 失败为零。没有证实真实机器人部署。
-
-### kangzejian1896/supermimic-g1-reproduction
-- Link: https://github.com/kangzejian1896/supermimic-g1-reproduction
-- Category: 强化学习 / 可微世界模型 / 动作跟踪 / 可复现研究
-- Robot Type: 人形机器人 — Unitree G1
-- Simulator: MuJoCo Warp / mjlab
-- Deploy: 仿真
-- Summary: 独立 G1 SuperMimic 复现，提供 168k 迭代的策略和 world-model 预览权重、评测脚本、复现实验说明，以及参考轨迹和仿真跟踪对比视频。
-- Notes: 约 2026-10-24 发布 v0.2.0-168k。README 报告使用 84,287 段动作（170.11 小时），128 条验证动作也用于选模型，不属于独立最终测试。代码 MIT，权重许可条款尚待明确；非论文作者官方实现。
 
 </details>
 
@@ -130,6 +130,34 @@
 - Notes: Fukang Liu 个人研究主页列出 Humanoid SRL（arXiv:2610.25628，2026-10-19）、Opt2VLA 和 Opt2Skill；新增机械臂系统将接触规划、全身学习及真实机器人实验结合。该链接是研究者主页，而非单独实验室官网。
 - Students and Representative Works:
   - [Fukang Liu](https://fukangl.github.io/) — [Humanoid SRL](https://arxiv.org/abs/2610.25628)
+
+### 白辰甲 — 中国电信人工智能研究院（TeleAI）
+- Institution: 中国电信人工智能研究院（TeleAI）
+- Homepage: https://baichenjia.github.io/
+- GitHub: https://github.com/Gamma-Robot
+- Lab / Department: TeleAI 具身智能研究中心
+- Key Topics: 人形 / 全身控制 / 遥操作 / 感知 / 强化学习
+- Notes: NEXUS 共同通讯作者（另一位为上海交大张伟楠），官方代码和 G1 模型于 2026-10-23 发布。学生及代表作待核实，暂不列出。
+
+### 张力 — 复旦大学 Logos Intelligence Lab
+- Institution: 复旦大学 / 上海创智学院
+- Homepage: https://lzrobots.github.io/
+- GitHub: https://github.com/LogosIntelligenceLab
+- Lab / Department: 大数据学院 Logos Intelligence Lab
+- Key Topics: 人形 / 动作重定向 / 物理智能
+- Notes: SMR（arXiv:2610.29169，2026-10-21）的来源团队：由语义条件物理专家蒸馏得到的流式人形重定向器；代码尚未发布（https://github.com/LogosIntelligenceLab/SMR 仅有项目 README）。
+
+### 黄思远 — 北京大学 / BIGAI（已有条目更新）
+- Institution: 北京大学 / 北京通用人工智能研究院
+- Homepage: https://siyuanhuang.com/
+- Key Topics: 人形 / 视频到人形控制 / 动作生成
+- Notes: 已有条目更新：与朱毅鑫共同参与 ViT-H（arXiv:2610.32966）。
+
+### 陈广团队 — SII PI Lab / 同济（草稿信号更新）
+- Institution: 同济大学 / 上海创智学院
+- Lab / Department: Physical Intelligence Lab
+- Key Topics: 人形 / 重定向 / 人-物交互 / 多人形协作
+- Notes: 一周内第二篇重定向论文（继 STR 之后的 CoCarry）；Hugging Face 组织 https://huggingface.co/sii-pi-lab 托管 CoCarry 数据。
 
 </details>
 
